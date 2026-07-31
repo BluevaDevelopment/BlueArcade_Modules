@@ -1,0 +1,81 @@
+local M = {}
+
+function M.sendDescription(session, winMode)
+  local descriptionKey = "description." .. winMode
+  for _, handle in ipairs(session.players()) do
+    local description = session.config.translationList(handle, descriptionKey)
+    if #description == 0 then
+      description = session.config.translationList(handle, "description")
+    end
+    for _, line in ipairs(description) do
+      session.messages.sendRaw(handle, line)
+    end
+  end
+end
+
+function M.sendCountdownTick(session, secondsLeft)
+  for _, handle in ipairs(session.players()) do
+    session.sounds.play(handle, session.coreConfig.getSound("sounds.starting_game.countdown"))
+    local title = string.gsub(session.coreConfig.language(handle, "titles.starting_game.title"), "{game_display_name}", "One In The Chamber")
+    title = string.gsub(title, "{time}", tostring(secondsLeft))
+    local subtitle = string.gsub(session.coreConfig.language(handle, "titles.starting_game.subtitle"), "{game_display_name}", "One In The Chamber")
+    subtitle = string.gsub(subtitle, "{time}", tostring(secondsLeft))
+    session.titles.sendRaw(handle, title, subtitle, 0, 20, 5)
+  end
+end
+
+function M.sendCountdownFinish(session)
+  for _, handle in ipairs(session.players()) do
+    local title = string.gsub(session.coreConfig.language(handle, "titles.game_started.title"), "{game_display_name}", "One In The Chamber")
+    local subtitle = string.gsub(session.coreConfig.language(handle, "titles.game_started.subtitle"), "{game_display_name}", "One In The Chamber")
+    session.titles.sendRaw(handle, title, subtitle, 0, 20, 20)
+    session.sounds.play(handle, session.coreConfig.getSound("sounds.starting_game.start"))
+  end
+end
+
+function M.sendDeathTitle(session, handle, killed)
+  if killed then
+    session.sounds.play(handle, session.coreConfig.getSound("sounds.in_game.dead"))
+    session.titles.sendRaw(handle,
+      session.config.translation(handle, "titles.you_died.title"),
+      session.config.translation(handle, "titles.you_died.subtitle"),
+      0, 80, 20)
+    return
+  end
+
+  session.sounds.play(handle, session.coreConfig.getSound("sounds.in_game.classified"))
+  session.titles.sendRaw(handle,
+    session.config.translation(handle, "titles.classified.title"),
+    session.config.translation(handle, "titles.classified.subtitle"),
+    0, 80, 20)
+end
+
+local function isSpectator(session, handle)
+  for _, spectator in ipairs(session.spectators()) do
+    if spectator == handle then return true end
+  end
+  return false
+end
+
+local function randomMessage(session, path)
+  local messages = session.config.translationList(nil, path)
+  if #messages == 0 then return nil end
+  return messages[math.random(#messages)]
+end
+
+function M.broadcastDeathMessage(session, victim, killer)
+  if isSpectator(session, victim) then return end
+
+  local path = killer ~= nil and "messages.deaths.killed_by_player" or "messages.deaths.generic"
+  local message = randomMessage(session, path)
+  if message == nil then return end
+
+  message = string.gsub(message, "{victim}", session.player.name(victim))
+  message = string.gsub(message, "{killer}", killer ~= nil and session.player.name(killer) or "")
+
+  for _, handle in ipairs(session.players()) do
+    session.messages.sendRaw(handle, message)
+  end
+end
+
+return M

@@ -1,0 +1,113 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Una en la recámara Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Una en la recámara"
+
+description:
+  last_standing:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Una en la recámara</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Todos reciben un arco y una sola flecha.</gray>"
+    - "<gray>Haz que cada disparo cuente: un golpe, una eliminación.</gray>"
+    - "<gray>Ten una espada de madera a mano cuando te quedes sin flechas.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  most_kills:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Una en la recámara</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Flechas instantáneas y reapariciones rápidas.</gray>"
+    - "<gray>Encadena eliminaciones para mantener tu carcaj lleno.</gray>"
+    - "<gray>Lidera la tabla de bajas antes de que termine el tiempo.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Una en la recámara</green>"
+  lore:
+    - "<gray>Duelos de arco de precisión con una sola flecha.</gray>"
+    - "<gray>Gana flechas con cada eliminación.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  labels:
+    arrows_shot: "Flechas disparadas"
+    hits_landed: "Golpes acertados"
+    kills: "Bajas"
+    games_played: "Partidas jugadas en Una en la recámara"
+    wins: "Victorias en Una en la recámara"
+
+messages:
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>preparó el disparo perfecto contra</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado a distancia por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>no falló cuando</gray> <red>{victim}</red> <gray>se asomó.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo esquivar</gray> <yellow>{killer}</yellow><gray>'s disparo de la recámara.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>se quedó sin oportunidades en la arena.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó antes de poder soltar otra flecha.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>perdió su disparo y también la vida.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>HAS MUERTO</bold></red>"
+    subtitle: "<gray>Más suerte la próxima vez.</gray>"
+  classified:
+    title: "<yellow><bold>CLASIFICADO</bold></yellow>"
+    subtitle: "<gray>Has sido eliminado.</gray>"
+
+scoreboard:
+  mode_labels:
+    last_standing: "Última flecha"
+    most_kills: "Más bajas"
+  last_standing:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Una en la recámara</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Bajas:</white> <red>{kills}</red>"
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  most_kills:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Una en la recámara</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<green>➊</green> <white>{place_1}</white> <gray>{kills_1}</gray>"
+      - "<gold>➋</gold> <white>{place_2}</white> <gray>{kills_2}</gray>"
+      - "<red>➌</red> <white>{place_3}</white> <gray>{kills_3}</gray>"
+      - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{kills_4}</dark_gray>"
+      - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{kills_5}</dark_gray>"
+      - ""
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  usage: "{prefix} <yellow>Uso: /baa game <id> one_in_the_chamber <setmode|setregion> [...args]</yellow>"
+  mode_set: "{prefix} <green>Modo de Una en la recámara establecido en {mode}.</green>"
+  usage_setmode: "{prefix} <yellow>Uso: /baa game <id> <minigame> setmode <last_standing|most_kills></yellow>"
+  must_use_stick: "{prefix} <yellow>Selecciona primero dos esquinas con la herramienta de setup.</yellow>"
+  region_set: "{prefix} <green>Play area guardado.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"

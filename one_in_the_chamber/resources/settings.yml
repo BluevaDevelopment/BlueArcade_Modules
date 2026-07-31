@@ -1,0 +1,50 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# One In The Chamber Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "BOW"
+
+respawn:
+  # Delay (in ticks) before a player respawns in most_kills mode after being eliminated
+  most_kills_delay_ticks: 40
+
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items:
+    - "BOW:1:0"
+    - "WOODEN_SWORD:1:1"
+    - "COOKED_BEEF:8:7"
+    - "ARROW:1:9"
+
+  # Minimum arrows a player should always have after spawning or respawning
+  minimum_arrows: 1
+
+  # Arrows awarded per elimination
+  kill_reward_arrows: 1
+
+  timed_supplies:
+    # Items delivered periodically during the match
+    # Format: MATERIAL:AMOUNT
+    items: []
+    interval_ticks: 0
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects:
+    - "SPEED:200:0"
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"

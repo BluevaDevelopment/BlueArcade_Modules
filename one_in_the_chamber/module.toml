@@ -1,0 +1,40 @@
+schema = 1
+id = "one_in_the_chamber"
+name = "One In The Chamber"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Precision bow duels with a single arrow - one hit, one elimination."
+
+[replaces]
+legacyId = "one_in_the_chamber"
+
+[[setup.steps]]
+id = "setmode"
+required = true
+displayName = "Configure Setmode"
+description = "Configure the module-specific setmode setup data."
+commandExamples = ["/baa game <arena> one_in_the_chamber setmode"]
+expectedInput = "mode"
+
+[[setup.steps]]
+id = "setregion"
+required = true
+displayName = "Configure Setregion"
+description = "Configure the module-specific setregion setup data."
+commandExamples = ["/baa game <arena> one_in_the_chamber setregion"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "setmode"
+usage = "/baa game <arena> one_in_the_chamber setmode"
+description = "Configure setmode setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "setregion"
+usage = "/baa game <arena> one_in_the_chamber setregion"
+description = "Configure setregion setup data."
+requiredHint = true
