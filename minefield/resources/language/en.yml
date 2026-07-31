@@ -1,0 +1,98 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Minefield Module - English (UK)
+# Minefield-specific content
+display_name: "Minefield"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>Minefield</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Dash to the safe zone without letting the mines toss you away.</gray>"
+  - "<gray>Plates explode with a knockback instead of a full reset.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<green>Minefield</green>"
+  lore:
+    - "<gray>Cross the minefield without getting blown</gray>"
+    - "<gray>off the track. First to finish wins.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+
+  descriptions:
+    wins: "Minefield wins"
+    games_played: "Minefield games played"
+    finish_line_crosses: "Times you reached the safe zone"
+    mines_triggered: "Mines you have stepped on"
+  labels:
+    finish_line_crosses: "Safe zone crosses"
+    games_played: "Minefields played"
+    wins: "Minefield wins"
+    mines_triggered: "Mines triggered"
+
+messages:
+  respawned: "<yellow>You have been respawned!</yellow>"
+  mines:
+    triggered:
+      - "<red>Boom!</red> A mine hurled you back."
+      - "<yellow>Watch your step!</yellow> That plate was armed."
+      - "<gray>The mine blasts you upward—recover your footing.</gray>"
+  deaths:
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>was forced back to the start.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>strayed off the path and reset.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>hit a forbidden block and respawned.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>slipped into the void.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>fell off the course.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>took a bad step and fell.</gray>"
+  finish:
+    crossed:
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>crossed the minefield at</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>reached the safe zone at</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>navigated the mines for place</gray> <yellow>#{position}</yellow><gray>!</gray>"
+
+titles:
+  finished:
+    title: "<bold><gradient:yellow:gold>SAFE!</gradient></bold>"
+    subtitle: "<white>You finished in position</white> <yellow>#{position}</yellow>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Game:</white> <aqua>Minefield</aqua>"
+    - "<white>Time:</white> <aqua>{time}</aqua>"
+    - "<white>Mines:</white> <red>{mines_active}</red>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{distance_1}m</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{distance_2}m</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{distance_3}m</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{distance_4}m</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{distance_5}m</dark_gray>"
+    - ""
+    - "<aqua>Your Position:</aqua> <white>#{minefield_position}</white>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  usage: "{prefix} <yellow>Usage: /baa game <id> minefield <finishline|floor> set</yellow>"
+  set_success: "{prefix} <green>Finish line set: {blocks} blocks ({x}×{y}×{z})</green>"
+  set_success_floor: "{prefix} <green>Floor set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select an area first.</red>"
+  not_configured: "{prefix} <red>Minefield is not fully configured! Use /baa game {arena_id} minefield finishline|floor set</red>"
+  usage_finish_line: "{prefix} <yellow>Usage: /baa game <id> minefield finishline set</yellow>"
+  usage_floor: "{prefix} <yellow>Usage: /baa game <id> minefield floor set</yellow>"

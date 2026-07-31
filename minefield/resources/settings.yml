@@ -1,0 +1,61 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Minefield Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "LIGHT_WEIGHTED_PRESSURE_PLATE"
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+  # Example:
+  # - "COOKED_BEEF:16:0"
+  # - "GOLDEN_APPLE:3:8"
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+  # Example:
+  # - "SPEED:999999:1"
+  # - "JUMP_BOOST:999999:0"
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:2"  # 3 seconds of resistance after respawn
+
+# Mine generation
+mines:
+  # Chance (0.0 - 1.0, or use percentages like 55 for 55%) that a floor block becomes a mine
+  spawn_chance: 0.55
+
+  # Pressure plate materials that count as mines
+  plate_materials:
+    - "LIGHT_WEIGHTED_PRESSURE_PLATE"
+    - "STONE_PRESSURE_PLATE"
+
+  explosion:
+    # Upward impulse applied when stepping on a mine
+    vertical_force: 1.35
+    # Backward impulse applied when stepping on a mine
+    backward_force: 1.05
+    # Particle and sound used on detonation
+    particle: "EXPLOSION_LARGE"
+    sound: "ENTITY_GENERIC_EXPLODE"
+  
+  # Setting this to true makes it so when players trigger a minefield, it teleports them to a random spawnpoint instead of using the propulsion
+  teleport: false
+
+  # Milliseconds of immunity after triggering a mine to avoid rapid chain detonations
+  immunity_millis: 1200

@@ -1,0 +1,40 @@
+schema = 1
+id = "minefield"
+name = "Minefield"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Dash to the safe zone without letting the mines toss you away."
+
+[replaces]
+legacyId = "minefield"
+
+[[setup.steps]]
+id = "finishline"
+required = true
+displayName = "Configure Finishline"
+description = "Configure the module-specific finishline setup data."
+commandExamples = ["/baa game <arena> minefield finishline"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "floor"
+required = true
+displayName = "Configure Floor"
+description = "Configure the module-specific floor setup data."
+commandExamples = ["/baa game <arena> minefield floor"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "finishline"
+usage = "/baa game <arena> minefield finishline"
+description = "Configure finishline setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "floor"
+usage = "/baa game <arena> minefield floor"
+description = "Configure floor setup data."
+requiredHint = true
