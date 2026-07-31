@@ -1,0 +1,208 @@
+# SkyWars Module - Spanish (ES)
+
+display_name: "SkyWars"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>SkyWars</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Aparece en islas flotantes, saquea cofres y sobrevive a tus rivales.</gray>"
+  - "<gray>Coopera con tu escuadrón para ser el último equipo en pie.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>SkyWars</green>"
+  lore:
+    - "<gray>Empieza dentro de una jaula de cristal sobre las islas.</gray>"
+    - "<gray>Saquea, lucha y sobrevive a la tormenta final.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+votes:
+  labels:
+    categories:
+      chests: "Botín de cofres"
+      hearts: "Corazones"
+      time: "Tiempo"
+      weather: "Clima"
+    options:
+      chests:
+        basic: "Básico"
+        normal: "Normal"
+        overpowered: "Sobrecargado"
+      hearts:
+        "10": "10 corazones"
+        "20": "20 corazones"
+        "30": "30 corazones"
+      time:
+        day: "Día"
+        night: "Noche"
+        sunset: "Atardecer"
+        sunrise: "Amanecer"
+      weather:
+        sunny: "Soleado"
+        rainy: "Lluvioso"
+    option_lore:
+      chests:
+        basic: "Menos equipo, más supervivencia."
+        normal: "Tablas de botín equilibradas."
+        overpowered: "Más equipo de diamante y bonificaciones."
+      hearts:
+        "10": "Salud clásica de SkyWars."
+        "20": "Peleas más largas y jugadas más ajustadas."
+        "30": "Batallas extra resistentes."
+      time:
+        day: "Visibilidad clara de día."
+        sunset: "Iluminación cálida de atardecer."
+        night: "Batallas oscuras y tensas."
+        sunrise: "Resplandor de madrugada."
+      weather:
+        sunny: "Cielos despejados."
+        rainy: "Ambiente tormentoso."
+  menu:
+    main:
+      title: "<aqua>Ajustes de votación de SkyWars</aqua>"
+      info_name: "<yellow>Ajustes de la partida</yellow>"
+      info_lore:
+        - "<gray>Vota los ajustes de la partida antes de que empiece.</gray>"
+        - "<gray>Tus votos se comparten con todos.</gray>"
+      chests_name: "<gold>Botín de cofres</gold>"
+      hearts_name: "<red>Corazones</red>"
+      time_name: "<yellow>Hora del día</yellow>"
+      weather_name: "<blue>Clima</blue>"
+      close_name: "<red>Cerrar</red>"
+      close_lore: "<gray>Volver al lobby.</gray>"
+    chests:
+      title: "<gold>Votar botín de cofres</gold>"
+    hearts:
+      title: "<red>Votar corazones</red>"
+    time:
+      title: "<yellow>Votar hora</yellow>"
+    weather:
+      title: "<blue>Votar clima</blue>"
+    back_name: "<gray>Atrás</gray>"
+    back_lore: "<gray>Volver a los ajustes.</gray>"
+  messages:
+    broadcast: "<yellow>{player}</yellow> <gray>eligió</gray> <aqua>{category}</aqua> <dark_gray>→</dark_gray> <white>{option}</white> <yellow>({votes} votos)</yellow>"
+    votes_count: "<gray>Votos:</gray> <white>{count}</white>"
+    your_vote: "<gray>Tu voto:</gray> <white>{option}</white>"
+    click_to_vote: "<green>Clic para votar</green>"
+    selected:
+      sources:
+        popular: "por votación popular"
+        default: "por defecto"
+      chests: "<gray>Seleccionado</gray> <gold>{option}</gold> <gray>botín de cofres {source}.</gray>"
+      hearts: "<gray>Seleccionado</gray> <red>{option}</red> <gray>{source}.</gray>"
+      time: "<gray>Seleccionado</gray> <yellow>{option}</yellow> <gray>hora {source}.</gray>"
+      weather: "<gray>Seleccionado</gray> <blue>{option}</blue> <gray>clima {source}.</gray>"
+    invalid: "<red>Esa opción de voto no está disponible.</red>"
+    not_available: "<red>Solo puedes votar mientras esperas a que empiece la partida.</red>"
+    no_permission: "<red>No tienes permiso para votar por</red> <yellow>{option}</yellow><red>.</red>"
+    cooldown: "<red>Debes esperar {time} segundos para volver a votar.</red>"
+
+stats:
+  descriptions:
+    wins: "SkyWars victorias"
+    games_played: "SkyWars partidas jugadas"
+    kills: "Rivales eliminados en SkyWars"
+    chests_looted: "Cofres saqueados en SkyWars"
+    storm_damage_taken: "Daño recibido de la tormenta en SkyWars"
+  labels:
+    kills: "Eliminaciones"
+    games_played: "SkyWars partidas jugadas"
+    wins: "SkyWars victorias"
+    chests_looted: "Cofres saqueados"
+    storm_damage_taken: "Daño recibido de la tormenta"
+
+messages:
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  out_of_bounds: "<yellow>No puedes salir de la arena.</yellow>"
+  events:
+    chest_refill: "<aqua>Los cofres se han rellenado.</aqua>"
+    storm_started: "<red>La tormenta final ha comenzado.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>superó a</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó ante</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>derrotó a</gray> <red>{victim}</red><gray>.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no sobrevivió al caos.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>se perdió en la tormenta.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>HAS MUERTO</bold></red>"
+    subtitle: "<gray>De vuelta al lobby.</gray>"
+  classified:
+    title: "<yellow><bold>ELIMINADO</bold></yellow>"
+    subtitle: "<gray>Tu escuadrón continúa sin ti.</gray>"
+
+scoreboard:
+  solo_team_label: "Solo"
+  event:
+    none: "None"
+    none_time: '-'
+    now: "Ahora"
+  storm_status:
+    safe: "<green>A salvo</green>"
+    unsafe: "<red>En la tormenta</red>"
+  storm_phase:
+    waiting: "<gray>Esperando</gray>"
+    final: "<red>Final</red>"
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>SkyWars</aqua>"
+      - ""
+      - "<white>Equipo:</white> <yellow>{team}</yellow>"
+      - "<white>Equipos vivos:</white> <green>{alive_teams}</green>"
+      - "<white>Jugadores vivos:</white> <green>{alive}</green>"
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<white>Siguiente evento:</white> <aqua>{next_event}</aqua>"
+      - "<white>Empieza en:</white> <aqua>{next_event_time}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  solo:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>SkyWars</aqua>"
+      - ""
+      - "<white>Jugadores vivos:</white> <green>{alive}</green>"
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<white>Siguiente evento:</white> <aqua>{next_event}</aqua>"
+      - "<white>Empieza en:</white> <aqua>{next_event_time}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  team:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> skywars team <count|size> <value></yellow>"
+    success: "{prefix} <green>Equipo {setting} establecido en {value} para {game} en la arena {arena_id}.</green>"
+    invalid_limit: "{prefix} <red>La configuración de equipos supera el máximo de jugadores de la arena ({max_players}).</red>"
+    invalid_value: "{prefix} <red>Equipo {setting} debe ser mayor que 0.</red>"
+    invalid_count: "{prefix} <red>El número de equipos debe ser al menos 2.</red>"
+    numeric_ids_only: "{prefix} <red>El ID del equipo debe ser un número entre {min} y {max}.</red>"
+  team_spawn:
+    usage_add: "{prefix} <red>Uso:</red> <yellow>/baa game <id> skywars team spawn add</yellow>"
+    usage_set: "{prefix} <red>Uso:</red> <yellow>/baa game <id> skywars team spawn set <team_id></yellow>"
+    usage_remove: "{prefix} <red>Uso:</red> <yellow>/baa game <id> skywars team spawn remove <team_id></yellow>"
+    teams_not_configured: "{prefix} <red>El número de equipos aún no está configurado. Defínelo primero con <yellow>/baa game <id> skywars team count <n></yellow>.</red>"
+    added: "{prefix} <green>Aparición de equipo añadida para el hueco <white>{slot}/{count}</white> en tu ubicación actual.</green>"
+    all_slots_filled: "{prefix} <red>Los {count} huecos de aparición de equipo ya están ocupados.</red>"
+    set: "{prefix} <green>Aparición de equipo establecida para el equipo <white>{team}</white> en tu ubicación actual.</green>"
+    removed: "{prefix} <yellow>Aparición de equipo eliminada para el equipo <white>{team}</white>.</yellow>"
+  region:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> skywars region <set|clear></yellow>"
+    must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+    set: "{prefix} <green>Región de regeneración guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    cleared: "{prefix} <yellow>Región de regeneración borrada.</yellow>"

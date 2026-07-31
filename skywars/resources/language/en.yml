@@ -1,0 +1,206 @@
+display_name: "SkyWars"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>SkyWars</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Spawn on floating islands, loot chests, and outlast rivals.</gray>"
+  - "<gray>Work with your squad to be the last team standing.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>SkyWars</green>"
+  lore:
+    - "<gray>Start inside a glass cage above the islands.</gray>"
+    - "<gray>Loot, fight, and survive the late-game storm.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+votes:
+  labels:
+    categories:
+      chests: "Chest loot"
+      hearts: "Hearts"
+      time: "Time"
+      weather: "Weather"
+    options:
+      chests:
+        basic: "Basic"
+        normal: "Normal"
+        overpowered: "Overpowered"
+      hearts:
+        "10": "10 hearts"
+        "20": "20 hearts"
+        "30": "30 hearts"
+      time:
+        day: "Day"
+        night: "Night"
+        sunset: "Sunset"
+        sunrise: "Sunrise"
+      weather:
+        sunny: "Sunny"
+        rainy: "Rainy"
+    option_lore:
+      chests:
+        basic: "Less gear, more survival."
+        normal: "Balanced loot tables."
+        overpowered: "More diamond gear and bonuses."
+      hearts:
+        "10": "Classic SkyWars health."
+        "20": "Longer fights and more clutch plays."
+        "30": "Extra tanky battles."
+      time:
+        day: "Clear daylight visibility."
+        sunset: "Warm evening lighting."
+        night: "Dark, tense battles."
+        sunrise: "Early morning glow."
+      weather:
+        sunny: "Clear skies."
+        rainy: "Stormy atmosphere."
+  menu:
+    main:
+      title: "<aqua>SkyWars vote settings</aqua>"
+      info_name: "<yellow>Match settings</yellow>"
+      info_lore:
+        - "<gray>Vote for the match setup before it starts.</gray>"
+        - "<gray>Your votes are shared with everyone.</gray>"
+      chests_name: "<gold>Chest loot</gold>"
+      hearts_name: "<red>Hearts</red>"
+      time_name: "<yellow>Time of day</yellow>"
+      weather_name: "<blue>Weather</blue>"
+      close_name: "<red>Close</red>"
+      close_lore: "<gray>Return to the lobby.</gray>"
+    chests:
+      title: "<gold>Vote chest loot</gold>"
+    hearts:
+      title: "<red>Vote hearts</red>"
+    time:
+      title: "<yellow>Vote time</yellow>"
+    weather:
+      title: "<blue>Vote weather</blue>"
+    back_name: "<gray>Back</gray>"
+    back_lore: "<gray>Return to settings.</gray>"
+  messages:
+    broadcast: "<yellow>{player}</yellow> <gray>picked</gray> <aqua>{category}</aqua> <dark_gray>→</dark_gray> <white>{option}</white> <yellow>({votes} votes)</yellow>"
+    votes_count: "<gray>Votes:</gray> <white>{count}</white>"
+    your_vote: "<gray>Your vote:</gray> <white>{option}</white>"
+    click_to_vote: "<green>Click to vote</green>"
+    selected:
+      sources:
+        popular: "by popular vote"
+        default: "by default"
+      chests: "<gray>Selected</gray> <gold>{option}</gold> <gray>chest loot {source}.</gray>"
+      hearts: "<gray>Selected</gray> <red>{option}</red> <gray>{source}.</gray>"
+      time: "<gray>Selected</gray> <yellow>{option}</yellow> <gray>time {source}.</gray>"
+      weather: "<gray>Selected</gray> <blue>{option}</blue> <gray>weather {source}.</gray>"
+    invalid: "<red>That vote option is not available.</red>"
+    not_available: "<red>You can only vote while waiting for the game to start.</red>"
+    no_permission: "<red>You do not have permission to vote for</red> <yellow>{option}</yellow><red>.</red>"
+    cooldown: "<red>You must wait {time} seconds before voting again.</red>"
+
+stats:
+  descriptions:
+    wins: "SkyWars victories"
+    games_played: "SkyWars matches played"
+    kills: "Opponents eliminated in SkyWars"
+    chests_looted: "Looted chests in SkyWars"
+    storm_damage_taken: "Damage received from the storm in SkyWars"
+  labels:
+    kills: "Eliminations"
+    games_played: "SkyWars games played"
+    wins: "SkyWars wins"
+    chests_looted: "Chests looted"
+    storm_damage_taken: "Storm damage taken"
+
+messages:
+  eliminated: "<red>You are out! You are now a spectator.</red>"
+  out_of_bounds: "<yellow>You cannot leave the arena.</yellow>"
+  events:
+    chest_refill: "<aqua>Chests have been refilled.</aqua>"
+    storm_started: "<red>The final storm has begun.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>was eliminated by</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>outplayed</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fell to</gray> <yellow>{killer}</yellow><gray>'s attack.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>took down</gray> <red>{victim}</red><gray>.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>couldn't survive the chaos.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>was lost in the storm.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>was eliminated.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>YOU DIED</bold></red>"
+    subtitle: "<gray>Back to the lobby.</gray>"
+  classified:
+    title: "<yellow><bold>ELIMINATED</bold></yellow>"
+    subtitle: "<gray>Your squad continues without you.</gray>"
+
+scoreboard:
+  solo_team_label: "Solo"
+  event:
+    none: "None"
+    none_time: "-"
+    now: "Now"
+  storm_status:
+    safe: "<green>Safe</green>"
+    unsafe: "<red>In Storm</red>"
+  storm_phase:
+    waiting: "<gray>Waiting</gray>"
+    final: "<red>Final</red>"
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>SkyWars</aqua>"
+      - ""
+      - "<white>Team:</white> <yellow>{team}</yellow>"
+      - "<white>Teams Alive:</white> <green>{alive_teams}</green>"
+      - "<white>Players Alive:</white> <green>{alive}</green>"
+      - "<white>Your Kills:</white> <red>{kills}</red>"
+      - ""
+      - "<white>Next Event:</white> <aqua>{next_event}</aqua>"
+      - "<white>Starts In:</white> <aqua>{next_event_time}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  solo:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>SkyWars</aqua>"
+      - ""
+      - "<white>Players Alive:</white> <green>{alive}</green>"
+      - "<white>Your Kills:</white> <red>{kills}</red>"
+      - ""
+      - "<white>Next Event:</white> <aqua>{next_event}</aqua>"
+      - "<white>Starts In:</white> <aqua>{next_event_time}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  team:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> skywars team <count|size> <value></yellow>"
+    success: "{prefix} <green>Team {setting} set to {value} for {game} in arena {arena_id}.</green>"
+    invalid_limit: "{prefix} <red>Team configuration exceeds arena max players ({max_players}).</red>"
+    invalid_value: "{prefix} <red>Team {setting} must be greater than 0.</red>"
+    invalid_count: "{prefix} <red>Team count must be at least 2.</red>"
+    numeric_ids_only: "{prefix} <red>Team ID must be a number between {min} and {max}.</red>"
+  team_spawn:
+    usage_add: "{prefix} <red>Usage:</red> <yellow>/baa game <id> skywars team spawn add</yellow>"
+    usage_set: "{prefix} <red>Usage:</red> <yellow>/baa game <id> skywars team spawn set <team_id></yellow>"
+    usage_remove: "{prefix} <red>Usage:</red> <yellow>/baa game <id> skywars team spawn remove <team_id></yellow>"
+    teams_not_configured: "{prefix} <red>Team count is not configured yet. Set it first with <yellow>/baa game <id> skywars team count <n></yellow>.</red>"
+    added: "{prefix} <green>Team spawn added for slot <white>{slot}/{count}</white> at your current location.</green>"
+    all_slots_filled: "{prefix} <red>All {count} team spawn slots are already filled.</red>"
+    set: "{prefix} <green>Team spawn set for team <white>{team}</white> at your current location.</green>"
+    removed: "{prefix} <yellow>Team spawn removed for team <white>{team}</white>.</yellow>"
+  region:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> skywars region <set|clear></yellow>"
+    must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+    set: "{prefix} <green>Regeneration region saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    cleared: "{prefix} <yellow>Regeneration region cleared.</yellow>"
