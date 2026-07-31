@@ -1,0 +1,26 @@
+schema = 1
+id = "exploding_sheep"
+name = "Exploding Sheep"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Shear sheep before their visible fuse runs out - or watch the floor disappear."
+
+[replaces]
+legacyId = "exploding_sheep"
+
+[[setup.steps]]
+id = "region"
+required = true
+displayName = "Configure Region"
+description = "Configure the module-specific region setup data."
+commandExamples = ["/baa game <arena> exploding_sheep region"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "region"
+usage = "/baa game <arena> exploding_sheep region"
+description = "Configure region setup data."
+requiredHint = true

@@ -1,0 +1,75 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Ovejas explosivas Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Ovejas explosivas"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Ovejas explosivas</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Esquila ovejas antes de que termine su mecha visible.</gray>"
+  - "<gray>Cada uno cambia de color, emite humo y pita cuando se acerca</gray>"
+  - "<gray>detonación. Córtales la mecha o mira cómo desaparece el suelo.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Ovejas explosivas</green>"
+  lore:
+    - "<gray>Corta la mecha antes de que las ovejas abran agujeros en el mapa.</gray>"
+    - "<gray>Cuenta atrás visible, sin explosiones aleatorias.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Exploding Sheep victorias"
+    games_played: "Exploding Sheep partidas jugadas"
+    sheep_sheared: "Ovejas con mecha detenida"
+  labels:
+    sheep_sheared: "Ovejas esquiladas"
+    games_played: "Exploding Sheep partidas jugadas"
+    wins: "Exploding Sheep victorias"
+
+messages:
+  eliminated: "<red>¡Saliste disparado de la arena! Ahora eres espectador.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>se acercó demasiado a una bomba lanuda.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>ignoró los pitidos y pagó el precio.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>desapareció en una explosión de lana.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>dejó que el suelo cediera.</gray>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Ovejas explosivas</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{shears_1} esquiladas</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{shears_2} esquiladas</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{shears_3} esquiladas</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{shears_4} esquiladas</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{shears_5} esquiladas</dark_gray>"
+    - ""
+    - "<white>Vivos:</white> <green>{alive_total}</green>"
+    - "<white>Esquiladas:</white> <green>{sheared_sheep}</green>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Región explosiva establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero la región explosiva.</red>"
+  not_configured: "{prefix} <red>¡La región no está configurada! Usa /baa game {arena_id} exploding_sheep region set</red>"
+  usage_region: "{prefix} <yellow>Uso: /baa game <id> exploding_sheep region set</yellow>"

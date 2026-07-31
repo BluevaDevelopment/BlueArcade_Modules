@@ -1,0 +1,73 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Exploding Sheep Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "SHEARS"
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items:
+    - "SHEARS:1:0"
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"
+
+sheep:
+  spawning:
+    # How often to try spawning sheep (ticks)
+    interval_ticks: 20
+    # Desired simultaneous sheep per active player
+    per_player: 3
+    # Minimum living sheep no matter player count
+    min_sheep: 24
+    # Sheep to try spawning per tick interval
+    batch_size: 6
+    # Hard cap of living sheep per arena
+    max_sheep: 90
+    # Vertical offset from the highest block at the spawn position
+    height_offset: 1.0
+
+  fuse:
+    # Total fuse time for a sheep in seconds
+    duration_seconds: 16
+    # Color transitions as the fuse runs out
+    yellow_at_seconds: 12
+    orange_at_seconds: 8
+    red_at_seconds: 4
+    # Final warning phase (blinking + smoke + beep)
+    blink_start_seconds: 3
+    # How often to toggle blink in ticks
+    blink_interval_ticks: 4
+    # Logic tick rate for fuse updates
+    update_ticks: 5
+
+  explosion:
+    radius: 2.5
+    damage: 6.0
+    knockback: 0.65
+    smoke: true
+    clear_drops: true
+
+sounds:
+  warning: "BLOCK_NOTE_BLOCK_PLING"
+  beep: "BLOCK_NOTE_BLOCK_HAT"
+  explosion: "ENTITY_GENERIC_EXPLODE"
+  shear: "ENTITY_SHEEP_SHEAR"

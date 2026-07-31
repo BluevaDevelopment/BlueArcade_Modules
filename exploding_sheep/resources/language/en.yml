@@ -1,0 +1,76 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Exploding Sheep Module - English (UK)
+# Only Exploding Sheep-specific content
+display_name: "Exploding Sheep"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>Exploding Sheep</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Shear sheep before their visible fuse runs out.</gray>"
+  - "<gray>Each one changes colour, smokes and beeps as it nears</gray>"
+  - "<gray>detonation. Snip them or watch the floor disappear.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<green>Exploding Sheep</green>"
+  lore:
+    - "<gray>Cut the fuse before sheep blow holes in the map.</gray>"
+    - "<gray>Visible countdown, no random explosions.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+
+  descriptions:
+    wins: "Exploding Sheep wins"
+    games_played: "Exploding Sheep games played"
+    sheep_sheared: "Fuse-stopping sheep"
+  labels:
+    sheep_sheared: "Sheep sheared"
+    games_played: "Exploding Sheep games played"
+    wins: "Exploding Sheep wins"
+
+messages:
+  eliminated: "<red>You were blasted off the arena! You are now a spectator.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>stood too close to a woolly bomb.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>ignored the beeps and paid the price.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>vanished in a burst of wool.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>let the floor give way.</gray>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Game:</white> <aqua>Exploding Sheep</aqua>"
+    - "<white>Time:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{shears_1} sheared</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{shears_2} sheared</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{shears_3} sheared</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{shears_4} sheared</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{shears_5} sheared</dark_gray>"
+    - ""
+    - "<white>Alive:</white> <green>{alive_total}</green>"
+    - "<white>Sheared:</white> <green>{sheared_sheep}</green>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Explosive region set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the explosive region first.</red>"
+  not_configured: "{prefix} <red>Region is not configured! Use /baa game {arena_id} exploding_sheep region set</red>"
+  usage_region: "{prefix} <yellow>Usage: /baa game <id> exploding_sheep region set</yellow>"
