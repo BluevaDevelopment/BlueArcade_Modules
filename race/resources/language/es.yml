@@ -1,0 +1,82 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Carrera Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Carrera"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Carrera</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>¡Sé el primero en llegar a la meta!</gray>"
+  - "<gray>Evita bloques mortales y obstáculos.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Carrera</green>"
+  lore:
+    - "<gray>¡Corre hasta la meta!</gray>"
+    - "<gray>Gana el primer jugador que llegue.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  labels:
+    finish_line_crosses: "Cruces de meta"
+    games_played: "Carreras jugadas"
+    wins: "Race victorias"
+
+messages:
+  respawned: "<yellow>¡Has reaparecido!</yellow>"
+  deaths:
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>pisó un bloque mortal y fue devuelto.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>activó una casilla mortal. ¡De vuelta a la pista!</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>aprendió por qué ese bloque brilla de forma sospechosa.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>resbaló fuera del recorrido.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>falló un salto y cayó.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>dio un salto de fe... y reapareció.</gray>"
+  finish:
+    crossed:
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>cruzó la meta en</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>cruzó la meta a toda velocidad en</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>aseguró la posición</gray> <yellow>#{position}</yellow> <gray>en la meta!</gray>"
+
+titles:
+  finished:
+    title: "<bold><gradient:dark_green:green>¡TERMINADO!</gradient></bold>"
+    subtitle: "<white>Terminaste en la posición</white> <yellow>#{position}</yellow>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Carrera</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{distance_1}m</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{distance_2}m</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{distance_3}m</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{distance_4}m</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{distance_5}m</dark_gray>"
+    - ""
+    - "<aqua>Tu posición:</aqua> <white>#{race_position}</white>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Meta establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero el área de meta.</red>"
+  not_configured: "{prefix} <red>¡La meta no está configurada! Usa /baa game {arena_id} race finishline set</red>"
+  usage_finish_line: "{prefix} <yellow>Uso: /baa game <id> <minigame> finishline set</yellow>"

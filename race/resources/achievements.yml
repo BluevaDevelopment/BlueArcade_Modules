@@ -1,0 +1,376 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "race"
+  name: "Race"
+  description:
+    - "Achievements tied to Race."
+  icon: "FEATHER"
+  sort_order: 10
+
+achievements:
+  rookie_racer:
+    name: "Rookie Racer"
+    description:
+      - "Finish your first races."
+    icon: "FEATHER"
+    phases:
+      1:
+        name: "First lap"
+        description:
+          - "Play your first race."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 10"
+            - "arcadeadmin xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Getting faster"
+        description:
+          - "Play 10 races."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 10"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Seasoned driver"
+        description:
+          - "Play 25 races."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 40"
+            - "arcadeadmin xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Track veteran"
+        description:
+          - "Play 50 races."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 50"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 60"
+            - "arcadeadmin xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Pit crew legend"
+        description:
+          - "Play 100 races."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 100"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 90"
+            - "arcadeadmin xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  finish_line:
+    name: "Finish Line"
+    description:
+      - "Cross the finish line multiple times."
+    icon: "GOLD_BLOCK"
+    phases:
+      1:
+        name: "Warm-up"
+        description:
+          - "Cross the finish line 5 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 5"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 20"
+            - "arcadeadmin xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Speedster"
+        description:
+          - "Cross the finish line 25 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 40"
+            - "arcadeadmin xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      3:
+        name: "Fast finisher"
+        description:
+          - "Cross the finish line 60 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 60"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 60"
+            - "arcadeadmin xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      4:
+        name: "Rapid finisher"
+        description:
+          - "Cross the finish line 120 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 120"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 80"
+            - "arcadeadmin xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Finish line fixture"
+        description:
+          - "Cross the finish line 250 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 250"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 120"
+            - "arcadeadmin xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  victory_lane:
+    name: "Victory Lane"
+    description:
+      - "Collect race wins."
+    icon: "DIAMOND_BLOCK"
+    phases:
+      1:
+        name: "First win"
+        description:
+          - "Win 1 race."
+        conditions:
+          - "{bluearcade_stat_module_race_wins} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      2:
+        name: "Podium regular"
+        description:
+          - "Win 5 races."
+        conditions:
+          - "{bluearcade_stat_module_race_wins} >= 5"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 50"
+            - "arcadeadmin xp give {player} 50"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+50 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+50 XP</light_purple>"
+      3:
+        name: "Race winner"
+        description:
+          - "Win 12 races."
+        conditions:
+          - "{bluearcade_stat_module_race_wins} >= 12"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 70"
+            - "arcadeadmin xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Circuit champion"
+        description:
+          - "Win 25 races."
+        conditions:
+          - "{bluearcade_stat_module_race_wins} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 100"
+            - "arcadeadmin xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      5:
+        name: "Grand prix king"
+        description:
+          - "Win 40 races."
+        conditions:
+          - "{bluearcade_stat_module_race_wins} >= 40"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 150"
+            - "arcadeadmin xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+
+  lap_master:
+    name: "Lap Master"
+    description:
+      - "Build long streaks of finish line crosses."
+    icon: "REDSTONE_BLOCK"
+    phases:
+      1:
+        name: "Long run"
+        description:
+          - "Cross the finish line 50 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 50"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 45"
+            - "arcadeadmin xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      2:
+        name: "Lap legend"
+        description:
+          - "Cross the finish line 150 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 150"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 80"
+            - "arcadeadmin xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      3:
+        name: "Lap architect"
+        description:
+          - "Cross the finish line 300 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 300"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 110"
+            - "arcadeadmin xp give {player} 110"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+110 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+110 XP</light_purple>"
+      4:
+        name: "Lap titan"
+        description:
+          - "Cross the finish line 500 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 500"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 150"
+            - "arcadeadmin xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+      5:
+        name: "Lap immortal"
+        description:
+          - "Cross the finish line 800 times."
+        conditions:
+          - "{bluearcade_stat_module_race_finish_line_crosses} >= 800"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 220"
+            - "arcadeadmin xp give {player} 220"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+220 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+220 XP</light_purple>"
+
+  track_regular:
+    name: "Track Regular"
+    description:
+      - "Keep racing and reaching the finish line."
+    icon: "STONE"
+    phases:
+      1:
+        name: "On the grid"
+        description:
+          - "Play 15 races and cross the finish line 20 times."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 15 && {bluearcade_stat_module_race_finish_line_crosses} >= 20"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 35"
+            - "arcadeadmin xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      2:
+        name: "Track veteran"
+        description:
+          - "Play 40 races and cross the finish line 60 times."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 40 && {bluearcade_stat_module_race_finish_line_crosses} >= 60"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 70"
+            - "arcadeadmin xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      3:
+        name: "Track fixture"
+        description:
+          - "Play 70 races and cross the finish line 120 times."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 70 && {bluearcade_stat_module_race_finish_line_crosses} >= 120"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 100"
+            - "arcadeadmin xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      4:
+        name: "Circuit staple"
+        description:
+          - "Play 110 races and cross the finish line 200 times."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 110 && {bluearcade_stat_module_race_finish_line_crosses} >= 200"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 140"
+            - "arcadeadmin xp give {player} 140"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+140 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+140 XP</light_purple>"
+      5:
+        name: "Track legend"
+        description:
+          - "Play 160 races and cross the finish line 320 times."
+        conditions:
+          - "{bluearcade_stat_module_race_games_played} >= 160 && {bluearcade_stat_module_race_finish_line_crosses} >= 320"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 200"
+            - "arcadeadmin xp give {player} 200"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+200 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+200 XP</light_purple>"
