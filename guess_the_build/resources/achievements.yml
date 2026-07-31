@@ -1,0 +1,62 @@
+# Guess The Build Achievements
+
+categories:
+  - id: "guess_the_build"
+    name: "Guess The Build"
+    description: "Achievements for Guess The Build"
+    icon: "CRAFTING_TABLE"
+
+trees:
+  veteran:
+    name: "Veteran"
+    description: "Play {target} games of Guess The Build."
+    category: "guess_the_build"
+    icon: "PAPER"
+    stat: "games_played"
+    levels:
+      - target: 10
+        reward: 100
+      - target: 50
+        reward: 500
+      - target: 100
+        reward: 1000
+      - target: 500
+        reward: 5000
+      - target: 1000
+        reward: 10000
+
+  point_collector:
+    name: "Point Collector"
+    description: "Earn {target} total points in Guess The Build."
+    category: "guess_the_build"
+    icon: "GOLD_INGOT"
+    stat: "points_total"
+    levels:
+      - target: 100
+        reward: 100
+      - target: 500
+        reward: 500
+      - target: 1000
+        reward: 1000
+      - target: 5000
+        reward: 5000
+      - target: 10000
+        reward: 10000
+
+  winner_path:
+    name: "Winner's Path"
+    description: "Win {target} games of Guess The Build."
+    category: "guess_the_build"
+    icon: "TROPHY"
+    stat: "wins"
+    levels:
+      - target: 5
+        reward: 250
+      - target: 25
+        reward: 1250
+      - target: 50
+        reward: 2500
+      - target: 100
+        reward: 5000
+      - target: 250
+        reward: 12500

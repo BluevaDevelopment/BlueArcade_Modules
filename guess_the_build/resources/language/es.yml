@@ -1,0 +1,123 @@
+# Adivina la construcción Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Adivina la construcción"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Juego</aqua> <gray>-</gray> <light_purple><bold>Adivina la construcción</bold></light_purple>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Un jugador construye mientras los demás adivinan el tema.</gray>"
+  - "<gray>Rota constructores y compite por conseguir más puntos.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+setup_messages:
+  plot:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> guess_the_build plot <set|spawn></yellow>"
+    set:
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      too_shallow: "{prefix} <red>La parcela es demasiado baja. La selección debe tener al menos 3 bloques de altura (1 de suelo + 2 de aire).</red>"
+      no_floor: "{prefix} <red>No se detectó suelo. La capa más baja de la selección debe contener bloques.</red>"
+      too_many_floor_layers: "{prefix} <red>Se detectaron demasiadas capas de suelo. El suelo debe tener 1-2 capas de bloques. Elimina los bloques sobrantes sobre el suelo.</red>"
+      success: "{prefix} <green>Parcela establecida.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+      spawn_set: "{prefix} <gray>Aparición de la parcela establecida en tu ubicación actual. Puedes cambiarla cuando quieras con</gray> <yellow>/baa game <id> guess_the_build plot spawn</yellow>"
+    spawn:
+      set: "{prefix} <green>Aparición de la parcela actualizada a tu ubicación actual.</green>"
+
+game:
+  round_start: "<yellow>Ronda <white>{round}</white></yellow>"
+  theme_being_selected:
+    title: "<bold><gradient:aqua:light_purple>Adivina la construcción</gradient></bold>"
+    subtitle: "<gray>El tema se está seleccionando...</gray>"
+  theme_selected_broadcast: "<green>¡El tema ha sido elegido! ¡Empieza a adivinar!</green>"
+  character_count: "<aqua>Hint:</aqua> <white>El tema tiene <yellow>{count}</yellow> caracteres.</white>"
+  action_bar:
+    guessing: "<aqua>Tema:</aqua> <white>{hint}</white> <dark_gray>•</dark_gray> <aqua>Tiempo:</aqua> <yellow>{time}</yellow>"
+    guessed: "<aqua>Tema:</aqua> <green>{theme}</green> <dark_gray>•</dark_gray> <aqua>Estado:</aqua> <green>¡Adivinado!</green>"
+    builder: "<aqua>Estás construyendo:</aqua> <green>{theme}</green> <dark_gray>•</dark_gray> <aqua>Tiempo:</aqua> <yellow>{time}</yellow>"
+  correct_guess_broadcast: "<green><bold>✔</bold></green> <yellow>{player}</yellow> <gray>¡adivinó el tema!</gray>"
+  correct_guess_points: "<green>+<yellow>{points}</yellow> puntos!</green>"
+  builder_got_points: "<green>+<yellow>{points}</yellow> puntos</green> <gray>porque alguien adivinó tu tema!</gray>"
+  theme_reveal_timeout: "<red><bold>¡SE ACABÓ EL TIEMPO!</bold></red> <gray>El tema era:</gray> <yellow>{theme}</yellow>"
+  theme_reveal_timeout_title: "<bold><gradient:red:dark_red>SE ACABÓ EL TIEMPO</gradient></bold>"
+  theme_reveal_timeout_subtitle: "<gray>El tema era:</gray> <yellow>{theme}</yellow>"
+  all_guessed: "<green><bold>✔</bold></green> <gray>¡Todos lo adivinaron! El tema era:</gray> <yellow>{theme}</yellow>"
+  cant_talk_builder: "<red>¡Los constructores no pueden hablar durante esta fase!</red>"
+  cant_talk_guessed: "<red>¡Ya has adivinado el tema!</red>"
+
+build:
+  time_remaining: "<gray>Tiempo restante:</gray> <aqua>{time}</aqua> <gray>segundos</gray>"
+
+theme_selection:
+  menu:
+    title: "<bold><gradient:aqua:light_purple>Selecciona un tema</gradient></bold>"
+  easy: "<green>Fácil <dark_gray>—</dark_gray> {theme}</green>"
+  medium: "<yellow>Medio <dark_gray>—</dark_gray> {theme}</yellow>"
+  hard: "<red>Difícil <dark_gray>—</dark_gray> {theme}</red>"
+  points_lore: "<gray>Recompensa: <yellow>{points}</yellow> pts</gray>"
+
+titles:
+  winner:
+    title: "<bold><gradient:aqua:light_purple>GANADOR</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+messages:
+  result_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough><reset>"
+    - " "
+    - "  <aqua><bold>Blue <light_purple><bold>Arcade <gray>-</gray> <yellow>Fin de la partida <gray>-</gray> <green>Resultados:</green>"
+    - " "
+    - "     <green>➊ <bold>{place_1}</green> <gray>({score_1} pts)</gray>"
+    - "     <gold>➋ <bold>{place_2}</gold> <gray>({score_2} pts)</gray>"
+    - "     <red>➌ <bold>{place_3}</red> <gray>({score_3} pts)</gray>"
+    - " "
+    - "  <light_purple>Has quedado:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough><reset>"
+  out_of_bounds: "<aqua>No puedes salir de la arena.</aqua>"
+
+stats:
+  descriptions:
+    wins: "Victorias en Adivina la construcción"
+    games_played: "Partidas jugadas en Adivina la construcción"
+    points_total: "Puntos totales conseguidos en Adivina la construcción"
+    points_highest: "Puntuación más alta en una partida de Adivina la construcción"
+  labels:
+    wins: "Victorias en Adivina la construcción"
+    games_played: "Partidas jugadas en Adivina la construcción"
+    points_total: "Puntos de construcción totales"
+    points_highest: "Mayor puntuación de construcción"
+
+scoreboard:
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Adivina la construcción</aqua>"
+      - ""
+      - "<white>Ronda:</white> <yellow>{round}</yellow>"
+      - "<white>Fase:</white> <light_purple>{phase}</light_purple>"
+      - "<white>Constructor:</white> <aqua>{builder}</aqua>"
+      - "<white>Tiempo Left:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    winner:
+      title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Arena:</white> <aqua>{arena}</aqua>"
+        - "<white>Jugadores:</white> <aqua>{players}</aqua>"
+        - ""
+        - "<green>➊</green> <white>{place_1}</white> <gray>({score_1} pts)</gray>"
+        - "<gold>➋</gold> <white>{place_2}</white> <gray>({score_2} pts)</gray>"
+        - "<red>➌</red> <white>{place_3}</white> <gray>({score_3} pts)</gray>"
+        - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>({score_4} pts)</dark_gray>"
+        - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>({score_5} pts)</dark_gray>"
+        - ""
+        - "<light_purple>Has quedado:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"

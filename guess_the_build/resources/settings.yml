@@ -1,0 +1,97 @@
+# Guess The Build Module Settings
+
+# Visual representation in core vote menu
+menus:
+  vote:
+    item: "CRAFTING_TABLE"
+
+# Themes for Guess The Build.
+# Each entry can have multiple synonymous names separated by commas.
+# The first name is the primary display name.
+themes:
+  easy:
+    - "Apple"
+    - "Sun"
+    - "Bread"
+    - "Book"
+    - "Dollar, Money, Bill"
+    - "Cloud"
+    - "Tree"
+    - "House, Home, Abode"
+    - "Car, Automobile, Vehicle"
+    - "Ball, Sphere"
+    - "Chair, Seat"
+    - "Lamp, Light"
+    - "River, Stream"
+    - "Mountain, Peak, Summit"
+    - "Flower, Bloom"
+    - "Boat, Ship"
+    - "Hat, Cap"
+    - "Shoe, Footwear"
+    - "Door, Gateway"
+    - "Window, Pane"
+  medium:
+    - "School Bus"
+    - "Horse, Steed, Pony"
+    - "Fountain"
+    - "Sumo"
+    - "Bicycle, Bike"
+    - "Lighthouse"
+    - "Pyramid"
+    - "Robot, Android, Golem"
+    - "Spaceship, Rocket"
+    - "Guitar, Instrument"
+    - "Volcano, Mount Vesuvius"
+    - "Castle, Fortress, Mansion"
+    - "Bridge, Overpass, Viaduct"
+    - "Windmill, Mill"
+    - "Octopus, Cephalopod"
+    - "Hot Air Balloon, Airship"
+    - "Train, Locomotive"
+    - "Carousel, Merry-go-round"
+    - "Chess Piece, Knight, Rook"
+    - "Telescope, Spyglass"
+  hard:
+    - "Soccer, Football"
+    - "Birthday Cake, Celebration Cake"
+    - "Typewriter"
+    - "Solar System, Galaxy, Cosmos"
+    - "Eiffel Tower, Landmark"
+    - "Dragon, Wyrm, Beast"
+    - "Submarine, U-boat"
+    - "Grandfather Clock, Timepiece"
+    - "Rollercoaster, Amusement Ride"
+    - "DNA, Helix"
+    - "Globe, World Map, Earth"
+    - "Opera House, Concert Hall"
+    - "Satellite, Orbiter"
+    - "Microscope, Magnifying Glass"
+    - "Labyrinth, Maze"
+    - "Golden Gate Bridge, Suspension Bridge"
+    - "The Sphinx, Monument"
+    - "Chandelier, Candelabra"
+    - "Pirate Ship, Galleon, Brig"
+    - "Globe Theater, Amphitheater"
+
+points:
+  difficulty_base:
+    easy: 1
+    medium: 2
+    hard: 3
+  guesser_speed_bonus:
+    1: 5
+    2: 3
+    3: 2
+    4: 1
+  builder_per_guess: 1
+
+timers:
+  theme_selection_seconds: 15
+  round_delay_seconds: 5
+  guess_time_reduction_seconds: 10
+  hint_reveal_interval_seconds: 10
+  hint_reveal_start_seconds: 70
+  character_count_broadcast_seconds: 90
+  min_remaining_time_after_guess: 15
+
+rounds_per_plot: 1

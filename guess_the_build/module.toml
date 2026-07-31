@@ -1,0 +1,27 @@
+schema = 1
+id = "guess_the_build"
+name = "Guess The Build"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "One player builds a secret theme while others guess it in chat. Rotate builders and compete for the most points!"
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "guess_the_build"
+
+[[setup.steps]]
+id = "plot"
+required = true
+displayName = "Configure Plot"
+description = "Configure the module-specific plot setup data."
+commandExamples = ["/baa game <arena> guess_the_build plot"]
+expectedInput = "plot region and spawn"
+
+[[setup.commands]]
+name = "plot"
+usage = "/baa game <arena> guess_the_build plot"
+description = "Configure plot setup data."
+requiredHint = true

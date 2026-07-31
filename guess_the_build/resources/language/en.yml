@@ -1,0 +1,121 @@
+# Guess The Build Module Language
+display_name: "Guess The Build"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Game</aqua> <gray>-</gray> <light_purple><bold>Guess The Build</bold></light_purple>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>One player builds while others guess the theme.</gray>"
+  - "<gray>Rotate builders and compete for the most points!</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+setup_messages:
+  plot:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> guess_the_build plot <set|spawn></yellow>"
+    set:
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      too_shallow: "{prefix} <red>Plot is too shallow. The selection must be at least 3 blocks high (1 floor + 2 air).</red>"
+      no_floor: "{prefix} <red>No floor detected. The lowest layer of the selection must contain blocks.</red>"
+      too_many_floor_layers: "{prefix} <red>Too many floor layers detected. The floor must be 1-2 block layers thick. Clear excess blocks above the floor.</red>"
+      success: "{prefix} <green>Plot set.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+      spawn_set: "{prefix} <gray>Plot spawn set to your current location. You can change it anytime with</gray> <yellow>/baa game <id> guess_the_build plot spawn</yellow>"
+    spawn:
+      set: "{prefix} <green>Plot spawn updated to your current location.</green>"
+
+game:
+  round_start: "<yellow>Round <white>{round}</white></yellow>"
+  theme_being_selected:
+    title: "<bold><gradient:aqua:light_purple>Guess The Build</gradient></bold>"
+    subtitle: "<gray>The theme is being selected...</gray>"
+  theme_selected_broadcast: "<green>The theme has been chosen! Start guessing!</green>"
+  character_count: "<aqua>Hint:</aqua> <white>The theme has <yellow>{count}</yellow> characters.</white>"
+  action_bar:
+    guessing: "<aqua>Theme:</aqua> <white>{hint}</white> <dark_gray>•</dark_gray> <aqua>Time:</aqua> <yellow>{time}</yellow>"
+    guessed: "<aqua>Theme:</aqua> <green>{theme}</green> <dark_gray>•</dark_gray> <aqua>Status:</aqua> <green>Guessed!</green>"
+    builder: "<aqua>You are building:</aqua> <green>{theme}</green> <dark_gray>•</dark_gray> <aqua>Time:</aqua> <yellow>{time}</yellow>"
+  correct_guess_broadcast: "<green><bold>✔</bold></green> <yellow>{player}</yellow> <gray>guessed the theme!</gray>"
+  correct_guess_points: "<green>+<yellow>{points}</yellow> points!</green>"
+  builder_got_points: "<green>+<yellow>{points}</yellow> points</green> <gray>because someone guessed your theme!</gray>"
+  theme_reveal_timeout: "<red><bold>TIME'S UP!</bold></red> <gray>The theme was:</gray> <yellow>{theme}</yellow>"
+  theme_reveal_timeout_title: "<bold><gradient:red:dark_red>TIME'S UP</gradient></bold>"
+  theme_reveal_timeout_subtitle: "<gray>The theme was:</gray> <yellow>{theme}</yellow>"
+  all_guessed: "<green><bold>✔</bold></green> <gray>Everyone guessed! The theme was:</gray> <yellow>{theme}</yellow>"
+  cant_talk_builder: "<red>Builders cannot talk during this phase!</red>"
+  cant_talk_guessed: "<red>You already guessed the theme!</red>"
+
+build:
+  time_remaining: "<gray>Time remaining:</gray> <aqua>{time}</aqua> <gray>seconds</gray>"
+
+theme_selection:
+  menu:
+    title: "<bold><gradient:aqua:light_purple>Select a Theme</gradient></bold>"
+  easy: "<green>Easy <dark_gray>—</dark_gray> {theme}</green>"
+  medium: "<yellow>Medium <dark_gray>—</dark_gray> {theme}</yellow>"
+  hard: "<red>Hard <dark_gray>—</dark_gray> {theme}</red>"
+  points_lore: "<gray>Reward: <yellow>{points}</yellow> pts</gray>"
+
+titles:
+  winner:
+    title: "<bold><gradient:aqua:light_purple>WINNER</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+messages:
+  result_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough><reset>"
+    - " "
+    - "  <aqua><bold>Blue <light_purple><bold>Arcade <gray>-</gray> <yellow>End of Game <gray>-</gray> <green>Results:</green>"
+    - " "
+    - "     <green>➊ <bold>{place_1}</green> <gray>({score_1} pts)</gray>"
+    - "     <gold>➋ <bold>{place_2}</gold> <gray>({score_2} pts)</gray>"
+    - "     <red>➌ <bold>{place_3}</red> <gray>({score_3} pts)</gray>"
+    - " "
+    - "  <light_purple>You placed:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough><reset>"
+  out_of_bounds: "<aqua>You cannot leave the arena.</aqua>"
+
+stats:
+  descriptions:
+    wins: "Guess The Build victories"
+    games_played: "Guess The Build matches played"
+    points_total: "Total points earned in Guess The Build"
+    points_highest: "Highest point score in a single Guess The Build match"
+  labels:
+    wins: "Guess The Build wins"
+    games_played: "Guess The Build games played"
+    points_total: "Total build points"
+    points_highest: "Highest build score"
+
+scoreboard:
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Guess The Build</aqua>"
+      - ""
+      - "<white>Round:</white> <yellow>{round}</yellow>"
+      - "<white>Phase:</white> <light_purple>{phase}</light_purple>"
+      - "<white>Builder:</white> <aqua>{builder}</aqua>"
+      - "<white>Time Left:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    winner:
+      title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Arena:</white> <aqua>{arena}</aqua>"
+        - "<white>Players:</white> <aqua>{players}</aqua>"
+        - ""
+        - "<green>➊</green> <white>{place_1}</white> <gray>({score_1} pts)</gray>"
+        - "<gold>➋</gold> <white>{place_2}</white> <gray>({score_2} pts)</gray>"
+        - "<red>➌</red> <white>{place_3}</white> <gray>({score_3} pts)</gray>"
+        - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>({score_4} pts)</dark_gray>"
+        - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>({score_5} pts)</dark_gray>"
+        - ""
+        - "<light_purple>You placed:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
