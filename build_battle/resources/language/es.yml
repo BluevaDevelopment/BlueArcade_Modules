@@ -1,0 +1,187 @@
+display_name: "Build Battle"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Juego</aqua> <gray>-</gray> <light_purple><bold>Build Battle</bold></light_purple>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Vota por un tema, construye tu creación,</gray>"
+  - "<gray>y después vota las construcciones de los demás.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<light_purple>Build Battle</light_purple>"
+  lore:
+    - "<gray>Vota un tema y empieza a construir.</gray>"
+    - "<gray>Puntúa las creaciones de otros jugadores.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+votes:
+  messages:
+    broadcast: "<aqua>{player}</aqua> <gray>votó por</gray> <light_purple>{theme}</light_purple> <white>({votes} votos)</white>"
+    selected:
+      sources:
+        popular: "por votación popular"
+        default: "aleatoriamente"
+      theme: "<gray>Tema seleccionado:</gray> <light_purple>{theme}</light_purple> <gray>{source}.</gray>"
+    invalid: "<red>Ese tema no está disponible.</red>"
+    not_available: "<red>Solo puedes votar mientras esperas a que empiece la partida.</red>"
+    no_permission: "<red>No tienes permiso para votar por</red> <yellow>{theme}</yellow><red>.</red>"
+    cooldown: "<red>Debes esperar {time} segundos para volver a votar.</red>"
+
+build:
+  theme_broadcast: "<gray>El tema es:</gray> <light_purple><bold>{theme}</bold></light_purple>"
+  time_remaining: "<gray>Tiempo restante:</gray> <aqua>{time}</aqua> <gray>segundos</gray>"
+  build_ended: "<light_purple><bold>¡El tiempo de construcción terminó!</bold></light_purple> <gray>Prepárate para votar.</gray>"
+
+plot_voting:
+  header: "<gray>¡Votando ahora la construcción de</gray> <aqua>{player}</aqua><gray>!</gray>"
+  self_voting_disabled: "<red>No puedes votar tu propia construcción.</red>"
+  vote_cast: "<gray>Has puntuado esta construcción</gray> <light_purple>{rating_name}</light_purple><gray>.</gray>"
+  next_plot: "<gray>Pasando a la siguiente construcción...</gray>"
+  voting_ended: "<light_purple><bold>¡La votación ha terminado!</bold></light_purple> <gray>Calculando resultados...</gray>"
+
+messages:
+  result_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</dark_gray><reset>"
+    - " "
+    - "  <aqua><bold>Blue <light_purple><bold>Arcade <gray>-</gray> <yellow>Fin de la partida <gray>-</gray> <green>Resultados:</green>"
+    - " "
+    - "     <green>➊ <bold>{place_1}</green> <gray>({score_1} pts)</gray>"
+    - "     <gold>➋ <bold>{place_2}</gold> <gray>({score_2} pts)</gray>"
+    - "     <red>➌ <bold>{place_3}</red> <gray>({score_3} pts)</gray>"
+    - " "
+    - "  <light_purple>Has quedado:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</dark_gray><reset>"
+  out_of_bounds: "<aqua>No puedes salir de la arena.</aqua>"
+
+stats:
+  descriptions:
+    wins: "Build Battle victorias"
+    games_played: "Build Battle partidas jugadas"
+    points_total: "Puntos totales conseguidos en Build Battle"
+    points_highest: "Puntuación más alta en una partida de Build Battle"
+  labels:
+    wins: "Build Battle victorias"
+    games_played: "Build Battle partidas jugadas"
+    points_total: "Puntos de construcción totales"
+    points_highest: "Mayor puntuación de construcción"
+
+titles:
+  theme_reveal:
+    title: "<bold><gradient:aqua:dark_aqua>Build Battle</gradient></bold>"
+    subtitle: "<light_purple><bold>{theme}</bold></light_purple>"
+  build_ended:
+    title: "<bold><gradient:red:dark_red>SE ACABÓ EL TIEMPO</gradient></bold>"
+    subtitle: "<gray>¡Deja de construir!</gray>"
+  voting_started:
+    title: "<bold><gradient:aqua:dark_aqua>TIEMPO DE VOTAR</gradient></bold>"
+    subtitle: "<gray>Puntúa cada construcción</gray>"
+  winner:
+    title: "<bold><gradient:aqua:light_purple>GANADOR</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+scoreboard:
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Build Battle</aqua>"
+      - ""
+      - "<white>Tema:</white> <yellow>{theme}</yellow>"
+      - "<white>Tiempo Left:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  voting:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Build Battle</aqua>"
+      - ""
+      - "<white>Votación:</white> <yellow>{current}/{total}</yellow>"
+      - "<white>Constructor:</white> <green>{builder}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    winner:
+      title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Arena:</white> <aqua>{arena}</aqua>"
+        - "<white>Jugadores:</white> <aqua>{players}</aqua>"
+        - ""
+        - "<green>➊</green> <white>{place_1}</white> <gray>({score_1} pts)</gray>"
+        - "<gold>➋</gold> <white>{place_2}</white> <gray>({score_2} pts)</gray>"
+        - "<red>➌</red> <white>{place_3}</white> <gray>({score_3} pts)</gray>"
+        - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>({score_4} pts)</dark_gray>"
+        - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>({score_5} pts)</dark_gray>"
+        - ""
+        - "<light_purple>Has quedado:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+
+options:
+  item:
+    name: "<light_purple><bold>Opciones</bold> <gray>(Clic derecho)</gray>"
+    lore:
+      - "<gray>Clic derecho para abrir las opciones de construcción</gray>"
+  menu:
+    title: "<bold><gradient:aqua:light_purple>Opciones de construcción</gradient></bold>"
+  time:
+    title: "<aqua>Cambiar hora</aqua>"
+  weather:
+    title: "<aqua>Cambiar clima</aqua>"
+  biome:
+    title: "<light_purple>Seleccionar bioma</light_purple>"
+  banner:
+    color_title: "<light_purple>Color del estandarte</light_purple>"
+    layer_title: "<light_purple>Patrón del estandarte</light_purple>"
+    layer_color_title: "<light_purple>Color del patrón</light_purple>"
+    back: "<gray>Volver</gray>"
+    create: "<light_purple>Crear estandarte</light_purple>"
+    final_name: "<light_purple>Estandarte personalizado</light_purple>"
+  particle:
+    title: "<light_purple>Partículas</light_purple>"
+    added: "<green>¡Partícula colocada!</green>"
+    removed: "<red>Partícula eliminada.</red>"
+    limit_reached: "<red>Se alcanzó el límite de partículas de la parcela.</red>"
+  heads:
+    title: "<light_purple>Jugador Heads</light_purple>"
+    category_title: "<light_purple>{category}</light_purple>"
+    search_title: "<light_purple>Resultados de búsqueda</light_purple>"
+  messages:
+    time_changed: "<green>¡Hora actualizada para tu parcela!</green>"
+    weather_changed: "<green>¡Clima actualizado para tu parcela!</green>"
+    floor_mode_entered: "<light_purple>¡Modo de cambio de suelo activo!</light_purple> <gray>Coloca un bloque para definirlo como el nuevo suelo.</gray>"
+    floor_changed: "<green>¡Material del suelo actualizado!</green>"
+    floor_invalid: "<red>Ese material no puede usarse como suelo.</red>"
+    plot_reset: "<green>¡Tu parcela se ha reiniciado!</green>"
+    biome_changed: "<green>¡Bioma actualizado para tu parcela!</green>"
+    banner_created: "<aqua>¡Estandarte añadido a tu inventario!</aqua>"
+
+setup_messages:
+  plot:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> build_battle plot <add|set|remove|spawn></yellow>"
+    invalid_id: "{prefix} <red>ID de parcela no válido.</red>"
+    not_found: "{prefix} <red>Esa parcela no existe.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      too_shallow: "{prefix} <red>La parcela es demasiado baja. La selección debe tener al menos 3 bloques de altura (1 de suelo + 2 de aire).</red>"
+      no_floor: "{prefix} <red>No se detectó suelo. La capa más baja de la selección debe contener bloques.</red>"
+      too_many_floor_layers: "{prefix} <red>Se detectaron demasiadas capas de suelo. El suelo debe tener 1-2 capas de bloques. Elimina los bloques sobrantes sobre el suelo.</red>"
+      set: "{prefix} <green>Región de la parcela {index} guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+      spawn_set: "{prefix} <gray>Aparición de la parcela establecida en tu ubicación actual. Puedes cambiarla cuando quieras con</gray> <yellow>/baa game <id> build_battle plot spawn set {index}</yellow>"
+    set:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> build_battle plot set <plot_id></yellow>"
+      success: "{prefix} <green>Región de la parcela {index} actualizada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+    remove:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> build_battle plot remove <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} has been eliminado.</green>"
+    spawn:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> build_battle plot spawn set <plot_id></yellow>"
+      set: "{prefix} <green>Aparición de la parcela {index} actualizada a tu ubicación actual.</green>"

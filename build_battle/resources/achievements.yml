@@ -1,0 +1,224 @@
+category:
+  id: "build_battle"
+  name: "Build Battle"
+  description:
+    - "Achievements tied to Build Battle."
+  icon: "CRAFTING_TABLE"
+  sort_order: 30
+
+achievements:
+  veteran:
+    name: "Builder"
+    description:
+      - "Play Build Battle matches."
+    icon: "CRAFTING_TABLE"
+    phases:
+      1:
+        name: "First Draft"
+        description:
+          - "Play 1 match."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Apprentice"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Architect"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Master Builder"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Build Battle Legend"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  point_collector:
+    name: "Point Collector"
+    description:
+      - "Earn points in Build Battle."
+    icon: "NETHER_STAR"
+    phases:
+      1:
+        name: "Getting Noticed"
+        description:
+          - "Earn 50 total points."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_points_total} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Crowd Pleaser"
+        description:
+          - "Earn 200 total points."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_points_total} >= 200"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Point Hoarder"
+        description:
+          - "Earn 500 total points."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_points_total} >= 500"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Score Master"
+        description:
+          - "Earn 1000 total points."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_points_total} >= 1000"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+      5:
+        name: "Point Legend"
+        description:
+          - "Earn 2500 total points."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_points_total} >= 2500"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  winner_path:
+    name: "Winner Path"
+    description:
+      - "Win Build Battle matches."
+    icon: "GOLD_BLOCK"
+    phases:
+      1:
+        name: "First Win"
+        description:
+          - "Win 1 match."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_wins} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Rising Star"
+        description:
+          - "Win 5 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_wins} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Champion"
+        description:
+          - "Win 15 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_wins} >= 15"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Build Battle King"
+        description:
+          - "Win 30 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_wins} >= 30"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Build Battle God"
+        description:
+          - "Win 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_build_battle_wins} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"

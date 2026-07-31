@@ -1,0 +1,88 @@
+# Build Battle Module Settings
+
+menus:
+  vote:
+    item: "CRAFTING_TABLE"
+
+waiting_items:
+  vote_theme:
+    enabled: true
+    material: "PAPER"
+    slot: 1
+    display_name: "<aqua>Vote Theme</aqua>"
+    lore:
+      - "<gray>Vote for the build theme.</gray>"
+
+votes:
+  defaults:
+    theme: "random"
+  cooldown_seconds: 5
+
+themes:
+  - "Castle"
+  - "House"
+  - "Dragon"
+  - "Tree"
+  - "Car"
+  - "Robot"
+  - "Pizza"
+  - "Spaceship"
+  - "Underwater"
+  - "Mountain"
+
+voting:
+  plot_display_seconds: 10
+  default_vote_points: 3
+
+particles:
+  limit: 25
+
+vote_items:
+  super_poop:
+    enabled: true
+    material: "RED_TERRACOTTA"
+    slot: 0
+    display_name: "<dark_red><bold>SUPER POOP</bold></dark_red>"
+    lore:
+      - "<gray>Worst build ever.</gray>"
+    points: 1
+  poop:
+    enabled: true
+    material: "PINK_TERRACOTTA"
+    slot: 1
+    display_name: "<red><bold>POOP</bold></red>"
+    lore:
+      - "<gray>Not great.</gray>"
+    points: 2
+  ok:
+    enabled: true
+    material: "LIME_TERRACOTTA"
+    slot: 2
+    display_name: "<green><bold>OK</bold></green>"
+    lore:
+      - "<gray>It's okay.</gray>"
+    points: 3
+  good:
+    enabled: true
+    material: "GREEN_TERRACOTTA"
+    slot: 3
+    display_name: "<dark_green><bold>GOOD</bold></dark_green>"
+    lore:
+      - "<gray>Nice build!</gray>"
+    points: 4
+  awesome:
+    enabled: true
+    material: "BLUE_TERRACOTTA"
+    slot: 4
+    display_name: "<blue><bold>AWESOME</bold></blue>"
+    lore:
+      - "<gray>Amazing work!</gray>"
+    points: 5
+  god:
+    enabled: true
+    material: "YELLOW_TERRACOTTA"
+    slot: 5
+    display_name: "<gold><bold>GOD</bold></gold>"
+    lore:
+      - "<gray>Absolute perfection!</gray>"
+    points: 6

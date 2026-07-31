@@ -1,0 +1,187 @@
+display_name: "Build Battle"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Game</aqua> <gray>-</gray> <light_purple><bold>Build Battle</bold></light_purple>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Vote for a theme, build your creation,</gray>"
+  - "<gray>then vote on everyone else's builds.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<light_purple>Build Battle</light_purple>"
+  lore:
+    - "<gray>Vote for a theme and start building.</gray>"
+    - "<gray>Rate other players' creations.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+votes:
+  messages:
+    broadcast: "<aqua>{player}</aqua> <gray>voted for</gray> <light_purple>{theme}</light_purple> <white>({votes} votes)</white>"
+    selected:
+      sources:
+        popular: "by popular vote"
+        default: "randomly"
+      theme: "<gray>Selected theme:</gray> <light_purple>{theme}</light_purple> <gray>{source}.</gray>"
+    invalid: "<red>That theme is not available.</red>"
+    not_available: "<red>You can only vote while waiting for the game to start.</red>"
+    no_permission: "<red>You do not have permission to vote for</red> <yellow>{theme}</yellow><red>.</red>"
+    cooldown: "<red>You must wait {time} seconds before voting again.</red>"
+
+build:
+  theme_broadcast: "<gray>The theme is:</gray> <light_purple><bold>{theme}</bold></light_purple>"
+  time_remaining: "<gray>Time remaining:</gray> <aqua>{time}</aqua> <gray>seconds</gray>"
+  build_ended: "<light_purple><bold>Building time is over!</bold></light_purple> <gray>Prepare to vote.</gray>"
+
+plot_voting:
+  header: "<gray>Now voting on</gray> <aqua>{player}</aqua><gray>'s build!</gray>"
+  self_voting_disabled: "<red>You cannot vote on your own build.</red>"
+  vote_cast: "<gray>You rated this build</gray> <light_purple>{rating_name}</light_purple><gray>.</gray>"
+  next_plot: "<gray>Moving to the next build...</gray>"
+  voting_ended: "<light_purple><bold>Voting has ended!</bold></light_purple> <gray>Calculating results...</gray>"
+
+messages:
+  result_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</dark_gray><reset>"
+    - " "
+    - "  <aqua><bold>Blue <light_purple><bold>Arcade <gray>-</gray> <yellow>End of Game <gray>-</gray> <green>Results:</green>"
+    - " "
+    - "     <green>➊ <bold>{place_1}</green> <gray>({score_1} pts)</gray>"
+    - "     <gold>➋ <bold>{place_2}</gold> <gray>({score_2} pts)</gray>"
+    - "     <red>➌ <bold>{place_3}</red> <gray>({score_3} pts)</gray>"
+    - " "
+    - "  <light_purple>You placed:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</dark_gray><reset>"
+  out_of_bounds: "<aqua>You cannot leave the arena.</aqua>"
+
+stats:
+  descriptions:
+    wins: "Build Battle victories"
+    games_played: "Build Battle matches played"
+    points_total: "Total points earned in Build Battle"
+    points_highest: "Highest point score in a single Build Battle match"
+  labels:
+    wins: "Build Battle wins"
+    games_played: "Build Battle games played"
+    points_total: "Total build points"
+    points_highest: "Highest build score"
+
+titles:
+  theme_reveal:
+    title: "<bold><gradient:aqua:dark_aqua>Build Battle</gradient></bold>"
+    subtitle: "<light_purple><bold>{theme}</bold></light_purple>"
+  build_ended:
+    title: "<bold><gradient:red:dark_red>TIME'S UP</gradient></bold>"
+    subtitle: "<gray>Stop building!</gray>"
+  voting_started:
+    title: "<bold><gradient:aqua:dark_aqua>VOTING TIME</gradient></bold>"
+    subtitle: "<gray>Rate each build</gray>"
+  winner:
+    title: "<bold><gradient:aqua:light_purple>WINNER</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+scoreboard:
+  default:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Build Battle</aqua>"
+      - ""
+      - "<white>Theme:</white> <yellow>{theme}</yellow>"
+      - "<white>Time Left:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  voting:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Build Battle</aqua>"
+      - ""
+      - "<white>Voting:</white> <yellow>{current}/{total}</yellow>"
+      - "<white>Builder:</white> <green>{builder}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    winner:
+      title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Arena:</white> <aqua>{arena}</aqua>"
+        - "<white>Players:</white> <aqua>{players}</aqua>"
+        - ""
+        - "<green>➊</green> <white>{place_1}</white> <gray>({score_1} pts)</gray>"
+        - "<gold>➋</gold> <white>{place_2}</white> <gray>({score_2} pts)</gray>"
+        - "<red>➌</red> <white>{place_3}</white> <gray>({score_3} pts)</gray>"
+        - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>({score_4} pts)</dark_gray>"
+        - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>({score_5} pts)</dark_gray>"
+        - ""
+        - "<light_purple>You placed:</light_purple> <white>{player_position}</white> <gray>({player_score} pts)</gray>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+
+options:
+  item:
+    name: "<light_purple><bold>Options</bold> <gray>(Right Click)</gray>"
+    lore:
+      - "<gray>Right-click to open build options</gray>"
+  menu:
+    title: "<bold><gradient:aqua:light_purple>Build Options</gradient></bold>"
+  time:
+    title: "<aqua>Change Time</aqua>"
+  weather:
+    title: "<aqua>Change Weather</aqua>"
+  biome:
+    title: "<light_purple>Select Biome</light_purple>"
+  banner:
+    color_title: "<light_purple>Banner Color</light_purple>"
+    layer_title: "<light_purple>Banner Pattern</light_purple>"
+    layer_color_title: "<light_purple>Pattern Color</light_purple>"
+    back: "<gray>Back</gray>"
+    create: "<light_purple>Create Banner</light_purple>"
+    final_name: "<light_purple>Custom Banner</light_purple>"
+  particle:
+    title: "<light_purple>Particles</light_purple>"
+    added: "<green>Particle placed!</green>"
+    removed: "<red>Particle removed.</red>"
+    limit_reached: "<red>Plot particle limit reached.</red>"
+  heads:
+    title: "<light_purple>Player Heads</light_purple>"
+    category_title: "<light_purple>{category}</light_purple>"
+    search_title: "<light_purple>Search Results</light_purple>"
+  messages:
+    time_changed: "<green>Time updated for your plot!</green>"
+    weather_changed: "<green>Weather updated for your plot!</green>"
+    floor_mode_entered: "<light_purple>Floor change mode active!</light_purple> <gray>Place a block to set it as the new floor.</gray>"
+    floor_changed: "<green>Floor material updated!</green>"
+    floor_invalid: "<red>That material cannot be used as a floor.</red>"
+    plot_reset: "<green>Your plot has been reset!</green>"
+    biome_changed: "<green>Biome updated for your plot!</green>"
+    banner_created: "<aqua>Banner added to your inventory!</aqua>"
+
+setup_messages:
+  plot:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> build_battle plot <add|set|remove|spawn></yellow>"
+    invalid_id: "{prefix} <red>Invalid plot ID.</red>"
+    not_found: "{prefix} <red>That plot does not exist.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      too_shallow: "{prefix} <red>Plot is too shallow. The selection must be at least 3 blocks high (1 floor + 2 air).</red>"
+      no_floor: "{prefix} <red>No floor detected. The lowest layer of the selection must contain blocks.</red>"
+      too_many_floor_layers: "{prefix} <red>Too many floor layers detected. The floor must be 1-2 block layers thick. Clear excess blocks above the floor.</red>"
+      set: "{prefix} <green>Plot {index} region saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+      spawn_set: "{prefix} <gray>Plot spawn set to your current location. You can change it anytime with</gray> <yellow>/baa game <id> build_battle plot spawn set {index}</yellow>"
+    set:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> build_battle plot set <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} region updated.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+    remove:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> build_battle plot remove <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} has been removed.</green>"
+    spawn:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> build_battle plot spawn set <plot_id></yellow>"
+      set: "{prefix} <green>Plot {index} spawn updated to your current location.</green>"

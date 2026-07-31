@@ -1,0 +1,27 @@
+schema = 1
+id = "build_battle"
+name = "Build Battle"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Vote for a theme, build your creation, then vote on everyone else's builds."
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "build_battle"
+
+[[setup.steps]]
+id = "plot"
+required = true
+displayName = "Configure Plot"
+description = "Configure the module-specific plot setup data."
+commandExamples = ["/baa game <arena> build_battle plot"]
+expectedInput = "plot region and spawn"
+
+[[setup.commands]]
+name = "plot"
+usage = "/baa game <arena> build_battle plot"
+description = "Configure plot setup data."
+requiredHint = true
