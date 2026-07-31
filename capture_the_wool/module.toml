@@ -1,0 +1,55 @@
+schema = 1
+id = "capture_the_wool"
+name = "Capture The Wool"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Capture enemy wools and bring them to your base."
+disabledRequirements = ["SPAWNS", "TIME"]
+
+[replaces]
+legacyId = "capture_the_wool"
+
+[[setup.steps]]
+id = "region"
+required = true
+displayName = "Configure Region"
+description = "Configure the module-specific region setup data."
+commandExamples = ["/baa game <arena> capture_the_wool region"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "team"
+required = true
+displayName = "Configure Team"
+description = "Configure the module-specific team setup data."
+commandExamples = ["/baa game <arena> capture_the_wool team"]
+expectedInput = "team count and team size"
+
+[[setup.steps]]
+id = "wool"
+required = true
+displayName = "Configure Wool"
+description = "Configure the module-specific wool setup data."
+commandExamples = ["/baa game <arena> capture_the_wool wool"]
+expectedInput = "wool block and capture data"
+
+[[setup.commands]]
+name = "region"
+usage = "/baa game <arena> capture_the_wool region"
+description = "Configure region setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "team"
+usage = "/baa game <arena> capture_the_wool team"
+description = "Configure team setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "wool"
+usage = "/baa game <arena> capture_the_wool wool"
+description = "Configure wool setup data."
+requiredHint = true
