@@ -1,0 +1,114 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Guerra de bolas de nieve Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Guerra de bolas de nieve"
+
+description:
+  last_standing:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Guerra de bolas de nieve</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Dispara bolas de nieve a tus rivales para</gray>"
+    - "<gray>elimínalos y sé el último en sobrevivir.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  most_kills:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Guerra de bolas de nieve</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Puntuación the most snowball eliminations</gray>"
+    - "<gray>antes de que termine el tiempo para reclamar la victoria.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Guerra de bolas de nieve</green>"
+  lore:
+    - "<gray>Minijuego de guerra de bolas de nieve.</gray>"
+    - "<gray>Lanza bolas de nieve para sobrevivir.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Snowball Fight victorias"
+    games_played: "Snowball Fight partidas jugadas"
+    snowballs_thrown: "Bolas de nieve lanzadas en Guerra de bolas de nieve"
+    snowball_kills: "Jugadores eliminados con bolas de nieve"
+    snowball_hits: "Golpes de bolas de nieve acertados"
+  labels:
+    snowballs_thrown: "Bolas de nieve lanzadas"
+    snowball_hits: "Golpes de bolas de nieve"
+    snowball_kills: "Eliminaciones con bolas de nieve"
+    games_played: "Snowball Fight partidas jugadas"
+    wins: "Snowball Fight victorias"
+
+messages:
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>acertó a</gray> <red>{victim}</red> <gray>con una bola de nieve.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue sepultado por la nieve de</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>envió a</gray> <red>{victim}</red> <gray>de vuelta al lobby.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo esquivar</gray> <yellow>{killer}</yellow><gray>'s lanzamiento.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>resbaló y desapareció en la nieve.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>desapareció entre copos.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue congelado fuera de la arena.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>HAS MUERTO</bold></red>"
+    subtitle: "<gray>Más suerte la próxima vez.</gray>"
+  classified:
+    title: "<yellow><bold>CLASIFICADO</bold></yellow>"
+    subtitle: "<gray>Has sido eliminado.</gray>"
+
+scoreboard:
+  mode_labels:
+    last_standing: "Último en pie"
+    most_kills: "Más bajas"
+  last_standing:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Guerra de bolas de nieve</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Bajas:</white> <red>{kills}</red>"
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  most_kills:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Guerra de bolas de nieve</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<green>➊</green> <white>{place_1}</white> <gray>{kills_1}</gray>"
+      - "<gold>➋</gold> <white>{place_2}</white> <gray>{kills_2}</gray>"
+      - "<red>➌</red> <white>{place_3}</white> <gray>{kills_3}</gray>"
+      - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{kills_4}</dark_gray>"
+      - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{kills_5}</dark_gray>"
+      - ""
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  mode_set: "{prefix} <green>Snowball Fight mode establecido en {mode}.</green>"
+  usage_setmode: "{prefix} <yellow>Uso: /baa game <id> <minigame> setmode <last_standing|most_kills></yellow>"
