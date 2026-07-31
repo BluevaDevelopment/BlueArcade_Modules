@@ -1,0 +1,65 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Sillas Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Sillas"
+
+description:
+  default:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Sillas</bold></yellow>"
+    - " "
+    - "<gray>Baila mientras suena la música.</gray>"
+    - "<gray>Cuando se detenga, siéntate antes de que termine el tiempo.</gray>"
+    - "<gray>Si no hay asiento, quedas eliminado.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<yellow>Sillas</yellow>"
+  lore:
+    - "<gray>Escucha, corre y siéntate.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+messages:
+  eliminated: "<red>Tardaste demasiado en sentarte.</red>"
+
+stats:
+  labels:
+    games_played: "Chairs partidas jugadas"
+    wins: "Chairs victorias"
+    rounds_survived: "Rondas sobrevividas"
+
+scoreboard:
+  main:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Sillas</aqua>"
+      - "<white>Ronda:</white> <aqua>{chairs_round}</aqua>"
+      - "<white>Temporizador:</white> <aqua>{chairs_time}</aqua>"
+      - ""
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+action_bar:
+  music: "<aqua>Ronda:</aqua> <white>{chairs_round}</white> <gray>|</gray> <light_purple>Music playing...</light_purple>"
+  sit: "<aqua>Ronda:</aqua> <white>{chairs_round}</white> <gray>|</gray> <aqua>Sit in:</aqua> <white>{chairs_time}s</white>"
+
+setup_messages:
+  usage_music_time: "{prefix} <yellow>Uso: /baa game <id> chairs musictime <seconds></yellow>"
+  usage_sit_time: "{prefix} <yellow>Uso: /baa game <id> chairs sittime <seconds></yellow>"
+  usage_music_reduction: "{prefix} <yellow>Uso: /baa game <id> chairs musicreduction <seconds></yellow>"
+  usage_sit_reduction: "{prefix} <yellow>Uso: /baa game <id> chairs sitreduction <seconds></yellow>"
+  time_updated: "{prefix} <green>Se actualizó <yellow>{key}</yellow> a <yellow>{value}</yellow>.</green>"

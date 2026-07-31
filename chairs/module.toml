@@ -1,0 +1,68 @@
+schema = 1
+id = "chairs"
+name = "Chairs"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Find a seat before the timer ends."
+
+[replaces]
+legacyId = "chairs"
+
+[[setup.steps]]
+id = "musictime"
+required = true
+displayName = "Configure Musictime"
+description = "Configure the module-specific musictime setup data."
+commandExamples = ["/baa game <arena> chairs musictime"]
+expectedInput = "seconds"
+
+[[setup.steps]]
+id = "sittime"
+required = true
+displayName = "Configure Sittime"
+description = "Configure the module-specific sittime setup data."
+commandExamples = ["/baa game <arena> chairs sittime"]
+expectedInput = "seconds"
+
+[[setup.steps]]
+id = "musicreduction"
+required = true
+displayName = "Configure Musicreduction"
+description = "Configure the module-specific musicreduction setup data."
+commandExamples = ["/baa game <arena> chairs musicreduction"]
+expectedInput = "percentage or amount"
+
+[[setup.steps]]
+id = "sitreduction"
+required = true
+displayName = "Configure Sitreduction"
+description = "Configure the module-specific sitreduction setup data."
+commandExamples = ["/baa game <arena> chairs sitreduction"]
+expectedInput = "percentage or amount"
+
+[[setup.commands]]
+name = "musictime"
+usage = "/baa game <arena> chairs musictime"
+description = "Configure musictime setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "sittime"
+usage = "/baa game <arena> chairs sittime"
+description = "Configure sittime setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "musicreduction"
+usage = "/baa game <arena> chairs musicreduction"
+description = "Configure musicreduction setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "sitreduction"
+usage = "/baa game <arena> chairs sitreduction"
+description = "Configure sitreduction setup data."
+requiredHint = true

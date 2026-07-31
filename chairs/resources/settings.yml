@@ -1,0 +1,63 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Chairs Module Settings
+# Songs from: https://github.com/nickg2/NBSsongs
+
+# Visual representation in menus
+menus:
+  vote:
+    item: "MINECART"
+
+gameplay:
+  # Default gameplay values for this module.
+  # You can override these per arena with /baa game setup commands when available.
+  initial_music_time: 6.0
+  initial_sit_time: 8.0
+  music_time_reduction: 0.35
+  sit_time_reduction: 0.4
+  minimum_music_time: 2.0
+  minimum_sit_time: 2.0
+
+seats:
+  # Valid entities: MINECART, BOAT, PIG, HORSE
+  types:
+    - "MINECART"
+    - "BOAT"
+    - "PIG"
+    - "HORSE"
+  spawn_height_offset: 6.0
+
+  # Full-seat warmup rounds before eliminations begin.
+  warmup_rounds: 2
+
+  # 0 = no player cap, so warmup rounds apply to any player count.
+  warmup_max_players: 0
+
+  # After the warmup, seats become alive players minus this value.
+  # Usually 1 for classic musical chairs.
+  seat_reduction: 1
+
+  # Safety floor for the seat count.
+  minimum_seats: 1
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects: []
