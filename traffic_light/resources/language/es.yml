@@ -1,0 +1,88 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Semáforo Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Semáforo"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Semáforo</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Avanza cuando esté en verde y quédate quieto cuando esté en rojo.</gray>"
+  - "<gray>Llega a la meta sin que te pillen moviéndote.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Semáforo</green>"
+  lore:
+    - "<gray>Avanza hasta la meta sin moverte</gray>"
+    - "<gray>mientras el semáforo está en rojo.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Traffic Light victorias"
+    games_played: "Traffic Light partidas jugadas"
+    finish_line_crosses: "Veces que llegaste a salvo"
+  labels:
+    finish_line_crosses: "Metas alcanzadas"
+    games_played: "Traffic Light partidas jugadas"
+    wins: "Traffic Light victorias"
+
+messages:
+  respawned: "<yellow>¡Has reaparecido!</yellow>"
+  red_light:
+    pushback_warning: "<gold>¡Quieto! Si vuelves a moverte en rojo, serás eliminado.</gold>"
+  deaths:
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>pisó un bloque prohibido y fue enviado hacia atrás.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>activó una casilla mortal. ¡De vuelta!</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>aprendió por qué ese bloque está prohibido.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>resbaló fuera del camino.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>calculó mal un salto y cayó.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>cayó dando tumbos al vacío.</gray>"
+    red_light:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>se movió en rojo y fue atrapado.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>ignoró la luz roja y fue eliminado.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>no pudo quedarse quieto con la luz roja.</gray>"
+  finish:
+    crossed:
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>llegó a salvo en</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>cruzó la línea en la posición</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>lo consiguió en la posición</gray> <yellow>#{position}</yellow><gray>!</gray>"
+
+titles:
+  finished:
+    title: "<bold><gradient:dark_green:green>¡A SALVO!</gradient></bold>"
+    subtitle: "<white>Has cruzado en la posición</white> <yellow>#{position}</yellow>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Semáforo</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<white>Semáforo:</white> {light_color}"
+    - "<white>Vivos:</white> <green>{alive}</green>"
+    - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Meta establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero el área de meta.</red>"
+  not_configured: "{prefix} <red>¡La meta no está configurada! Usa /baa game {arena_id} traffic_light finishline set</red>"
+  usage_finish_line: "{prefix} <yellow>Uso: /baa game <id> <minigame> finishline set</yellow>"

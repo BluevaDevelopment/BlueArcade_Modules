@@ -1,0 +1,26 @@
+schema = 1
+id = "traffic_light"
+name = "Traffic Light"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Advance on green, freeze on red, and reach the goal without getting caught moving."
+
+[replaces]
+legacyId = "traffic_light"
+
+[[setup.steps]]
+id = "finishline"
+required = true
+displayName = "Configure Finishline"
+description = "Configure the module-specific finishline setup data."
+commandExamples = ["/baa game <arena> traffic_light finishline"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "finishline"
+usage = "/baa game <arena> traffic_light finishline"
+description = "Configure finishline setup data."
+requiredHint = true

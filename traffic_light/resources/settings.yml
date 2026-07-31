@@ -1,0 +1,56 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Traffic Light Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "ROSE_BUSH"
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+  # Example:
+  # - "COOKED_BEEF:16:0"
+  # - "GOLDEN_APPLE:3:8"
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+  # Example:
+  # - "SPEED:999999:1"
+  # - "JUMP_BOOST:999999:0"
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:2"  # 3 seconds of resistance after respawn
+
+# Traffic light behavior
+red_light:
+  durations:
+    green:
+      min: 3
+      max: 6
+    yellow:
+      min: 1
+      max: 3
+    red:
+      min: 1
+      max: 8
+  pushback:
+    # When true, the first red-light movement pushes the player back instead of eliminating immediately.
+    enabled: true
+    # Horizontal force applied to the pushback velocity.
+    force: 1.15
+    # Ticks before a second red-light movement triggers elimination after a pushback.
+    immunity_ticks: 15

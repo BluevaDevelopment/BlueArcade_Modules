@@ -1,0 +1,89 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Traffic Light Module - English (UK)
+# Only Traffic Light-specific content
+display_name: "Traffic Light"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>Traffic Light</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Advance while it's green, freeze when it's red.</gray>"
+  - "<gray>Reach the finish line without getting caught moving.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<green>Traffic Light</green>"
+  lore:
+    - "<gray>Advance to the goal without moving</gray>"
+    - "<gray>while the light is red.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+
+  descriptions:
+    wins: "Traffic Light wins"
+    games_played: "Traffic Light games played"
+    finish_line_crosses: "Times you reached safety"
+  labels:
+    finish_line_crosses: "Finishes reached"
+    games_played: "Traffic Light games played"
+    wins: "Traffic Light wins"
+
+messages:
+  respawned: "<yellow>You have been respawned!</yellow>"
+  red_light:
+    pushback_warning: "<gold>Freeze! Move again on red and you'll be eliminated.</gold>"
+  deaths:
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>stepped on a forbidden block and was sent back.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>triggered a deadly tile. Back you go!</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>learned why that block is off-limits.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>slipped off the path.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>misjudged a jump and fell.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>tumbled into the void.</gray>"
+    red_light:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>moved on red and got caught.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>ignored the red light and was frozen out.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>couldn't stand still under the red light.</gray>"
+  finish:
+    crossed:
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>reached safety at</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>crossed the line in place</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>made it through as</gray> <yellow>#{position}</yellow><gray>!</gray>"
+
+titles:
+  finished:
+    title: "<bold><gradient:dark_green:green>SAFE!</gradient></bold>"
+    subtitle: "<white>You crossed at position</white> <yellow>#{position}</yellow>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Game:</white> <aqua>Traffic Light</aqua>"
+    - "<white>Time:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<white>Light:</white> {light_color}"
+    - "<white>Alive:</white> <green>{alive}</green>"
+    - "<white>Spectators:</white> <gray>{spectators}</gray>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Finish line set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the finish line area first.</red>"
+  not_configured: "{prefix} <red>Finish line is not configured! Use /baa game {arena_id} traffic_light finishline set</red>"
+  usage_finish_line: "{prefix} <yellow>Usage: /baa game <id> <minigame> finishline set</yellow>"
