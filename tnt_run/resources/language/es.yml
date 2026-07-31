@@ -1,0 +1,100 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# TNT Run Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "TNT Run"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>TNT Run</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Corre sobre capas de arena y TNT.</gray>"
+  - "<gray>Cada paso hace que el suelo se derrumbe bajo tus pies.</gray>"
+  - "<gray>Sobrevive más que todos para reclamar la victoria.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>TNT Run</green>"
+  lore:
+    - "<gray>Corre rápido o caerás a través del suelo.</gray>"
+    - "<gray>Sé el último jugador en pie.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "TNT Run victorias"
+    games_played: "TNT Run partidas jugadas"
+    blocks_dropped: "Bloques caídos en TNT Run"
+  labels:
+    blocks_dropped: "Bloques caídos"
+    games_played: "TNT Run partidas jugadas"
+    wins: "TNT Run victorias"
+
+messages:
+  eliminated: "<red>Has caído por la última capa. Ahora estás como espectador.</red>"
+  floor_removal_warning: "<gold>⚠ El suelo #{floor} será eliminado en <red>{time}</red> segundos!</gold>"
+  floor_removed: "<red>⚠ Floor #{floor} has been eliminado!</red>"
+  victory:
+    - "<gold>★</gold> <yellow>{winner}</yellow> <gray>¡sobrevivió al derrumbe de TNT Run!</gray>"
+    - "<gold>★</gold> <yellow>{winner}</yellow> <gray>superó todas las capas que se derrumbaban.</gray>"
+    - "<gold>★</gold> <yellow>{winner}</yellow> <gray>¡es el último corredor en pie!</gray>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>falló el último bloque.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó al vacío de abajo.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo escapar del derrumbe.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>resbaló más allá de la capa final.</gray>"
+
+scoreboard:
+  main:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>TNT Run</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - "<white>Saltos:</white> <aqua>{double_jumps}/{double_jumps_max}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  floor_add_success: "{prefix} <green>Suelo #{number} añadido con {blocks} bloques.</green>"
+  floor_remove_success: "{prefix} <green>Floor #{number} eliminado.</green>"
+  floor_remove_not_found: "{prefix} <red>Floor #{number} no existe.</red>"
+  floor_list_header: "{prefix} <green>Suelos de TNT Run en la arena {arena_id}:</green>"
+  floor_list_item: "{prefix}  <gray>#{number}: {blocks} bloques | Autoeliminar: {auto_remove}</gray>"
+  floor_list_empty: "{prefix} <yellow>Aún no hay suelos configurados. Añade al menos 1 suelo.</yellow>"
+  floor_list_disabled: "Desactivado"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero un área de suelo.</red>"
+  not_configured: "{prefix} <red>¡Los suelos no están configurados! Usa /baa game {arena_id} tnt_run floor add</red>"
+  usage_floor: "{prefix} <yellow>Uso: /baa game <id> tnt_run floor <add|remove|list|delay|removal></yellow>"
+  usage_floor_remove: "{prefix} <yellow>Uso: /baa game <id> tnt_run floor remove <number></yellow>"
+  usage_floor_delay: "{prefix} <yellow>Uso: /baa game <id> tnt_run floor delay <ticks></yellow>"
+  usage_floor_removal: "{prefix} <yellow>Uso: /baa game <id> tnt_run floor removal <floor_num> <seconds></yellow>"
+  floor_delay_success: "{prefix} <green>Floor removal delay establecido en {ticks} ticks.</green>"
+  floor_delay_invalid: "{prefix} <red>El retraso debe estar entre 1 y 100 ticks.</red>"
+  floor_removal_success: "{prefix} <green>El suelo #{floor} se eliminará automáticamente tras {seconds} segundos.</green>"
+  floor_removal_disabled: "{prefix} <green>Autoeliminación desactivada para el suelo #{floor}.</green>"
+  floor_removal_invalid: "{prefix} <red>El tiempo debe estar entre 0 y 600 segundos (0 = desactivado).</red>"
+  usage_doublejump: "{prefix} <yellow>Uso: /baa game <id> tnt_run doublejump <set|setboost></yellow>"
+  usage_doublejump_set: "{prefix} <yellow>Uso: /baa game <id> tnt_run doublejump set <amount></yellow>"
+  usage_doublejump_boost: "{prefix} <yellow>Uso: /baa game <id> tnt_run doublejump setboost <vertical|horizontal> <value></yellow>"
+  doublejump_invalid: "{prefix} <red>La cantidad de dobles saltos debe estar entre 0 y 10.</red>"
+  doublejump_disabled: "{prefix} <green>El doble salto se ha desactivado para TNT Run.</green>"
+  doublejump_success: "{prefix} <green>Doble salto establecido en {amount} usos por jugador.</green>"
+  doublejump_boost_type_invalid: "{prefix} <red>Type debe ser 'vertical' or 'horizontal'.</red>"
+  doublejump_boost_invalid: "{prefix} <red>El valor del impulso debe estar entre 0.1 y 2.0.</red>"
+  doublejump_boost_success: "{prefix} <green>Impulso de doble salto {type} establecido en {value}.</green>"

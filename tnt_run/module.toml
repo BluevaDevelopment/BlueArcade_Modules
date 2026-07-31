@@ -1,0 +1,40 @@
+schema = 1
+id = "tnt_run"
+name = "TNT Run"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Run across layered floors of sand and TNT before the ground collapses beneath you."
+
+[replaces]
+legacyId = "tnt_run"
+
+[[setup.steps]]
+id = "doublejump"
+required = true
+displayName = "Configure Doublejump"
+description = "Configure the module-specific doublejump setup data."
+commandExamples = ["/baa game <arena> tnt_run doublejump"]
+expectedInput = "number of uses"
+
+[[setup.steps]]
+id = "floor"
+required = true
+displayName = "Configure Floor"
+description = "Configure the module-specific floor setup data."
+commandExamples = ["/baa game <arena> tnt_run floor"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "doublejump"
+usage = "/baa game <arena> tnt_run doublejump"
+description = "Configure doublejump setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "floor"
+usage = "/baa game <arena> tnt_run floor"
+description = "Configure floor setup data."
+requiredHint = true

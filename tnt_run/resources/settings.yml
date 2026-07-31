@@ -1,0 +1,103 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# TNT Run Module Settings
+
+# Visual representation in menus
+menus:
+  vote:
+    item: "TNT_MINECART"
+
+gameplay:
+  # Time limit for a match in seconds
+  time_limit_seconds: 300
+
+trail:
+  # Delay (in ticks) before the floor disappears after being stepped on
+  floor_delay_ticks: 10
+  floor_delay_limits:
+    min: 1
+    max: 100
+  detection:
+    # How many blocks below the player to scan for the floor
+    scan_depth: 3
+    # Additional blocks below the detected floor to also remove (use 1 for sand + TNT)
+    additional_blocks_below: 1
+    # Sensitivity for detecting edges/corners to remove neighboring blocks
+    edge_threshold: 0.25
+    # How often (in ticks) to rescan players who are standing still
+    stationary_scan_ticks: 4
+    # Maximum ticks a player can stay in the same block before aggressive block breaking (20 ticks = 1 seconds)
+    # This prevents players from cheating by staying in corners or edges
+    stationary_max_ticks: 20
+    # Radius of blocks to break around a stationary player (1 = 3x3 area)
+    stationary_break_radius: 1
+
+floors:
+  # Default auto-remove time (seconds) for a new floor (0 = disabled)
+  default_auto_remove_seconds: 0
+  # Maximum auto-remove time allowed in setup
+  auto_remove_max_seconds: 600
+  # Warning times (in seconds) before a floor auto-removes
+  auto_remove_warnings_seconds:
+    - "120"
+    - "60"
+    - "30"
+    - "10"
+    - "5"
+    - "4"
+    - "3"
+    - "2"
+    - "1"
+
+double_jump:
+  # Default double jump uses per player (0 = disabled)
+  default_uses: 0
+  # Maximum allowed double jumps
+  max_uses: 10
+  boost:
+    vertical: 0.8
+    horizontal: 0.8
+  boost_limits:
+    min: 0.1
+    max: 2.0
+
+blocks:
+  particles:
+    enabled: true
+    type: "BLOCK"
+    # Number of particles to spawn when a block disappears
+    count: 12
+    # Horizontal spread for decay particles
+    spread: 0.35
+    # Speed of the particle burst
+    speed: 0.15
+  falling:
+    # Whether to spawn a falling shard when a block disappears
+    enabled: true
+    # Downward velocity for the falling shard
+    downward_velocity: 0.3
+    # Horizontal randomness applied to the falling shard velocity
+    horizontal_randomness: 0.08
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"
