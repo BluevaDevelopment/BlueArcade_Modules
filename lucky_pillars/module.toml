@@ -1,0 +1,41 @@
+schema = 1
+id = "lucky_pillars"
+name = "Lucky Pillars"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Spawn on bedrock pillars, get random items, and be the last player standing."
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "lucky_pillars"
+
+[[setup.steps]]
+id = "region"
+required = true
+displayName = "Configure Region"
+description = "Configure the module-specific region setup data."
+commandExamples = ["/baa game <arena> lucky_pillars region"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "team"
+required = true
+displayName = "Configure Team"
+description = "Configure the module-specific team setup data."
+commandExamples = ["/baa game <arena> lucky_pillars team"]
+expectedInput = "team count and team size"
+
+[[setup.commands]]
+name = "region"
+usage = "/baa game <arena> lucky_pillars region"
+description = "Configure region setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "team"
+usage = "/baa game <arena> lucky_pillars team"
+description = "Configure team setup data."
+requiredHint = true

@@ -1,0 +1,6 @@
+default_cage: "clear_glass"
+
+cages:
+  clear_glass:
+    material: "GLASS"
+    head_clear: false
