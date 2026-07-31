@@ -1,0 +1,376 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "bridge_race"
+  name: "Bridge Race"
+  description:
+    - "Achievements tied to Bridge Race."
+  icon: "BRICKS"
+  sort_order: 10
+
+achievements:
+  bridge_builder:
+    name: "Bridge Builder"
+    description:
+      - "Play your first Bridge Races."
+    icon: "BRICKS"
+    phases:
+      1:
+        name: "First plank"
+        description:
+          - "Play your first Bridge Race."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 10"
+            - "arcadeadmin xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Apprentice builder"
+        description:
+          - "Play 10 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 10"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Skilled builder"
+        description:
+          - "Play 25 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 40"
+            - "arcadeadmin xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Expert builder"
+        description:
+          - "Play 50 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 50"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 60"
+            - "arcadeadmin xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Master builder"
+        description:
+          - "Play 100 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 100"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 90"
+            - "arcadeadmin xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  master_bridger:
+    name: "Master Bridger"
+    description:
+      - "Place blocks to build your bridges."
+    icon: "BRICK"
+    phases:
+      1:
+        name: "Foundation layer"
+        description:
+          - "Place 50 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_blocks_placed} >= 50"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 20"
+            - "arcadeadmin xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Sturdy structure"
+        description:
+          - "Place 200 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_blocks_placed} >= 200"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 40"
+            - "arcadeadmin xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      3:
+        name: "Bridge architect"
+        description:
+          - "Place 500 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_blocks_placed} >= 500"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 60"
+            - "arcadeadmin xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      4:
+        name: "Mega builder"
+        description:
+          - "Place 1000 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_blocks_placed} >= 1000"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 80"
+            - "arcadeadmin xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Block titan"
+        description:
+          - "Place 2000 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_blocks_placed} >= 2000"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 120"
+            - "arcadeadmin xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  bridge_champion:
+    name: "Bridge Champion"
+    description:
+      - "Win Bridge Races."
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First crossing"
+        description:
+          - "Win 1 Bridge Race."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_wins} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      2:
+        name: "Bridge regular"
+        description:
+          - "Win 5 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_wins} >= 5"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 50"
+            - "arcadeadmin xp give {player} 50"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+50 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+50 XP</light_purple>"
+      3:
+        name: "Bridge winner"
+        description:
+          - "Win 12 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_wins} >= 12"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 70"
+            - "arcadeadmin xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Bridge champion"
+        description:
+          - "Win 25 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_wins} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 100"
+            - "arcadeadmin xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      5:
+        name: "Bridge dominator"
+        description:
+          - "Win 45 Bridge Races."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_wins} >= 45"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 150"
+            - "arcadeadmin xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+
+  speed_builder:
+    name: "Speed Builder"
+    description:
+      - "Play games and place blocks at speed."
+    icon: "GOLDEN_PICKAXE"
+    phases:
+      1:
+        name: "Quick hands"
+        description:
+          - "Play 5 Bridge Races and place 50 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 5 && {bluearcade_stat_module_bridge_race_blocks_placed} >= 50"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 45"
+            - "arcadeadmin xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      2:
+        name: "Rapid placer"
+        description:
+          - "Play 20 Bridge Races and place 200 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 20 && {bluearcade_stat_module_bridge_race_blocks_placed} >= 200"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 80"
+            - "arcadeadmin xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      3:
+        name: "Speed architect"
+        description:
+          - "Play 40 Bridge Races and place 500 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 40 && {bluearcade_stat_module_bridge_race_blocks_placed} >= 500"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 110"
+            - "arcadeadmin xp give {player} 110"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+110 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+110 XP</light_purple>"
+      4:
+        name: "Lightning builder"
+        description:
+          - "Play 70 Bridge Races and place 1000 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 70 && {bluearcade_stat_module_bridge_race_blocks_placed} >= 1000"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 150"
+            - "arcadeadmin xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+      5:
+        name: "Speed demon"
+        description:
+          - "Play 100 Bridge Races and place 2000 blocks."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 100 && {bluearcade_stat_module_bridge_race_blocks_placed} >= 2000"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 220"
+            - "arcadeadmin xp give {player} 220"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+220 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+220 XP</light_purple>"
+
+  bridge_legend:
+    name: "Bridge Legend"
+    description:
+      - "Become a legendary bridge racer."
+    icon: "NETHER_STAR"
+    phases:
+      1:
+        name: "Rising builder"
+        description:
+          - "Play 15 Bridge Races and win 1."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 15 && {bluearcade_stat_module_bridge_race_wins} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 35"
+            - "arcadeadmin xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      2:
+        name: "Bridge veteran"
+        description:
+          - "Play 40 Bridge Races and win 5."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 40 && {bluearcade_stat_module_bridge_race_wins} >= 5"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 70"
+            - "arcadeadmin xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      3:
+        name: "Bridge hero"
+        description:
+          - "Play 70 Bridge Races and win 12."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 70 && {bluearcade_stat_module_bridge_race_wins} >= 12"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 100"
+            - "arcadeadmin xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      4:
+        name: "Bridge master"
+        description:
+          - "Play 110 Bridge Races and win 25."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 110 && {bluearcade_stat_module_bridge_race_wins} >= 25"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 140"
+            - "arcadeadmin xp give {player} 140"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+140 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+140 XP</light_purple>"
+      5:
+        name: "Bridge legend"
+        description:
+          - "Play 160 Bridge Races and win 45."
+        conditions:
+          - "{bluearcade_stat_module_bridge_race_games_played} >= 160 && {bluearcade_stat_module_bridge_race_wins} >= 45"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 200"
+            - "arcadeadmin xp give {player} 200"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+200 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+200 XP</light_purple>"

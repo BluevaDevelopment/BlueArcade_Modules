@@ -1,0 +1,26 @@
+schema = 1
+id = "bridge_race"
+name = "Bridge Race"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Build bridges to reach the finish line - first to cross wins the race."
+
+[replaces]
+legacyId = "bridge_race"
+
+[[setup.steps]]
+id = "finishline"
+required = true
+displayName = "Configure Finishline"
+description = "Configure the module-specific finishline setup data."
+commandExamples = ["/baa game <arena> bridge_race finishline"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "finishline"
+usage = "/baa game <arena> bridge_race finishline"
+description = "Configure finishline setup data."
+requiredHint = true
