@@ -79,8 +79,9 @@ Short, fast paced rounds.
 
 ## Creating Your Own Modules
 
-Anyone can build a Universal Module using `bacli`, the official BlueArcade authoring CLI, and
-publish it independently at
+Anyone can build a Universal Module using
+[`bacli`](https://github.com/BluevaDevelopment/BlueArcade_CLI), the official BlueArcade authoring
+CLI, and publish it independently at
 [blueva.net/store/blue-arcade/modules/manage](https://blueva.net/store/blue-arcade/modules/manage).
 Publishing this way keeps the module yours: you stay in full control of it and you are the one
 responsible for maintaining it going forward. Opening a pull request against this repository is not
