@@ -1,0 +1,84 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# TNT Tag Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "TNT"
+
+round:
+  # Duration of each TNT Tag round in seconds when not overridden by the game setup.
+  # The /baa game <id> tnt_tag time <seconds> command controls the per-round timer.
+  default_seconds: 15
+  convert_setup_time_from_minutes: true
+  minutes_conversion_minimum_seconds: 60
+  smoke_warning:
+    enabled: true
+    seconds: 5
+    particle: "SMOKE"
+    count: 10
+    offset: 0.35
+
+tagging:
+  tagged_players:
+    # Format: "min-max:tagged" or "min+:tagged"
+    rules:
+      - "1-4:1"
+      - "5-9:2"
+      - "10-14:3"
+      - "15-19:4"
+      - "20+:5"
+    fallback: 1
+
+  inventory_indicator:
+    enabled: true
+    tick_rate: 5
+    critical_seconds: 5
+    tnt_slot: 4
+    wool_slots:
+      - 3
+      - 5
+    wool_primary: "RED_WOOL"
+    wool_secondary: "WHITE_WOOL"
+    apply_helmet: true
+    blink:
+      min_ticks: 2
+      max_ticks: 10
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects:
+    - "SPEED:999999:0"
+
+  # Effects that only apply while the player is carrying the TNT
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  tagged_effects: []
+  # Example:
+  # - "SPEED:999999:1"
+
+  # Effects that only apply while the player is NOT carrying the TNT
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  untagged_effects: []
+  # Example:
+  # - "JUMP_BOOST:999999:0"
+
+  # Reserved for compatibility with the shared module config structure.
+  # TNT Tag players do not respawn after elimination, so this setting is not used here.
+  respawn_effects: []
+
+explosion:
+  particle_count: 10

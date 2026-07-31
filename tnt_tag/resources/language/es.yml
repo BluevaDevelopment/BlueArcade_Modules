@@ -1,0 +1,77 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# TNT Tag Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "TNT Tag"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>TNT Tag</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Jugadores aleatorios reciben TNT cada ronda.</gray>"
+  - "<gray>Pasa la TNT antes de que la mecha llegue a cero.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>TNT Tag</green>"
+  lore:
+    - "<gray>Pasa la TNT antes de que explote.</gray>"
+    - "<gray>Sobrevive cada ronda para ganar.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  labels:
+    tags_given: "Pases de TNT"
+    rounds_survived: "Rondas sobrevividas"
+    tnt_escaped: "Escapes con TNT"
+    games_played: "TNT Tag partidas jugadas"
+    wins: "TNT Tag victorias"
+
+messages:
+  you_have_tnt: "<red>¡Ahora llevas la TNT! Toca a otra persona.</red>"
+  you_no_have_tnt: "<green>Ya no tienes la TNT. ¡Corre!</green>"
+  player_has_the_tnt: "<yellow>{player}</yellow> <gray>ahora tiene la TNT.</gray>"
+  detonated: "<red>¡Has explotado!</red>"
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  new_round: "<yellow>¡La ronda {round} ha empezado! Sigue moviéndote.</yellow>"
+
+titles:
+  warning:
+    title: "<red><bold>TNT!</bold></red>"
+    subtitle: "<yellow>Pásala antes de que explote.</yellow>"
+
+scoreboard:
+  main:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>TNT Tag</aqua>"
+      - ""
+      - "<red>- {tnt_holder_1}</red>"
+      - "<red>- {tnt_holder_2}</red>"
+      - "<red>- {tnt_holder_3}</red>"
+      - "<red>- {tnt_holder_4}</red>"
+      - "<red>- {tnt_holder_5}</red>"
+      - ""
+      - "<white>Vivos:</white> <green>{alive}/{total_players}</green>"
+      - "<white>Ronda:</white> <yellow>{round}</yellow>"
+      - "<white>Mecha:</white> <red>{time}</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  no_extra_steps: "{prefix} <yellow>TNT Tag no requiere pasos de setup adicionales.</yellow>"
+
+placeholders:
+  none: "None"

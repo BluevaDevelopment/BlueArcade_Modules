@@ -1,0 +1,376 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "tnt_tag"
+  name: "TNT Tag"
+  description:
+    - "Achievements tied to TNT Tag."
+  icon: "TNT"
+  sort_order: 23
+
+achievements:
+  arena_runner:
+    name: "Arena Runner"
+    description:
+      - "Play TNT Tag matches."
+    icon: "TNT"
+    phases:
+      1:
+        name: "First blast"
+        description:
+          - "Play 1 match."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Warming up"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Street sprinter"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Track regular"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Arena courier"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  hot_potato:
+    name: "Hot Potato"
+    description:
+      - "Pass TNT to other players."
+    icon: "BLAZE_POWDER"
+    phases:
+      1:
+        name: "Quick hands"
+        description:
+          - "Pass TNT 5 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tags_given} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Relay runner"
+        description:
+          - "Pass TNT 20 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tags_given} >= 20"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Fuse juggler"
+        description:
+          - "Pass TNT 60 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tags_given} >= 60"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Chain starter"
+        description:
+          - "Pass TNT 150 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tags_given} >= 150"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Fuse courier"
+        description:
+          - "Pass TNT 300 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tags_given} >= 300"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  fuse_evader:
+    name: "Fuse Evader"
+    description:
+      - "Survive rounds and escape with TNT."
+    icon: "FEATHER"
+    phases:
+      1:
+        name: "First dodge"
+        description:
+          - "Survive 5 rounds."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_rounds_survived} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Bomb dancer"
+        description:
+          - "Survive 20 rounds."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_rounds_survived} >= 20"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Fuse surfer"
+        description:
+          - "Survive 60 rounds."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_rounds_survived} >= 60"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Fuse sprinter"
+        description:
+          - "Survive 140 rounds."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_rounds_survived} >= 140"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+      5:
+        name: "Fuse nomad"
+        description:
+          - "Survive 250 rounds."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_rounds_survived} >= 250"
+        rewards:
+          commands:
+            - "baa credits give {player} 130"
+            - "baa xp give {player} 130"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+130 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+130 XP</light_purple>"
+
+  tnt_escape_artist:
+    name: "Escape Artist"
+    description:
+      - "Drop TNT before it detonates."
+    icon: "FIREWORK_ROCKET"
+    phases:
+      1:
+        name: "Close call"
+        description:
+          - "Escape TNT once."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tnt_escaped} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Slippery"
+        description:
+          - "Escape TNT 5 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tnt_escaped} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Fuse dodger"
+        description:
+          - "Escape TNT 15 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tnt_escaped} >= 15"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Bomb shuffler"
+        description:
+          - "Escape TNT 35 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tnt_escaped} >= 35"
+        rewards:
+          commands:
+            - "baa credits give {player} 110"
+            - "baa xp give {player} 110"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+110 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+110 XP</light_purple>"
+      5:
+        name: "Fuse magician"
+        description:
+          - "Escape TNT 60 times."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_tnt_escaped} >= 60"
+        rewards:
+          commands:
+            - "baa credits give {player} 160"
+            - "baa xp give {player} 160"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+160 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+160 XP</light_purple>"
+
+  bomb_champion:
+    name: "Bomb Champion"
+    description:
+      - "Win TNT Tag matches."
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First survivor"
+        description:
+          - "Win 1 match."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_wins} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Street veteran"
+        description:
+          - "Win 5 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_wins} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Fuse tactician"
+        description:
+          - "Win 12 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_wins} >= 12"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Fuse expert"
+        description:
+          - "Win 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_wins} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 110"
+            - "baa xp give {player} 110"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+110 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+110 XP</light_purple>"
+      5:
+        name: "Street legend"
+        description:
+          - "Win 45 matches."
+        conditions:
+          - "{bluearcade_stat_module_tnt_tag_wins} >= 45"
+        rewards:
+          commands:
+            - "baa credits give {player} 170"
+            - "baa xp give {player} 170"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+170 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+170 XP</light_purple>"

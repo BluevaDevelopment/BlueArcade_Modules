@@ -1,0 +1,12 @@
+schema = 1
+id = "tnt_tag"
+name = "TNT Tag"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Pass the TNT before it explodes."
+
+[replaces]
+legacyId = "tnt_tag"
