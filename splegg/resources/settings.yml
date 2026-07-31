@@ -1,0 +1,39 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Splegg Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "EGG"
+
+# Game settings
+game:
+  # Delay between egg shots for each player, in ticks.
+  # 20 ticks = 1 second. Set to 0 to disable the delay.
+  # Players clicking faster than this delay will not fire an egg.
+  # Default: 4 ticks (max 5 eggs per second) to prevent autoclickers.
+  shoot_delay_ticks: 4
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items:
+    - "DIAMOND_SHOVEL:1:0"
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"

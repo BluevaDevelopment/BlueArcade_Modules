@@ -1,0 +1,68 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Splegg Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Splegg"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Splegg</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Dispara huevos para romper el suelo bajo</gray>"
+  - "<gray>tus rivales y ser el último en pie.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Splegg</green>"
+  lore:
+    - "<gray>Dispara huevos para destruir el suelo.</gray>"
+    - "<gray>Gana el último superviviente.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Splegg victorias"
+    games_played: "Splegg partidas jugadas"
+    blocks_broken: "Bloques rotos con huevos"
+  labels:
+    blocks_broken: "Bloques rotos"
+    games_played: "Splegg partidas jugadas"
+    wins: "Splegg victorias"
+
+messages:
+  eliminated: "<red>¡Has caído! Ahora eres espectador.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue empujado al vacío con un huevo.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>sufrió una caída desafortunada.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue revuelto por un huevo.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó por el suelo agrietado.</gray>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Splegg</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<white>Vivos:</white> <green>{alive}</green>"
+    - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Área del suelo establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero la región del suelo.</red>"
+  not_configured: "{prefix} <red>¡El suelo no está configurado! Usa /baa game {arena_id} splegg floor set</red>"
+  usage_floor: "{prefix} <yellow>Uso: /baa game <id> <minigame> floor set</yellow>"
