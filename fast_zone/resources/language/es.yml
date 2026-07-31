@@ -1,0 +1,90 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Zona rápida Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Zona rápida"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Zona rápida</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Corre a velocidad absurda hacia la meta.</gray>"
+  - "<gray>Esquiva muros y peligros: un choque puede acabar tu carrera.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Zona rápida</green>"
+  lore:
+    - "<gray>Corre a toda velocidad hasta la meta.</gray>"
+    - "<gray>Choca contra un muro y estás fuera.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Fast Zone victorias"
+    games_played: "Fast Zone partidas jugadas"
+    finish_line_crosses: "Veces que llegaste a la meta de Fast Zone"
+  labels:
+    finish_line_crosses: "Metas alcanzadas en la zona"
+    games_played: "Fast Zone partidas jugadas"
+    wins: "Fast Zone victorias"
+
+messages:
+  respawned: "<yellow>¡Has reaparecido!</yellow>"
+  deaths:
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>activó una casilla peligrosa.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>pisó un bloque mortal.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>activó un bloque trampa.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>se salió de la pista.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>se salió del carril y tuvo que reiniciar.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>perdió el control y salió del recorrido.</gray>"
+    wall:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>se estrelló contra una pared a toda velocidad.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>no pudo esquivar a wall and fue eliminado.</gray>"
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>se chocó contra la barrera.</gray>"
+  finish:
+    crossed:
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>cruzó la meta a toda velocidad en la posición</gray> <yellow>#{position}</yellow><gray>!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>consiguió el puesto</gray> <yellow>#{position}</yellow> <gray>al final del carril!</gray>"
+      - "<dark_green>✔</dark_green> <green>{player}</green> <gray>salió disparado hasta el</gray> <yellow>#{position}</yellow> <gray>puesto!</gray>"
+
+titles:
+  finished:
+    title: "<bold><gradient:dark_green:green>¡TERMINADO!</gradient></bold>"
+    subtitle: "<white>Terminaste en la posición</white> <yellow>#{position}</yellow>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Zona rápida</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{distance_1}m</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{distance_2}m</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{distance_3}m</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{distance_4}m</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{distance_5}m</dark_gray>"
+    - ""
+    - "<aqua>Tu posición:</aqua> <white>#{fast_zone_position}</white>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Meta establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero el área de meta.</red>"
+  not_configured: "{prefix} <red>¡La meta no está configurada! Usa /baa game {arena_id} fast_zone finishline set</red>"
+  usage_finish_line: "{prefix} <yellow>Uso: /baa game <id> <minigame> finishline set</yellow>"

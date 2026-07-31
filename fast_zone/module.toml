@@ -1,0 +1,26 @@
+schema = 1
+id = "fast_zone"
+name = "Fast Zone"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Dash through the lane at blistering speed and avoid crashing into walls."
+
+[replaces]
+legacyId = "fast_zone"
+
+[[setup.steps]]
+id = "finishline"
+required = true
+displayName = "Configure Finishline"
+description = "Configure the module-specific finishline setup data."
+commandExamples = ["/baa game <arena> fast_zone finishline"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "finishline"
+usage = "/baa game <arena> fast_zone finishline"
+description = "Configure finishline setup data."
+requiredHint = true

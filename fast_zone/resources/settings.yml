@@ -1,0 +1,48 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Fast Zone Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "ICE"
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+  # Example:
+  # - "COOKED_BEEF:16:0"
+  # - "GOLDEN_APPLE:3:8"
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects:
+    - "SPEED:999999:25" # Hyper-speed run (same feel as Fast Zone in BlueArcade2)
+  # Example:
+  # - "JUMP_BOOST:999999:0"
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:2"  # 3 seconds of resistance after respawn
+    - "SPEED:999999:25"         # Keep the exaggerated speed on respawn
+
+hazards:
+  wall_collision:
+    enabled: true
+    # Distance (in blocks) to check in front of the player for collisions
+    check_distance: 1.0
+    # Blocks ignored by the collision check
+    ignore_blocks:
+      - "AIR"
+      - "CAVE_AIR"
+      - "VOID_AIR"
