@@ -1,0 +1,41 @@
+schema = 1
+id = "battle_royale"
+name = "Battle Royale"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Fly in with the dragon, loot chests, and survive the shrinking storm to be the last team standing."
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "battle_royale"
+
+[[setup.steps]]
+id = "region"
+required = true
+displayName = "Configure Region"
+description = "Configure the module-specific region setup data."
+commandExamples = ["/baa game <arena> battle_royale region"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "team"
+required = true
+displayName = "Configure Team"
+description = "Configure the module-specific team setup data."
+commandExamples = ["/baa game <arena> battle_royale team"]
+expectedInput = "team count and team size"
+
+[[setup.commands]]
+name = "region"
+usage = "/baa game <arena> battle_royale region"
+description = "Configure region setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "team"
+usage = "/baa game <arena> battle_royale team"
+description = "Configure team setup data."
+requiredHint = true
