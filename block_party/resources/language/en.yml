@@ -1,0 +1,113 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Block Party Module - English (UK)
+display_name: "Block Party"
+
+description:
+  default:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Game</green> <gray>-</gray> <light_purple><bold>Block Party</bold></light_purple>"
+    - " "
+    - "<white>Description:</white>"
+    - "<gray>Music plays, then a color is revealed.</gray>"
+    - "<gray>Stand on the chosen block before the rest falls.</gray>"
+    - "<gray>Grab power-ups to outsmart everyone else.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<light_purple>Block Party</light_purple>"
+  lore:
+    - "<gray>Dance until the beat stops.</gray>"
+    - "<gray>Find the right color or fall.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+  labels:
+    correct_blocks: "Correct colors matched"
+    games_played: "Block Party games played"
+    wins: "Block Party wins"
+    powerups_used: "Power-ups collected"
+
+messages:
+  eliminated: "<red>The floor vanished beneath you! You're now spectating.</red>"
+  round:
+    starting: "<yellow>Round {bp_round} is starting! Keep moving until the color is shown.</yellow>"
+    reveal: "<yellow>Find and stand on: <white>{block}</white></yellow>"
+    collapsing: "<red>The wrong colors are disappearing!</red>"
+  powerups:
+    collected: "<green>{player}</green> grabbed a <aqua>{powerup}</aqua>."
+    expired: "<gray>A power-up faded away.</gray>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>missed the color change.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>didn't find the right block.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fell through the dance floor.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>got caught off-beat.</gray>"
+
+scoreboard:
+  main:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Block Party</aqua>"
+      - "<white>Time:</white> <aqua>{bp_time}</aqua>"
+      - ""
+      - "<white>Round:</white> <aqua>{bp_round}</aqua>"
+      - ""
+      - "<white>Alive:</white> <green>{alive}</green>"
+      - "<white>Spectators:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+action_bar:
+  search: "<aqua>Time:</aqua> <white>{bp_time}s</white> <gray>|</gray> <aqua>Round:</aqua> <white>{bp_round}</white>"
+
+setup_messages:
+  set_success: "{prefix} <green>Floor area set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the floor region first.</red>"
+  not_configured: "{prefix} <red>The floor is missing, the pattern type is not set, or static mode has no saved patterns.</red>"
+  usage_floor: "{prefix} <yellow>Usage: /baa game <id> block_party floor set</yellow>"
+  usage_pattern: "{prefix} <yellow>Usage: /baa game <id> block_party pattern <add|remove|list|initial|type|status|templates></yellow>"
+  usage_pattern_add: "{prefix} <yellow>Usage: /baa game <id> block_party pattern add <name></yellow>"
+  usage_pattern_remove: "{prefix} <yellow>Usage: /baa game <id> block_party pattern remove <name></yellow>"
+  usage_pattern_list: "{prefix} <yellow>Usage: /baa game <id> block_party pattern list</yellow>"
+  usage_pattern_initial: "{prefix} <yellow>Usage: /baa game <id> block_party pattern initial <name></yellow>"
+  usage_pattern_type: "{prefix} <yellow>Usage: /baa game <id> block_party pattern type <static|procedural></yellow>"
+  usage_pattern_templates: "{prefix} <yellow>Usage: /baa game <id> block_party pattern templates <all|type...></yellow>"
+  pattern_added: "{prefix} <green>Pattern <yellow>{name}</yellow> saved with {blocks} blocks.</green>"
+  pattern_removed: "{prefix} <green>Pattern <yellow>{name}</yellow> removed.</green>"
+  pattern_exists: "{prefix} <red>A pattern named <yellow>{name}</yellow> already exists.</red>"
+  pattern_missing: "{prefix} <red>Pattern <yellow>{name}</yellow> not found.</red>"
+  pattern_list_header: "{prefix} <green>Available patterns:</green>"
+  pattern_list_entry: "{prefix} <gray>-</gray> <yellow>{name}</yellow>"
+  pattern_initial_set: "{prefix} <green>Initial pattern set to <yellow>{name}</yellow>.</green>"
+  pattern_required: "{prefix} <red>Create at least one pattern before starting the game.</red>"
+  pattern_type_set_static: "{prefix} <green>Pattern type set to <yellow>static</yellow>. Saved patterns will be used.</green>"
+  pattern_type_set_procedural: "{prefix} <green>Pattern type set to <yellow>procedural</yellow>. A new pattern will be generated each round; saved patterns will be ignored.</green>"
+  pattern_type_status: "{prefix} <gray>Pattern type: <yellow>{type}</yellow>, templates: <yellow>{templates}</yellow></gray>"
+  pattern_templates_updated: "{prefix} <green>Procedural templates: <yellow>{templates}</yellow>.</green>"
+  pattern_templates_invalid: "{prefix} <red>No valid procedural templates were provided.</red>"
+  usage_music_time: "{prefix} <yellow>Usage: /baa game <id> block_party musictime <seconds></yellow>"
+  usage_search_time: "{prefix} <yellow>Usage: /baa game <id> block_party searchtime <seconds></yellow>"
+  usage_decrease_time: "{prefix} <yellow>Usage: /baa game <id> block_party decreasetime <seconds></yellow>"
+  usage_min_time: "{prefix} <yellow>Usage: /baa game <id> block_party mintime <seconds></yellow>"
+  time_updated: "{prefix} <green>Updated <yellow>{key}</yellow> to <yellow>{value}</yellow>.</green>"
+
+powerup_names:
+  TELEPORT: "Teleporter"
+  PATCH: "Color Splash"
+  SPEED: "Speed Burst"
+  BONUS_TIME: "Time Extender"
+
+items:
+  target_name: "<yellow>Target Block</yellow>"

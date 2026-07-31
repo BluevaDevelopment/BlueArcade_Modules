@@ -1,0 +1,18 @@
+return {
+  "[NBS] modules/block_party/music/14th Song.nbs",
+  "[NBS] modules/block_party/music/A Little Piece of Heaven.nbs",
+  "[NBS] modules/block_party/music/A Nightmare Before Christmas.nbs",
+  "[NBS] modules/block_party/music/Alan Walker - Alone.nbs",
+  "[NBS] modules/block_party/music/Alan Walker - Fade.nbs",
+  "[NBS] modules/block_party/music/Animals.nbs",
+  "[NBS] modules/block_party/music/BlindingLights.nbs",
+  "[NBS] modules/block_party/music/fnafsong.nbs",
+  "[NBS] modules/block_party/music/Gangnam Style.nbs",
+  "[NBS] modules/block_party/music/Gravity Falls Theme.nbs",
+  "[NBS] modules/block_party/music/I'm an Albatraoz.nbs",
+  "[NBS] modules/block_party/music/Luis Fonsi - Despacito.nbs",
+  "[NBS] modules/block_party/music/Mad World.nbs",
+  "[NBS] modules/block_party/music/Nyan Cat.nbs",
+  "[NBS] modules/block_party/music/OMFG - Hello.nbs",
+  "[NBS] modules/block_party/music/thriller.nbs",
+}

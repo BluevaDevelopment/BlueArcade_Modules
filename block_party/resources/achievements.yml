@@ -1,0 +1,376 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "block_party"
+  name: "Block Party"
+  description:
+    - "Achievements tied to Block Party."
+  icon: "MUSIC_DISC_CAT"
+  sort_order: 30
+
+achievements:
+  dancefloor_rookie:
+    name: "Dancefloor Rookie"
+    description:
+      - "Play Block Party matches."
+    icon: "JUKEBOX"
+    phases:
+      1:
+        name: "First track"
+        description:
+          - "Play your first match."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Opening act"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Warmed up"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Headliner"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Encore loop"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  color_matcher:
+    name: "Color Matcher"
+    description:
+      - "Stand on the right colors."
+    icon: "PURPLE_CONCRETE"
+    phases:
+      1:
+        name: "On beat"
+        description:
+          - "Match 25 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_correct_blocks} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Rhythm reader"
+        description:
+          - "Match 100 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_correct_blocks} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Pattern pro"
+        description:
+          - "Match 250 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_correct_blocks} >= 250"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Choreographer"
+        description:
+          - "Match 500 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_correct_blocks} >= 500"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Beat architect"
+        description:
+          - "Match 800 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_correct_blocks} >= 800"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  party_champion:
+    name: "Party Champion"
+    description:
+      - "Win Block Party matches."
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First clear"
+        description:
+          - "Win 1 match."
+        conditions:
+          - "{bluearcade_stat_module_block_party_wins} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Dance crown"
+        description:
+          - "Win 5 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_wins} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Head choreographer"
+        description:
+          - "Win 12 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_wins} >= 12"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Dancefloor monarch"
+        description:
+          - "Win 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_wins} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 100"
+            - "baa xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      5:
+        name: "Block party legend"
+        description:
+          - "Win 45 matches."
+        conditions:
+          - "{bluearcade_stat_module_block_party_wins} >= 45"
+        rewards:
+          commands:
+            - "baa credits give {player} 150"
+            - "baa xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+
+  groove_collector:
+    name: "Groove Collector"
+    description:
+      - "Collect power-ups during matches."
+    icon: "AMETHYST_SHARD"
+    phases:
+      1:
+        name: "Quick grab"
+        description:
+          - "Collect 3 power-ups."
+        conditions:
+          - "{bluearcade_stat_module_block_party_powerups_used} >= 3"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Loot runner"
+        description:
+          - "Collect 10 power-ups."
+        conditions:
+          - "{bluearcade_stat_module_block_party_powerups_used} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Supply expert"
+        description:
+          - "Collect 25 power-ups."
+        conditions:
+          - "{bluearcade_stat_module_block_party_powerups_used} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Treasure seeker"
+        description:
+          - "Collect 50 power-ups."
+        conditions:
+          - "{bluearcade_stat_module_block_party_powerups_used} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Beat hoarder"
+        description:
+          - "Collect 80 power-ups."
+        conditions:
+          - "{bluearcade_stat_module_block_party_powerups_used} >= 80"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  rhythm_specialist:
+    name: "Rhythm Specialist"
+    description:
+      - "Stay consistent across colors and matches."
+    icon: "BEACON"
+    phases:
+      1:
+        name: "Steady beat"
+        description:
+          - "Play 15 matches and match 60 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 15 && {bluearcade_stat_module_block_party_correct_blocks} >= 60"
+        rewards:
+          commands:
+            - "baa credits give {player} 30"
+            - "baa xp give {player} 30"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+30 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+30 XP</light_purple>"
+      2:
+        name: "Full routine"
+        description:
+          - "Play 40 matches and match 200 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 40 && {bluearcade_stat_module_block_party_correct_blocks} >= 200"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      3:
+        name: "Showtime"
+        description:
+          - "Play 70 matches and match 450 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 70 && {bluearcade_stat_module_block_party_correct_blocks} >= 450"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+      4:
+        name: "Headliner tour"
+        description:
+          - "Play 100 matches and match 700 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 100 && {bluearcade_stat_module_block_party_correct_blocks} >= 700"
+        rewards:
+          commands:
+            - "baa credits give {player} 130"
+            - "baa xp give {player} 130"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+130 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+130 XP</light_purple>"
+      5:
+        name: "Endless encore"
+        description:
+          - "Play 140 matches and match 1100 correct blocks."
+        conditions:
+          - "{bluearcade_stat_module_block_party_games_played} >= 140 && {bluearcade_stat_module_block_party_correct_blocks} >= 1100"
+        rewards:
+          commands:
+            - "baa credits give {player} 190"
+            - "baa xp give {player} 190"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+190 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+190 XP</light_purple>"

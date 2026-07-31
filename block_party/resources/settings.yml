@@ -1,0 +1,123 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Block Party Module Settings
+# Songs from: https://github.com/nickg2/NBSsongs 
+# Visual representation in menus
+menus:
+  vote:
+    item: "MUSIC_DISC_MELLOHI"
+
+gameplay:
+  # Default gameplay values for this module.
+  # You can override these per arena with /baa game setup commands when available.
+  # How far below the lowest floor a player must fall to be eliminated
+  elimination_margin: 1.0
+  # Seconds to let music play before revealing the target block
+  initial_music_time: 3.0
+  # Seconds players have to find the target at the start of the match
+  search_time: 12.0
+  # Seconds removed from the search time every round
+  decrease_time: 1.0
+  # Minimum search time (seconds)
+  min_search_time: 0.5
+  # Delay (ticks) after collapse before the next round starts
+  round_pause_ticks: 60
+  # Slot where the target block preview is given (-1 to disable)
+  target_item_slot: 4
+  # Whether to hand out the target block item
+  give_target_item: true
+  # If true, the module will honor basic.time from the arena data and end when it is reached
+  respect_max_game_time: false
+  falling_blocks:
+    # Whether to spawn a falling shard when a wrong block disappears
+    enabled: true
+    downward_velocity: 0.3
+    horizontal_randomness: 0.08
+  # Game mode players will be put in when game starts
+  game_mode: "SURVIVAL"
+
+# Runtime-generated floor patterns. Enable this per arena with:
+# /baa game <id> block_party pattern type procedural
+procedural_patterns:
+  # Avoid selecting one of the most recently used template types.
+  no_repeat: 3
+  # Minimum number of pattern cells that should fit on the shortest side of the floor.
+  # Higher values produce smaller cells; lower values produce larger cells.
+  scale:
+    min_cells_per_side: 3
+  # A target color must cover at least this percentage of the floor area when possible.
+  min_target_area_percent: 25
+  difficulty:
+    # More colors are introduced as rounds progress.
+    initial_colors: 4
+    max_colors: 16
+    color_increase_every: 2
+
+particles:
+  region:
+    enabled: true
+    type: "NOTE"
+    count: 6
+    spacing: 3.5
+    speed: 0.02
+  collapse:
+    enabled: false
+    type: "FLAME"
+    count: 10
+    spread: 0.35
+    speed: 0.1
+
+fallback_pattern:
+  materials:
+    - "RED_CONCRETE"
+    - "BLUE_CONCRETE"
+    - "GREEN_CONCRETE"
+    - "YELLOW_CONCRETE"
+    - "PURPLE_CONCRETE"
+
+powerups:
+  enabled: true
+  spawn_interval_ticks: 200
+  max_active: 2
+  item: "BEACON"
+  bonus_time_ticks: 40
+  speed:
+    duration_ticks: 160
+    amplifier: 1
+  patch:
+    radius: 2
+  particles:
+    enabled: true
+    type: "WITCH"
+    count: 12
+    spread: 0.35
+    speed: 0.12
+
+music:
+  # Add your NoteBlock (.nbs) files inside the module's music folder.
+  # The module automatically reads:
+  # /plugins/BlueArcade/modules/block_party/music
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects:
+    - "NIGHT_VISION:999999:0"
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "NIGHT_VISION:999999:0"

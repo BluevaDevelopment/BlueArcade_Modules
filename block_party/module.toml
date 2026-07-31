@@ -1,0 +1,96 @@
+schema = 1
+id = "block_party"
+name = "Block Party"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Match the color before the floor disappears."
+
+[replaces]
+legacyId = "block_party"
+
+[[setup.steps]]
+id = "floor"
+required = true
+displayName = "Configure Floor"
+description = "Configure the module-specific floor setup data."
+commandExamples = ["/baa game <arena> block_party floor"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "pattern"
+required = true
+displayName = "Configure Pattern"
+description = "Configure the module-specific pattern setup data."
+commandExamples = ["/baa game <arena> block_party pattern"]
+expectedInput = "pattern type and saved patterns"
+
+[[setup.steps]]
+id = "musictime"
+required = true
+displayName = "Configure Musictime"
+description = "Configure the module-specific musictime setup data."
+commandExamples = ["/baa game <arena> block_party musictime"]
+expectedInput = "seconds"
+
+[[setup.steps]]
+id = "searchtime"
+required = true
+displayName = "Configure Searchtime"
+description = "Configure the module-specific searchtime setup data."
+commandExamples = ["/baa game <arena> block_party searchtime"]
+expectedInput = "seconds"
+
+[[setup.steps]]
+id = "decreasetime"
+required = true
+displayName = "Configure Decreasetime"
+description = "Configure the module-specific decreasetime setup data."
+commandExamples = ["/baa game <arena> block_party decreasetime"]
+expectedInput = "seconds"
+
+[[setup.steps]]
+id = "mintime"
+required = true
+displayName = "Configure Mintime"
+description = "Configure the module-specific mintime setup data."
+commandExamples = ["/baa game <arena> block_party mintime"]
+expectedInput = "seconds"
+
+[[setup.commands]]
+name = "floor"
+usage = "/baa game <arena> block_party floor"
+description = "Configure floor setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "pattern"
+usage = "/baa game <arena> block_party pattern"
+description = "Configure pattern setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "musictime"
+usage = "/baa game <arena> block_party musictime"
+description = "Configure musictime setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "searchtime"
+usage = "/baa game <arena> block_party searchtime"
+description = "Configure searchtime setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "decreasetime"
+usage = "/baa game <arena> block_party decreasetime"
+description = "Configure decreasetime setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "mintime"
+usage = "/baa game <arena> block_party mintime"
+description = "Configure mintime setup data."
+requiredHint = true
