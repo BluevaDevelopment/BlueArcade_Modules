@@ -1,0 +1,84 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Red Alert Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "RED_CONCRETE"
+
+gameplay:
+  # How far below the lowest floor a player must fall to be eliminated
+  elimination_margin: 1.0
+
+random_mode:
+  # Chance (percentage) each tick to advance a block to the next color
+  change_color_chance: 1.5
+  # Amount added to the chance every second
+  increase_chance_every_second: 1.0
+  # Tick rate (in ticks) for block checks
+  tick_rate: 20
+
+trail_mode:
+  # Interval (in ticks) before a tile heats again while a player stands on it
+  hold_interval_ticks: 16
+  # Instantly advance blocks that are already changing (yellow/orange/red) when stepped on again
+  accelerate_hot_block_touches: true
+  detection:
+    # How many blocks below the player to scan to find the floor (TNT Run-like detection)
+    scan_depth: 3
+    # Additional blocks below the detected floor position to also affect (keep 0 for single-layer floors)
+    additional_blocks_below: 0
+    # Sensitivity for detecting when the player is on the edge of a block (adds side/diagonal tiles)
+    edge_threshold: 0.25
+  # Time (in ticks) to auto-advance each stage after last touch
+  stage_advance_ticks:
+    safe_to_warn: 20
+    warn_to_danger: 28
+    danger_to_critical: 36
+    critical_to_air: 44
+
+blocks:
+  stages:
+    safe: "WHITE_CONCRETE"
+    warn: "YELLOW_CONCRETE"
+    danger: "ORANGE_CONCRETE"
+    critical: "RED_CONCRETE"
+  particles:
+    enabled: true
+    type: "FLAME"
+    # Number of particles to spawn when a block disappears
+    count: 12
+    # Horizontal spread for decay particles
+    spread: 0.35
+    # Speed of the particle burst
+    speed: 0.15
+  falling:
+    # Whether to spawn a falling shard when a block disappears
+    enabled: true
+    # Downward velocity for the falling shard
+    downward_velocity: 0.3
+    # Horizontal randomness applied to the falling shard velocity
+    horizontal_randomness: 0.08
+
+# Game items (optional)
+items:
+  # Items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"

@@ -1,0 +1,84 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Alerta roja Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Alerta roja"
+
+description:
+  chaos:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Alerta roja</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Las casillas se sobrecalientan aleatoriamente por toda la arena.</gray>"
+    - "<gray>Sigue moviéndote mientras los colores cambian hacia el rojo.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  trail:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Alerta roja</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Las casillas se calientan donde pisan los jugadores.</gray>"
+    - "<gray>Corre más rápido que el rastro que se derrumba para sobrevivir.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Alerta roja</green>"
+  lore:
+    - "<gray>Escapa del suelo sobrecalentado.</gray>"
+    - "<gray>Sobrevive más que todos los demás.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Red Alert victorias"
+    games_played: "Red Alert partidas jugadas"
+    tiles_melted: "Blocks heated or eliminado"
+  labels:
+    tiles_melted: "Casillas derretidas"
+    games_played: "Red Alert partidas jugadas"
+    wins: "Red Alert victorias"
+
+messages:
+  eliminated: "<red>¡El calor te devoró! Ahora estás como espectador.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo escapar del colapso.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>quemó el último bloque.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó al vacío ardiente.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>ignoró las luces de advertencia.</gray>"
+
+scoreboard:
+  mode_labels:
+    chaos: "Cuadrícula caótica"
+    trail: "Rastro colapsable"
+  main:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Alerta roja</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Área del suelo establecida: {blocks} bloques ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero la región del suelo.</red>"
+  not_configured: "{prefix} <red>¡El suelo no está configurado! Usa /baa game {arena_id} red_alert floor set</red>"
+  usage_floor: "{prefix} <yellow>Uso: /baa game <id> <minigame> floor set</yellow>"
+  usage_setmode: "{prefix} <yellow>Uso: /baa game <id> red_alert setmode <chaos|trail></yellow>"
+  mode_set: "{prefix} <green>Mode establecido en</green> <yellow>{mode}</yellow><green>.</green>"

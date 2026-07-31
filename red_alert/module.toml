@@ -1,0 +1,40 @@
+schema = 1
+id = "red_alert"
+name = "Red Alert"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Outrun the overheating floor - survive longer than everyone else."
+
+[replaces]
+legacyId = "red_alert"
+
+[[setup.steps]]
+id = "floor"
+required = true
+displayName = "Configure Floor"
+description = "Configure the module-specific floor setup data."
+commandExamples = ["/baa game <arena> red_alert floor"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "setmode"
+required = true
+displayName = "Configure Setmode"
+description = "Configure the module-specific setmode setup data."
+commandExamples = ["/baa game <arena> red_alert setmode"]
+expectedInput = "mode"
+
+[[setup.commands]]
+name = "floor"
+usage = "/baa game <arena> red_alert floor"
+description = "Configure floor setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "setmode"
+usage = "/baa game <arena> red_alert setmode"
+description = "Configure setmode setup data."
+requiredHint = true

@@ -1,0 +1,85 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Red Alert Module - English (UK)
+# Only Red Alert-specific content
+display_name: "Red Alert"
+
+description:
+  chaos:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Game</green> <gray>-</gray> <yellow><bold>Red Alert</bold></yellow>"
+    - " "
+    - "<white>Description:</white>"
+    - "<gray>Tiles overheat randomly across the arena.</gray>"
+    - "<gray>Keep moving as colors shift toward red.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  trail:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Game</green> <gray>-</gray> <yellow><bold>Red Alert</bold></yellow>"
+    - " "
+    - "<white>Description:</white>"
+    - "<gray>Tiles heat up where players step.</gray>"
+    - "<gray>Outrun the collapsing trail to survive.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<green>Red Alert</green>"
+  lore:
+    - "<gray>Outrun the overheating floor.</gray>"
+    - "<gray>Survive longer than everyone else.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+
+  descriptions:
+    wins: "Red Alert wins"
+    games_played: "Red Alert games played"
+    tiles_melted: "Blocks heated or removed"
+  labels:
+    tiles_melted: "Tiles melted"
+    games_played: "Red Alert games played"
+    wins: "Red Alert wins"
+
+messages:
+  eliminated: "<red>The heat swallowed you! You're now spectating.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>couldn't outrun the meltdown.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>burned through the last block.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fell into the hot void.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>ignored the warning lights.</gray>"
+
+scoreboard:
+  mode_labels:
+    chaos: "Chaos Grid"
+    trail: "Trail Collapse"
+  main:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Red Alert</aqua>"
+      - "<white>Time:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Alive:</white> <green>{alive}</green>"
+      - "<white>Spectators:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Floor area set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the floor region first.</red>"
+  not_configured: "{prefix} <red>Floor is not configured! Use /baa game {arena_id} red_alert floor set</red>"
+  usage_floor: "{prefix} <yellow>Usage: /baa game <id> <minigame> floor set</yellow>"
+  usage_setmode: "{prefix} <yellow>Usage: /baa game <id> red_alert setmode <chaos|trail></yellow>"
+  mode_set: "{prefix} <green>Mode set to</green> <yellow>{mode}</yellow><green>.</green>"
