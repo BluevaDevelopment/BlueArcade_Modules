@@ -1,0 +1,26 @@
+schema = 1
+id = "knockback"
+name = "Knockback"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Launch opponents into the void!"
+
+[replaces]
+legacyId = "knockback"
+
+[[setup.steps]]
+id = "setmode"
+required = true
+displayName = "Configure Setmode"
+description = "Configure the module-specific setmode setup data."
+commandExamples = ["/baa game <arena> knockback setmode"]
+expectedInput = "mode"
+
+[[setup.commands]]
+name = "setmode"
+usage = "/baa game <arena> knockback setmode"
+description = "Configure setmode setup data."
+requiredHint = true

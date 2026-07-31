@@ -1,0 +1,47 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Knockback Module Settings
+# Visual representation in menus
+menus:
+  vote:
+    item: "STICK"
+
+respawn:
+  # Delay (in ticks) before a player respawns in most_kills mode after being eliminated
+  most_kills_delay_ticks: 60
+
+kills:
+  # Time window (in ticks) to credit a killer after hitting a player
+  credit_window_ticks: 200
+
+# Game items (optional)
+items:
+  # Core knockback weapon
+  knockback_stick:
+    material: "STICK"
+    amount: 1
+    slot: 0
+    knockback_level: 3
+    unbreakable: true
+    name: "<yellow><bold>Knockback Stick</bold></yellow>"
+    lore: []
+
+  # Additional items to give players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+# Potion effects (optional)
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects: []

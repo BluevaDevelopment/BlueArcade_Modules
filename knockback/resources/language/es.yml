@@ -1,0 +1,111 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Knockback Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Knockback"
+
+description:
+  last_standing:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Knockback</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Usa un palo de empuje para lanzar rivales</gray>"
+    - "<gray>al vacío y ser el último en pie.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  most_kills:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Knockback</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Empuja jugadores al vacío tantas veces</gray>"
+    - "<gray>posibles antes de que termine el tiempo.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Knockback</green>"
+  lore:
+    - "<gray>Manda a tus rivales volando con un palo de empuje.</gray>"
+    - "<gray>Permanece en el mapa o cae intentándolo.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Knockback victorias"
+    games_played: "Knockback partidas jugadas"
+    knockback_hits: "Golpes acertados con armas de empuje"
+    knockback_kills: "Jugadores knocked into the void"
+  labels:
+    knockback_hits: "Golpes de empuje"
+    knockback_kills: "Eliminaciones por empuje"
+    games_played: "Knockback partidas jugadas"
+    wins: "Knockback victorias"
+
+messages:
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue lanzado al vacío por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>lanzó a</gray> <red>{victim}</red> <gray>fuera del mapa.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo sobrevivir a</gray> <yellow>{killer}</yellow><gray>.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó al vacío.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>perdió el equilibrio y desapareció.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue tragado por el vacío.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>SALISTE VOLANDO</bold></red>"
+    subtitle: "<gray>Recupérate e inténtalo de nuevo.</gray>"
+  classified:
+    title: "<yellow><bold>CLASIFICADO</bold></yellow>"
+    subtitle: "<gray>Has sido eliminado.</gray>"
+
+scoreboard:
+  mode_labels:
+    last_standing: "Último en pie"
+    most_kills: "Más bajas"
+  last_standing:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Knockback</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Bajas:</white> <red>{kills}</red>"
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  most_kills:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Knockback</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<green>➊</green> <white>{place_1}</white> <gray>{kills_1}</gray>"
+      - "<gold>➋</gold> <white>{place_2}</white> <gray>{kills_2}</gray>"
+      - "<red>➌</red> <white>{place_3}</white> <gray>{kills_3}</gray>"
+      - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{kills_4}</dark_gray>"
+      - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{kills_5}</dark_gray>"
+      - ""
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  mode_set: "{prefix} <green>Knockback mode establecido en {mode}.</green>"
+  usage_setmode: "{prefix} <yellow>Uso: /baa game <id> <minigame> setmode <last_standing|most_kills></yellow>"
