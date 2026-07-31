@@ -1,0 +1,40 @@
+schema = 1
+id = "all_against_all"
+name = "All Against All"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Chaotic free-for-all PvP - last one standing, or the most kills, wins."
+
+[replaces]
+legacyId = "all_against_all"
+
+[[setup.steps]]
+id = "setmode"
+required = true
+displayName = "Configure Setmode"
+description = "Configure the module-specific setmode setup data."
+commandExamples = ["/baa game <arena> all_against_all setmode"]
+expectedInput = "mode"
+
+[[setup.steps]]
+id = "setregion"
+required = true
+displayName = "Configure Setregion"
+description = "Configure the module-specific setregion setup data."
+commandExamples = ["/baa game <arena> all_against_all setregion"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "setmode"
+usage = "/baa game <arena> all_against_all setmode"
+description = "Configure setmode setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "setregion"
+usage = "/baa game <arena> all_against_all setregion"
+description = "Configure setregion setup data."
+requiredHint = true

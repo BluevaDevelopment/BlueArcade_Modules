@@ -1,0 +1,117 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Todos contra todos Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Todos contra todos"
+
+description:
+  last_standing:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Todos contra todos</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Equípate con espadas, arcos y bloques.</gray>"
+    - "<gray>Construye, rompe y sobrevive a todos tus rivales.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  most_kills:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - "<green>Juego</green> <gray>-</gray> <yellow><bold>Todos contra todos</bold></yellow>"
+    - " "
+    - "<white>Descripción:</white>"
+    - "<gray>Reaparece y sigue luchando.</gray>"
+    - "<gray>Consigue más bajas que nadie antes de que se acabe el tiempo.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Todos contra todos</green>"
+  lore:
+    - "<gray>PvP caótico con equipo cuerpo a cuerpo y a distancia.</gray>"
+    - "<gray>Construye defensas y pasa al ataque.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Victorias en Todos contra todos"
+    games_played: "Partidas jugadas en Todos contra todos"
+    kills: "Rivales derrotados en Todos contra todos"
+    arrows_shot: "Flechas disparadas en Todos contra todos"
+    hits_landed: "Golpes acertados en Todos contra todos"
+  labels:
+    arrows_shot: "Flechas disparadas"
+    hits_landed: "Golpes acertados"
+    kills: "Bajas"
+    games_played: "Partidas jugadas en Todos contra todos"
+    wins: "Victorias en Todos contra todos"
+
+messages:
+  eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue abatido por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>superó a</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo sobrevivir a</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>se cobró a</gray> <red>{victim}</red> <gray>como su próxima baja.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo seguir luchando.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>tuvo un final prematuro.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue reclamado por la arena.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>HAS MUERTO</bold></red>"
+    subtitle: "<gray>Más suerte la próxima vez.</gray>"
+  classified:
+    title: "<red><bold>ELIMINADO</bold></red>"
+    subtitle: "<gray>Has sido eliminado.</gray>"
+
+scoreboard:
+  mode_labels:
+    last_standing: "Último en pie"
+    most_kills: "Más bajas"
+  last_standing:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Todos contra todos</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Bajas:</white> <red>{kills}</red>"
+      - "<white>Vivos:</white> <green>{alive}</green>"
+      - "<white>Espectadores:</white> <gray>{spectators}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  most_kills:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Todos contra todos</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<green>➊</green> <white>{place_1}</white> <gray>{kills_1}</gray>"
+      - "<gold>➋</gold> <white>{place_2}</white> <gray>{kills_2}</gray>"
+      - "<red>➌</red> <white>{place_3}</white> <gray>{kills_3}</gray>"
+      - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{kills_4}</dark_gray>"
+      - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{kills_5}</dark_gray>"
+      - ""
+      - "<white>Tus bajas:</white> <red>{kills}</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  usage: "{prefix} <yellow>Uso: /baa game <id> all_against_all <setmode|setregion> [...args]</yellow>"
+  mode_set: "{prefix} <green>Modo de Todos contra todos establecido en {mode}.</green>"
+  usage_setmode: "{prefix} <yellow>Uso: /baa game <id> <minigame> setmode <last_standing|most_kills></yellow>"
+  must_use_stick: "{prefix} <yellow>Selecciona primero dos esquinas con la herramienta de setup.</yellow>"
+  region_set: "{prefix} <green>Región de regeneración guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"

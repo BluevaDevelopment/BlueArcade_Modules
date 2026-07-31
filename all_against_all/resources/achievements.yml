@@ -1,0 +1,232 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "all_against_all"
+  name: "All Against All"
+  description:
+    - "Achievements tied to All Against All."
+  icon: "IRON_SWORD"
+  sort_order: 22
+
+achievements:
+  arena_regular:
+    name: "Arena Regular"
+    description:
+      - "Play All Against All matches."
+    icon: "IRON_SWORD"
+    phases:
+      1:
+        name: "First blood"
+        description:
+          - "Play 1 match."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Warm-up"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Skirmisher"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Ring fighter"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Arena legend"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  ruthless:
+    name: "Ruthless"
+    description:
+      - "Eliminate opponents."
+    icon: "DIAMOND_SWORD"
+    phases:
+      1:
+        name: "Opening strike"
+        description:
+          - "Eliminate 1 player."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_kills} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Duelist"
+        description:
+          - "Eliminate 10 players."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_kills} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Arena menace"
+        description:
+          - "Eliminate 25 players."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_kills} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Arena ace"
+        description:
+          - "Eliminate 50 players."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_kills} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+      5:
+        name: "Arena champion"
+        description:
+          - "Eliminate 100 players."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_kills} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  precise_striker:
+    name: "Precise Striker"
+    description:
+      - "Land melee or ranged hits."
+    icon: "BOW"
+    phases:
+      1:
+        name: "Measured swing"
+        description:
+          - "Land 20 hits."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_hits_landed} >= 20"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Reliable aim"
+        description:
+          - "Land 50 hits."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_hits_landed} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Consistent striker"
+        description:
+          - "Land 120 hits."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_hits_landed} >= 120"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Battlefield expert"
+        description:
+          - "Land 200 hits."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_hits_landed} >= 200"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Unerring"
+        description:
+          - "Land 320 hits."
+        conditions:
+          - "{bluearcade_stat_module_all_against_all_hits_landed} >= 320"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
