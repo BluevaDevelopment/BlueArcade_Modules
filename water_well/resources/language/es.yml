@@ -1,0 +1,67 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Pozo de agua Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Pozo de agua"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Pozo de agua</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>¡Salta desde arriba al pozo de agua!</gray>"
+  - "<gray>Aterriza en el agua para ganar puntos; falla y los perderás.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Pozo de agua</green>"
+  lore:
+    - "<gray>¡Lánzate al pozo de agua!</gray>"
+    - "<gray>Gana puntos aterrizando en el agua.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  descriptions:
+    wins: "Water Well victorias"
+    games_played: "Water Well partidas jugadas"
+    water_landings: "Caídas exitosas en agua"
+    total_score: "Total puntos earned from water landings"
+  labels:
+    water_landings: "Caídas en agua"
+    total_score: "Total puntuación"
+    games_played: "Water Well partidas jugadas"
+    wins: "Water Well victorias"
+
+messages:
+  water_landing: "<green>+2</green> <gray>¡Splash! ¡Has caído en el agua!</gray>"
+  missed_landing: "<red>-1</red> <gray>¡Ups! Has fallado el agua.</gray>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Juego:</white> <aqua>Pozo de agua</aqua>"
+    - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<green>➊</green> <white>{place_1}</white> <gray>{score_1} pts</gray>"
+    - "<gold>➋</gold> <white>{place_2}</white> <gray>{score_2} pts</gray>"
+    - "<red>➌</red> <white>{place_3}</white> <gray>{score_3} pts</gray>"
+    - "<dark_gray>➍</dark_gray> <gray>{place_4}</gray> <dark_gray>{score_4} pts</dark_gray>"
+    - "<dark_gray>➎</dark_gray> <gray>{place_5}</gray> <dark_gray>{score_5} pts</dark_gray>"
+    - ""
+    - "<aqua>Tu puntuación:</aqua> <white>{player_score} pts</white>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  not_configured: "{prefix} <red>¡Los límites no están configurados! Usa /baa game {arena_id} water_well bounds set</red>"
