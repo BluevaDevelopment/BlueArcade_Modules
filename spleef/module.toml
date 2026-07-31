@@ -1,0 +1,26 @@
+schema = 1
+id = "spleef"
+name = "Spleef"
+version = "1.0.0"
+type = "MICROGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Break the floor and be the last standing!"
+
+[replaces]
+legacyId = "spleef"
+
+[[setup.steps]]
+id = "floor"
+required = true
+displayName = "Configure Floor"
+description = "Configure the module-specific floor setup data."
+commandExamples = ["/baa game <arena> spleef floor"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "floor"
+usage = "/baa game <arena> spleef floor"
+description = "Configure floor setup data."
+requiredHint = true

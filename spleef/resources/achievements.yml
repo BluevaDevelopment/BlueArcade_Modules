@@ -1,0 +1,376 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "spleef"
+  name: "Spleef"
+  description:
+    - "Achievements tied to Spleef."
+  icon: "SNOW_BLOCK"
+  sort_order: 20
+
+achievements:
+  icebreaker:
+    name: "Icebreaker"
+    description:
+      - "Play your first Spleef matches."
+    icon: "DIAMOND_SHOVEL"
+    phases:
+      1:
+        name: "First round"
+        description:
+          - "Play your first match."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Warm hands"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Snow regular"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Ice veteran"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Frozen legend"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  snow_digger:
+    name: "Snow Digger"
+    description:
+      - "Break lots of snow blocks."
+    icon: "IRON_SHOVEL"
+    phases:
+      1:
+        name: "Small hole"
+        description:
+          - "Break 50 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_snow_blocks_broken} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Big hole"
+        description:
+          - "Break 200 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_snow_blocks_broken} >= 200"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Snow sculptor"
+        description:
+          - "Break 450 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_snow_blocks_broken} >= 450"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Snow carver"
+        description:
+          - "Break 800 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_snow_blocks_broken} >= 800"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Ice excavator"
+        description:
+          - "Break 1200 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_snow_blocks_broken} >= 1200"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  frost_champion:
+    name: "Frost Champion"
+    description:
+      - "Win Spleef matches."
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First win"
+        description:
+          - "Win 1 match."
+        conditions:
+          - "{bluearcade_stat_module_spleef_wins} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Snow crown"
+        description:
+          - "Win 5 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_wins} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Frost ruler"
+        description:
+          - "Win 12 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_wins} >= 12"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Icy monarch"
+        description:
+          - "Win 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_wins} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 100"
+            - "baa xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      5:
+        name: "Snow sovereign"
+        description:
+          - "Win 45 matches."
+        conditions:
+          - "{bluearcade_stat_module_spleef_wins} >= 45"
+        rewards:
+          commands:
+            - "baa credits give {player} 150"
+            - "baa xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+
+  ice_artist:
+    name: "Ice Artist"
+    description:
+      - "Break snow blocks across many games."
+    icon: "PACKED_ICE"
+    phases:
+      1:
+        name: "Crafted paths"
+        description:
+          - "Play 15 matches and break 120 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 15 && {bluearcade_stat_module_spleef_snow_blocks_broken} >= 120"
+        rewards:
+          commands:
+            - "baa credits give {player} 30"
+            - "baa xp give {player} 30"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+30 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+30 XP</light_purple>"
+      2:
+        name: "Master sculptor"
+        description:
+          - "Play 40 matches and break 300 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 40 && {bluearcade_stat_module_spleef_snow_blocks_broken} >= 300"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      3:
+        name: "Ice artisan"
+        description:
+          - "Play 70 matches and break 600 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 70 && {bluearcade_stat_module_spleef_snow_blocks_broken} >= 600"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+      4:
+        name: "Permafrost artist"
+        description:
+          - "Play 100 matches and break 900 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 100 && {bluearcade_stat_module_spleef_snow_blocks_broken} >= 900"
+        rewards:
+          commands:
+            - "baa credits give {player} 130"
+            - "baa xp give {player} 130"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+130 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+130 XP</light_purple>"
+      5:
+        name: "Glacier virtuoso"
+        description:
+          - "Play 140 matches and break 1300 snow blocks."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 140 && {bluearcade_stat_module_spleef_snow_blocks_broken} >= 1300"
+        rewards:
+          commands:
+            - "baa credits give {player} 190"
+            - "baa xp give {player} 190"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+190 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+190 XP</light_purple>"
+
+  chill_streak:
+    name: "Chill Streak"
+    description:
+      - "Win and keep playing."
+    icon: "SNOWBALL"
+    phases:
+      1:
+        name: "Cold run"
+        description:
+          - "Play 20 matches and win 3 times."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 20 && {bluearcade_stat_module_spleef_wins} >= 3"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      2:
+        name: "Frozen streak"
+        description:
+          - "Play 50 matches and win 10 times."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 50 && {bluearcade_stat_module_spleef_wins} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      3:
+        name: "Icy momentum"
+        description:
+          - "Play 80 matches and win 20 times."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 80 && {bluearcade_stat_module_spleef_wins} >= 20"
+        rewards:
+          commands:
+            - "baa credits give {player} 100"
+            - "baa xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      4:
+        name: "Frozen focus"
+        description:
+          - "Play 120 matches and win 35 times."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 120 && {bluearcade_stat_module_spleef_wins} >= 35"
+        rewards:
+          commands:
+            - "baa credits give {player} 150"
+            - "baa xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+      5:
+        name: "Glacial streak"
+        description:
+          - "Play 180 matches and win 55 times."
+        conditions:
+          - "{bluearcade_stat_module_spleef_games_played} >= 180 && {bluearcade_stat_module_spleef_wins} >= 55"
+        rewards:
+          commands:
+            - "baa credits give {player} 220"
+            - "baa xp give {player} 220"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+220 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+220 XP</light_purple>"

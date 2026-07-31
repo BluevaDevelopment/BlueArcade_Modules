@@ -1,0 +1,69 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Spleef Module - English (UK)
+# Only Spleef-specific content
+display_name: "Spleef"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>Spleef</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Break the floor beneath your opponents</gray>"
+  - "<gray>and stay as the last player standing.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+# Vote menu
+vote_menu:
+  name: "<green>Spleef</green>"
+  lore:
+    - "<gray>Shovel the snow from under rivals.</gray>"
+    - "<gray>Last survivor wins.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+
+  descriptions:
+    wins: "Spleef wins"
+    games_played: "Spleef games played"
+    snow_blocks_broken: "Snow blocks removed"
+  labels:
+    snow_blocks_broken: "Snow blocks broken"
+    games_played: "Spleef games played"
+    wins: "Spleef wins"
+
+messages:
+  eliminated: "<red>You fell! You are now a spectator.</red>"
+  deaths:
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>slipped into the void.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>took an unfortunate tumble.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>dug their own downfall.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>vanished beneath the snow.</gray>"
+
+scoreboard:
+  title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+  lines:
+    - ""
+    - "<white>Arena:</white> <aqua>{arena}</aqua>"
+    - "<white>Game:</white> <aqua>Spleef</aqua>"
+    - "<white>Time:</white> <aqua>{time}</aqua>"
+    - ""
+    - "<white>Alive:</white> <green>{alive}</green>"
+    - "<white>Spectators:</white> <gray>{spectators}</gray>"
+    - ""
+    - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  set_success: "{prefix} <green>Floor area set: {blocks} blocks ({x}×{y}×{z})</green>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the floor region first.</red>"
+  not_configured: "{prefix} <red>Floor is not configured! Use /baa game {arena_id} spleef floor set</red>"
+  usage_floor: "{prefix} <yellow>Usage: /baa game <id> <minigame> floor set</yellow>"
