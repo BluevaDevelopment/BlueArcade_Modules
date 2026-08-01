@@ -1,7 +1,7 @@
 schema = 1
 id = "chairs"
 name = "Chairs"
-version = "20260802-8dc44fc"
+version = "dev"
 type = "MICROGAME"
 api = "^1.0"
 entry = "src/main.lua"
