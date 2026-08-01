@@ -1,8 +1,9 @@
--- Mirrors legacy SkyWarsModule.java. StoreAPI-driven kit/cage registration isn't ported - see loadout_service.lua.
+-- Mirrors legacy SkyWarsModule.java.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
 local voteService = require("support.vote_service")
+local storeService = require("support.store_service")
 
 local M = {}
 
@@ -18,6 +19,8 @@ function M.onLoad()
   ba.stats.define("storm_damage_taken", ba.config.translation(nil, "stats.labels.storm_damage_taken"), ba.config.translation(nil, "stats.descriptions.storm_damage_taken"))
 
   ba.achievements.register("achievements.yml")
+
+  storeService.registerStoreItems()
 
   ba.vote.register(
     ba.config.getString("menus.vote.item"),
@@ -65,8 +68,11 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() re-cleans active arenas on mid-match disable; not ported (same standing gap as every module's onDisable).
+-- Mirrors legacy SkyWarsGame.shutdown(): defensive cleanup only, no winner/stats.
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisableCleanup(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

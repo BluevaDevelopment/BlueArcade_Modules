@@ -1,9 +1,9 @@
 -- Mirrors legacy ShopServiceImpl.java: a category->content->tier->buy_item interpreter reading
 -- `shop.yml` at runtime, loaded once lazily at module scope (shared across arenas) via `ba.config`.
--- Not ported: the Bedrock half (unreachable), Quick Buy shift-click *customization* (no
--- PersistentPlayerDataAPI binding - Quick Buy still shows the server-configured defaults), Vault
--- currency (unbound, always resolves to 0 money; the shipped shop.yml never uses it), and legacy's
--- multi-path config-key fallback chains (this conversion's shop.yml only has one schema).
+-- Not ported: Vault currency (unbound, always resolves to 0 money; the shipped shop.yml never uses
+-- it) and legacy's multi-path config-key fallback chains (this conversion's shop.yml only has one
+-- schema). Bedrock and Quick Buy customization are both real now (session.menu.open auto-derives a
+-- Bedrock form; Quick Buy persists per-player via session.playerData).
 local RESOURCE_CURRENCY = { iron = "IRON_INGOT", gold = "GOLD_INGOT", diamond = "DIAMOND", emerald = "EMERALD" }
 local SWORD_DAMAGE = { WOODEN_SWORD = 4, GOLDEN_SWORD = 4, STONE_SWORD = 5, IRON_SWORD = 6, DIAMOND_SWORD = 7, NETHERITE_SWORD = 8 }
 local DYE_COLOR = {
@@ -218,6 +218,52 @@ local function findContent(category, contentId)
     if content.id == contentId then return content end
   end
   return nil
+end
+
+local function serializeQuickBuyEntries(entries)
+  local parts = {}
+  for _, entry in ipairs(entries) do
+    parts[#parts + 1] = entry.slot .. "|" .. entry.categoryId .. "|" .. entry.contentId
+  end
+  return table.concat(parts, ";;")
+end
+
+local function parseQuickBuyEntries(raw)
+  local entries = {}
+  if not raw or raw == "" then return entries end
+  for part in raw:gmatch("[^;;]+") do
+    local slot, categoryId, contentId = part:match("^(%d+)|([^|]+)|(.+)$")
+    if slot and categoryId and contentId then
+      entries[#entries + 1] = { slot = tonumber(slot), categoryId = categoryId, contentId = contentId }
+    end
+  end
+  return entries
+end
+
+-- Mirrors legacy ShopServiceImpl.getPlayerQuickBuy: per-player customization via PersistentPlayerDataAPI, cached for the session.
+local function getPlayerQuickBuy(session, handle, catalog)
+  local cached = session.state.shopQuickBuy[handle]
+  if cached then return cached end
+
+  local customized = session.playerData.getBoolean(handle, "shop_quick_buy_customized", false)
+  local entries
+  if customized then
+    entries = parseQuickBuyEntries(session.playerData.getString(handle, "shop_quick_buy_entries", ""))
+  else
+    entries = {}
+    for _, entry in ipairs(catalog.quickBuyDefaults) do
+      entries[#entries + 1] = { slot = entry.slot, categoryId = entry.categoryId, contentId = entry.contentId }
+    end
+  end
+  session.state.shopQuickBuy[handle] = entries
+  return entries
+end
+
+local function savePlayerQuickBuy(session, handle, entries)
+  session.playerData.set(handle, "shop_quick_buy_customized", true)
+  session.playerData.set(handle, "shop_quick_buy_entries", serializeQuickBuyEntries(entries))
+  session.playerData.save(handle)
+  session.state.shopQuickBuy[handle] = entries
 end
 
 local function getCache(session, handle)
@@ -603,7 +649,7 @@ function M.openQuickBuy(session, handle)
   local catalog = loadShop()
   local items = buildNavigation(session, handle, nil, catalog)
   local occupied = {}
-  for _, entry in ipairs(catalog.quickBuyDefaults) do
+  for _, entry in ipairs(getPlayerQuickBuy(session, handle, catalog)) do
     occupied[entry.slot] = entry
   end
 
@@ -722,10 +768,73 @@ function M.onPlayerCloseShop(session, handle)
   session.state.playersInShop[handle] = nil
 end
 
--- Quick Buy customization isn't ported (see file doc); swallows every shift-click while in the
--- shop instead, so it doesn't fall through as a normal inventory move.
+-- Mirrors legacy ShopServiceImpl.handleShopShiftClick: shift-click in a category adds that content
+-- to the first free Quick Buy slot, shift-click in the Quick Buy view removes that slot's entry.
 function M.handleShopShiftClick(session, handle, slot)
-  return M.isPlayerInShop(session, handle)
+  if not M.isPlayerInShop(session, handle) then return false end
+
+  local catalog = loadShop()
+  local currentCategory = session.state.shopSelectedCategory[handle]
+  local quickBuy = getPlayerQuickBuy(session, handle, catalog)
+
+  if currentCategory then
+    local cat = findCategory(catalog, currentCategory)
+    if not cat then return false end
+    local content = nil
+    for _, c in ipairs(cat.content) do
+      if c.slot == slot then content = c break end
+    end
+    if not content then return false end
+
+    for _, entry in ipairs(quickBuy) do
+      if entry.categoryId == currentCategory and entry.contentId == content.id then
+        local msg = session.config.translation(handle, "messages.shop.quick_buy_already_added")
+        if msg then session.messages.sendRaw(handle, msg) end
+        session.sounds.playDirect(handle, "BLOCK_NOTE_BLOCK_BASS", 1.0, 1.0)
+        return true
+      end
+    end
+
+    for _, qbSlot in ipairs(catalog.quickBuySlots) do
+      local occupied = false
+      for _, entry in ipairs(quickBuy) do
+        if entry.slot == qbSlot then occupied = true break end
+      end
+      if not occupied then
+        quickBuy[#quickBuy + 1] = { slot = qbSlot, categoryId = currentCategory, contentId = content.id }
+        savePlayerQuickBuy(session, handle, quickBuy)
+        local msg = session.config.translation(handle, "messages.shop.quick_buy_added")
+        if msg then session.messages.sendRaw(handle, msg) end
+        session.sounds.playDirect(handle, "BLOCK_NOTE_BLOCK_PLING", 1.0, 2.0)
+        M.openCategory(session, handle, currentCategory)
+        return true
+      end
+    end
+
+    local fullMsg = session.config.translation(handle, "messages.shop.quick_buy_full")
+    if fullMsg then session.messages.sendRaw(handle, fullMsg) end
+    return true
+  end
+
+  local isQuickBuySlot = false
+  for _, qbSlot in ipairs(catalog.quickBuySlots) do
+    if qbSlot == slot then isQuickBuySlot = true break end
+  end
+  if not isQuickBuySlot then return false end
+
+  for i, entry in ipairs(quickBuy) do
+    if entry.slot == slot then
+      table.remove(quickBuy, i)
+      savePlayerQuickBuy(session, handle, quickBuy)
+      local msg = session.config.translation(handle, "messages.shop.quick_buy_removed")
+      if msg then session.messages.sendRaw(handle, msg) end
+      session.sounds.playDirect(handle, "BLOCK_NOTE_BLOCK_BASS", 1.0, 1.0)
+      M.openQuickBuy(session, handle)
+      return true
+    end
+  end
+
+  return false
 end
 
 function M.restoreOnRespawn(session, handle)
@@ -755,6 +864,7 @@ end
 function M.clearArena(session)
   session.state.shopSelectedCategory = {}
   session.state.shopCache = {}
+  session.state.shopQuickBuy = {}
   session.state.playersInShop = {}
 end
 

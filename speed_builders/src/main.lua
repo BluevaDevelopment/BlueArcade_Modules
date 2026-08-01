@@ -1,5 +1,4 @@
--- Mirrors legacy SpeedBuildersModule.java. store.yml/StoreAPI registration isn't ported - StoreAPI
--- is entirely unbound in this project's Lua layer, matching every other converted module.
+-- Mirrors legacy SpeedBuildersModule.java; its store.yml has no categories and legacy never calls StoreAPI here, so there is nothing to register.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -45,9 +44,11 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena on module disable - not ported,
--- same documented gap as every other converted module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- Defensive plugin-shutdown cleanup only - no winner, no stats, mirrors legacy shutdown().
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisable(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

@@ -1,0 +1,235 @@
+categories:
+  - "root"
+  - "beast_skins"
+  - "zappers"
+  - "kits"
+  - "beast_pass"
+
+weights:
+  beast_pass:
+    default: 1
+    bonus: 3
+
+# Gameplay values used by selectable Beast equipment and kits.
+gameplay:
+  shredder:
+    amount: 4
+    slow_duration_ticks: 80
+    slow_amplifier: 1
+  swiftness:
+    duration_ticks: 200
+    amplifier: 1
+  reset_wand:
+    radius: 12.0
+
+category_settings:
+  root:
+    id: "rftb_store"
+    name: "Run From The Beast"
+    icon: "DRAGON_HEAD"
+    description:
+      - "<gray>All Run From The Beast cosmetics and perks.</gray>"
+      - "<gray>Everything you unlock works in every arena.</gray>"
+      - "<gray> </gray>"
+      - "<yellow>Browse categories below to gear up.</yellow>"
+    enabled: true
+    type: "group"
+    selection_enabled: false
+    sort_order: 10
+    items:
+      order: []
+  beast_skins:
+    id: "rftb_beast_skins"
+    name: "Beast Skins"
+    icon: "ZOMBIE_HEAD"
+    description:
+      - "<gray>Change the Beast's appearance between rounds.</gray>"
+      - "<gray>Purely cosmetic looks that stay unlocked forever.</gray>"
+      - "<gray> </gray>"
+      - "<yellow>Pick a look that matches your mood.</yellow>"
+    enabled: true
+    type: "selection"
+    parent_id: "rftb_store"
+    selection_enabled: true
+    random_selection_enabled: true
+    random_item:
+      display_name: "Random Beast Skin"
+      icon: "ENDER_CHEST"
+      description:
+        - "<gray>Select a random unlocked skin.</gray>"
+    sort_order: 10
+    items:
+      order: [creeper, villager, jeb]
+      creeper:
+        name: "Creeper"
+        icon: "CREEPER_HEAD"
+        price: 150
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Classic green menace with a grin.</gray>"
+          - "<gray>Perfect for jump scares.</gray>"
+      villager:
+        name: "Villager"
+        icon: "VILLAGER_SPAWN_EGG"
+        price: 100
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Trade vibes, no trades required.</gray>"
+          - "<gray>Nods knowingly at your prey.</gray>"
+      jeb:
+        name: "Jeb Sheep"
+        icon: "SHEEP_SPAWN_EGG"
+        price: 1000
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Rainbow shimmer on every chase.</gray>"
+          - "<gray>Named in honor of Jeb_.</gray>"
+  zappers:
+    id: "rftb_zappers"
+    name: "Zappers"
+    icon: "WOODEN_HOE"
+    description:
+      - "<gray>Upgrade the zapper you wield as the Beast.</gray>"
+      - "<gray>Higher tiers hit harder and last longer.</gray>"
+      - "<gray> </gray>"
+      - "<yellow>Keep runners at bay with better shocks.</yellow>"
+    enabled: true
+    type: "selection"
+    parent_id: "rftb_store"
+    selection_enabled: true
+    random_selection_enabled: true
+    random_item:
+      display_name: "Random Zapper"
+      icon: "ENDER_CHEST"
+      description:
+        - "<gray>Pick a random unlocked zapper.</gray>"
+    sort_order: 20
+    items:
+      order: [wood, stone, iron, diamond]
+      wood:
+        name: "<yellow>Wood Zapper</yellow>"
+        icon: "WOODEN_HOE"
+        price: 0
+        enabled: true
+        default_unlocked: true
+        gameplay:
+          material: "WOODEN_HOE"
+          sharpness: 0
+          unbreaking: 0
+        description:
+          - "<gray>Entry-level zapper, gets the job done.</gray>"
+          - "<gray>Reliable starter gear.</gray>"
+      stone:
+        name: "<white>Stone Zapper</white>"
+        icon: "STONE_HOE"
+        price: 200
+        enabled: true
+        default_unlocked: false
+        gameplay:
+          material: "STONE_HOE"
+          sharpness: 1
+          unbreaking: 1
+        description:
+          - "<gray>Heavier hits with sturdier stone.</gray>"
+          - "<gray>Great early upgrade.</gray>"
+      iron:
+        name: "<aqua>Iron Zapper</aqua>"
+        icon: "IRON_HOE"
+        price: 600
+        enabled: true
+        default_unlocked: false
+        gameplay:
+          material: "IRON_HOE"
+          sharpness: 2
+          unbreaking: 2
+        description:
+          - "<gray>Durable zapper built for long hunts.</gray>"
+          - "<gray>Better reach, better control.</gray>"
+      diamond:
+        name: "<light_purple>Diamond Zapper</light_purple>"
+        icon: "DIAMOND_HOE"
+        price: 1500
+        enabled: true
+        default_unlocked: false
+        gameplay:
+          material: "DIAMOND_HOE"
+          sharpness: 4
+          unbreaking: 3
+        description:
+          - "<gray>Top-tier zapper for relentless Beasts.</gray>"
+          - "<gray>Premium shock and longevity.</gray>"
+  kits:
+    id: "rftb_kits"
+    name: "Beast Kits"
+    icon: "CHEST"
+    description:
+      - "<gray>Start with useful tools and consumables.</gray>"
+      - "<gray>Pick the kit that matches your Beast playstyle.</gray>"
+      - "<gray> </gray>"
+      - "<yellow>Swap kits between games freely.</yellow>"
+    enabled: true
+    type: "selection"
+    parent_id: "rftb_store"
+    selection_enabled: true
+    random_selection_enabled: true
+    random_item:
+      display_name: "Random Kit"
+      icon: "ENDER_CHEST"
+      description:
+        - "<gray>Choose a random unlocked kit.</gray>"
+    sort_order: 30
+    items:
+      order: [shredder, swiftness, reset_wand]
+      shredder:
+        name: "<gold>Shredder Plates</gold>"
+        icon: "LIGHT_WEIGHTED_PRESSURE_PLATE"
+        price: 50
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Drop plates to slow fleeing runners.</gray>"
+          - "<gray>Useful for chokepoints.</gray>"
+      swiftness:
+        name: "<aqua>Swiftness Potion</aqua>"
+        icon: "POTION"
+        price: 10
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Short burst of speed for quick catches.</gray>"
+          - "<gray>Lightweight and affordable.</gray>"
+      reset_wand:
+        name: "<light_purple>Reset Wand</light_purple>"
+        icon: "REDSTONE_TORCH"
+        price: 60
+        enabled: true
+        default_unlocked: false
+        description:
+          - "<gray>Includes slowing plates to drop.</gray>"
+          - "<gray>Right-click the wand to re-arm triggered plates.</gray>"
+  beast_pass:
+    id: "rftb_beast_pass"
+    name: "Beast Pass"
+    icon: "NETHER_STAR"
+    description:
+      - "<gray>Buy once to unlock premium Beast rewards.</gray>"
+      - "<gray>Permanent pass without any selection step.</gray>"
+      - "<gray> </gray>"
+      - "<yellow>Includes perks across all RFTB arenas.</yellow>"
+    enabled: true
+    type: "purchase_only"
+    parent_id: "rftb_store"
+    selection_enabled: false
+    sort_order: 5
+    items:
+      order: [pass]
+      pass:
+        name: "Beast Pass"
+        icon: "NETHER_STAR"
+        price: 80
+        enabled: true
+        default_unlocked: false
+        description: []

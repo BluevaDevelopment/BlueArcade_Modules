@@ -339,6 +339,21 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy CaptureTheWoolGame.shutdown(): same reset as finishGame minus the games_played stat.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  woolService.clearTrackedWoolItems(session)
+
+  session.world.setTime(1000)
+  session.world.setStorm(false)
+  session.world.setThundering(false)
+
+  for _, handle in ipairs(session.players()) do
+    session.player.resetMaxHealth(handle)
+    session.player.setHealth(handle, math.min(session.player.health(handle), 20.0))
+  end
+end
+
 function M.getPlayerKills(session, handle)
   return session.state.kills[handle] or 0
 end

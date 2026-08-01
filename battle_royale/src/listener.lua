@@ -1,4 +1,3 @@
--- Explosion-triggered chest loot isn't ported, see support/loot_service.lua.
 -- player_interact's per-hand double-dispatch self-filters: the chest is already AIR by hand two.
 local gameManager = require("game_manager")
 local lootService = require("support.loot_service")
@@ -164,6 +163,35 @@ function M.register()
 
     e:cancel()
     gameManager.handleNonCombatDeath(session, e.player)
+  end)
+
+  -- Mirrors legacy BattleRoyaleGame.handleChestExplosion: TNT/creepers still fill chests before destroying them.
+  ba.events.on("entity_explode", function(session, e)
+    if session.phase() ~= "PLAYING" or not session.isInsideBounds(e.location) then return end
+
+    local breakOnlyPlaced = session.config.getBoolean("block_rules.break_only_player_placed", false)
+    for i = e.blockCount, 1, -1 do
+      local blockLoc = e.blockLocationAt(i)
+      if blockLoc then
+        local x, y, z = math.floor(blockLoc.x), math.floor(blockLoc.y), math.floor(blockLoc.z)
+        local survives = true
+        if breakOnlyPlaced then
+          if lootService.isPlayerPlacedBlock(session, x, y, z) then
+            lootService.untrackPlacedBlock(session, x, y, z)
+          else
+            e.removeBlock(blockLoc)
+            survives = false
+          end
+        end
+
+        if survives then
+          local blockType = session.world.blockTypeAt(x, y, z)
+          if blockType == "CHEST" or blockType == "TRAPPED_CHEST" or blockType == "ENDER_CHEST" then
+            lootService.handleChestLoot(session, nil, x, y, z, blockType)
+          end
+        end
+      end
+    end
   end)
 end
 

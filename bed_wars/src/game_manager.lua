@@ -52,6 +52,7 @@ local function newState()
     enderChests = {},
     shopSelectedCategory = {},
     shopCache = {},
+    shopQuickBuy = {},
     playersInShop = {},
     upgradeTeamTiers = {},
     fireballCooldowns = {},
@@ -428,6 +429,27 @@ function M.finishGame(session)
 
   for _, handle in ipairs(session.players()) do
     session.stats.add(handle, "games_played", 1)
+  end
+end
+
+-- Mirrors legacy BedWarsGame.shutdown(): same reset as finishGame minus the games_played stat.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+
+  cageService.removeCages(session)
+  bedService.clearBedHolograms(session)
+  spawnerService.clearSpawnerHolograms(session)
+  npcService.despawnNpcs(session)
+  shopService.clearArena(session)
+  upgradeService.clearArena(session)
+
+  session.world.setTime(1000)
+  session.world.setStorm(false)
+  session.world.setThundering(false)
+
+  for _, handle in ipairs(session.players()) do
+    session.player.resetMaxHealth(handle)
+    session.player.setHealth(handle, math.min(session.player.health(handle), 20.0))
   end
 end
 

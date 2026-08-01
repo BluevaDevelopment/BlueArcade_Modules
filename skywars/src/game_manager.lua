@@ -501,6 +501,22 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy SkyWarsGame.shutdown(): cancel tasks, remove cages, clear the world border, reset world/hearts - no chest restore, no stats.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  spawnCageService.removeCages(session)
+  stormService.clearWorldBorder(session)
+
+  session.world.setTime(1000)
+  session.world.setStorm(false)
+  session.world.setThundering(false)
+
+  for _, handle in ipairs(session.players()) do
+    session.player.resetMaxHealth(handle)
+    session.player.setHealth(handle, math.min(session.player.health(handle), 20.0))
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return placeholderService.buildPlaceholders(session, handle, M)
 end

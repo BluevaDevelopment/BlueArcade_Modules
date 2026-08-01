@@ -249,4 +249,10 @@ function M.handleEnd(session)
   statsService.recordGamesPlayed(session)
 end
 
+-- Mirrors legacy TNTRunGameManager.handleDisable(): cancel tasks and clear falling shards, no stats.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  fallingBlockService.cleanupAll(session)
+end
+
 return M

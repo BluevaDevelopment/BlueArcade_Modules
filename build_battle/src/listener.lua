@@ -1,6 +1,7 @@
 -- Mirrors legacy BuildBattleListener.java. The BannerMenuHolder/ParticleMenuHolder/HeadMenuHolder click
 -- branches aren't ported - those menus are now real session.menu.open menus Core already routes generically.
 -- The "cancel inventory clicks outside PLOT_VOTING" guard is a real gap - no inventory_click Lua event exists yet.
+-- BuildBattleVoteListener.java (the redundant /buildbattlevote command entry point) IS ported below (player_command).
 local plotVotingService = require("support.plot_voting_service")
 local optionsService = require("support.options_service")
 local voteService = require("support.vote_service")
@@ -21,6 +22,22 @@ local function isInsidePlot(plot, location)
 end
 
 function M.register()
+  -- Mirrors legacy BuildBattleVoteListener: /buildbattlevote is a second entry point into the same vote system as the waiting item.
+  ba.events.on("player_command", function(session, e)
+    local message = e.message
+    if not message or message == "" then return end
+    local trimmed = message:match("^%s*(.-)%s*$")
+    local prefix = "/buildbattlevote"
+    if trimmed:lower():sub(1, #prefix) ~= prefix then return end
+    e:cancel()
+    local rest = message:sub(2):match("^%s*(.-)%s*$")
+    local parts = {}
+    for word in rest:gmatch("%S+") do parts[#parts + 1] = word end
+    local args = {}
+    for i = 2, #parts do args[#args + 1] = parts[i] end
+    voteService.handleVoteAction(e.player, args)
+  end)
+
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then
       return

@@ -522,4 +522,11 @@ function M.handleEnd(session)
   end
 end
 
+-- Mirrors legacy BlockPartyGame.onDisable(): cancel tasks, clear falling shards and powerups, no stats/hologram/music.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  fallingBlockService.cleanupAll(session)
+  powerupService.removeActivePowerups(session)
+end
+
 return M

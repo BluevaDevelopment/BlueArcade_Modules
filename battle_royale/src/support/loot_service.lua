@@ -1,5 +1,4 @@
--- Explosion-triggered chest loot (TNT/creepers) isn't ported - no entity_explode/block_explode
--- event mapping exists yet; the primary interact/break loot paths both work fine without it.
+-- TNT/creeper explosions also loot chests via handleChestLoot, wired in listener.lua's entity_explode handler.
 local M = {}
 
 local function blockKey(x, y, z)

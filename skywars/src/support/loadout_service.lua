@@ -1,6 +1,4 @@
--- Mirrors legacy PlayerLoadoutService.java. StoreAPI is unbound in Lua (no ba.store yet), so every
--- player gets kits.yml's default_kit - matching legacy's own storeAPI==null fallback path exactly.
--- applyRespawnEffects isn't ported - dead code, since skywars has no respawn mechanism at all.
+-- Mirrors legacy PlayerLoadoutService.java; kit selection now resolves via the real StoreAPI binding, falling back to kits.yml's default_kit when unconfigured/unselected. applyRespawnEffects isn't ported - dead code, skywars has no respawn mechanism.
 local M = {}
 
 local function parseParts(raw)
@@ -70,13 +68,18 @@ function M.applyStartingEffects(session, handle)
   applyEffects(session, handle, session.config.getStringList("effects.starting_effects"))
 end
 
-local function resolveSelectedKitId(session)
-  -- storeAPI is always unavailable here (see file doc) - always resolves to kits.yml's default_kit.
-  return session.config.getStringFrom("kits.yml", "default_kit", "none")
+local function resolveSelectedKitId(session, handle)
+  local defaultKit = session.config.getStringFrom("kits.yml", "default_kit", "none")
+  local categoryId = session.config.getStringFrom("store.yml", "category_settings.kits.id", "skywars_kits")
+  local selected = session.store.resolveSelected(handle, categoryId)
+  if selected and session.config.containsFrom("kits.yml", "kits." .. selected) then
+    return selected
+  end
+  return defaultKit
 end
 
 function M.applySelectedKit(session, handle)
-  local kitId = resolveSelectedKitId(session)
+  local kitId = resolveSelectedKitId(session, handle)
   if not kitId or kitId == "" then
     return
   end

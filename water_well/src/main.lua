@@ -42,6 +42,13 @@ function M.onEnd(session, result)
   gameManager.handleEnd(session)
 end
 
+-- Defensive plugin-shutdown cleanup only - no winner, no stats, mirrors legacy handleDisable().
+function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisable(session)
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return gameManager.getCustomPlaceholders(session, handle)
 end

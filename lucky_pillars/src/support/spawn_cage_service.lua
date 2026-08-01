@@ -1,4 +1,4 @@
--- storeAPI is always nil, so every cage uses cage.yml's default_cage (same as legacy's no-StoreAPI fallback). resolveCageOwners/resolveTeamCageOwners aren't ported - confirmed dead code (buildCages never calls them).
+-- Cage skin now resolves via the real StoreAPI binding, falling back to cage.yml's default_cage when unconfigured/unselected. resolveCageOwners/resolveTeamCageOwners aren't ported - confirmed dead code (buildCages never calls them).
 local M = {}
 
 local MAX_DISTANCE_SQUARED = 2.25
@@ -13,8 +13,13 @@ local function blockKey(location)
   return math.floor(location.x) .. ":" .. math.floor(location.y) .. ":" .. math.floor(location.z)
 end
 
-local function resolveCageDefinition(session)
+local function resolveCageDefinition(session, handle)
   local cageId = session.config.getStringFrom("cage.yml", "default_cage", "clear_glass")
+  local categoryId = session.config.getStringFrom("store.yml", "category_settings.cages.id", "lucky_pillars_cages")
+  local selected = session.store.resolveSelected(handle, categoryId)
+  if selected and session.config.containsFrom("cage.yml", "cages." .. selected) then
+    cageId = selected
+  end
   local base = "cages." .. cageId
   local material = session.config.getStringFrom("cage.yml", base .. ".material", "GLASS")
   local headClear = session.config.getBooleanFrom("cage.yml", base .. ".head_clear", false)
@@ -71,13 +76,12 @@ function M.buildCages(session)
     spawns[#spawns + 1] = location
   end
 
-  local cage = resolveCageDefinition(session)
-
   for _, handle in ipairs(players) do
     if not session.state.cagedPlayers[handle] then
       local playerLocation = session.player.location(handle)
       local spawn = resolveSpawnForPlayer(session, handle, spawns, playerLocation)
       if spawn then
+        local cage = resolveCageDefinition(session, handle)
         local baseX = math.floor(playerLocation.x)
         local baseY = math.floor(playerLocation.y)
         local baseZ = math.floor(playerLocation.z)

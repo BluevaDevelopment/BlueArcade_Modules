@@ -1,5 +1,4 @@
--- RewardService and StoreService's shredder/reset-wand/zapper/kit subsystem aren't ported - both
--- gated behind StoreAPI or a console-command binding, neither of which exists in this Lua layer.
+-- RewardService and the zapper/kit equipment swap (StoreService's shredder/reset-wand/kit subsystem) aren't ported; beast skin + beast-pass weighting now go through store_service.lua.
 local beastService = require("support.beast_service")
 local disguiseService = require("support.disguise_service")
 local cageService = require("support.cage_service")
@@ -7,6 +6,7 @@ local checkpointService = require("support.checkpoint_service")
 local loadoutService = require("support.loadout_service")
 local messagingService = require("support.messaging_service")
 local distanceService = require("support.distance_service")
+local storeService = require("support.store_service")
 
 local M = {}
 
@@ -109,7 +109,7 @@ local function preparePlayers(session)
     loadoutService.applyStartingEffects(session, beast, "effects.beast_effects")
     beastService.applyBeastGlow(session, beast)
     loadoutService.applyBeastEquipment(session, beast)
-    disguiseService.apply(session, beast, "creeper")
+    disguiseService.apply(session, beast, storeService.resolveBeastSkin(session, beast))
     messagingService.sendBeastTitle(session, beast)
     session.messages.sendRaw(beast, session.config.translation(beast, "messages.roles.beast"))
     session.stats.add(beast, "beast_roles", 1)
@@ -407,6 +407,15 @@ function M.onEnd(session)
   for _, handle in ipairs(session.players()) do
     session.stats.add(handle, "games_played", 1)
   end
+end
+
+-- Mirrors legacy RunFromTheBeastGameManager.onDisable(): same reset as onEnd minus the games_played stat.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  cageService.restoreCage(session)
+  beastService.removeBeastGlow(session)
+  disguiseService.remove(session, M.getBeast(session))
+  distanceService.resetDistanceBars(session)
 end
 
 function M.formatPlayerList(session, players)

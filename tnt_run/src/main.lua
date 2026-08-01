@@ -44,6 +44,13 @@ function M.onEnd(session, result)
   gameManager.handleEnd(session)
 end
 
+-- Mirrors legacy TNTRunGameManager.handleDisable(): defensive cleanup only, no winner/stats.
+function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisableCleanup(session)
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return gameManager.getCustomPlaceholders(session, handle)
 end

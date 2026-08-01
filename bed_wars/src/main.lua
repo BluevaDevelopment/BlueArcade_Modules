@@ -63,9 +63,12 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy onDisable() re-cleans every still-active arena and unregisters menu/item handlers - not
--- ported, same documented gap as every other converted module's M.onDisable().
+-- Mirrors legacy BedWarsGame.shutdown(): defensive cleanup only, no winner/stats. Menu/item handler
+-- unregistration isn't ported (no equivalent teardown hook exists in this Lua layer).
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisableCleanup(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

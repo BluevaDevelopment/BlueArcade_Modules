@@ -353,6 +353,13 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy shutdown(): cancel tasks, drop cleanup, world border reset - no chest restore, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  dropService.cleanup(session)
+  stormService.clearWorldBorder(session)
+end
+
 function M.getCustomPlaceholders(session, handle)
   return placeholderService.buildPlaceholders(session, handle, M)
 end

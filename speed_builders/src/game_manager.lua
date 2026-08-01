@@ -358,6 +358,14 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy shutdown(): cancel tasks, reset world/player state - no plot/guardian cleanup, no stats.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  sessionService.resetWorldDefaults(session)
+  sessionService.resetPlayerStates(session)
+  sessionService.clearPlayerInventories(session)
+end
+
 function M.getCustomPlaceholders(session, handle)
   if not session.state then
     return {}

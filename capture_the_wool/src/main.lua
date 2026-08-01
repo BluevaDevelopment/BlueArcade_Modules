@@ -75,8 +75,11 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- onDisable cleanup not ported - same gap as every other converted module.
+-- Mirrors legacy CaptureTheWoolGame.shutdown(): defensive cleanup only, no winner/stats.
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisableCleanup(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

@@ -1,8 +1,8 @@
--- StoreAPI-driven registration calls aren't ported - StoreAPI is entirely unbound in this Lua layer.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
 local armoryService = require("support.armory_service")
+local storeService = require("support.store_service")
 
 local M = {}
 
@@ -19,6 +19,8 @@ function M.onLoad()
   ba.stats.define("runner_kills", ba.config.translation(nil, "stats.labels.runner_kills"), "Beasts slain while playing as a runner")
 
   ba.achievements.register("achievements.yml")
+
+  storeService.registerStoreItems()
 
   ba.vote.register(
     ba.config.getString("menus.vote.item"),
@@ -71,8 +73,11 @@ function M.onEnd(session, result)
   gameManager.onEnd(session)
 end
 
--- onDisable cleanup not ported - same documented gap as every other converted module.
+-- Mirrors legacy RunFromTheBeastGameManager.onDisable(): defensive cleanup only, no winner/stats.
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisableCleanup(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

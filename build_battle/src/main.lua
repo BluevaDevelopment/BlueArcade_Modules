@@ -1,4 +1,4 @@
--- Mirrors legacy BuildBattleModule.java. StoreAPI-driven registration calls aren't ported - StoreAPI is entirely unbound in this project's Lua layer.
+-- Mirrors legacy BuildBattleModule.java; its store.yml has no categories and legacy never calls StoreAPI here, so there is nothing to register.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -82,8 +82,11 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans active arenas on disable; not ported, same gap as every other converted module.
+-- Mirrors legacy BuildBattleGame.shutdown(): per active arena, cancel tasks and reset world/player state; gameManager.finishGame already does exactly that (no stats/messages of its own), so it's reused directly.
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.finishGame(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

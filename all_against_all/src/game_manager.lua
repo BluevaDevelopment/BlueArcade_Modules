@@ -146,6 +146,12 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy shutdown(): cancel tasks, restore world difficulty - no stats, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  restoreWorldDifficulty(session)
+end
+
 function M.getPlaceholders(session, handle)
   return placeholderService.buildPlaceholders(session, handle)
 end

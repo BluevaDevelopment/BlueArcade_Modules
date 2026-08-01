@@ -153,6 +153,11 @@ function M.handleEnd(session)
   statsService.recordGamesPlayed(session)
 end
 
+-- Mirrors legacy onDisable(): cancel tasks only, no winner, no stats.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+end
+
 function M.handleProjectileShot(session, handle)
   statsService.recordShot(session, handle)
 end

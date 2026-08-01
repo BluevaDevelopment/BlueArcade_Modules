@@ -44,6 +44,13 @@ function M.onEnd(session, result)
   gameManager.handleEnd(session)
 end
 
+-- Legacy onDisable() only cancels tasks and clears its arena registry - nothing cosmetic to undo.
+function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    session.scheduler.cancelArenaTasks()
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return gameManager.getCustomPlaceholders(session, handle)
 end

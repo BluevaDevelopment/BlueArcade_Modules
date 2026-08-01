@@ -334,6 +334,14 @@ function M.finishGame(session)
   cleanupService.clearPlayerInventories(session)
 end
 
+-- Mirrors legacy shutdown(): cancel tasks, reset world/players/inventories - no plot clear, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  cleanupService.resetWorldDefaults(session)
+  cleanupService.resetPlayerStates(session)
+  cleanupService.clearPlayerInventories(session)
+end
+
 function M.endGame(session)
   if session.state.ended then
     return

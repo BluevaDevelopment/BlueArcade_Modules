@@ -49,8 +49,11 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- onDisable cleanup not ported - same documented gap as every other converted module.
+-- Defensive plugin-shutdown cleanup only - no winner, no stats, mirrors legacy shutdown().
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisable(session)
+  end
 end
 
 function M.getCustomPlaceholders(session, handle)

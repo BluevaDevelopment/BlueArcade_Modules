@@ -702,6 +702,22 @@ function M.finishGame(session)
   end
 end
 
+-- Mirrors legacy LuckyPillarsGame.shutdown(): cancel tasks, remove cages, reset world/hearts, clear (not drop) inventories - no stats.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  spawnCageService.removeCages(session)
+
+  session.world.setTime(1000)
+  session.world.setStorm(false)
+  session.world.setThundering(false)
+
+  for _, handle in ipairs(session.players()) do
+    session.player.resetMaxHealth(handle)
+    session.player.setHealth(handle, math.min(session.player.health(handle), 20.0))
+    session.player.clearInventory(handle)
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return placeholderService.buildPlaceholders(session, handle, M)
 end

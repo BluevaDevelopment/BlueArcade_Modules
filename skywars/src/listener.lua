@@ -1,4 +1,4 @@
--- Mirrors legacy SkyWarsListener.java. SkyWarsVoteListener.java isn't ported (see vote_service.lua).
+-- Mirrors legacy SkyWarsListener.java. SkyWarsVoteListener.java IS ported below (player_command).
 -- onEntityExplode/onBlockExplode aren't ported either - no entity_explode/block_explode event mapping exists yet (same gap as battle_royale).
 local lootService = require("support.loot_service")
 local gameManager = require("game_manager")
@@ -7,6 +7,22 @@ local voteService = require("support.vote_service")
 local M = {}
 
 function M.register()
+  -- Mirrors legacy SkyWarsVoteListener: /skywarsvote is a second entry point into the same vote system as the waiting item.
+  ba.events.on("player_command", function(session, e)
+    local message = e.message
+    if not message or message == "" then return end
+    local trimmed = message:match("^%s*(.-)%s*$")
+    local prefix = "/skywarsvote"
+    if trimmed:lower():sub(1, #prefix) ~= prefix then return end
+    e:cancel()
+    local rest = message:sub(2):match("^%s*(.-)%s*$")
+    local parts = {}
+    for word in rest:gmatch("%S+") do parts[#parts + 1] = word end
+    local args = {}
+    for i = 2, #parts do args[#args + 1] = parts[i] end
+    voteService.handleVoteAction(e.player, args)
+  end)
+
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then
       return

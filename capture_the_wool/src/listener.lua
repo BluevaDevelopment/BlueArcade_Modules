@@ -1,5 +1,5 @@
 -- Mirrors legacy CaptureTheWoolListener.java. CaptureTheWoolVoteListener.java (the redundant
--- /capture_the_woolvote PlayerCommandPreprocessEvent entry point) isn't ported - see vote_service.lua.
+-- /capture_the_woolvote PlayerCommandPreprocessEvent entry point) IS ported below (player_command).
 local woolService = require("support.wool_service")
 local armoryService = require("support.armory_service")
 local gameManager = require("game_manager")
@@ -8,6 +8,22 @@ local voteService = require("support.vote_service")
 local M = {}
 
 function M.register()
+  -- Mirrors legacy CaptureTheWoolVoteListener: /capture_the_woolvote is a second entry point into the same vote system as the waiting item.
+  ba.events.on("player_command", function(session, e)
+    local message = e.message
+    if not message or message == "" then return end
+    local trimmed = message:match("^%s*(.-)%s*$")
+    local prefix = "/capture_the_woolvote"
+    if trimmed:lower():sub(1, #prefix) ~= prefix then return end
+    e:cancel()
+    local rest = message:sub(2):match("^%s*(.-)%s*$")
+    local parts = {}
+    for word in rest:gmatch("%S+") do parts[#parts + 1] = word end
+    local args = {}
+    for i = 2, #parts do args[#args + 1] = parts[i] end
+    voteService.handleVoteAction(e.player, args)
+  end)
+
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then
       return

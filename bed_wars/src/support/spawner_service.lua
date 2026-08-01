@@ -1,6 +1,4 @@
 -- Mirrors legacy SpawnerService.java. SpawnerDefinition/SpawnerType are plain Lua tables.
--- Hologram/item-stand liveness self-healing isn't ported - a spawned handle is trusted to stay
--- valid until this module itself deletes it, same as every other converted module.
 local M = {}
 
 local SPAWNER_SCAN_LIMIT = 128
@@ -203,8 +201,12 @@ local function buildSpawnerHologramLines(session, def, remainingSeconds)
 end
 
 local function spawnSpawnerItemStand(session, def)
-  if session.state.spawnerItemStands[def.key] then
-    return
+  local existing = session.state.spawnerItemStands[def.key]
+  if existing then
+    if session.entities.isValid(existing) then
+      return
+    end
+    session.state.spawnerItemStands[def.key] = nil
   end
   local loc = { x = def.x + 0.5, y = def.y + 2.8, z = def.z + 0.5 }
   if not session.world.isChunkLoaded(math.floor(loc.x / 16), math.floor(loc.z / 16)) then
@@ -220,8 +222,13 @@ end
 function M.spawnSpawnerHolograms(session)
   for _, def in ipairs(session.state.spawners) do
     if def.hologramEnabled then
+      local existing = session.state.spawnerHolograms[def.key]
+      if existing and not session.hologram.isAlive(existing) then
+        session.state.spawnerHolograms[def.key] = nil
+        existing = nil
+      end
       local holoLoc = { x = def.x + 0.5, y = def.y + 2.5, z = def.z + 0.5 }
-      if session.world.isChunkLoaded(math.floor(holoLoc.x / 16), math.floor(holoLoc.z / 16)) and not session.state.spawnerHolograms[def.key] then
+      if session.world.isChunkLoaded(math.floor(holoLoc.x / 16), math.floor(holoLoc.z / 16)) and not existing then
         local lines = buildSpawnerHologramLines(session, def, nil)
         local hologram = session.hologram.spawn(holoLoc, lines)
         if hologram then
@@ -236,16 +243,24 @@ function M.spawnSpawnerHolograms(session)
 end
 
 function M.updateSpawnerHolograms(session)
+  local needsRespawn = false
   for _, def in ipairs(session.state.spawners) do
-    local hologram = session.state.spawnerHolograms[def.key]
-    if def.hologramEnabled and hologram then
-      local multiplier = getSpawnerMultiplier(session, def.teamId, def.type)
-      local effectiveTicks = math.max(1, math.floor(def.intervalTicks / multiplier))
-      local currentTicks = session.state.spawnerTicks[def.key] or 0
-      local remainingTicks = effectiveTicks - currentTicks
-      local remainingSeconds = math.max(0, math.floor((remainingTicks + 19) / 20))
-      session.hologram.setLines(hologram, buildSpawnerHologramLines(session, def, remainingSeconds))
+    if def.hologramEnabled then
+      local hologram = session.state.spawnerHolograms[def.key]
+      if not hologram or not session.hologram.isAlive(hologram) then
+        needsRespawn = true
+      else
+        local multiplier = getSpawnerMultiplier(session, def.teamId, def.type)
+        local effectiveTicks = math.max(1, math.floor(def.intervalTicks / multiplier))
+        local currentTicks = session.state.spawnerTicks[def.key] or 0
+        local remainingTicks = effectiveTicks - currentTicks
+        local remainingSeconds = math.max(0, math.floor((remainingTicks + 19) / 20))
+        session.hologram.setLines(hologram, buildSpawnerHologramLines(session, def, remainingSeconds))
+      end
     end
+  end
+  if needsRespawn then
+    M.spawnSpawnerHolograms(session)
   end
 end
 

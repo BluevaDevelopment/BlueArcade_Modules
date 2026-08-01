@@ -258,4 +258,10 @@ function M.onEnd(session)
   end
 end
 
+-- Mirrors legacy onDisable(): cancel tasks, remove seat entities - no music stop, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  cleanupSeats(session)
+end
+
 return M

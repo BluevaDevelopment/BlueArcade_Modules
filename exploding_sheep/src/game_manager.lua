@@ -136,6 +136,12 @@ function M.handleEnd(session)
   end
 end
 
+-- Mirrors legacy handleDisable(): cancel tasks, remove spawned sheep - no stats, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  sheepService.cleanupSheep(session)
+end
+
 function M.handlePlayerElimination(session, handle)
   local isSpectating = false
   for _, spectator in ipairs(session.spectators()) do

@@ -44,6 +44,13 @@ function M.onEnd(session, result)
   gameManager.handleEnd(session)
 end
 
+-- Legacy handleDisable() only cancels tasks and clears its arena map - nothing cosmetic to undo.
+function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    session.scheduler.cancelArenaTasks()
+  end
+end
+
 function M.getCustomPlaceholders(session, handle)
   return gameManager.getCustomPlaceholders(session, handle)
 end

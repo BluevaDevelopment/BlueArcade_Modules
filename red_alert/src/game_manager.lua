@@ -133,6 +133,12 @@ function M.handleEnd(session)
   statsService.recordGamesPlayed(session)
 end
 
+-- Mirrors legacy handleDisable(): cancel tasks, drop falling blocks - no floor reset, no stats.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  fallingBlockService.cleanupAll(session)
+end
+
 function M.handlePlayerElimination(session, handle)
   if isSpectator(session, handle) then return end
   if session.state.eliminatedPlayers[handle] then return end

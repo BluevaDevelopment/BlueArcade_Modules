@@ -143,6 +143,12 @@ function M.handleEnd(session)
   end
 end
 
+-- Mirrors legacy handleDisable(): cancel tasks, remove placed mine blocks - no stats, no winner.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+  mineService.clearMineBlocks(session)
+end
+
 function M.handlePlayerFinish(session, handle)
   session.stats.add(handle, "finish_line_crosses", 1)
 

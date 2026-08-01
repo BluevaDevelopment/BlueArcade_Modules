@@ -64,9 +64,12 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- onDisable gets no session (unlike onEnd) - no live-session registry to iterate in Lua, so
--- legacy shutdown()'s mid-match cleanup isn't ported. Documented gap, not a silent drop.
+-- Defensive plugin-shutdown cleanup only - no winner, no stats, mirrors legacy shutdown().
 function M.onDisable()
+  for _, session in ipairs(ba.session.all()) do
+    gameManager.handleDisable(session)
+  end
+  themeService.clearPendingSelection(nil)
 end
 
 function M.getCustomPlaceholders(session, handle)

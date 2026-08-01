@@ -1,8 +1,7 @@
--- Mirrors legacy BedWarsListener.java. BedWarsVoteListener.java and `onPlayerInteractAtEntity`
--- aren't ported - both are dead/redundant in legacy (votes go through the menu-action path;
--- `PlayerInteractAtEntityEvent` never fires for a plain Villager). The Fireball-vs-own-shooter
+-- Mirrors legacy BedWarsListener.java. `onPlayerInteractAtEntity` isn't ported - it's dead/redundant
+-- in legacy (`PlayerInteractAtEntityEvent` never fires for a plain Villager). The Fireball-vs-own-shooter
 -- damage guard isn't needed either - this module's fireball damages manually via config, which
--- never fires a real damage event for itself.
+-- never fires a real damage event for itself. BedWarsVoteListener.java IS ported below (player_command).
 local gameManager = require("game_manager")
 local bedService = require("support.bed_service")
 local npcService = require("support.npc_service")
@@ -27,6 +26,22 @@ local function isBedMaterial(material)
 end
 
 function M.register()
+  -- Mirrors legacy BedWarsVoteListener: /bedwarsvote is a second entry point into the same vote system as the waiting item.
+  ba.events.on("player_command", function(session, e)
+    local message = e.message
+    if not message or message == "" then return end
+    local trimmed = message:match("^%s*(.-)%s*$")
+    local prefix = "/bedwarsvote"
+    if trimmed:lower():sub(1, #prefix) ~= prefix then return end
+    e:cancel()
+    local rest = message:sub(2):match("^%s*(.-)%s*$")
+    local parts = {}
+    for word in rest:gmatch("%S+") do parts[#parts + 1] = word end
+    local args = {}
+    for i = 2, #parts do args[#args + 1] = parts[i] end
+    voteService.handleVoteAction(e.player, table.concat(args, " "))
+  end)
+
   ba.events.on("player_quit", function(session, e)
     local arenaId = ba.playerUtil.getArena(e.player)
     if not arenaId and session then

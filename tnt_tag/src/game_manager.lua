@@ -388,4 +388,10 @@ function M.handleEnd(session)
   end
 end
 
+-- Mirrors legacy TNTTagGameManager.onDisable(): cancel tasks and clear indicators, no stats/transition-effects reset.
+function M.handleDisableCleanup(session)
+  session.scheduler.cancelArenaTasks()
+  indicatorService.clearAllIndicators(session)
+end
+
 return M

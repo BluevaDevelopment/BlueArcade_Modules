@@ -1,5 +1,4 @@
--- skinId is always "creeper" (hardcoded), not legacy's store-selected skin - StoreAPI is unbound
--- and legacy has no non-store default, so this keeps the beast disguised at all.
+-- skinId now comes from store_service.resolveBeastSkin (real StoreAPI selection); falls back to "creeper" when unconfigured/unselected, since legacy itself has no non-store default.
 local M = {}
 
 local ENTITY_TYPE_BY_SKIN = { creeper = "CREEPER", villager = "VILLAGER", jeb = "SHEEP" }

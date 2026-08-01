@@ -257,4 +257,9 @@ function M.handleEnd(session)
   end
 end
 
+-- Mirrors legacy handleDisable(): cancel tasks only, no winner, no stats.
+function M.handleDisable(session)
+  session.scheduler.cancelArenaTasks()
+end
+
 return M

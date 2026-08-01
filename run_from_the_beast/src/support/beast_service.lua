@@ -1,15 +1,40 @@
+local storeService = require("support.store_service")
+
 local M = {}
 
--- Store-driven beast-pass weighting always falls back to equal weights (StoreAPI unbound), so a
--- plain uniform pick matches legacy's own `storeAPI != null && ...` guard's false branch exactly.
+local function buildBeastWeights(session, candidates)
+  local defaultWeight = session.config.getIntFrom("store.yml", "weights.beast_pass.default", 1)
+  local bonusWeight = session.config.getIntFrom("store.yml", "weights.beast_pass.bonus", 3)
+  local weights = {}
+  for _, handle in ipairs(candidates) do
+    weights[handle] = storeService.hasBeastPass(session, handle) and (defaultWeight + bonusWeight) or defaultWeight
+  end
+  return weights
+end
+
+-- Weighted pick via the real StoreAPI beast-pass bonus; degrades to uniform weights when unconfigured, matching legacy's own storeAPI==null fallback.
 function M.selectBeast(session)
   local candidates = session.players()
   if #candidates == 0 then
     return
   end
 
-  local roll = math.random(#candidates)
-  local chosen = candidates[roll]
+  local weights = buildBeastWeights(session, candidates)
+  local totalWeight = 0
+  for _, handle in ipairs(candidates) do
+    totalWeight = totalWeight + weights[handle]
+  end
+
+  local roll = math.random(math.max(totalWeight, 1))
+  local cumulative = 0
+  local chosen = candidates[1]
+  for _, handle in ipairs(candidates) do
+    cumulative = cumulative + weights[handle]
+    if roll <= cumulative then
+      chosen = handle
+      break
+    end
+  end
   session.state.beastId = chosen
 
   local beastSpawn = session.dataAccess.getGameLocation("game.beast.spawn")
