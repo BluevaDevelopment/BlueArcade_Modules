@@ -1,17 +1,5 @@
--- Mirrors legacy LuckyPillarsVoteService.java + VoteState.java's own module-level menu-item
--- construction that legacy sourced from LuckyPillarsVoteMenuRepository.java (a live YAML->
--- MenuDefinition build) - here the menu's slots/materials/text are built directly in Lua from the
--- same modifier list, resolving text through session/module config translations instead. The
--- "close" button and "vote" item actions match the legacy menu YAML exactly (slot numbers,
--- MODULE;lucky_pillars;vote modifier <id> action strings). LuckyPillarsVoteMenuRepository.java/
--- LuckyPillarsMenuAPI.java (a thin openMenuById delegate for the redundant /lucky_pillarsvote
--- slash command, see LuckyPillarsVoteListener.java) aren't ported - the lobby-item-click and
--- menu-action-handler paths already cover the same functionality. cleanStaleVotes() (the no-arg,
--- all-arenas variant) is dead code in the legacy source too (never called anywhere) - only the
--- per-arena cleanStaleVotesForArena is real. The waiting-room "broadcast this vote to everyone
--- else in the lobby" notification (legacy's broadcastToWaitingArena) is a documented, deliberate
--- gap - see docs/BAMODULE_STATUS.md - it needs a "list all online players" binding nothing else
--- has needed yet; the vote itself, the cooldown, and the menu still work correctly.
+-- The vote menu (slots/materials/actions, matching the legacy menu YAML exactly) is built directly in Lua from the modifier list rather than via LuckyPillarsVoteMenuRepository/LuckyPillarsMenuAPI, which aren't ported.
+-- cleanStaleVotes() (the no-arg, all-arenas variant) is dead in legacy too - only cleanStaleVotesForArena is real. The waiting-room "broadcast to everyone else in the lobby" notification is a documented gap (see docs/BAMODULE_STATUS.md) - needs a "list all online players" binding nothing else has needed yet; voting/cooldown/menu still work.
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -37,8 +25,7 @@ for _, entry in ipairs(MODIFIERS) do
   MODIFIER_SET[entry.id] = true
 end
 
--- Module-level, shared across every arena this module runs - mirrors the legacy service's own
--- instance fields (one LuckyPillarsVoteService per module, not per arena).
+-- Module-level, shared across every arena this module runs - mirrors legacy's one-service-per-module instance fields.
 local waitingVoteStates = {}
 local voteCooldowns = {}
 
@@ -109,8 +96,7 @@ local function cleanStaleVotesForArena(state, arenaId)
   end
 end
 
--- clearActiveVote - the in-session half of legacy LuckyPillarsGame.onPlayerQuit (the waiting-room
--- half is M.clearWaitingVote below).
+-- clearActiveVote - the in-session half of legacy's onPlayerQuit (the waiting-room half is M.clearWaitingVote below).
 function M.clearActiveVote(session, playerId)
   local voteState = session.state.voteState
   if voteState then
@@ -352,8 +338,7 @@ function M.handleVoteCommandWithoutContext(handle, args)
   return false
 end
 
--- The single entry point both the lobby waiting-item click and the menu-action handler dispatch
--- through - mirrors legacy LuckyPillarsGame.handleVoteCommand's own context-or-not routing.
+-- The single entry point both the lobby waiting-item click and the menu-action handler dispatch through - mirrors legacy's context-or-not routing.
 function M.handleVoteAction(handle, args)
   local session = ba.session.forPlayer(handle)
   if not session then
@@ -362,7 +347,11 @@ function M.handleVoteAction(handle, args)
 
   local phase = session.phase()
   if phase == "PLAYING" or phase == "ENDING" or phase == "FINISHED" then
-    return false
+    local message = session.config.translation(handle, "votes.messages.not_available")
+    if message then
+      session.messages.sendRaw(handle, message)
+    end
+    return true
   end
 
   return M.handleVoteCommand(session, handle, args)

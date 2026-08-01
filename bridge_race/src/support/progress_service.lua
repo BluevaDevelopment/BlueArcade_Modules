@@ -31,8 +31,7 @@ function M.formatDistance(session, handle)
   return string.format("%.0f", distance)
 end
 
--- Spectators first, in their real finish order, then alive players ascending by distance to the
--- finish line - the same shape `minefield`'s own scoreboard service already proved.
+-- Spectators first in finish order, then alive players ascending by distance to the finish line.
 function M.getTopPlayersByDistance(session)
   local topPlayers = {}
   for _, spectator in ipairs(session.spectators()) do

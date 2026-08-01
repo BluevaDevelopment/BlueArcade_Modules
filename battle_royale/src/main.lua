@@ -1,5 +1,3 @@
--- Mirrors legacy BattleRoyaleModule.java. requiresSpawnCapacityValidation isn't defined here -
--- legacy never overrides it either, so it keeps the framework default (true).
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -51,9 +49,7 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world border/plane/loot state
--- if the module gets disabled mid-match. Not ported - same documented gap as every other converted
--- module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- onDisable cleanup not ported - same documented gap as every other converted module.
 function M.onDisable()
 end
 

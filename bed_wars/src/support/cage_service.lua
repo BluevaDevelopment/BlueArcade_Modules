@@ -1,13 +1,7 @@
--- Mirrors legacy SpawnCageService.java. CageDefinition isn't a separate file - a plain
--- {material, headClear} table. StoreAPI-driven cage-skin selection is gracefully skipped (StoreAPI
--- is entirely unbound in this project's Lua layer, matching every other converted module's own
--- StoreAPI gap) - every cage always uses `cage.yml`'s own `default_cage` entry, same real block
--- placement either way. The arena-level `getSpawns()` fallback (used only when team spawns are
--- somehow empty) isn't ported - this module's `disabledRequirements` already excludes SPAWNS
--- validation, and every real match already requires team spawns to be configured before it can
--- start (the setup layer's own `team` step), so that fallback path is unreachable in practice.
--- Folia-safe `runAtLocation` block-edit scheduling isn't ported either - every other converted
--- module already places blocks directly via `world.setBlockType`/`setRegion` with no such wrapper.
+-- Mirrors legacy SpawnCageService.java. CageDefinition is a plain {material, headClear} table.
+-- StoreAPI-driven cage-skin selection is skipped (unbound); always uses `cage.yml`'s
+-- `default_cage`. The arena-level `getSpawns()` fallback isn't ported - team spawns are always
+-- required before a match can start, so it's unreachable.
 local M = {}
 
 function M.isEnabled(session)

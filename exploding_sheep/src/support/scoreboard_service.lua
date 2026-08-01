@@ -26,9 +26,7 @@ function M.getCustomPlaceholders(session, handle)
   }
 end
 
--- Sorted descending by shears, ties broken by name (case-insensitive) - matches
--- `ExplodingSheepScoreboardService.getTopPlayersByShears`'s own comparator exactly, including its
--- fallback to *every* player (not just the alive ones) when nobody is alive.
+-- Sorted by shears desc, ties by name; falls back to every player when nobody is alive.
 function M.getTopPlayersByShears(session)
   local candidates = session.alivePlayers()
   if #candidates == 0 then

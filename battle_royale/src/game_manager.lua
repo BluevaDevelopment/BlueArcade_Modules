@@ -1,11 +1,5 @@
--- Mirrors legacy BattleRoyaleGame.java - the top-level per-match orchestration. ArenaState.java
--- isn't a separate file - it's a plain session.state table, same convention as every other
--- converted module. handleDropExit/handlePlaneSneakToggle/handleDropLanding/handleChestLoot/
--- isChestLooted aren't wrapped here the way the legacy game class wraps them (a thin
--- null-arena-state-check pass-through to dropService/lootService) - listener.lua calls
--- support.drop_service/support.loot_service directly, since session.state always exists once a
--- match has started (no cross-arena player->context map to resolve the way the legacy Java
--- singleton game instance needed).
+-- listener.lua calls support.drop_service/loot_service directly - legacy's own game-class
+-- pass-throughs existed only for a null-arena-state check session.state doesn't need.
 local combatService = require("support.combat_service")
 local outcomeService = require("support.outcome_service")
 local loadoutService = require("support.loadout_service")

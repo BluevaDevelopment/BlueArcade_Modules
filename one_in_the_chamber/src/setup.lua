@@ -20,9 +20,7 @@ function M.register()
     ctx.reply(message)
   end)
 
-  -- Unlike `all_against_all`'s own "setregion" (`registerRegenerationRegion` - a destructible
-  -- floor), this module's play area is a static bounds check only, matching `fast_zone`/`race`/
-  -- `traffic_light`/`minefield`'s own `setRegionBounds` pattern.
+  -- Static bounds check (setRegionBounds), not all_against_all's destructible-floor regeneration region.
   ba.setup.on("setregion", function(ctx)
     if not ctx.selection.hasCompleteSelection() then
       ctx.reply(ba.config.translation(ctx.player, "setup_messages.must_use_stick"))
@@ -47,9 +45,7 @@ function M.register()
     ctx.reply(message)
   end)
 
-  -- Checks both keys, matching `OneInTheChamberModule.getSetupMetadata`'s own status check
-  -- exactly - "basic.mode" is never written by this module's own `setmode` handler (only
-  -- "basic.win_mode" is), but the legacy check still ORs it in.
+  -- Checks both keys to match legacy exactly; "basic.mode" is never actually written, only "basic.win_mode".
   ba.setup.status("setmode", function(ctx)
     return ctx.data.has("basic.win_mode") or ctx.data.has("basic.mode")
   end)

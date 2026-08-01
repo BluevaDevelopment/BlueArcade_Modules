@@ -1,6 +1,4 @@
--- Mirrors legacy PlayerLoadoutService.java. applyRespawnEffects (respawn_effects, e.g. a short
--- damage-resistance grace period) is real here - unlike battle_royale's dead copy of the same
--- method, capture_the_wool's respawn flow actually calls it every respawn.
+-- Mirrors legacy PlayerLoadoutService.java. Unlike battle_royale's dead copy, applyRespawnEffects is actually called every respawn here.
 local M = {}
 
 local function parseParts(raw)

@@ -1,6 +1,4 @@
--- Mirrors legacy PlaceholderService.java. Lucky Pillars never schedules events
--- (legacy's own scheduledEvents list is always empty), so next_event/next_event_time always
--- resolve to the "none" translations - ported for parity rather than hardcoded.
+-- Lucky Pillars never schedules events (legacy's scheduledEvents list is always empty), so next_event/next_event_time always resolve to the "none" translations.
 local M = {}
 
 local function formatTime(seconds)

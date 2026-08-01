@@ -1,12 +1,6 @@
--- Mirrors legacy BedWarsGame.java + BedWarsGameplayService.java + BedWarsRuntimeService.java +
--- BedWarsArenaDataLoader.java - the top-level per-match orchestration. ArenaState.java isn't a
--- separate file - it's a plain session.state table, same convention as every other converted
--- module (its "storm" fields are confirmed dead code in the legacy source and aren't ported - see
--- docs/BAMODULE_STATUS.md). shutdown()'s defensive re-clean-every-active-arena-on-module-disable
--- isn't ported either - same documented gap as every other converted module's M.onDisable().
--- resetPlayerHearts' reflection-based MAX_HEALTH/GENERIC_MAX_HEALTH attribute lookup is replaced
--- by the real `session.player.resetMaxHealth` binding (same simplification every prior converted
--- module already applies).
+-- Mirrors legacy BedWarsGame/BedWarsGameplayService/BedWarsRuntimeService/BedWarsArenaDataLoader
+-- - the top-level per-match orchestration. ArenaState is a plain session.state table; its "storm"
+-- fields are confirmed dead code in legacy and aren't ported.
 local bedService = require("support.bed_service")
 local spawnerService = require("support.spawner_service")
 local npcService = require("support.npc_service")
@@ -476,9 +470,7 @@ function M.handleBedBreak(session, breakerHandle, x, y, z)
   return broken
 end
 
--- Called by both handleBedBreak above and combat_service.handleElimination (after a final kill) -
--- the two events that can end a match early, mirroring legacy `BedWarsGameplayService`/
--- `CombatService` both calling `game.checkForVictory` at exactly these same two points.
+-- Called after a bed break or a final kill, mirroring legacy's own two `checkForVictory` call sites.
 function M.checkForVictory(session)
   if shouldEndForVictory(session) then
     M.endGame(session)
@@ -579,10 +571,7 @@ function M.handleMenuAction(playerHandle, payload)
   if not payload or payload == "" then
     return false
   end
-  -- "vote ..." (a direct vote cast) and "menu ..." (the vote menu's own main<->category
-  -- navigation, since a Lua-built menu can't use legacy's "OPEN;<menuId>" - see vote_service.lua's
-  -- own doc) both belong to the vote subsystem; shop/upgrade payloads are always "shop:"/
-  -- "upgrade:"-prefixed (colon, not space), so there's no ambiguity between the two.
+  -- "vote"/"menu" payloads belong to the vote subsystem; shop/upgrade payloads are colon-prefixed.
   if payload:match("^vote") or payload:match("^menu") then
     return voteService.handleVoteAction(playerHandle, payload)
   end
@@ -681,10 +670,8 @@ function M.untrackPlacedBlock(session, x, y, z)
   session.state.playerPlacedBlocks[blockKey(x, y, z)] = nil
 end
 
--- openArenaEnderChest/saveArenaEnderChest - mirrors legacy's ArenaEnderChestHolder-backed real,
--- writable, per-team shared chest (BedWarsGame.openArenaEnderChest/saveArenaEnderChest). Uses the
--- new `player.openTrackedInventory` binding (built this session) so `inventory_close` can hand the
--- final contents back via the tracking key it's opened with.
+-- Mirrors legacy's real, writable, per-team shared ender chest; `openTrackedInventory` hands the
+-- final contents back via `inventory_close` using the tracking key it's opened with.
 local function enderChestTeamId(session, handle)
   if not session.teams.isEnabled() then
     return "solo"

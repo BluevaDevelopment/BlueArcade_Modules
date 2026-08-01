@@ -1,17 +1,5 @@
--- Mirrors legacy CaptureTheWoolVoteService.java + VoteState.java's own menu-item construction
--- that legacy sourced from CaptureTheWoolVoteMenuRepository.java (a live YAML->MenuDefinition
--- build) - here all 4 menus (main + hearts/time/weather submenus) are built directly in Lua from
--- the same slot/material layout as the legacy menu YAMLs, using "MODULE;capture_the_wool;..."
--- actions for navigation instead of the legacy YAML's "OPEN;<menuId>" strings, which depend on
--- Core's MenuManager having a registered static menu id - a Lua-built session.menu.open/ba.menu.open
--- inventory is never registered under one, so OPEN;-based navigation genuinely can't reach it
--- (confirmed by reading MenuActionExecutor.openMenu's own registered-menu-first lookup). "CLOSE" is
--- a real Core-generic action string (MenuActionExecutor's own `player.closeInventory()`), so the
--- close button is ported as-is. CaptureTheWoolMenuAPI.java/CaptureTheWoolVoteMenuRepository.java
--- (the OPEN;-based repository/openMenuById delegate) aren't ported - same skip decision as
--- lucky_pillars' analogous file. CaptureTheWoolVoteListener.java (the redundant
--- /capture_the_woolvote slash-command entry point) isn't ported either - the waiting-item click and
--- menu-action-handler paths already cover voting.
+-- Mirrors legacy CaptureTheWoolVoteService.java. Menus use "MODULE;capture_the_wool;..." actions instead of the legacy
+-- YAMLs' "OPEN;<menuId>", since a Lua-built menu is never registered under a static menu id for OPEN; to reach.
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -31,8 +19,7 @@ local CATEGORY_OPTION_SET = {
   weather = { sunny = true, rainy = true },
 }
 
--- Slot/material layout matches the legacy menu YAMLs exactly (capture_the_wool_vote_main.yml,
--- _vote_hearts.yml, _vote_time.yml, _vote_weather.yml).
+-- Slot/material layout matches the legacy menu YAMLs exactly.
 local MAIN_MENU_BUTTONS = {
   { category = "hearts", slot = 11, material = "APPLE", nameKey = "votes.menu.main.hearts_name" },
   { category = "time", slot = 13, material = "CLOCK", nameKey = "votes.menu.main.time_name" },
@@ -468,11 +455,8 @@ function M.handleVoteCommandWithoutContext(handle, args)
       return true
     end
 
-    -- Unlike an in-session vote (M.handleVoteCommand broadcasts to session.players()), a
-    -- waiting-room vote doesn't broadcast to the rest of the lobby - same documented, deliberate
-    -- gap as lucky_pillars' own vote_service.lua: it needs a "list every other player in this
-    -- waiting arena" binding nothing has needed yet. The vote itself, the cooldown, and the menu
-    -- still work correctly.
+    -- Unlike an in-session vote, a waiting-room vote doesn't broadcast to the rest of the lobby (no "list this
+    -- waiting arena's players" binding yet) - same deliberate gap as lucky_pillars. Vote/cooldown/menu still work.
     VoteState.castVote(waiting, handle, category, option)
     voteCooldowns[handle] = os.clock()
     openMenu(nil, handle, waiting, mapMenuId(category))

@@ -77,6 +77,10 @@ function M.register()
       e:cancel()
       return
     end
+
+    if not session.isInsideBounds(e.location) then
+      e:cancel()
+    end
   end)
 
   ba.events.on("projectile_launch", function(session, e)

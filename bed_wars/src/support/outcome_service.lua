@@ -1,7 +1,5 @@
--- Mirrors legacy OutcomeService.java - declares a winning team (the last team with either an
--- intact bed or a living player) or, if none, the team(s) tied for most kills, then a final
--- scoreboard and the "wins" stat (first-winner-only, matching legacy's own `state.getWinnerId()`
--- guard).
+-- Mirrors legacy OutcomeService.java - declares the last team with an intact bed or living player,
+-- or the top-kills team(s) on a tie, then a final scoreboard and a first-winner-only "wins" stat.
 local M = {}
 
 local function showFinalScoreboard(session, gameManager, winningTeamId)

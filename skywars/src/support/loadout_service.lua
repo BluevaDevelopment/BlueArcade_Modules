@@ -1,13 +1,6 @@
--- Mirrors legacy PlayerLoadoutService.java. StoreAPI is entirely unbound in this project's Lua
--- layer (no `ba.store` binding exists yet - a real, tracked gap, not attempted here) - legacy's
--- own `resolveSelectedKitId`/`resolveCageDefinition` (see spawn_cage_service.lua) already fall
--- back to the configured default when `storeAPI == null`, so this is a legitimate existing legacy
--- code path, not a fabricated simplification: every player always gets `kits.yml`'s `default_kit`
--- ("none" - zero items) since kit selection can never resolve to anything else here.
--- applyRespawnEffects isn't ported - confirmed dead code: skywars has no respawn mechanism at all
--- (permanent elimination via CombatService, unlike capture_the_wool's respawn model), so
--- PlayerLoadoutService.applyRespawnEffects is defined in the legacy source but never called by
--- anything in this module's own package.
+-- Mirrors legacy PlayerLoadoutService.java. StoreAPI is unbound in Lua (no ba.store yet), so every
+-- player gets kits.yml's default_kit - matching legacy's own storeAPI==null fallback path exactly.
+-- applyRespawnEffects isn't ported - dead code, since skywars has no respawn mechanism at all.
 local M = {}
 
 local function parseParts(raw)
@@ -25,9 +18,7 @@ end
 
 local POTION_MATERIALS = { POTION = true, SPLASH_POTION = true, LINGERING_POTION = true }
 
--- Lua truthiness means any non-nil string (including the literal text "false") is truthy, so the
--- "extended"/"upgraded" flags must be parsed into real booleans here before crossing into Kotlin -
--- LuaValue:toboolean() on the raw string would otherwise always come back true.
+-- Lua truthiness means the string "false" is truthy - parse to a real boolean before crossing into Kotlin.
 local function toBool(str)
   return str == "true"
 end
@@ -80,8 +71,7 @@ function M.applyStartingEffects(session, handle)
 end
 
 local function resolveSelectedKitId(session)
-  -- storeAPI is always unavailable here (see file doc) - always resolves to kits.yml's own
-  -- default_kit, matching legacy's own `storeAPI == null -> return defaultKit` fallback exactly.
+  -- storeAPI is always unavailable here (see file doc) - always resolves to kits.yml's default_kit.
   return session.config.getStringFrom("kits.yml", "default_kit", "none")
 end
 

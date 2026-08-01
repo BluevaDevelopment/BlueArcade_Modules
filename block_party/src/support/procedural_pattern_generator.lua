@@ -23,14 +23,8 @@ local CREEPER = {
   { 0, 0, 0, 0, 0, 0, 0, 0 },
 }
 
--- LuaJ has no 64-bit integers or bitwise operators, unlike Java's `long`-based seed mixing this
--- template set was written against. The seed is purely an internal, per-round RNG input (never
--- persisted, never compared across implementations), so exact bit-for-bit reproduction of the
--- legacy `Random`/xorshift sequence isn't behaviorally observable - only "a well-distributed,
--- deterministic-per-round pattern" is. Replaced with a Lehmer/MINSTD-style multiplicative hash
--- (multiplier 48271, modulus 2^31-1, a real, well-known PRNG constant pair) that stays exact in
--- Lua's double-precision arithmetic, and `math.randomseed`/`math.random` for the sequential offsets
--- each template already drew from `Random` one-at-a-time.
+-- LuaJ has no 64-bit ints/bitwise ops, so legacy's long-based xorshift seed mixing is replaced
+-- with a Lehmer/MINSTD multiplicative hash; seed is internal RNG input only, never compared cross-impl.
 local function hashIndex(seed, a, b)
   local h = (seed + a * 92821 + b * 68917) % 2147483647
   h = (h * 48271) % 2147483647

@@ -1,10 +1,5 @@
--- Mirrors legacy ArmoryService.java's "open a read-only clone of a right-clicked container" -
--- but built on session.menu.open (real MenuAPI item slots, always click-cancelled) instead of
--- legacy's raw player.openInventory(clone), which never cancelled clicks and so actually let a
--- player pull duplicate items out of the "preview". Reusing the menu binding is a deliberate,
--- documented behavior improvement (properly read-only), not a byte-for-byte port. Only
--- material/amount survive the clone, not exact ItemMeta (name/lore/enchants) - matches
--- WorldBinding.containerContentsAt's own documented scope.
+-- Mirrors legacy ArmoryService.java, but uses session.menu.open (always click-cancelled) instead of legacy's raw
+-- openInventory clone, which let players actually pull duplicate items out of the "preview" - a deliberate fix, not a byte-for-byte port. Only material/amount survive the clone, not full ItemMeta.
 local M = {}
 
 function M.openChestClone(session, handle, x, y, z)

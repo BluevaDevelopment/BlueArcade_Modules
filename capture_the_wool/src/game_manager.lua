@@ -1,15 +1,5 @@
--- Mirrors legacy CaptureTheWoolGame.java - the top-level per-match orchestration. ArenaState.java
--- isn't a separate file - it's a plain session.state table, same convention as every other
--- converted module. isSoloMode is confirmed dead code (defined in the legacy source, never called
--- by anything in this module's own package) and isn't ported. shutdown()'s defensive
--- re-clean-every-active-arena-on-module-disable isn't ported either - same documented gap as every
--- other converted module's M.onDisable(), see docs/BAMODULE_STATUS.md. The carrier-hologram update
--- interval reads "wools.carrier_hologram_update_ticks" (matching this module's own settings.yml
--- layout) rather than legacy's own `moduleConfig.getInt("wool.carrier_hologram_update_ticks", 2)"
--- call - a real, caught legacy bug (missing "s"; that path never exists in settings.yml, so the
--- call always silently fell back to its own default of 2) - harmless in practice since the default
--- already matches the intended value, fixed here the same way the MAX_HEALTH/GENERIC_MAX_HEALTH
--- attribute-name bug was in an earlier conversion.
+-- Mirrors legacy CaptureTheWoolGame.java; ArenaState.java folded into session.state. isSoloMode is dead code in legacy, not ported.
+-- Reads "wools.carrier_hologram_update_ticks" (the real settings.yml key) - legacy's own read used the wrong key ("wool.") and always fell back to its default, a harmless legacy bug fixed here.
 local combatService = require("support.combat_service")
 local outcomeService = require("support.outcome_service")
 local woolService = require("support.wool_service")

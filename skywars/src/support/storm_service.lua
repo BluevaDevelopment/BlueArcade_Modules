@@ -1,5 +1,4 @@
--- Mirrors legacy StormService.java - a real per-world WorldBorder-driven shrinking storm, same
--- WorldBorderBinding surface battle_royale's own storm_service.lua already proved.
+-- Mirrors legacy StormService.java - a real per-world WorldBorder-driven shrinking storm, same WorldBorderBinding surface battle_royale already proved.
 local M = {}
 
 local WORLD_BORDER_DEFAULT_SIZE = 59999968.0

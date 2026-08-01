@@ -1,4 +1,3 @@
--- Mirrors legacy RunFromTheBeastCheckpointService.java.
 local M = {}
 
 function M.getCheckpointSetMaterial(session)

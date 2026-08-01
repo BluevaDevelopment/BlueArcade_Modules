@@ -1,11 +1,5 @@
--- Mirrors legacy LuckyPillarsGame.java - the top-level per-match orchestration. ArenaState.java
--- isn't a separate file - it's a plain session.state table, same convention as guess_the_build.
--- migrateSpawnsToDisk (raw JSON rewrite of the legacy spawn-format migration) isn't ported - a
--- documented, deliberate simplification (see docs/BAMODULE_STATUS.md); the in-memory
--- state.teamSpawns fallback still works correctly for the current match, it just doesn't persist a
--- migration to disk for a future restart. The generic-spawns migration fallback this fed
--- (arenaAPI.getSpawns() when no team spawns are configured) isn't ported either - lucky_pillars
--- ships disabledRequirements=["SPAWNS"], so a properly-configured arena always has team spawns.
+-- ArenaState.java isn't a separate file here - it's a plain session.state table, same convention as guess_the_build.
+-- migrateSpawnsToDisk and the generic-spawns fallback aren't ported (documented simplification, see docs/BAMODULE_STATUS.md) - lucky_pillars ships disabledRequirements=["SPAWNS"], so a configured arena always has team spawns.
 local combatService = require("support.combat_service")
 local outcomeService = require("support.outcome_service")
 local spawnCageService = require("support.spawn_cage_service")
@@ -164,8 +158,7 @@ function M.startGame(session)
 end
 
 function M.handleCountdownTick(session, secondsLeft)
-  -- {game_display_name} resolves to the module's fixed registration name (module.toml's own
-  -- `name`), not a per-locale translation - matches legacy's own moduleInfo.getName() usage here.
+  -- {game_display_name} resolves to module.toml's fixed name, not a per-locale translation - matches legacy's moduleInfo.getName() usage.
   for _, handle in ipairs(session.players()) do
     session.sounds.play(handle, "sounds.starting_game.countdown")
     local title = (session.coreConfig.language(handle, "titles.starting_game.title") or "")
@@ -550,8 +543,7 @@ local function applyModifier(session)
   elseif modifier == "rising_lava" then
     startRisingLava(session)
   end
-  -- "speed" has no direct effect here - it halves the item-distribution interval instead, see
-  -- startItemDistribution below.
+  -- "speed" has no direct effect here - it halves the item-distribution interval instead, see startItemDistribution below.
 end
 
 local function isHiddenOrCreativeItem(material)
@@ -588,9 +580,7 @@ local function buildRandomItemCandidates(session)
   return candidates
 end
 
--- Overflow from a full inventory is silently dropped rather than spawned on the ground
--- (session.player.giveItem has no leftover-drop return, unlike the legacy giveItemToPlayer) - a
--- documented, deliberate simplification for this rare edge case.
+-- Overflow from a full inventory is silently dropped, not spawned on the ground (giveItem has no leftover-drop return) - accepted simplification for this rare edge case.
 local function distributeRandomItem(session)
   if session.phase() ~= "PLAYING" then
     return
@@ -692,10 +682,7 @@ function M.beginPlaying(session)
   end
 end
 
--- finishGame's inventory cleanup uses dropInventory (clears storage+armor+off-hand together,
--- dropping anything at the player's feet) rather than legacy's silent clear()/setArmorContents(
--- null)/setExtraContents(null) - the arena resets right after this anyway, and no binding exposes
--- a silent-discard equivalent for the off-hand slot specifically.
+-- Uses dropInventory (drops at the player's feet) instead of legacy's silent discard - the arena resets right after this anyway, and no binding exposes a silent-discard equivalent.
 function M.finishGame(session)
   session.scheduler.cancelArenaTasks()
   spawnCageService.removeCages(session)

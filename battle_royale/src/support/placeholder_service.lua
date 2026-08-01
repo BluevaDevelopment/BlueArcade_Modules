@@ -1,6 +1,4 @@
--- Mirrors legacy PlaceholderService.java. The world-equality guard in resolveStormStatus isn't
--- ported - session locations never carry a world reference (single world per arena anyway, see
--- LocationBinding's own doc), so it would always be true here.
+-- resolveStormStatus skips legacy's world-equality guard - single world per arena, always true here.
 local M = {}
 
 local function resolveStormStatus(session, handle)

@@ -1,4 +1,3 @@
--- Mirrors legacy RunFromTheBeastSetup.java.
 local M = {}
 
 local function msg(ctx, key)

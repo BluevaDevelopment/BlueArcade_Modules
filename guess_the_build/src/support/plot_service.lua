@@ -1,6 +1,5 @@
--- Mirrors legacy GuessTheBuildPlotService.java. There is always at most ONE plot in practice
--- (every legacy call site indexed plots.get(0)), so session.state.plot is singular here, not an
--- array - a faithful simplification, not a behavior change.
+-- Mirrors legacy GuessTheBuildPlotService.java. Only ever one plot in practice (every legacy call
+-- site indexed plots.get(0)), so session.state.plot is singular here, not an array.
 local M = {}
 
 local function centerLocation(loc)
@@ -95,9 +94,8 @@ function M.teleportToPlot(session, handle)
   session.player.teleport(handle, centerLocation(spawn))
 end
 
--- Scans upward through the plot's own vertical center column for the first two-block-tall air
--- pocket, matching legacy GuessTheBuildPlot#findSafeTeleport exactly - falls back to just above
--- the floor if nothing safe is found.
+-- Scans the plot's vertical center column for the first two-block-tall air pocket, falling back
+-- to just above the floor if nothing safe is found - matches legacy GuessTheBuildPlot#findSafeTeleport.
 function M.findSafeTeleport(session, plot)
   if not plot then
     return nil

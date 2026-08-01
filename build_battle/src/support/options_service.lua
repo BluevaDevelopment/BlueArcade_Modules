@@ -1,10 +1,6 @@
--- Mirrors legacy OptionsService.java. The main/time/weather menus are built directly in Lua from
--- the same slot/material/action layout the legacy menus/java/build_battle_options_*.yml files
--- shipped (OptionsMenuRepository.java's own OPEN;-based repository isn't ported, same reasoning as
--- every prior module's own menu-repository skip) - unlike vote menu text, these labels were never
--- routed through moduleConfig.getTranslation in legacy either (the bundled YAML's own literal
--- MiniMessage text was the only copy), so they stay hardcoded here too, matching legacy 1:1 rather
--- than inventing new translation keys legacy never had.
+-- Mirrors legacy OptionsService.java. Main/time/weather menus are built directly in Lua from the same
+-- slot/material/action layout the legacy YAML menus shipped; labels stay hardcoded, matching legacy 1:1
+-- (they were never routed through moduleConfig.getTranslation there either).
 local OPTIONS_SLOT = 8
 
 -- name, icon, biome - matches OptionsService.BIOMES exactly.
@@ -35,8 +31,7 @@ local WEATHER_TYPES = { clear = "CLEAR", sunny = "CLEAR", rain = "DOWNFALL", rai
 local M = {}
 local bannerService, particleService, headsService
 
--- Set from main.lua after all support modules are required, avoiding a require cycle
--- (banner/particle/heads services don't need to call back into options_service).
+-- Set from main.lua after all support modules are required, avoiding a require cycle.
 function M.wire(banner, particle, heads)
   bannerService = banner
   particleService = particle
@@ -150,6 +145,9 @@ function M.handleOptionsClick(session, handle)
 end
 
 local function getPlot(session, handle)
+  if session.state.phase ~= "BUILDING" then
+    return nil
+  end
   return session.state.playerPlot[handle]
 end
 
@@ -223,7 +221,7 @@ function M.handleFloorChange(session, handle, material)
   if not plot or not plot.min or not plot.max then
     return false
   end
-  if NON_FLOOR_MATERIALS[material] then
+  if NON_FLOOR_MATERIALS[material] or not session.world.materialIsSolidBlock(material) then
     sendMessage(session, handle, "options.messages.floor_invalid")
     return false
   end

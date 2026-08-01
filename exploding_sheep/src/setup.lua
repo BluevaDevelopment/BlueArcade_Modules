@@ -41,9 +41,8 @@ function M.register()
     ctx.reply(message)
   end)
 
-  -- Checks both keys, matching `ExplodingSheepModule.getSetupMetadata`'s own status check exactly -
-  -- "game.play_area.bounds" is never written by this module's own `region` handler (only
-  -- "game.region.bounds" is), but the legacy check still ORs it in.
+  -- Matches legacy: also checks "game.play_area.bounds" even though this module's own region
+  -- handler never writes it.
   ba.setup.status("region", function(ctx)
     return (ctx.data.has("game.play_area.bounds.min.x") and ctx.data.has("game.play_area.bounds.max.x"))
         or (ctx.data.has("game.region.bounds.min.x") and ctx.data.has("game.region.bounds.max.x"))

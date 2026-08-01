@@ -1,6 +1,4 @@
--- Mirrors legacy RunFromTheBeastModule.java. requiresSpawnCapacityValidation isn't defined here -
--- legacy never overrides it either, so it keeps the framework default (true). StoreAPI-driven
--- registration calls aren't ported - StoreAPI is entirely unbound in this project's Lua layer.
+-- StoreAPI-driven registration calls aren't ported - StoreAPI is entirely unbound in this Lua layer.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -12,9 +10,7 @@ listener.register()
 setup.register()
 
 function M.onLoad()
-  -- Descriptions are hardcoded English here, not translation keys - matching legacy
-  -- RunFromTheBeastStatsService.registerStats' own literal, never-localized StatDefinition text
-  -- exactly (this module's language files only carry stats.labels.*, no stats.descriptions.*).
+  -- Descriptions are hardcoded English, matching legacy's own literal, never-localized text.
   ba.stats.define("games_played", ba.config.translation(nil, "stats.labels.games_played"), "Run From The Beast games played")
   ba.stats.define("runner_wins", ba.config.translation(nil, "stats.labels.runner_wins"), "Wins achieved as a runner")
   ba.stats.define("beast_wins", ba.config.translation(nil, "stats.labels.beast_wins"), "Wins achieved as the beast")
@@ -30,9 +26,7 @@ function M.onLoad()
     ba.config.translationList(nil, "vote_menu.lore")
   )
 
-  -- Mirrors RunFromTheBeastModule's own module action handler - only the armory's own
-  -- "armory_take <material> <amount>" click action is real here (see armory_service.lua's own
-  -- doc comment for why it's click-to-take rather than a real lootable inventory).
+  -- Only the armory's "armory_take <material> <amount>" click action is real - see armory_service.lua.
   ba.menu.onAction(function(playerHandle, payload)
     if not payload or payload == "" then
       return false
@@ -77,9 +71,7 @@ function M.onEnd(session, result)
   gameManager.onEnd(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world/players/cage/disguise
--- if the module gets disabled mid-match. Not ported - same documented gap as every other converted
--- module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- onDisable cleanup not ported - same documented gap as every other converted module.
 function M.onDisable()
 end
 

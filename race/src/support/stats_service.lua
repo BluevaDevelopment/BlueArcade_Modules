@@ -1,9 +1,6 @@
 local M = {}
 
--- Unlike every other module, race's legacy stats service hardcodes its English label/description
--- strings directly in Java instead of reading them from the language file (RaceStatsService never
--- calls moduleConfig.getTranslation) - replicated literally here, not "fixed" into a translation
--- lookup the legacy behavior never had.
+-- Legacy hardcodes English label/description strings here instead of reading the language file - replicated as-is.
 function M.registerStats()
   ba.stats.define("wins", "Wins", "Race wins")
   ba.stats.define("games_played", "Games Played", "Races played")

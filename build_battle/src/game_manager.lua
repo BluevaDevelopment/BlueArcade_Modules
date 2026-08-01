@@ -1,8 +1,4 @@
--- Mirrors legacy BuildBattleGame.java - the top-level per-match orchestration. ArenaState.java
--- isn't a separate file - it's a plain session.state table, same convention as every other
--- converted module. The legacy arenas/playerArena cross-arena bookkeeping (getContext(player),
--- getArenaState(context)) isn't ported - that's Core's own job in this project's session model
--- (ba.session.forPlayer), not something a module re-implements.
+-- Mirrors legacy BuildBattleGame.java. ArenaState.java is a plain session.state table here, same convention as every other converted module.
 local voteService = require("support.vote_service")
 local plotService = require("support.plot_service")
 local plotVotingService = require("support.plot_voting_service")

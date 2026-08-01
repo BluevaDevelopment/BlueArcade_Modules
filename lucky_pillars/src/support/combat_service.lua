@@ -1,6 +1,4 @@
--- Mirrors legacy CombatService.java. loadoutService is always nil in Lucky Pillars (no kits), so
--- healKiller only plays the respawn sound - CombatService.java's own dead healKiller overload
--- (never called; LuckyPillarsGame.healKiller is the real path) isn't ported.
+-- loadoutService is always nil (no kits), so healKiller only plays the respawn sound - CombatService.java's own dead healKiller overload (never called) isn't ported.
 local M = {}
 
 local function getRandomMessage(session, handle, path)
@@ -12,8 +10,7 @@ local function getRandomMessage(session, handle, path)
 end
 
 local function broadcastDeathMessage(session, victimHandle, killerHandle)
-  -- legacy's own "don't broadcast for spectators" guard here is always false in practice -
-  -- handleElimination already returns before this if the target is already spectating.
+  -- legacy's own spectator guard here is unreachable in practice - handleElimination already returns before this if the target is spectating.
   local path = killerHandle and "messages.deaths.killed_by_player" or "messages.deaths.generic"
   local message = getRandomMessage(session, victimHandle, path)
   if not message then

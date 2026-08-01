@@ -1,9 +1,5 @@
--- Mirrors legacy CombatService.java. Unlike lucky_pillars/battle_royale's permanent-spectator
--- elimination, capture_the_wool respawns players: a kill drops any carried wool, clears the
--- inventory, and puts the target in temporary SPECTATOR gamemode for `game.respawn_delay_seconds`
--- before gameManager.respawnPlayer brings them back - session.eliminate/session.setSpectating are
--- never called here, matching legacy's own real gamemode-only lock (same pattern PlayerBinding's
--- own doc calls out for all_against_all's most_kills mode).
+-- Mirrors legacy CombatService.java. Unlike lucky_pillars/battle_royale's permanent elimination, capture_the_wool
+-- respawns players after a temporary SPECTATOR gamemode lock, matching legacy - session.eliminate is never called here.
 local loadoutService = require("support.loadout_service")
 
 local M = {}
@@ -18,7 +14,7 @@ end
 
 local function broadcastDeathMessage(session, victimHandle, killerHandle)
   local path = killerHandle and "messages.deaths.killed_by_player" or "messages.deaths.generic"
-  local message = getRandomMessage(session, victimHandle, path)
+  local message = getRandomMessage(session, nil, path)
   if not message then
     return
   end

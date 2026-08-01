@@ -1,10 +1,5 @@
--- Mirrors legacy BuildBattleVoteService.java + VoteState.java's own module-level menu-item
--- construction that legacy sourced from BuildBattleVoteMenuRepository.java (a live YAML->
--- MenuDefinition build fed by the `themes` config list) - here the menu is built directly in Lua
--- from that same `themes` list, one button per theme plus a "Random" button, using
--- "MODULE;build_battle;vote theme <id>" actions. BuildBattleVoteMenuRepository.java/
--- BuildBattleModuleMenuAPI.java/support/vote/BuildBattleMenuAPI.java (all `OPEN;`-based) aren't
--- ported - same reasoning as every prior module's own menu-repository skip.
+-- Mirrors legacy BuildBattleVoteService.java + VoteState.java. The menu is built directly in Lua from the
+-- `themes` config list; BuildBattleVoteMenuRepository.java's OPEN;-based repository isn't ported.
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -158,8 +153,7 @@ function M.applyPendingVotes(session)
   waitingVoteStates[session.arenaId] = nil
 end
 
--- applyVotes - "random" resolves to a random pick from the `themes` list only now, at apply time,
--- matching legacy BuildBattleVoteService.applyVotes exactly (not at vote-cast time).
+-- "random" resolves to a random pick from `themes` at apply time, not at vote-cast time, matching legacy.
 function M.applyVotes(session)
   local voteState = session.state.voteState
   if not voteState then

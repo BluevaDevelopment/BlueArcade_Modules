@@ -286,6 +286,9 @@ end
 function M.startGame(session)
   session.state = newState()
 
+  session.summary.setGameSummaryEnabled(false)
+  session.summary.setFinalSummaryEnabled(false)
+
   session.scheduler.cancelArenaTasks()
   plotService.loadPlot(session)
   plotService.assignPlayersToPlot(session)

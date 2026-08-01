@@ -1,5 +1,4 @@
--- Mirrors legacy OutcomeService.java. gameManager is passed in explicitly (not required) to avoid
--- a require cycle, since game_manager.lua is the one that requires this file.
+-- gameManager is passed in explicitly (not required) to avoid a require cycle with game_manager.lua.
 local M = {}
 
 local function handleWinStats(session, winners)

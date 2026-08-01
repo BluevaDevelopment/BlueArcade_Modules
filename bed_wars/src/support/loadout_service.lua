@@ -1,7 +1,5 @@
--- Mirrors legacy PlayerLoadoutService.java. "MATERIAL:AMOUNT:SLOT[:HEX_COLOR]" item strings and
--- "EFFECT:DURATION:AMPLIFIER" effect strings are parsed the same way `giveItem`/`addPotionEffect`
--- already expect. Team-indexed starting items (`items.starting_items_by_team.<slot>`) use the
--- same "1-based index into the enabled team list" resolution as legacy's own resolveTeamSlot.
+-- Mirrors legacy PlayerLoadoutService.java. Item/effect strings parse the same
+-- "MATERIAL:AMOUNT:SLOT[:HEX_COLOR]" / "EFFECT:DURATION:AMPLIFIER" formats legacy uses.
 local M = {}
 
 local function resolveTeamSlot(session, handle)

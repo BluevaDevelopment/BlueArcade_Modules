@@ -1,8 +1,5 @@
--- Mirrors legacy SkyWarsGame.java - the top-level per-match orchestration. ArenaState.java isn't a
--- separate file - it's a plain session.state table, same convention as every other converted
--- module. Team spawn/cage handling reuses lucky_pillars' own pattern (no JSON-migration-to-disk
--- fallback, same documented simplification - disabledRequirements=["SPAWNS"] means a properly
--- configured arena always has team spawns).
+-- Mirrors legacy SkyWarsGame.java; ArenaState.java is just session.state here. Team spawn/cage
+-- handling reuses lucky_pillars' pattern (disabledRequirements=["SPAWNS"] means an arena always has team spawns).
 local combatService = require("support.combat_service")
 local outcomeService = require("support.outcome_service")
 local loadoutService = require("support.loadout_service")

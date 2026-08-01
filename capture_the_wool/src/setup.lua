@@ -1,11 +1,5 @@
--- Mirrors legacy CaptureTheWoolSetup.java (team/region/wool subcommands). Unlike material names
--- read from module config (always pre-validated data), a setup command's material argument is
--- admin-typed input - legacy pre-validates it via Material.valueOf(...) and rejects an invalid one
--- with a dedicated error message; no Lua binding exists to check a material name's validity ahead
--- of use (WoolBinding/WorldBinding's own Material.valueOf lookups all just silently no-op on a bad
--- name instead of erroring), so an invalid material typed here is stored as-is and simply never
--- resolves to a real block later - a documented, low-risk simplification (setup-time admin
--- feedback quality, not gameplay behavior).
+-- Mirrors legacy CaptureTheWoolSetup.java. Unlike legacy, admin-typed material names aren't
+-- validated here (no Lua binding checks Material.valueOf) - an invalid one is stored as-is and just never resolves later.
 local M = {}
 
 local function setupMessage(key)

@@ -243,9 +243,9 @@ local function handleRegion(ctx)
   ctx.data.registerRegenerationRegion("game.play_area", pos1, pos2)
   ctx.data.save()
 
-  local x = math.abs(pos2.x - pos1.x) + 1
-  local y = math.abs(pos2.y - pos1.y) + 1
-  local z = math.abs(pos2.z - pos1.z) + 1
+  local x = math.floor(math.abs(pos2.x - pos1.x)) + 1
+  local y = math.floor(math.abs(pos2.y - pos1.y)) + 1
+  local z = math.floor(math.abs(pos2.z - pos1.z)) + 1
   local blocks = x * y * z
 
   ctx.reply(setupMessage("region.set")

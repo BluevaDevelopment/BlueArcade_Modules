@@ -64,9 +64,8 @@ function M.register()
     return ctx.data.has("game.floor.bounds.min.x") and ctx.data.has("game.floor.bounds.max.x")
   end)
 
-  -- Checks both keys, matching `RedAlertModule.getSetupMetadata`'s own status check exactly -
-  -- "basic.win_mode" is never written by this module's own `setmode` handler (only "basic.mode"
-  -- is), but the legacy check still ORs it in.
+  -- Checks both keys, matching legacy's getSetupMetadata - "basic.win_mode" is never actually
+  -- written by setmode, but legacy still ORs it in.
   ba.setup.status("setmode", function(ctx)
     return ctx.data.has("basic.win_mode") or ctx.data.has("basic.mode")
   end)

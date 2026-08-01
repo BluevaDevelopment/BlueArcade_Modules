@@ -1,7 +1,5 @@
--- Mirrors legacy RunFromTheBeastListener.java. The reset-wand/shredder-plate interact/place
--- branches aren't ported - StoreAPI-gated, see game_manager.lua's own doc comment. block_place
--- isn't registered at all - legacy's own onBlockPlace only ever handled shredder-plate placement,
--- so with that skipped there is nothing left for it to do.
+-- Reset-wand/shredder-plate branches aren't ported - StoreAPI-gated, see game_manager.lua.
+-- block_place isn't registered - legacy's onBlockPlace only ever handled shredder placement.
 local gameManager = require("game_manager")
 local checkpointService = require("support.checkpoint_service")
 local armoryService = require("support.armory_service")

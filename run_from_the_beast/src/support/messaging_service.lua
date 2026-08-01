@@ -1,4 +1,3 @@
--- Mirrors legacy RunFromTheBeastMessagingService.java.
 local M = {}
 
 local function formatCountdownTime(seconds)

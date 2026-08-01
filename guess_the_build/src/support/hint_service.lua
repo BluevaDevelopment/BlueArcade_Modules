@@ -1,6 +1,5 @@
--- Mirrors legacy GuessTheBuildHintService.java. characterCountBroadcasted lives on
--- session.state (not a module-level local like the Java field) since it must reset per round,
--- per-session - a module-level Lua local would leak across every live arena this module runs.
+-- Mirrors legacy GuessTheBuildHintService.java. characterCountBroadcasted lives on session.state,
+-- not a module-level local, so it stays per-session instead of leaking across every live arena.
 local M = {}
 
 local function formatTime(totalSeconds)

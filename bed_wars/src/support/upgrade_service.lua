@@ -1,10 +1,7 @@
--- Mirrors legacy TeamUpgradeService.java - "same shape as the shop, one level simpler" (flat menu,
--- no categories, per-team not per-player progress). Bedrock half not ported, same established gap.
--- `state.getTeamXEnchantments`/`getTeamEffects` live in `session.state.teamSwordEnchantments`/
--- `teamArmorEnchantments`/`teamBowEnchantments`/`teamEffects` (declared in game_manager.lua's
--- `newState`) - `applyAction` here appends to those same tables `game_manager.respawnPlayer`'s own
--- `applyTeamUpgradesOnRespawn` reads from, and also applies immediately to every currently-online
--- teammate via `player.enchantEquipped`/`addPotionEffect`.
+-- Mirrors legacy TeamUpgradeService.java - same shape as the shop, one level simpler (flat menu,
+-- per-team progress). Bedrock half not ported. `applyAction` appends to the same
+-- `session.state.teamXEnchantments`/`teamEffects` tables `game_manager.respawnPlayer` reads on
+-- respawn, and also applies immediately to every online teammate.
 local ROMAN = { "I", "II", "III", "IV", "V" }
 local RESOURCE_CURRENCY = { iron = "IRON_INGOT", gold = "GOLD_INGOT", diamond = "DIAMOND", emerald = "EMERALD" }
 

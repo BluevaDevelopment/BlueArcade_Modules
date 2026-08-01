@@ -64,11 +64,8 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world/players/pending theme
--- selections if the module gets disabled mid-match. Not ported: M.onDisable() (unlike onEnd)
--- receives no session at all - Lua module-level code has no live-session registry to iterate, and
--- no other converted module has needed one. A real, documented gap, not a silent drop - see
--- docs/BAMODULE_STATUS.md.
+-- onDisable gets no session (unlike onEnd) - no live-session registry to iterate in Lua, so
+-- legacy shutdown()'s mid-match cleanup isn't ported. Documented gap, not a silent drop.
 function M.onDisable()
 end
 

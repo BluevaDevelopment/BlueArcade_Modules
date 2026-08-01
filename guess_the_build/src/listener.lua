@@ -1,8 +1,5 @@
--- Mirrors legacy GuessTheBuildListener.java. `isInFloorChangeMode` is deliberately not ported -
--- traced through every legacy file this module ships with: state.addFloorChangeMode(...) is never
--- actually called anywhere, so the check GuessTheBuildListener.onBlockPlace guards with is always
--- false in practice. `player_interact` isn't subscribed at all - the legacy handler's body is
--- empty.
+-- Mirrors legacy GuessTheBuildListener.java. isInFloorChangeMode not ported (legacy never calls
+-- addFloorChangeMode, always false); player_interact not subscribed (legacy handler body is empty).
 local M = {}
 
 local function insidePlot(session, location)
@@ -19,6 +16,9 @@ end
 function M.register()
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then
+      return
+    end
+    if session.phase() ~= "PLAYING" then
       return
     end
     if not session.isInsideBounds(e.to) then

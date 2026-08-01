@@ -1,4 +1,3 @@
--- Mirrors legacy BattleRoyaleSetup.java.
 local M = {}
 
 local function setupMessage(key)

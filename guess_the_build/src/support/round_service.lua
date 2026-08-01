@@ -1,15 +1,5 @@
--- Mirrors legacy GuessTheBuildRoundService.java.
---
--- selectNextBuilder is simplified from the legacy "skip players who already used a played plot"
--- logic to a plain uniform-random pick. Traced through deliberately, not guessed: with exactly one
--- shared plot (see plot_service.lua's own note), state.getPlayerPlot(p) returns the SAME plot
--- object for every player, so state.getPlayedPlots().contains(playerPlot(p)) is either true for
--- ALL players (the moment it's true for one) or false for none - the "already built" list can
--- never be a strict, non-empty subset. Every round therefore either finds every player "available"
--- immediately, or finds none available and clears the played-plots tracking on the spot before
--- re-checking - both paths land on "pick from all currently alive players," so the anti-repeat
--- bookkeeping never actually changes the outcome. This is real 100%-parity behavior, not a
--- shortcut: a repeat builder in consecutive rounds is exactly what the legacy code also produces.
+-- Mirrors legacy GuessTheBuildRoundService.java. selectNextBuilder is a plain random pick - with
+-- only one shared plot, legacy's anti-repeat bookkeeping can never distinguish players anyway.
 local themeService = require("support.theme_service")
 local plotService = require("support.plot_service")
 

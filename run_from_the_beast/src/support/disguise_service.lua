@@ -1,14 +1,5 @@
--- Mirrors legacy RunFromTheBeastDisguiseService.java - a real, non-player decoy mob that follows
--- the beast's location every tick while the real beast player is hidden from everyone but
--- themselves. Uses session.player.hideEntity/showEntity (real Player#hideEntity/showEntity,
--- Kotlin-side) and session.player.hidePlayer/showPlayer (real Player#hidePlayer/showPlayer) plus
--- the new session.entities.configureBeastDisguise composite for the decoy's own AI/gravity/
--- persistence flags. skinId is always "creeper" here (a hardcoded default) rather than the
--- store-selected skin legacy offers (creeper/villager/jeb sheep) - StoreAPI is entirely unbound in
--- this project's Lua layer, and unlike skywars' kit fallback there is no non-store default skin in
--- legacy's own config to fall back to, so this is a deliberate adaptation (not literal legacy
--- behavior) to keep the module's actual core mechanic - a hidden beast - working at all without a
--- real store integration, rather than leaving the beast permanently undisguised.
+-- skinId is always "creeper" (hardcoded), not legacy's store-selected skin - StoreAPI is unbound
+-- and legacy has no non-store default, so this keeps the beast disguised at all.
 local M = {}
 
 local ENTITY_TYPE_BY_SKIN = { creeper = "CREEPER", villager = "VILLAGER", jeb = "SHEEP" }

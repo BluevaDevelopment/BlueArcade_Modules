@@ -1,7 +1,5 @@
--- Mirrors legacy SpeedBuildersWorldSupport.java's region/view-finding math. Structure pasting and
--- clearing/resetting are handled by session.structure.paste and session.world.setRegion instead -
--- this file only ports the pure math (no real Bukkit call beyond block-type reads) that has no
--- Kotlin binding of its own.
+-- Mirrors legacy SpeedBuildersWorldSupport.java's pure region/view-finding math - pasting and
+-- clearing go through session.structure/session.world instead, which have their own bindings.
 local M = {}
 
 local function isAir(name)
@@ -71,8 +69,7 @@ function M.findSafeViewLocation(session, min, max)
 end
 
 -- findSafeViewLocationWithinBounds - exhaustive search inside [boundsMin, boundsMax] for the
--- closest safe spot to a preferred height above the region, used only when
--- gameplay.strict_plot_region is true.
+-- closest safe spot to a preferred height, used only when gameplay.strict_plot_region is true.
 function M.findSafeViewLocationWithinBounds(session, min, max, boundsMin, boundsMax)
   local minX = math.min(boundsMin.x, boundsMax.x)
   local maxX = math.max(boundsMin.x, boundsMax.x)

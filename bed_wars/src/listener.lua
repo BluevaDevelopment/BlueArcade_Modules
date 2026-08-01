@@ -1,14 +1,8 @@
--- Mirrors legacy BedWarsListener.java. BedWarsVoteListener.java (a redundant command-preprocess
--- entry point) isn't ported - same as every prior converted module's vote_service.lua handling
--- votes purely through the menu-action/waiting-item path. `onPlayerInteractAtEntity` isn't ported
--- either - confirmed dead in the legacy source: `PlayerInteractAtEntityEvent` only fires for
--- entities with sub-hitboxes (ArmorStands), never a plain `Villager`, so `onPlayerInteractEntity`
--- alone already covers every real shop-NPC click. The Fireball-vs-fireball's-own-shooter damage
--- guard legacy has in `onDamage` isn't ported either - this module's own fireball special item
--- deals damage manually via config (`damage_self`/`damage_enemy`/`damage_teammates`, see
--- special_items_service.lua), through a world-sourced `world.createExplosion` call that doesn't
--- fire a real `EntityExplodeEvent`/`EntityDamageByEntityEvent` for the fireball itself the way a
--- genuinely exploding entity would - there is nothing for that guard to prevent here.
+-- Mirrors legacy BedWarsListener.java. BedWarsVoteListener.java and `onPlayerInteractAtEntity`
+-- aren't ported - both are dead/redundant in legacy (votes go through the menu-action path;
+-- `PlayerInteractAtEntityEvent` never fires for a plain Villager). The Fireball-vs-own-shooter
+-- damage guard isn't needed either - this module's fireball damages manually via config, which
+-- never fires a real damage event for itself.
 local gameManager = require("game_manager")
 local bedService = require("support.bed_service")
 local npcService = require("support.npc_service")
@@ -75,7 +69,7 @@ function M.register()
       return
     end
 
-    if armoryService.openChestClone(session, e.player, x, y, z) then
+    if armoryService.openContainer(session, e.player, x, y, z) then
       e:cancel()
     end
   end)
@@ -91,10 +85,8 @@ function M.register()
     end
   end)
 
-  -- The non-player-target half of NPC-attack protection (`player_damage_by_entity` below only
-  -- fires for a Player target - a Villager shop NPC never is one), reusing the same shop-open
-  -- behavior as a genuine right-click so accidentally left-clicking an NPC still opens its menu
-  -- instead of just silently blocking the hit, matching legacy's own `onDamage` NPC branch.
+  -- Non-player-target half of NPC-attack protection - left-clicking a shop NPC opens its menu
+  -- instead of just blocking the hit, matching legacy's own `onDamage` NPC branch.
   ba.events.on("player_attack_entity", function(session, e)
     if session.phase() ~= "PLAYING" then return end
     if not session.isPlaying(e.attacker) then return end
@@ -240,10 +232,7 @@ function M.register()
     gameManager.handleNonCombatDeath(session, e.player)
   end)
 
-  -- entity_explode - TNT (and any other genuinely exploding entity) only breaks player-placed
-  -- blocks, never the map or beds, matching legacy `BedWarsListener.onEntityExplode`'s
-  -- `blockList().removeIf`. Dispatched once per active session (see `dispatchByLocation`'s own
-  -- doc) - `session.isInsideBounds` is this handler's own self-filter.
+  -- TNT (and any other exploding entity) only breaks player-placed blocks, never the map or beds.
   ba.events.on("entity_explode", function(session, e)
     if not session.isInsideBounds(e.location) then return end
     for i = e.blockCount, 1, -1 do
@@ -261,8 +250,7 @@ function M.register()
     end
   end)
 
-  -- item_spawn - prevents a broken bed's own dropped bed item from being picked back up, matching
-  -- legacy `BedWarsListener.onItemSpawn`'s material-family check.
+  -- Prevents a broken bed's own dropped bed item from being picked back up.
   ba.events.on("item_spawn", function(session, e)
     if not isBedMaterial(e.itemType) then return end
     if session.isInsideBounds(e.location) then

@@ -1,6 +1,5 @@
 -- Mirrors legacy GuessTheBuildChatListener.java. Dispatches from `player_chat`
--- (AsyncPlayerChatEvent - the one non-main-thread event in the catalogue, see
--- UniversalEventListener.onAsyncPlayerChat's own doc for why that's now safe).
+-- (AsyncPlayerChatEvent) - the one non-main-thread event in the catalogue, made safe by the sandbox lock.
 local gameManager = require("game_manager")
 local hintService = require("support.hint_service")
 

@@ -1,11 +1,5 @@
--- Mirrors legacy HeadsService.java + SkullUtil.java. The categories/heads menus are built directly
--- in Lua via session.menu.open's existing skullValue item field (already end-to-end wired for real
--- Base64 skull textures - see MenuItemBuilder.kt's own net.blueva.foundation.items.Items.skullValue
--- call) - no new binding needed for the menu icons themselves. "Click to add this head" instead
--- gives a real skull item via the new PlayerBinding.giveSkullItem (a thin wrapper around that same
--- Items.skullValue helper). openSearchMenu isn't ported - legacy's own OptionsService.
--- handleModuleAction switch never exposes a "search" action, so it's unreachable through the real
--- click-driven UI (a genuinely dead path from this angle, not a fabricated skip).
+-- Mirrors legacy HeadsService.java + SkullUtil.java, via session.menu.open's skullValue item field and
+-- PlayerBinding.giveSkullItem. openSearchMenu isn't ported - legacy never exposes a "search" action either.
 local BACK_SLOT = 45
 
 local CATEGORIES = {
@@ -146,8 +140,7 @@ function M.takeHead(session, handle, categoryId, index)
   session.player.giveSkullItem(handle, -1, head.texture, head.name)
 end
 
--- args[1] is always "heads" (dispatched by options_service.handleModuleAction) - args[2] is the
--- sub-action.
+-- args[2] is the sub-action (dispatched by options_service.handleModuleAction).
 function M.handleModuleAction(session, handle, args)
   local action = args[2] and args[2]:lower()
   if action == "menu" then

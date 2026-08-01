@@ -1,15 +1,8 @@
--- Mirrors legacy BedWarsVoteService.java + VoteState.java + BedWarsVoteMenuRepository.java's own
--- menu construction. Menu item names/lore are hardcoded literal MiniMessage strings taken directly
--- from the legacy menus/java/bed_wars_vote_*.yml files rather than looked up via
--- `session.config.translation` keys - unlike most of this module's other UI, the legacy vote menus
--- never went through the translation system at all (no matching `votes.menu.*` keys exist in
--- language/en.yml/es.yml either), so hardcoding here is a faithful port, not a shortcut.
--- BedWarsMenuAPI.java (the admin-tooling `openMenuById` wrapper registered under a second module id
--- "bed") isn't ported - no player-facing effect, same documented gap as every other converted
--- module's analogous `*MenuAPI` skip. "OPEN;<menuId>" navigation is replaced with
--- "MODULE;bed_wars;menu <id>" throughout, for the same reason capture_the_wool's own vote menu
--- does: a Lua-built session.menu.open/ba.menu.open inventory is never registered under a Core menu
--- id, so "OPEN;" can't reach it.
+-- Mirrors legacy BedWarsVoteService/VoteState/BedWarsVoteMenuRepository. Menu item names/lore are
+-- hardcoded literal MiniMessage strings, matching legacy - the vote menus never went through the
+-- translation system. BedWarsMenuAPI's admin-tooling `openMenuById` wrapper isn't ported (no
+-- player-facing effect). "OPEN;<menuId>" navigation is replaced with "MODULE;bed_wars;menu <id>" -
+-- a Lua-built menu is never registered under a Core menu id, so "OPEN;" can't reach it.
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -207,8 +200,9 @@ function M.applyVotes(session)
 
   local maxHealth = math.max(2.0, session.state.selectedHearts * 2.0)
   for _, handle in ipairs(session.players()) do
+    local currentHealth = session.player.health(handle)
     session.player.setMaxHealth(handle, maxHealth)
-    session.player.setHealth(handle, math.min(maxHealth, session.player.maxHealth(handle)))
+    session.player.setHealth(handle, math.min(currentHealth, maxHealth))
   end
 
   session.world.setTime(timeTicksFor(time))
@@ -422,9 +416,7 @@ function M.handleVoteCommandWithoutContext(handle, args)
       return true
     end
 
-    -- A waiting-room vote doesn't broadcast to the rest of the lobby - same documented gap as
-    -- capture_the_wool/lucky_pillars' own vote_service.lua (no "list every other player in this
-    -- waiting arena" binding exists yet). The vote itself, the cooldown, and the menu still work.
+    -- A waiting-room vote doesn't broadcast to the rest of the lobby - no such binding exists yet.
     VoteState.castVote(waiting, handle, category, option)
     voteCooldowns[handle] = os.clock()
     openMenu(nil, handle, waiting, mapMenuId(category))
@@ -434,8 +426,7 @@ function M.handleVoteCommandWithoutContext(handle, args)
   return false
 end
 
--- The single entry point both the lobby waiting-item click and the menu-action handler dispatch
--- through - mirrors legacy BedWarsGame.handleVoteCommand's own context-or-not routing.
+-- Single entry point for both the waiting-item click and the menu-action handler.
 function M.handleVoteAction(handle, payload)
   local args = {}
   for word in payload:gmatch("%S+") do

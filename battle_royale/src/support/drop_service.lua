@@ -1,8 +1,5 @@
--- Mirrors legacy DropService.java - the parachute-plane sequence. The plane vehicle (an invisible,
--- gravity-less ArmorStand) and its 16 decorative BLOCK_DISPLAY entities are purely visual; players
--- never actually ride them as real vehicle passengers (state.isOnPlane tracking + a synced
--- teleport/velocity every tick achieves the same visual effect, exactly matching legacy's own
--- design - see movePlanePlayers/updatePlanePlayersVelocity below).
+-- The plane vehicle and its 16 BLOCK_DISPLAY entities are purely visual - players never actually
+-- ride them; a synced teleport/velocity each tick fakes it, matching legacy's own design.
 local M = {}
 
 local PLANE_OFFSETS = {

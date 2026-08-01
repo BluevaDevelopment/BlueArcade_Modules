@@ -337,7 +337,7 @@ function M.startJudgingPhase(session, state)
 end
 
 function M.evaluateBuild(session, handle)
-  judgingService.evaluateBuild(session, session.state, handle, startNextRound)
+  judgingService.evaluateBuild(session, session.state, handle, M.startJudgingPhase)
 end
 
 function M.finishGame(session)

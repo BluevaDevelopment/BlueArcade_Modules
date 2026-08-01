@@ -1,5 +1,4 @@
--- Mirrors legacy StormService.java, driving the real per-world WorldBorder directly
--- (session.world.border).
+-- Drives the real per-world WorldBorder directly (session.world.border), no cached reference needed.
 local M = {}
 
 local function getBounds(session)

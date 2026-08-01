@@ -5,12 +5,8 @@ local M = {}
 local ARROW_TYPES = { ARROW = true, SPECTRAL_ARROW = true, TIPPED_ARROW = true, TRIDENT = true }
 
 function M.register()
-  -- No COUNTDOWN-phase teleport-back branch here (unlike race/fast_zone) - it's real, provably
-  -- dead code: `freezePlayersOnCountdown()` hardcodes `return false`, so the listener's own
-  -- `phase == COUNTDOWN && freezePlayersOnCountdown()` guard can never be true. Falling through,
-  -- an out-of-bounds move during COUNTDOWN takes the *same* `phase ~= PLAYING` branch below as any
-  -- other non-playing phase - a real respawn (loadout, gamemode, sound), not a plain teleport like
-  -- exploding_sheep/minefield/red_alert use for their own non-playing out-of-bounds correction.
+  -- freezePlayersOnCountdown() always returns false, so the COUNTDOWN teleport-back branch is dead
+  -- code; out-of-bounds during COUNTDOWN falls through to the same real-respawn branch below.
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then return end
 
@@ -49,10 +45,8 @@ function M.register()
     end
   end)
 
-  -- The whole "one in the chamber" identity: any real arrow hit is *always* lethal, regardless of
-  -- actual remaining health - matches `finalHealth = projectileHit ? -1 : realHealthCheck` exactly.
-  -- Non-projectile (melee) damage still uses a genuine health check. Shooting yourself is a real,
-  -- separate branch: an immediate elimination with no killer credited to anyone.
+  -- Any arrow hit is unconditionally lethal (finalHealth = -1); melee uses a real health check.
+  -- Self-damage is a separate branch: immediate elimination, no killer credited.
   ba.events.on("player_damage_by_entity", function(session, e)
     if e.target == nil then return end
     if not session.isPlaying(e.target) then return end

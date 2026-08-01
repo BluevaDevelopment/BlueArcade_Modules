@@ -1,7 +1,5 @@
--- Mirrors legacy GuardianService.java. Real mechanics (entity control, explosion shard physics,
--- particle beams) live in session.guardian (GuardianBinding.kt) - this file owns the business
--- decisions legacy mixed into the same class: orbit angle bookkeeping, which alive player to look
--- at, and the per-tick watch/beam-draw scheduling loops.
+-- Mirrors legacy GuardianService.java. Real entity/particle mechanics live in session.guardian
+-- (GuardianBinding.kt) - this file owns orbit bookkeeping and the watch/beam scheduling loops.
 local plotService = require("support.plot_service")
 
 local M = {}

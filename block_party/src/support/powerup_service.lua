@@ -173,7 +173,7 @@ local function applyColorPatch(session, state)
   local minY = math.min(state.floor.min.y, state.floor.max.y)
   local player = alive[math.random(#alive)]
   local center = session.player.location(player)
-  local radius = session.config.getInt("powerups.patch.radius", 2)
+  local radius = math.max(1, session.config.getInt("powerups.patch.radius", 2))
   local centerX, centerZ = math.floor(center.x), math.floor(center.z)
 
   for dx = -radius, radius do
@@ -198,8 +198,8 @@ function M.applyPowerupEffect(session, handle, powerupType)
   elseif powerupType == "PATCH" then
     applyColorPatch(session, state)
   elseif powerupType == "SPEED" then
-    local duration = session.config.getInt("powerups.speed.duration_ticks", 160)
-    local amplifier = session.config.getInt("powerups.speed.amplifier", 1)
+    local duration = math.max(1, session.config.getInt("powerups.speed.duration_ticks", 160))
+    local amplifier = math.max(0, session.config.getInt("powerups.speed.amplifier", 1))
     session.player.addPotionEffect(handle, "SPEED", duration, amplifier)
   elseif powerupType == "BONUS_TIME" then
     if state.phase == "SEARCH" then

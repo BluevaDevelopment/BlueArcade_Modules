@@ -1,6 +1,4 @@
--- Mirrors legacy ShopNpcService.java. ShopNpcDefinition/ShopNpcType aren't separate files - plain
--- Lua tables ({npcId, type, x, y, z, entityHandle}) with type as "STORE"/"UPGRADE" strings, same
--- convention as every other converted module's state delegates.
+-- Mirrors legacy ShopNpcService.java. ShopNpcDefinition/ShopNpcType are plain Lua tables.
 local M = {}
 
 local NPC_SCAN_LIMIT = 64

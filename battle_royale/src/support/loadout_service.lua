@@ -1,5 +1,4 @@
--- Mirrors legacy PlayerLoadoutService.java. applyRespawnEffects isn't ported - confirmed dead
--- code (defined but never called anywhere in the legacy source).
+-- applyRespawnEffects isn't ported - confirmed dead code in the legacy source (defined, never called).
 local M = {}
 
 function M.giveStartingItems(session, handle)

@@ -1,6 +1,4 @@
--- Mirrors legacy VoteState.java. A vote state is a plain table, nested per category
--- (chests/hearts/time/weather) - same shape as capture_the_wool's own 3-category version, with
--- a 4th "chests" category added.
+-- Mirrors legacy VoteState.java. A vote state is a plain table nested per category (chests/hearts/time/weather).
 local M = {}
 
 function M.new(defaults)

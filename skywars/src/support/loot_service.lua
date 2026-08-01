@@ -1,9 +1,5 @@
--- Mirrors legacy LootService.java + TrackedChest.java. The weighted-random item roll and the
--- MATERIAL:AMOUNT:WEIGHT / MATERIAL:MIN:MAX:WEIGHT[|ENCHANT:LEVEL,...] entry parsing both stay in
--- Lua (pure data, matching how every other module's own random-outcome logic already works) -
--- session.world.fillContainer/dropEnchantedItemAt only handle the real Bukkit mechanics
--- (multi-enchantment ItemStacks, container slot placement), the first module needing more than
--- one enchantment on a single item.
+-- Mirrors legacy LootService.java + TrackedChest.java. Weighted-random item roll and entry parsing
+-- (MATERIAL:MIN:MAX:WEIGHT[|ENCHANT:LEVEL,...]) stay in Lua; fillContainer/dropEnchantedItemAt only handle the real Bukkit item/enchantment mechanics.
 local M = {}
 
 local function isChestMaterial(material)
@@ -178,8 +174,7 @@ function M.handleChestLoot(session, handle, x, y, z, blockType)
   session.stats.add(handle, "chests_looted", 1)
 end
 
--- Returns true if this break was fully handled here (loot dropped, block removed) - the caller
--- cancels the real BlockBreakEvent when this is true, matching legacy's own return-value contract.
+-- Returns true if loot was dropped and the block removed - caller cancels the break event when true.
 function M.handleChestBreak(session, handle, x, y, z, blockType)
   if not isChestMaterial(blockType) then
     return false

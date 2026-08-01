@@ -10,10 +10,10 @@ listener.register()
 setup.register()
 
 function M.onLoad()
-  ba.stats.define("wins", ba.config.translation(nil, "stats.labels.wins"), "Speed Builders wins")
-  ba.stats.define("games_played", ba.config.translation(nil, "stats.labels.games_played"), "Speed Builders games played")
-  ba.stats.define("rounds_survived", ba.config.translation(nil, "stats.labels.rounds_survived"), "Rounds survived")
-  ba.stats.define("perfect_builds", ba.config.translation(nil, "stats.labels.perfect_builds"), "Perfect builds")
+  ba.stats.define("wins", ba.config.translation(nil, "stats.labels.wins"), ba.config.translation(nil, "stats.descriptions.wins"))
+  ba.stats.define("games_played", ba.config.translation(nil, "stats.labels.games_played"), ba.config.translation(nil, "stats.descriptions.games_played"))
+  ba.stats.define("rounds_survived", ba.config.translation(nil, "stats.labels.rounds_survived"), ba.config.translation(nil, "stats.descriptions.rounds_survived"))
+  ba.stats.define("perfect_builds", ba.config.translation(nil, "stats.labels.perfect_builds"), ba.config.translation(nil, "stats.descriptions.perfect_builds"))
 
   ba.achievements.register("achievements.yml")
 

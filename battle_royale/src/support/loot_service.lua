@@ -1,9 +1,5 @@
--- Mirrors legacy LootService.java + TrackedChest.java (a tracked chest is just a plain
--- {x,y,z,material} table in session.state.trackedChests, keyed the same block-coordinate way as
--- everywhere else in this binding layer). handleChestExplosion (EntityExplodeEvent/
--- BlockExplodeEvent-triggered loot) isn't ported - the v1 event catalogue has no
--- entity_explode/block_explode mapping yet, a real, deliberate gap for this rare edge case
--- (TNT/creeper explosions destroying a chest); the primary interact/break loot paths both work.
+-- Explosion-triggered chest loot (TNT/creepers) isn't ported - no entity_explode/block_explode
+-- event mapping exists yet; the primary interact/break loot paths both work fine without it.
 local M = {}
 
 local function blockKey(x, y, z)

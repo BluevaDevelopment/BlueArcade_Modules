@@ -1,8 +1,5 @@
--- Mirrors legacy BedService.java. BedDefinition/BedState aren't separate files - plain Lua tables
--- ({teamId, x, y, z}) and a "intact"/"destroyed" string kept in session.state.bedState, same
--- convention as every other converted module's state delegates. Real bed block manipulation goes
--- through `world.bedOtherHalf`/`removeBedPair`/`repairBed` (built this session) rather than
--- reimplementing the HEAD/FOOT facing math in Lua.
+-- Mirrors legacy BedService.java. BedDefinition/BedState are plain Lua tables. Real bed HEAD/FOOT
+-- manipulation goes through `world.bedOtherHalf`/`removeBedPair`/`repairBed` bindings.
 local M = {}
 
 local function resolveDataBasePath(session, section)

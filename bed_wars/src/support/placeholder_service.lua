@@ -1,7 +1,5 @@
 -- Mirrors legacy PlaceholderService.java. `uniqueSuffix`'s zero-width-space padding keeps
--- otherwise-identical scoreboard lines (e.g. two "<black>.</black>" filler lines) from being
--- silently deduped by Bukkit's scoreboard API, which requires every line's rendered text to be
--- distinct - ported verbatim since dropping it would visibly break scoreboards past 2 empty slots.
+-- otherwise-identical filler scoreboard lines from being deduped by Bukkit's scoreboard API.
 local bedService = require("support.bed_service")
 
 local M = {}

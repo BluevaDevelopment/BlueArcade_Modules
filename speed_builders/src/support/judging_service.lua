@@ -1,6 +1,5 @@
 -- Mirrors legacy SpeedBuildersJudgingService.java. startNextRound is passed in by game_manager.lua
--- rather than required directly, to avoid a require() cycle (game_manager already requires this
--- file).
+-- rather than required directly, to avoid a require() cycle.
 local worldSupport = require("support.world_support")
 local guardianService = require("support.guardian_service")
 local scoreboardService = require("support.scoreboard_service")
@@ -24,9 +23,8 @@ local function allAlivePlayersPerfect(session, state)
   return true
 end
 
--- evaluateBuild - the "early perfect" check fired shortly after every block break/place during the
--- BUILDING phase (see listener.lua's scheduleEvaluate). Ends the round immediately once every
--- alive player has hit a perfect score.
+-- evaluateBuild - the "early perfect" check fired after every block break/place during BUILDING
+-- (see listener.lua's scheduleEvaluate). Ends the round once every alive player is perfect.
 function M.evaluateBuild(session, state, handle, startNextRound)
   if state.ended or state.phase ~= "BUILDING" or state.perfectPlayers[handle] then
     return
@@ -139,10 +137,8 @@ local function continueAfterJudging(session, state, startNextRound)
   end, betweenRounds * 20)
 end
 
--- evaluateBuildsAndEliminate - the real round-end judging pass: scores every alive player once
--- more (mob-inclusive this time, unlike evaluateBuild's own early check), eliminates the single
--- lowest non-perfect scorer (ties broken by iteration order, matching legacy's own
--- Map.Entry-iteration tie-break), and continues to the next round or ends the game.
+-- evaluateBuildsAndEliminate - the round-end judging pass: scores every alive player, eliminates
+-- the single lowest non-perfect scorer, and continues to the next round or ends the game.
 function M.evaluateBuildsAndEliminate(session, state, startNextRound)
   if state.ended then
     return

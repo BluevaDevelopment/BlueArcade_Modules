@@ -95,9 +95,7 @@ end
 function M.handlePlayerFinish(session, handle)
   statsService.recordFinishLineCross(session, handle)
 
-  -- Unlike every other Phase 4 conversion so far, race never calls session.setWinner() at all -
-  -- crossing the finish line only ever credits the "wins" stat once, verified directly from the
-  -- legacy source (RaceGameManager.handlePlayerFinish never touches GameContext#setWinner).
+  -- Legacy never calls GameContext#setWinner here; only credits the "wins" stat once per arena.
   if not session.state.winnerCredited then
     session.state.winnerCredited = true
     statsService.recordWin(session, handle)

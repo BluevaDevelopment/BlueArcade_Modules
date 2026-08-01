@@ -31,9 +31,8 @@ function M.formatDistance(session, handle)
   return string.format("%.0f", distance)
 end
 
--- Spectators first, in their real finish order (matches `session.spectators()`'s own real
--- insertion order - the same podium-placement convention `fast_zone` relies on), then alive
--- players sorted ascending by distance to the finish line.
+-- Spectators first in finish order (session.spectators() insertion order, same convention as
+-- fast_zone), then alive players sorted ascending by distance to the finish line.
 function M.getTopPlayersByDistance(session)
   local topPlayers = {}
   for _, spectator in ipairs(session.spectators()) do

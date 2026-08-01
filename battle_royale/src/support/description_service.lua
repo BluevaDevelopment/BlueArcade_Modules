@@ -1,4 +1,3 @@
--- Mirrors legacy DescriptionService.java.
 local M = {}
 
 function M.sendDescription(session)

@@ -45,8 +45,7 @@ local function randomMessage(session, handle, path)
   return messages[math.random(#messages)]
 end
 
--- Unlike spleef's single broadcast, splegg rolls a fresh random message (and a fresh
--- player-aware translation lookup) for every recipient individually.
+-- Unlike spleef's single broadcast, splegg rolls a fresh random/translated message per recipient.
 function M.broadcastElimination(session, victim)
   local isSpectator = false
   for _, spectator in ipairs(session.spectators()) do

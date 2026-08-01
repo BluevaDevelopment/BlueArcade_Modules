@@ -1,9 +1,4 @@
--- Mirrors legacy SpawnCageService.java. The store-driven cage skin selection
--- (resolveCageDefinition's StoreAPI branch) is dropped - storeAPI is always nil in this
--- conversion (see modules/universal/lucky_pillars in docs/BAMODULE_STATUS.md), so every cage
--- always uses cage.yml's default_cage, exactly like the legacy fallback path with no StoreAPI.
--- resolveCageOwners/resolveTeamCageOwners aren't ported either - confirmed dead code in the
--- legacy source (buildCages never calls them).
+-- storeAPI is always nil, so every cage uses cage.yml's default_cage (same as legacy's no-StoreAPI fallback). resolveCageOwners/resolveTeamCageOwners aren't ported - confirmed dead code (buildCages never calls them).
 local M = {}
 
 local MAX_DISTANCE_SQUARED = 2.25
@@ -13,10 +8,7 @@ local function squaredDistance(a, b)
   return dx * dx + dy * dy + dz * dz
 end
 
--- Block-coordinate key, matching legacy ArenaState.toKey's use of Location#getBlockX/Y/Z (integer
--- block coordinates, not raw doubles) - both the read (resolveSpawnForPlayer) and the write
--- (markPlayersAtSpawn) must floor consistently or a spawn already caged for one player would never
--- be recognised as caged when checked against a second player's nearby spawn.
+-- Block-coordinate key (matches legacy ArenaState.toKey) - read and write must floor consistently or a caged spawn won't be recognised for a second player.
 local function blockKey(location)
   return math.floor(location.x) .. ":" .. math.floor(location.y) .. ":" .. math.floor(location.z)
 end

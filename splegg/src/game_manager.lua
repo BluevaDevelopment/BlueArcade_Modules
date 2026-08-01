@@ -48,9 +48,7 @@ function M.handlePlayerElimination(session, handle)
   loadoutService.applyRespawnEffects(session, handle)
 end
 
--- os.clock() is the sandbox's only sub-second clock (a monotonic elapsed-seconds double, not
--- wall-clock time) - needed here because the default shoot delay (4 ticks = 0.2s) would round
--- away to nothing with os.time()'s whole-second precision.
+-- os.clock() (monotonic, sub-second) is used instead of os.time() - the 0.2s default delay would round away to nothing otherwise.
 function M.canShoot(session, handle)
   local delayTicks = session.config.getInt("game.shoot_delay_ticks", 0)
   if delayTicks <= 0 then return true end

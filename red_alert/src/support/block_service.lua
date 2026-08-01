@@ -21,9 +21,8 @@ local function parseKey(key)
   return tonumber(x), tonumber(y), tonumber(z)
 end
 
--- Settings are read once at match start into session.state.settings, matching
--- `RedAlertSettings.load()`'s own one-time-load-at-onLoad shape rather than re-reading
--- `session.config` on every block tick across a potentially large floor.
+-- Settings cached once at match start (matching RedAlertSettings.load()) rather than re-reading
+-- session.config on every block tick across a potentially large floor.
 function M.cacheSettings(session)
   local stageMaterials = {}
   for i, path in ipairs(STAGE_PATHS) do
@@ -63,10 +62,8 @@ function M.cacheSettings(session)
   }
 end
 
--- No fallback to a legacy static-arena `FloorRegion` here (unlike `findFloorBounds`'s own
--- `context.getArenaAPI().getFloors()` fallback) - a `.bamodule` arena is always the dynamic model,
--- always writes `game.floor.bounds` via its own `floor` setup command, so that fallback path is
--- dead for any universal-module deployment.
+-- No static-arena FloorRegion fallback here (unlike legacy's findFloorBounds) - a .bamodule arena
+-- is always dynamic and always writes game.floor.bounds itself.
 function M.cacheFloorBounds(session)
   session.state.floorMin = session.dataAccess.getGameLocation("game.floor.bounds.min")
   session.state.floorMax = session.dataAccess.getGameLocation("game.floor.bounds.max")

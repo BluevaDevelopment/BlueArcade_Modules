@@ -1,9 +1,5 @@
--- Mirrors legacy GuessTheBuildSetup.java. Setup-time translations go through the module-level
--- `ba.config` (not `ctx.coreConfig`), matching every other converted module's setup.lua
--- (block_party's own setup.lua) - `ba.config` was built against an empty player-handle table at
--- module load, so `ctx.player` never actually resolves through it; it always falls back to the
--- server default locale, same as the legacy code's own `getTranslation(player, key)` effectively
--- does for setup-time messages in practice.
+-- Mirrors legacy GuessTheBuildSetup.java. Uses `ba.config` (not `ctx.coreConfig`) for translations -
+-- `ctx.player` never resolves through it at setup time, so it falls back to server default locale.
 local M = {}
 
 local function setupMessage(key, fallback)

@@ -44,8 +44,7 @@ function M.register()
     end
   end)
 
-  -- Mines are real pressure plates - `Action.PHYSICAL` fires from stepping on one, exposed via
-  -- `player_interact`'s generic `action` field (no dedicated "mine" event needed).
+  -- Mines are pressure plates: stepping on one fires player_interact with action == "PHYSICAL".
   ba.events.on("player_interact", function(session, e)
     if e.action ~= "PHYSICAL" then return end
     if e.clickedBlockType == nil then return end
@@ -60,9 +59,8 @@ function M.register()
     gameManager.handleMineTrigger(session, e.player, loc)
   end)
 
-  -- All damage is cancelled unconditionally while playing - the only ways to "die" here are
-  -- falling out of bounds/onto a death block (player_move) or a mine (a real pressure plate, not
-  -- damage at all), matching the legacy `onPlayerDamage`'s own no-cause-check cancel.
+  -- All damage is cancelled unconditionally while playing - death only comes from falling out of
+  -- bounds/death block or a mine, matching legacy's no-cause-check cancel.
   ba.events.on("player_damage", function(session, e)
     if session.isPlaying(e.player) then e:cancel() end
   end)

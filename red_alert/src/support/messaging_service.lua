@@ -29,9 +29,8 @@ function M.sendCountdownFinish(session)
   end
 end
 
--- A second, separate title at game start - no sound, different timing (0/20/10) - sent on top of
--- (not instead of) sendCountdownFinish's own title, matching `RedAlertGameManager.handleGameStart`
--- calling `sendStartTitle` as well as the countdown-finish hook already having fired it once.
+-- Second title sent at game start (0/20/10 timing, no sound) on top of sendCountdownFinish's own
+-- title, matching legacy's handleGameStart calling sendStartTitle too.
 function M.sendStartTitle(session)
   for _, handle in ipairs(session.players()) do
     local title = string.gsub(session.coreConfig.language(handle, "titles.game_started.title"), "{game_display_name}", "Red Alert")

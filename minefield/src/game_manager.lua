@@ -90,9 +90,8 @@ local function updateHud(session, allPlayers, timeLeft)
   end
 end
 
--- Runs every 10 ticks but only decrements `timeLeft` on every *other* call (matches
--- `MinefieldGameTimerService`'s own `tickCount % 2 == 0` gate) - a 0.5s HUD refresh with a 1s
--- countdown cadence, not the 20-tick/1-decrement-per-call shape every other converted module uses.
+-- Runs every 10 ticks but decrements timeLeft only every other call: 0.5s HUD refresh, 1s
+-- countdown cadence (matches MinefieldGameTimerService's tickCount % 2 == 0 gate).
 local function startGameTimer(session)
   local gameTime = session.dataAccess.getGameDataNumber("basic.time")
   if gameTime == nil or gameTime == 0 then gameTime = DEFAULT_GAME_TIME end
@@ -147,8 +146,8 @@ end
 function M.handlePlayerFinish(session, handle)
   session.stats.add(handle, "finish_line_crosses", 1)
 
-  -- Same real anomaly as race/traffic_light: crossing the finish line never calls
-  -- session.setWinner(), only guards the "wins" stat via the arena's own internal winner flag.
+  -- Same as race/traffic_light: finishing never calls session.setWinner(), only guards the
+  -- "wins" stat via session.state.winnerId.
   if session.state.winnerId == nil then
     session.state.winnerId = handle
     session.stats.add(handle, "wins", 1)

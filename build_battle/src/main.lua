@@ -1,6 +1,4 @@
--- Mirrors legacy BuildBattleModule.java. requiresSpawnCapacityValidation isn't defined here -
--- legacy never overrides it either, so it keeps the framework default (true). StoreAPI-driven
--- registration calls aren't ported - StoreAPI is entirely unbound in this project's Lua layer.
+-- Mirrors legacy BuildBattleModule.java. StoreAPI-driven registration calls aren't ported - StoreAPI is entirely unbound in this project's Lua layer.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -34,10 +32,7 @@ function M.onLoad()
   voteService.registerWaitingItem()
   voteService.registerClickHandler()
 
-  -- Mirrors BuildBattleModule's own module action handler - OptionsService gets first refusal
-  -- (matching legacy: "if (finalOptionsService != null && finalOptionsService.handleModuleAction(...))
-  -- return true"), then falls back to the vote command, matching legacy's own
-  -- "options ..." vs "vote ..." / "menu ..." routing exactly.
+  -- Mirrors legacy: OptionsService gets first refusal on "options ..." payloads, then falls back to the vote command.
   ba.menu.onAction(function(playerHandle, payload)
     if not payload or payload == "" then
       return false
@@ -87,9 +82,7 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world/players on module
--- disable. Not ported - same documented gap as every other converted module's M.onDisable(), see
--- docs/BAMODULE_STATUS.md.
+-- Legacy shutdown() defensively re-cleans active arenas on disable; not ported, same gap as every other converted module.
 function M.onDisable()
 end
 

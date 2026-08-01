@@ -1,9 +1,4 @@
--- Mirrors legacy CaptureTheWoolModule.java. requiresSpawnCapacityValidation isn't defined here -
--- legacy never overrides it either, so it keeps the framework default (true).
--- "chests_looted" is registered as a stat (matching legacy's own registerStats()) but never
--- actually incremented anywhere in the legacy source either - ArmoryService.openChestClone has no
--- stat call, confirmed by reading it in full - so the "Loot Runner" achievement tied to it is
--- legacy dead instrumentation, not a bug to fix here.
+-- Mirrors legacy CaptureTheWoolModule.java; requiresSpawnCapacityValidation stays framework default (true), matching legacy.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -18,6 +13,7 @@ function M.onLoad()
   ba.stats.define("wins", ba.config.translation(nil, "stats.labels.wins"), ba.config.translation(nil, "stats.descriptions.wins"))
   ba.stats.define("games_played", ba.config.translation(nil, "stats.labels.games_played"), ba.config.translation(nil, "stats.descriptions.games_played"))
   ba.stats.define("kills", ba.config.translation(nil, "stats.labels.kills"), ba.config.translation(nil, "stats.descriptions.kills"))
+  -- chests_looted is never incremented in legacy either (dead instrumentation) - not a bug here.
   ba.stats.define("chests_looted", ba.config.translation(nil, "stats.labels.chests_looted"), ba.config.translation(nil, "stats.descriptions.chests_looted"))
   ba.stats.define("deaths", ba.config.translation(nil, "stats.labels.deaths"), ba.config.translation(nil, "stats.descriptions.deaths"))
   ba.stats.define("wools_stolen", ba.config.translation(nil, "stats.labels.wools_stolen"), ba.config.translation(nil, "stats.descriptions.wools_stolen"))
@@ -34,9 +30,7 @@ function M.onLoad()
   voteService.registerWaitingItem()
   voteService.registerClickHandler()
 
-  -- Mirrors CaptureTheWoolModule's own registerMenuActions lambda - parses the payload
-  -- MenuActionExecutor already stripped "MODULE;capture_the_wool;" from
-  -- ("menu <category>" / "vote <category> <option>") back into an args array.
+  -- payload is "menu <category>" / "vote <category> <option>" with the "MODULE;capture_the_wool;" prefix already stripped.
   ba.menu.onAction(function(playerHandle, payload)
     if not payload or payload == "" then
       return false
@@ -81,9 +75,7 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy onDisable() calls game.shutdown() (defensive re-clean of every still-active arena's
--- world/players on module disable) and unregisters menu/item handlers - not ported, same
--- documented gap as every other converted module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- onDisable cleanup not ported - same gap as every other converted module.
 function M.onDisable()
 end
 

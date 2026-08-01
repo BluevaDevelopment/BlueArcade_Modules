@@ -1,6 +1,4 @@
--- Mirrors legacy CombatService.java. Permanent elimination via session.eliminate/setSpectating -
--- unlike capture_the_wool's respawn model, skywars has no respawn mechanism at all, same pattern
--- as battle_royale/lucky_pillars.
+-- Mirrors legacy CombatService.java. Permanent elimination (no respawn), same pattern as battle_royale/lucky_pillars.
 local loadoutService = require("support.loadout_service")
 
 local M = {}
@@ -15,7 +13,7 @@ end
 
 local function broadcastDeathMessage(session, victimHandle, killerHandle)
   local path = killerHandle and "messages.deaths.killed_by_player" or "messages.deaths.generic"
-  local message = getRandomMessage(session, victimHandle, path)
+  local message = getRandomMessage(session, nil, path)
   if not message then
     return
   end

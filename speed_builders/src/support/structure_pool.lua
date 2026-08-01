@@ -1,7 +1,5 @@
 -- Mirrors the business-logic half of legacy StructureService.java (pick order/shuffle/size
--- filter) - loading, pasting, and evaluating the actual voxel data is session.structure's job
--- (StructureBinding.kt), since that's real BlockData/Material mechanics with nothing left to make
--- a business decision about.
+-- filter) - loading, pasting, and evaluating voxel data is session.structure's job instead.
 local M = {}
 
 local function reshuffle(state)

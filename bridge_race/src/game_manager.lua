@@ -118,8 +118,7 @@ end
 function M.handlePlayerFinish(session, handle)
   statsService.recordFinishLineCross(session, handle)
 
-  -- Same real anomaly as race/traffic_light/minefield/red_alert: crossing the finish line never
-  -- calls session.setWinner(), only guards the "wins" stat via the arena's own internal winner flag.
+  -- Same anomaly as race/traffic_light/minefield/red_alert: never calls session.setWinner(), only guards the "wins" stat.
   if session.state.winnerId == nil then
     session.state.winnerId = handle
     statsService.recordWin(session, handle)
@@ -171,9 +170,7 @@ local function processActiveMovement(session, handle, to)
   end
 end
 
--- freezePlayersOnCountdown() is real (true) here, unlike most other converted modules - any
--- block-changing move during COUNTDOWN is unconditionally snapped back, matching `race`'s own
--- real teleport-based countdown snap-back (not a dead branch this time).
+-- freezePlayersOnCountdown() is real here - COUNTDOWN moves are unconditionally snapped back, same as `race`.
 function M.handlePlayerMove(session, handle, from, to)
   if session.phase() == "COUNTDOWN" then
     session.player.teleport(handle, from)

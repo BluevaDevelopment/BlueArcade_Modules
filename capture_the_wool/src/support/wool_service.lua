@@ -1,8 +1,5 @@
--- Mirrors legacy WoolService.java + WoolDefinition.java + WoolState.java, plus the wool-related
--- slice of ArenaState.java (wool states/carriers/capturers/holograms live on session.state, a
--- plain table, matching the project's established "no separate arena-state object" convention).
--- WoolState.DROPPED is never actually assigned in the legacy source (confirmed dead enum value) -
--- only "SPAWNED"/"CARRIED"/"CAPTURED" are used here.
+-- Mirrors legacy WoolService.java + WoolDefinition.java + WoolState.java (wool states/carriers/capturers/holograms live
+-- on session.state, a plain table). WoolState.DROPPED is never assigned in legacy either (dead enum value) - not used here.
 local M = {}
 
 local WOOL_ID_SCAN_LIMIT = 128
@@ -234,6 +231,7 @@ local function removeCarrierHologram(session, woolKey)
   end
 end
 
+-- LIGHT_BLUE correctly resolves to <aqua> here; legacy's own check-ordering bug always returns <blue> for it.
 local function resolveWoolColor(material)
   local name = material or ""
   if name:find("RED") then return "<red>" end
@@ -493,10 +491,8 @@ function M.handleWoolCapture(session, playerHandle, x, y, z, placedMaterial)
   return false
 end
 
--- removeWoolItems isn't ported - legacy's own WoolService.handlePlayerDeath calls it, but the
--- caller (CombatService.handleElimination) always clears the player's entire inventory
--- immediately afterward, making it dead code in every real code path (confirmed by reading
--- both call sites) - see combat_service.lua's own inventory clear.
+-- removeWoolItems isn't ported - legacy's caller (CombatService.handleElimination) always clears the whole
+-- inventory right after, making it dead code in every real path (see combat_service.lua's own inventory clear).
 function M.handlePlayerDeath(session, playerHandle)
   removeCarrierHologramsForPlayer(session, playerHandle)
 

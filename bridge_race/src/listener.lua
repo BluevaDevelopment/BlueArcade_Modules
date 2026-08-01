@@ -19,10 +19,7 @@ function M.register()
     if session.isPlaying(e.player) then e:cancel() end
   end)
 
-  -- Core cancels block placement inside an arena by default - this module explicitly allows it
-  -- back within bounds while playing (`e:allow()`), matching the legacy listener's own real
-  -- `event.setCancelled(false)` call, then tracks the block so it can later be broken again or
-  -- cleared at match end.
+  -- Core cancels block placement by default; un-cancel within bounds while playing, then track for later break/cleanup.
   ba.events.on("block_place", function(session, e)
     if session.phase() ~= "PLAYING" then
       e:cancel()
@@ -38,8 +35,7 @@ function M.register()
     gameManager.handleBlockPlaced(session, e.player, e.location)
   end)
 
-  -- Only ever un-cancels breaking a block this same module tracked as player-placed - anything
-  -- else (the arena's own terrain) stays blocked by Core's default protection.
+  -- Only un-cancels breaking a block this module tracked as player-placed; arena terrain stays protected.
   ba.events.on("block_break", function(session, e)
     if session.phase() ~= "PLAYING" then
       e:cancel()

@@ -1,6 +1,4 @@
--- Mirrors legacy SkyWarsModule.java. requiresSpawnCapacityValidation isn't defined here - legacy
--- never overrides it either, so it keeps the framework default (true). StoreAPI-driven kit/cage
--- registration calls aren't ported - see support/loadout_service.lua's own doc comment.
+-- Mirrors legacy SkyWarsModule.java. StoreAPI-driven kit/cage registration isn't ported - see loadout_service.lua.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -16,8 +14,7 @@ function M.onLoad()
   ba.stats.define("games_played", ba.config.translation(nil, "stats.labels.games_played"), ba.config.translation(nil, "stats.descriptions.games_played"))
   ba.stats.define("kills", ba.config.translation(nil, "stats.labels.kills"), ba.config.translation(nil, "stats.descriptions.kills"))
   ba.stats.define("chests_looted", ba.config.translation(nil, "stats.labels.chests_looted"), ba.config.translation(nil, "stats.descriptions.chests_looted"))
-  -- storm_damage_taken - registered but never incremented anywhere, matching legacy's own
-  -- StormService (its constructor accepts but discards a StatsAPI param); confirmed dead stat.
+  -- storm_damage_taken is registered but never incremented anywhere, matching legacy (dead stat).
   ba.stats.define("storm_damage_taken", ba.config.translation(nil, "stats.labels.storm_damage_taken"), ba.config.translation(nil, "stats.descriptions.storm_damage_taken"))
 
   ba.achievements.register("achievements.yml")
@@ -31,9 +28,7 @@ function M.onLoad()
   voteService.registerWaitingItem()
   voteService.registerClickHandler()
 
-  -- Mirrors SkyWarsModule's own voteActionHandler lambda - parses the payload
-  -- MenuActionExecutor already stripped "MODULE;skywars;" from ("menu chests" /
-  -- "vote chests overpowered") back into an args array.
+  -- Mirrors SkyWarsModule's voteActionHandler - splits the stripped "menu chests"/"vote chests overpowered" payload back into an args array.
   ba.menu.onAction(function(playerHandle, payload)
     if not payload or payload == "" then
       return false
@@ -70,9 +65,7 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world/players/cages if the
--- module gets disabled mid-match. Not ported - same documented gap as every other converted
--- module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- Legacy shutdown() re-cleans active arenas on mid-match disable; not ported (same standing gap as every module's onDisable).
 function M.onDisable()
 end
 

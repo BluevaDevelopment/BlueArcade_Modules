@@ -29,9 +29,7 @@ function M.register()
     end
   end)
 
-  -- Any player-on-player (or player-shot-projectile) hit is unconditionally cancelled - this
-  -- module's only real threat is a sheep's own explosion, matching the legacy `onDamage`'s own
-  -- unconditional cancel (no `isPlaying` guard on the victim either).
+  -- Cancels unconditionally, no isPlaying guard on the victim - matches legacy onDamage.
   ba.events.on("player_damage_by_entity", function(session, e)
     if e.target == nil then return end
     if e.damager == nil then return end

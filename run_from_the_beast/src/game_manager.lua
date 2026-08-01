@@ -1,12 +1,5 @@
--- Mirrors legacy RunFromTheBeastGameManager.java - the top-level per-match orchestration.
--- ArenaState.java isn't a separate file - it's a plain session.state table, same convention as
--- every other converted module. The legacy StateRegistry cross-arena bookkeeping isn't ported -
--- that's Core's own job in this project's session model (ba.session.forPlayer), not something a
--- module re-implements. RewardService (rewards.yml-driven console commands on victory) and
--- StoreService's shredder-trap/reset-wand/zapper/kit subsystem aren't ported either - all gated
--- behind either StoreAPI (entirely unbound in this project's Lua layer) or a "run a console
--- command from a module" binding neither exists yet nor is needed by anything else so far; both
--- are genuinely unreachable without them, matching the "don't port unreachable code" precedent.
+-- RewardService and StoreService's shredder/reset-wand/zapper/kit subsystem aren't ported - both
+-- gated behind StoreAPI or a console-command binding, neither of which exists in this Lua layer.
 local beastService = require("support.beast_service")
 local disguiseService = require("support.disguise_service")
 local cageService = require("support.cage_service")
@@ -40,6 +33,11 @@ end
 
 function M.startGame(session)
   session.state = newState()
+
+  session.summary.setGameSummaryEnabled(false)
+  session.summary.setFinalSummaryEnabled(false)
+  session.summary.setRewardsEnabled(false)
+
   session.scheduler.cancelArenaTasks()
 
   session.state.timeLeftSeconds = getGameTime(session)
@@ -326,6 +324,8 @@ function M.handleOutOfBounds(session, player, deathBlock)
     return
   end
 
+  local deathLocation = session.player.location(player)
+  session.visualEffects.playDeathEffect(player, deathLocation)
   session.respawnPlayer(player)
   loadoutService.applyStartingEffects(session, player, "effects.respawn_effects")
   broadcastOutOfBoundsMessage(session, player, deathBlock)
@@ -346,6 +346,12 @@ function M.handleDamage(session, victim, killer)
   end
   if isSpectator(session, victim) then
     return
+  end
+
+  local deathLocation = session.player.location(victim)
+  session.visualEffects.playDeathEffect(victim, deathLocation)
+  if killer then
+    session.visualEffects.playKillEffect(killer)
   end
 
   if isBeast(session, victim) then

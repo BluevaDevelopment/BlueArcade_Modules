@@ -177,13 +177,15 @@ local function respawnRedLockedPlayers(session)
   end
 
   for _, handle in ipairs(handles) do
-    if session.isPlaying(handle) then
-      session.respawnPlayer(handle)
-      session.player.setGameMode(handle, "SURVIVAL")
-      loadoutService.applyRespawnEffects(session, handle)
-      session.sounds.play(handle, session.coreConfig.getSound("sounds.in_game.respawn"))
+    if session.player.isOnline(handle) then
+      if session.isPlaying(handle) then
+        session.respawnPlayer(handle)
+        session.player.setGameMode(handle, "SURVIVAL")
+        loadoutService.applyRespawnEffects(session, handle)
+        session.sounds.play(handle, session.coreConfig.getSound("sounds.in_game.respawn"))
+      end
+      session.state.redLockedHandles[handle] = nil
     end
-    session.state.redLockedHandles[handle] = nil
   end
 end
 

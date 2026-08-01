@@ -36,9 +36,8 @@ local function getMineSpawnChance(session)
   return math.min(1.0, math.max(0.0, chance))
 end
 
--- Only plate-suffixed materials count, matching `getPlateMaterials`'s own
--- `material.name().endsWith("PRESSURE_PLATE")` filter - a genuinely invalid material name is left
--- to `session.world.setBlockType`'s own silent-failure handling rather than validated here too.
+-- Only names ending in PRESSURE_PLATE count (matches getPlateMaterials' filter); invalid material
+-- names are left to setBlockType's own silent failure rather than validated here.
 local function getPlateMaterials(session)
   local names = session.config.getStringList("mines.plate_materials")
   local plates = {}
@@ -122,9 +121,8 @@ end
 local function hasMineImmunity(session, handle)
   local until_ = session.state.mineImmunity[handle]
   if until_ == nil then return false end
-  -- os.clock() is the sandbox's only sub-second clock - immunity_millis (1200 by default) would
-  -- round away to nothing with os.time()'s whole-second precision, same reasoning as
-  -- traffic_light's red-light pushback window.
+  -- os.clock() is used since immunity_millis (1200ms default) needs sub-second precision that
+  -- os.time() can't provide, same reasoning as traffic_light's pushback window.
   if os.clock() > until_ then
     session.state.mineImmunity[handle] = nil
     return false

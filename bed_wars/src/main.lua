@@ -1,8 +1,5 @@
--- Mirrors legacy BedWarsModule.java. "store.yml" and the Bedrock-menu yml files
--- (menus/bedrock/*.yml) legacy registers in registerConfigs() are not ported - StoreAPI is
--- entirely unbound in this project's Lua layer (BedWarsStoreService.registerStoreItems is a no-op
--- gap already documented for every prior StoreAPI-using module) and the Bedrock menu path is
--- already documented as unreachable from a universal module (see docs/BAMODULE_STATUS.md).
+-- Mirrors legacy BedWarsModule.java. store.yml and menus/bedrock/*.yml aren't registered -
+-- StoreAPI and the Bedrock menu path are both unbound/unreachable, same as every other module.
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -34,10 +31,7 @@ function M.onLoad()
   voteService.registerWaitingItem()
   voteService.registerClickHandler()
 
-  -- Legacy's registerMenuActions routes every "MODULE;bed_wars;<payload>" click through a single
-  -- BedWarsGame.handleMenuAction dispatcher (vote/shop/upgrade payloads alike) - gameManager mirrors
-  -- that single entry point rather than splitting per-subsystem the way capture_the_wool's simpler
-  -- vote-only menu did.
+  -- Single dispatcher for vote/shop/upgrade payloads, mirroring legacy's own handleMenuAction.
   ba.menu.onAction(gameManager.handleMenuAction)
 end
 

@@ -1,11 +1,6 @@
--- Mirrors legacy BuildBattleListener.java. The BannerMenuHolder/ParticleMenuHolder/HeadMenuHolder
--- InventoryClickEvent branches, plus the pending-biome-menu click check, aren't ported - all three
--- menus are now real session.menu.open menus dispatched generically through the module action
--- handler (see options_service.lua's own doc comment), so Core already routes their clicks without
--- this listener's involvement. The plain "cancel any inventory click outside the player's own
--- inventory during PLOT_VOTING" guard is a real, documented gap - no inventory_click Lua event
--- mapping exists yet and nothing else has needed one; voting itself (via hotbar item interact/
--- place) still works correctly without it.
+-- Mirrors legacy BuildBattleListener.java. The BannerMenuHolder/ParticleMenuHolder/HeadMenuHolder click
+-- branches aren't ported - those menus are now real session.menu.open menus Core already routes generically.
+-- The "cancel inventory clicks outside PLOT_VOTING" guard is a real gap - no inventory_click Lua event exists yet.
 local plotVotingService = require("support.plot_voting_service")
 local optionsService = require("support.options_service")
 local voteService = require("support.vote_service")

@@ -1,8 +1,5 @@
--- Mirrors legacy OutcomeService.java, including the full ASCII wool-capture recap broadcast
--- (sendWinnerOutcomeMessage) - unlike lucky_pillars'/battle_royale's simplified outcome_service,
--- this one is real, visible per-match behavior worth preserving exactly. gameManager is passed in
--- explicitly (not required) to avoid a require cycle, since game_manager.lua is the one that
--- requires this file.
+-- Mirrors legacy OutcomeService.java, including the full wool-capture recap broadcast (sendWinnerOutcomeMessage) - a real,
+-- visible per-match message worth preserving exactly. gameManager is passed in (not required) to avoid a require cycle with game_manager.lua.
 local woolService = require("support.wool_service")
 local placeholderService = require("support.placeholder_service")
 
@@ -74,7 +71,10 @@ local function getCapturableWoolsForTeam(session, teamId, teamIndex)
 end
 
 local function resolvePlayerName(session, playerId)
-  local name = playerId and session.player.name(playerId)
+  if not playerId then
+    return session.config.translation(nil, "messages.winner_board.unknown_player") or "Unknown"
+  end
+  local name = session.player.name(playerId) or ba.playerUtil.offlineName(playerId)
   if name then
     return name
   end

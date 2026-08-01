@@ -49,10 +49,8 @@ function M.register()
     ctx.reply(message)
   end)
 
-  -- Checks both keys, matching `AllAgainstAllModule.getSetupMetadata`'s own status check exactly -
-  -- "basic.mode" is never written by this module's own `setmode` handler (only "basic.win_mode"
-  -- is), but the legacy check still ORs it in, so arena data written by some earlier key name
-  -- still reports as configured.
+  -- Checks both keys, matching legacy's own status check - "basic.mode" is never written here,
+  -- but the OR keeps old arena data using that key name reporting as configured.
   ba.setup.status("setmode", function(ctx)
     return ctx.data.has("basic.win_mode") or ctx.data.has("basic.mode")
   end)

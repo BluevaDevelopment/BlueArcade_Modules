@@ -1,7 +1,5 @@
--- Mirrors legacy RunFromTheBeastCageService.java. Cage blocks come from setup.lua's own
--- ctx.data.saveRegionBlocks("game.beast_cage.blocks", pos1, pos2) snapshot - a real per-block
--- "world,x,y,z,material" (5-part, used by clearCage's own fallback) / "world,minX,minY,minZ,maxX,
--- maxY,maxZ,material" (8-part, used by restoreCage) string list, parsed identically to legacy.
+-- Cage block entries are "world,x,y,z,material" (5-part) or "world,minX,minY,minZ,maxX,maxY,maxZ,
+-- material" (8-part) strings from setup.lua's saveRegionBlocks snapshot, parsed like legacy.
 local M = {}
 
 local function splitCommas(entry)

@@ -21,8 +21,7 @@ local function formatTime(seconds)
   return string.format("%02d:%02d", math.floor(seconds / 60), seconds % 60)
 end
 
--- Only players who have actually scored get an entry, matching the legacy per-arena score map
--- (populated on first score change, not pre-seeded for every player at match start).
+-- Lazily creates a score entry on first score change, matching legacy (no pre-seeding).
 local function addScore(session, handle, amount)
   session.state.scores[handle] = (session.state.scores[handle] or 0) + amount
 end

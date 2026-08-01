@@ -1,9 +1,5 @@
--- Mirrors legacy BattleRoyaleListener.java. onEntityExplode/onBlockExplode (explosion-triggered
--- chest loot) aren't ported - see support/loot_service.lua's own doc for why. player_interact's
--- real double-dispatch (once per hand) isn't explicitly filtered the way legacy filters
--- `event.getHand() != EquipmentSlot.HAND` - the chest is already AIR by the time the second
--- dispatch runs (both fire synchronously against the same live block), so the material-type check
--- alone naturally skips the second one; a genuinely harmless simplification, not a behavioral gap.
+-- Explosion-triggered chest loot isn't ported, see support/loot_service.lua.
+-- player_interact's per-hand double-dispatch self-filters: the chest is already AIR by hand two.
 local gameManager = require("game_manager")
 local lootService = require("support.loot_service")
 

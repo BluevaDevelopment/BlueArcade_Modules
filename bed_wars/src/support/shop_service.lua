@@ -1,24 +1,9 @@
--- Mirrors legacy ShopServiceImpl.java: a generic category->content->tier->buy_item interpreter
--- reading `shop.yml` at runtime (never hardcoded into Lua), matching legacy's own config-driven
--- design and preserving real admin-configurability. Loaded once, lazily, at module scope (shared
--- across every arena, matching legacy's own constructor-time load) via `ba.config` rather than
--- per-session `session.config` - shop catalog data doesn't vary per arena.
---
--- Deliberately NOT ported (all pre-existing, documented gaps):
--- - The entire Bedrock half (openBedrockCategories/openBedrockCategory/buildBedrockContentButton/
---   bedrockText/bedrockCategoryImage/bedrockContentImage) - "no Bedrock menu from a universal
---   module" is an established gap; `isBedrockPlayer` always resolves as if false here.
--- - Quick Buy *customization* (shift-click add/remove, PersistentPlayerDataAPI-backed per-player
---   layout) - PersistentPlayerDataAPI is unbound in this project's Lua layer; the Quick Buy tab
---   still works, always showing `shop.quick_buy_defaults` (server-configured, not per-player).
---   `handleShopShiftClick` is a no-op stub for this reason.
--- - Vault/real-economy currency (`currency: "vault"` / a null currency) - no Vault binding exists
---   in this Lua layer; treated as always-0-money (can't afford), matching every other converted
---   module's own StoreAPI/economy gap. The packaged `shop.yml` never actually uses "vault" for any
---   tier, so this never triggers in practice with the shipped config.
--- - Legacy's multi-path config-key fallback chains (`firstString` checking 2-4 alternate paths for
---   backward compat with older config schemas) - this conversion's `shop.yml` only ever has one
---   schema, so only the single modern path each setting actually uses is read.
+-- Mirrors legacy ShopServiceImpl.java: a category->content->tier->buy_item interpreter reading
+-- `shop.yml` at runtime, loaded once lazily at module scope (shared across arenas) via `ba.config`.
+-- Not ported: the Bedrock half (unreachable), Quick Buy shift-click *customization* (no
+-- PersistentPlayerDataAPI binding - Quick Buy still shows the server-configured defaults), Vault
+-- currency (unbound, always resolves to 0 money; the shipped shop.yml never uses it), and legacy's
+-- multi-path config-key fallback chains (this conversion's shop.yml only has one schema).
 local RESOURCE_CURRENCY = { iron = "IRON_INGOT", gold = "GOLD_INGOT", diamond = "DIAMOND", emerald = "EMERALD" }
 local SWORD_DAMAGE = { WOODEN_SWORD = 4, GOLDEN_SWORD = 4, STONE_SWORD = 5, IRON_SWORD = 6, DIAMOND_SWORD = 7, NETHERITE_SWORD = 8 }
 local DYE_COLOR = {
@@ -348,7 +333,7 @@ local function giveBuyItem(session, handle, buyItem, content)
     teamEnchantments = session.state.teamSwordEnchantments[teamId] or {}
   end
 
-  if material:match("_SWORD$") and not buyItem.autoEquip then
+  if material:match("_SWORD$") then
     removeWeakerSwords(session, handle, material)
   end
 
@@ -737,10 +722,8 @@ function M.onPlayerCloseShop(session, handle)
   session.state.playersInShop[handle] = nil
 end
 
--- Quick Buy customization (shift-click add/remove) is not ported - see file doc. Real shop
--- shift-click still needs to be intercepted so a shift-click doesn't fall through as a normal
--- inventory move; this returns true (handled/swallowed) whenever the player is in the shop at all,
--- matching the closest safe behavior without the underlying customization feature.
+-- Quick Buy customization isn't ported (see file doc); swallows every shift-click while in the
+-- shop instead, so it doesn't fall through as a normal inventory move.
 function M.handleShopShiftClick(session, handle, slot)
   return M.isPlayerInShop(session, handle)
 end

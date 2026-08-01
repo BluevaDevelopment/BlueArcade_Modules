@@ -19,8 +19,7 @@ local function getModeLabel(session, handle, mode)
   return session.config.translation(handle, "scoreboard.mode_labels.last_standing")
 end
 
--- Sorted descending by kills, ties broken by name (case-insensitive) - matches
--- `PlaceholderService.getPlayersSortedByKills`'s own comparator exactly.
+-- Sorted descending by kills, ties broken by name (case-insensitive), matching legacy.
 function M.getPlayersSortedByKills(session, handles, limit)
   local sorted = {}
   for _, handle in ipairs(handles) do

@@ -1,4 +1,3 @@
--- Mirrors legacy CombatService.java.
 local loadoutService = require("support.loadout_service")
 
 local M = {}

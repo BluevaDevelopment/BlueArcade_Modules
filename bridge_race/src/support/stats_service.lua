@@ -1,9 +1,6 @@
 local M = {}
 
--- Hardcoded label/description strings, matching `BridgeRaceStatsService.registerStats`'s own
--- real anomaly - it never reads them from `moduleConfig.getTranslation(...)`, even though the
--- language file's own `stats.labels` section exists (it's simply never read). Not "fixed" into a
--- translation lookup, same shape as `race`/`one_in_the_chamber`'s own hardcoded stats.
+-- Hardcoded label/description strings, matching legacy's own anomaly (stats.labels is never read).
 function M.registerStats()
   ba.stats.define("wins", "Wins", "Bridge Race wins")
   ba.stats.define("games_played", "Games Played", "Bridge Races played")

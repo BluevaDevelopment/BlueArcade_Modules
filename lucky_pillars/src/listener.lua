@@ -1,5 +1,4 @@
--- Mirrors legacy LuckyPillarsListener.java. LuckyPillarsVoteListener.java (the redundant
--- /lucky_pillarsvote PlayerCommandPreprocessEvent entry point) isn't ported - see vote_service.lua.
+-- LuckyPillarsVoteListener.java (the redundant /lucky_pillarsvote command entry point) isn't ported - see vote_service.lua.
 local gameManager = require("game_manager")
 local voteService = require("support.vote_service")
 

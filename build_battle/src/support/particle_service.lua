@@ -1,7 +1,5 @@
--- Mirrors legacy ParticleService.java. Menu built directly in Lua (see options_service.lua's own
--- doc comment for why - ParticleMenuHolder.java isn't ported). The actual per-second particle tick
--- (BuildBattleGame.startParticleTask) lives in game_manager.lua, not here - this file only manages
--- the menu and the plot-owned particle list itself.
+-- Mirrors legacy ParticleService.java. The per-second particle tick lives in game_manager.lua's
+-- startParticleTask - this file only manages the menu and the plot-owned particle list itself.
 local BACK_SLOT = 45
 local REMOVE_SLOT = 49
 

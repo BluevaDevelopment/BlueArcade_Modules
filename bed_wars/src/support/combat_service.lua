@@ -1,12 +1,7 @@
--- Mirrors legacy CombatService.java. Bed-intact respawn vs no-bed final elimination, matching
--- legacy's own branch on `game.canPlayerRespawn`. Resource drops (iron/gold/diamond/emerald only,
--- armor kept on) use `player.countItem` + `world.dropItemAt` rather than reading/clearing full
--- inventory contents item-by-item - combines same-material stacks into one dropped stack instead of
--- legacy's one-drop-per-ItemStack, a low-risk simplification (same total resources return to the
--- world either way) since the inventory is fully cleared moments later regardless.
--- `healKiller` itself lives on game_manager.lua (gameManager.healKiller), not here - legacy's own
--- `handleKillCredit` calls back through `BedWarsGame.healKiller` (-> gameplayService), not
--- `CombatService`'s own identically-bodied but otherwise-uncalled `healKiller` method.
+-- Mirrors legacy CombatService.java. Resource drops (iron/gold/diamond/emerald) combine same-
+-- material stacks into one dropped stack instead of legacy's one-drop-per-ItemStack - same total
+-- resources either way. `healKiller` lives on game_manager.lua, not here - legacy's own
+-- `CombatService.healKiller` is an unused duplicate; `handleKillCredit` calls `BedWarsGame.healKiller`.
 
 local RESOURCE_MATERIALS = { "IRON_INGOT", "GOLD_INGOT", "DIAMOND", "EMERALD" }
 

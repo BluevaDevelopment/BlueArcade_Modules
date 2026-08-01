@@ -40,8 +40,7 @@ function M.register()
     e.setDamage(0)
   end)
 
-  -- the shared dispatch fires this for the same PvP hit too (EntityDamageByEntityEvent shares
-  -- EntityDamageEvent's handler list) - only cancel non-combat causes, combat is handled above.
+  -- shared dispatch: EntityDamageByEntityEvent reuses EntityDamageEvent's handler list, so this also fires per hit; only cancel non-combat causes.
   ba.events.on("player_damage", function(session, e)
     if not session.isPlaying(e.player) then return end
     if e.cause == "ENTITY_ATTACK" or e.cause == "ENTITY_SWEEP_ATTACK" then return end

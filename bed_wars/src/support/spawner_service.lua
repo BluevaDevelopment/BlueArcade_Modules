@@ -1,11 +1,6 @@
--- Mirrors legacy SpawnerService.java. SpawnerDefinition/SpawnerType aren't separate files - plain
--- Lua tables ({spawnerId, type, x, y, z, intervalTicks, hologramEnabled, teamId}) and lowercase
--- type strings ("iron"/"gold"/"diamond"/"emerald"), same convention as every other converted
--- module's state delegates. Hologram/item-stand liveness self-healing (legacy's own
--- `isHologramAlive`/`isItemStandAlive` re-spawn-if-dead checks) isn't ported - no other converted
--- module bothers with this defensive re-check either (a hologram/item-stand handle is trusted to
--- stay valid until this module itself deletes it), a documented simplification, not a behavior gap
--- any real match should ever exercise.
+-- Mirrors legacy SpawnerService.java. SpawnerDefinition/SpawnerType are plain Lua tables.
+-- Hologram/item-stand liveness self-healing isn't ported - a spawned handle is trusted to stay
+-- valid until this module itself deletes it, same as every other converted module.
 local M = {}
 
 local SPAWNER_SCAN_LIMIT = 128
@@ -18,8 +13,10 @@ local function resolveDataBasePath(session, section)
   return "game." .. section
 end
 
+local DEFAULT_INTERVAL_TICKS = { iron = 40, gold = 160, diamond = 600, emerald = 1200 }
+
 local function defaultInterval(session, spawnerType)
-  return session.config.getInt("spawners.defaults." .. spawnerType .. "_interval_ticks", 40)
+  return session.config.getInt("spawners.defaults." .. spawnerType .. "_interval_ticks", DEFAULT_INTERVAL_TICKS[spawnerType] or 40)
 end
 
 local function defaultHologram(spawnerType)

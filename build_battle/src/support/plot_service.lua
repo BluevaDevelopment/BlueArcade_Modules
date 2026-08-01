@@ -1,7 +1,5 @@
--- Mirrors legacy BuildBattlePlotService.java. Plot bounds/floor/spawn are read from
--- game.plots.list.p<N>.{bounds.min,bounds.max,floor,spawn}, written by setup.lua's own "plot add/
--- set" commands. Floor regeneration is a per-block Lua loop over session.world.setBlockType, same
--- convention as every other module's own region-fill code (e.g. lucky_pillars' fillLavaLayer).
+-- Mirrors legacy BuildBattlePlotService.java. Plot bounds/floor/spawn come from
+-- game.plots.list.p<N>.{bounds.min,bounds.max,floor,spawn}, written by setup.lua's "plot add/set" commands.
 local M = {}
 
 local function calculatePlotCenter(min, max)

@@ -1,11 +1,5 @@
--- Mirrors legacy SpawnCageService.java. The store-driven cage skin selection
--- (resolveCageDefinition's StoreAPI branch) is dropped - storeAPI is unbound in this project's Lua
--- layer, so every cage always uses cage.yml's default_cage, exactly like the legacy fallback path
--- with no StoreAPI (same simplification as lucky_pillars' own spawn_cage_service.lua).
--- resolveCageOwners/resolveTeamCageOwners aren't ported either - confirmed dead code in the legacy
--- source (buildCages never calls them). The generic-arena-spawns fallback (when no team spawns are
--- configured) isn't ported either - skywars ships disabledRequirements=["SPAWNS"], so a properly
--- configured arena always has team spawns, same reasoning as lucky_pillars.
+-- Mirrors legacy SpawnCageService.java. StoreAPI cage-skin selection is dropped (unbound in Lua) -
+-- every cage uses cage.yml's default_cage. resolveCageOwners/resolveTeamCageOwners aren't ported (dead code); no-team-spawns fallback isn't ported (disabledRequirements=["SPAWNS"] guarantees team spawns).
 local M = {}
 
 local MAX_DISTANCE_SQUARED = 2.25

@@ -1,5 +1,4 @@
--- Mirrors legacy RunFromTheBeastDistanceService.java - the "distance to the beast" indicator is
--- just the player's own real XP bar (session.player.setExp), no boss bar or new binding needed.
+-- "Distance to the beast" is just the player's own real XP bar (session.player.setExp).
 local M = {}
 
 function M.resetDistanceBar(session, handle)

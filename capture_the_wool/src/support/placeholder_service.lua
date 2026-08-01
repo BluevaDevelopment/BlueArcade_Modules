@@ -1,7 +1,5 @@
--- Mirrors legacy PlaceholderService.java, including the zero-width-space `uniqueSuffix` trick -
--- a real Minecraft client hides scoreboard lines with duplicate text, so every otherwise-identical
--- "<black>.</black>" filler line for an empty team slot needs a distinct invisible suffix to render
--- as a separate line at all.
+-- Mirrors legacy PlaceholderService.java, including the zero-width-space `uniqueSuffix` trick: a real client hides
+-- scoreboard lines with duplicate text, so identical filler lines each need a distinct invisible suffix to render at all.
 local woolService = require("support.wool_service")
 
 local M = {}

@@ -1,8 +1,7 @@
 local M = {}
 
--- Hardcoded label/description strings, matching `StatsService.registerStats`'s own real anomaly -
--- it never reads them from `moduleConfig.getTranslation(...)`, even though the language file's own
--- `stats.labels` section exists (it's simply never read). Not "fixed" into a translation lookup.
+-- Hardcoded strings, matching legacy's own anomaly: stats.labels exists in the language file but
+-- is never read here either.
 function M.registerStats()
   ba.stats.define("wins", "Wins", "One in the Chamber wins")
   ba.stats.define("games_played", "Games Played", "One in the Chamber games played")

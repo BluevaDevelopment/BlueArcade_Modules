@@ -527,10 +527,8 @@ function M.register()
   ba.setup.status("showcase", function(ctx)
     return ctx.data.has("game.showcase_plot.bounds.min.x") and ctx.data.has("game.showcase_plot.bounds.max.x")
   end)
-  -- Always satisfied once bundled default structures are extracted (see the module-level doc in
-  -- StructureBinding.kt) - a real, deliberate behavioral improvement over legacy's own status
-  -- check, which only looked at admin-saved structures even though ~350 bundled defaults were
-  -- already fully playable without any admin action.
+  -- Deliberate improvement over legacy: satisfied as soon as the ~350 bundled default structures
+  -- extract, not just admin-saved ones (legacy's own check ignored the bundled defaults).
   ba.setup.status("structure", function(ctx)
     return #ctx.data.listStructureTemplateIds() > 0
   end)

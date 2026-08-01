@@ -1,15 +1,5 @@
--- Mirrors legacy SkyWarsVoteService.java + VoteState.java's own menu-item construction that
--- legacy sourced from SkyWarsVoteMenuRepository.java (a live YAML->MenuDefinition build) - here
--- all 5 menus (main + chests/hearts/time/weather submenus) are built directly in Lua from the
--- same slot/material layout as the legacy menu YAMLs, using "MODULE;skywars;..." actions for
--- navigation instead of the legacy YAML's "OPEN;<menuId>" strings, which depend on Core's
--- MenuManager having a registered static menu id - a Lua-built session.menu.open/ba.menu.open
--- inventory is never registered under one, so OPEN;-based navigation genuinely can't reach it -
--- same finding/decision as capture_the_wool's own vote_service.lua. "CLOSE" is a real Core-generic
--- action string, so the close button is ported as-is. SkyWarsMenuAPI.java/
--- SkyWarsVoteMenuRepository.java (the OPEN;-based repository) and SkyWarsVoteListener.java (the
--- redundant /skywarsvote slash-command entry point) aren't ported for the same reason as
--- capture_the_wool's analogous files.
+-- Mirrors legacy SkyWarsVoteService.java + VoteState.java. All 5 menus are built directly in Lua using
+-- "MODULE;skywars;..." actions, not the legacy YAML's "OPEN;<menuId>" (same decision as capture_the_wool).
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -24,8 +14,7 @@ local CATEGORY_OPTION_SET = {
   weather = { sunny = true, rainy = true },
 }
 
--- Slot/material layout matches the legacy menu YAMLs exactly (skywars_vote_main.yml,
--- _vote_chests.yml, _vote_hearts.yml, _vote_time.yml, _vote_weather.yml).
+-- Slot/material layout matches the legacy menu YAMLs exactly.
 local MAIN_MENU_BUTTONS = {
   { category = "chests", slot = 10, material = "CHEST", nameKey = "votes.menu.main.chests_name" },
   { category = "hearts", slot = 12, material = "APPLE", nameKey = "votes.menu.main.hearts_name" },
@@ -92,9 +81,7 @@ local function getOptionLore(session, handle, category, option)
   return translate(session, handle, "votes.labels.option_lore." .. category .. "." .. option) or ""
 end
 
--- mapPermissionOption - legacy's own "overpowered" -> "op" permission-node alias
--- (bluearcade.skywars.votes.chests.op, not ...chests.overpowered), plus a legacy "chest" (singular)
--- category alias checked alongside the real "chests" one.
+-- "overpowered" maps to the "op" permission node (bluearcade.skywars.votes.chests.op), matching legacy.
 local function mapPermissionOption(category, option)
   if category == "chests" and option == "overpowered" then
     return "op"
@@ -482,7 +469,11 @@ function M.handleVoteCommandWithoutContext(handle, args)
 
     local cooldownRemaining = getRemainingVoteCooldownSeconds(handle)
     if cooldownRemaining > 0 then
-      openMenu(nil, handle, waiting, mapMenuId(category))
+      local message = ba.config.translation(nil, "votes.messages.cooldown")
+      if message and message ~= "" then
+        ba.messages.sendRaw(handle, message:gsub("{time}", tostring(cooldownRemaining)))
+      end
+      openMenu(nil, handle, waiting, "main")
       return true
     end
 
@@ -490,7 +481,7 @@ function M.handleVoteCommandWithoutContext(handle, args)
     -- same documented, deliberate gap as lucky_pillars'/capture_the_wool's own vote_service.lua.
     VoteState.castVote(waiting, handle, category, option)
     voteCooldowns[handle] = os.clock()
-    openMenu(nil, handle, waiting, mapMenuId(category))
+    openMenu(nil, handle, waiting, "main")
     return true
   end
 

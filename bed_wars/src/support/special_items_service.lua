@@ -1,12 +1,6 @@
--- Mirrors legacy SpecialItemHandler.java - a dozen distinct small kit-item mechanics, all
--- triggered off a held item's "special" tag. `getSpecialTag`'s real two-tier lookup is preserved
--- (explicit `bluearcade:bedwars_special` PersistentDataContainer tag first, via the new
--- `player.mainHandItemTag` binding - replacing legacy's own lore-text `[SPECIAL:xxx]` parsing -
--- then a material-type fallback second, for items bought before this session or given by other
--- means). `net.blueva.foundation.entities.Entities.spawn(loc, TNTPrimed.class, "TNT",
--- "PRIMED_TNT")`'s pre-1.20.5 `EntityType` name fallback isn't ported - this project only targets
--- modern Paper/Folia, where `EntityType.TNT` always resolves directly (same precedent already
--- applied to `exploding_sheep`'s own sound/particle fallbacks).
+-- Mirrors legacy SpecialItemHandler.java - a dozen small kit-item mechanics triggered off a held
+-- item's "special" tag. `getSpecialTag` preserves legacy's two-tier lookup: a PDC tag first
+-- (replacing legacy's lore-text `[SPECIAL:xxx]` parsing), then a material-type fallback.
 local gameManager = require("game_manager")
 
 local MATERIAL_SPECIAL_FALLBACK = {
@@ -83,10 +77,8 @@ local function handleTNT(session, handle, e)
   if e.action ~= "RIGHT_CLICK_BLOCK" or not e.clickedBlockLocation then return end
   e:cancel()
 
-  -- TNT is placed one block in front of the clicked face - the real face isn't exposed on
-  -- `player_interact`'s event table, so this uses the clicked block's own top-center as a close
-  -- approximation (the block above the clicked block, matching the overwhelmingly common
-  -- right-click-on-floor case this item is actually used for).
+  -- Approximates "block adjacent to the clicked face" as "block above" - the click face isn't
+  -- exposed on `player_interact`'s event table, and floor right-clicks are the common case.
   local loc = e.clickedBlockLocation
   local spawnLoc = { x = math.floor(loc.x) + 0.5, y = math.floor(loc.y) + 1, z = math.floor(loc.z) + 0.5 }
   local tnt = session.world.spawnEntity(spawnLoc, "TNT")
@@ -284,8 +276,7 @@ local function handleFireballHit(session, handle, e)
     if session.isPlaying(target) then
       local targetLoc = session.player.location(target)
       local dx, dy, dz = targetLoc.x - loc.x, targetLoc.y - loc.y, targetLoc.z - loc.z
-      local dist = math.sqrt(dx * dx + dy * dy + dz * dz)
-      if dist <= explosionSize then
+      if math.abs(dx) <= explosionSize and math.abs(dy) <= explosionSize and math.abs(dz) <= explosionSize then
         local horizLen = math.sqrt(dx * dx + dz * dz)
         local hx = horizLen > 0 and -(dx / horizLen) * horizontalKb or 0
         local hz = horizLen > 0 and -(dz / horizLen) * horizontalKb or 0

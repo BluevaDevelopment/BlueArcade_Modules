@@ -1,11 +1,5 @@
--- Mirrors legacy RunFromTheBeastArmoryService.java. Legacy opens a real, lootable Bukkit
--- Inventory (drag items straight into your own inventory) - this project's session.menu.open only
--- supports click-driven button menus (MenuAPI's real click dispatch, not free dragging), so each
--- armory item is click-to-take instead ("MODULE;run_from_the_beast;armory_take <index>" gives that
--- exact item to whoever clicks it) - a real interaction-model adaptation, not a read-only clone
--- like capture_the_wool's own ArmoryService (that one is deliberately look-but-don't-touch; this
--- one's whole point is gearing up, so the "take an item" outcome is preserved even though the
--- click-vs-drag mechanic differs).
+-- Legacy opens a freely-lootable Inventory; session.menu.open only supports click-driven buttons,
+-- so each armory item became click-to-take - the "take an item" outcome is preserved either way.
 local M = {}
 
 local function parseItemSpec(spec)

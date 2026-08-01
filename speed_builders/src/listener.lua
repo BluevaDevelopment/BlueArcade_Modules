@@ -1,8 +1,5 @@
--- Mirrors legacy SpeedBuildersListener.java. onEntityChangeBlock isn't ported - the equivalent
--- protection (a spawned FallingBlock explosion shard never places a real block on landing) is
--- already handled unconditionally by UniversalEventListener.onEntityChangeBlock in Kotlin for any
--- entity registered in the shared EntityHandleTable, which GuardianBinding.explodePlot's shards
--- now are (see its own doc comment) - nothing left for a module-level handler to do.
+-- Mirrors legacy SpeedBuildersListener.java. onEntityChangeBlock isn't ported - Kotlin's
+-- UniversalEventListener already cancels registered FallingBlock shards from placing on landing.
 local gameManager = require("game_manager")
 
 local M = {}
@@ -121,10 +118,8 @@ function M.register()
     scheduleEvaluate(session, e.player)
   end)
 
-  -- LEFT_CLICK_BLOCK - legacy's own second, redundant-looking-but-not break path: real survival
-  -- break time (even bare-handed) can take several ticks for anything but the softest blocks,
-  -- while this fires the instant a player left-clicks, giving speed_builders its actual "instant
-  -- break any block" building feel regardless of tool.
+  -- LEFT_CLICK_BLOCK - legacy's second break path, needed because real survival break time can
+  -- take several ticks; this gives speed_builders its "instant break" feel regardless of tool.
   ba.events.on("player_interact", function(session, e)
     if e.action ~= "LEFT_CLICK_BLOCK" or not e.clickedBlockType then
       return

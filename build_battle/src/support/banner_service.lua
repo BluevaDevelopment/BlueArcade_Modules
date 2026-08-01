@@ -1,15 +1,7 @@
--- Mirrors legacy BannerCreatorService.java + BannerBuilderState.java + BannerPatternUtil.java. Menu
--- built directly in Lua (see options_service.lua's own doc comment - BannerMenuHolder.java isn't
--- ported). Unlike legacy's own live-composited preview (each menu icon shows the banner-so-far with
--- the candidate pattern already applied), menu icons here just show a plain banner of the relevant
--- color with the pattern/color name in the label - MenuBinding's own item table has no path for
--- arbitrary ItemMeta injection (JavaItemDefinition only carries material/amount/name/lore/
--- skullValue, and extending it lives in the versioned BlueArcade-API submodule, out of scope for a
--- cosmetic preview) - a documented, deliberate simplification. The real composited banner is still
--- built correctly server-side by BannerItemFactory when the player actually creates it.
--- Per-player builder state (base color + chosen pattern layers) lives in session.state.
--- bannerBuilder[handle], reset every time "options banner" is opened fresh, same convention as
--- state.floorChangeMode/pendingBiomeMenu elsewhere in this module.
+-- Mirrors legacy BannerCreatorService.java + BannerBuilderState.java + BannerPatternUtil.java. Unlike
+-- legacy's live-composited preview icons, menu icons here just show a plain banner with the pattern/color
+-- name in the label - MenuBinding's item table has no path for arbitrary ItemMeta injection. The real
+-- composited banner is still built correctly server-side by BannerItemFactory on creation.
 local DYE_COLORS = {
   "WHITE", "ORANGE", "MAGENTA", "LIGHT_BLUE", "YELLOW", "LIME", "PINK", "GRAY",
   "LIGHT_GRAY", "CYAN", "PURPLE", "BLUE", "BROWN", "GREEN", "RED", "BLACK",
@@ -167,8 +159,7 @@ local function createFinalBanner(session, handle)
   session.state.bannerBuilder[handle] = nil
 end
 
--- args[1] is always "banner". args[2] nil (bare "options banner") re-enters the wizard from the
--- top, matching legacy's own OptionsService.handleModuleAction "banner" case.
+-- args[2] nil (bare "options banner") re-enters the wizard from the top, matching legacy.
 function M.handleModuleAction(session, handle, args)
   local action = args[2] and args[2]:lower()
   if not action then

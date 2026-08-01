@@ -152,11 +152,11 @@ function M.createProceduralPattern(session, state)
   local minSide = math.min(width, depth)
   local area = width * depth
 
-  local minCellsPerSide = session.config.getInt("procedural_patterns.scale.min_cells_per_side", 3)
+  local minCellsPerSide = math.max(2, session.config.getInt("procedural_patterns.scale.min_cells_per_side", 3))
   local size = math.max(1, math.floor(minSide / math.max(1, minCellsPerSide)))
 
-  local initialColors = session.config.getInt("procedural_patterns.difficulty.initial_colors", 4)
-  local maxColors = session.config.getInt("procedural_patterns.difficulty.max_colors", 16)
+  local initialColors = math.max(2, session.config.getInt("procedural_patterns.difficulty.initial_colors", 4))
+  local maxColors = math.max(initialColors, session.config.getInt("procedural_patterns.difficulty.max_colors", 16))
   local colorIncreaseEvery = math.max(1, session.config.getInt("procedural_patterns.difficulty.color_increase_every", 2))
   local increases = math.floor(math.max(0, state.round - 1) / colorIncreaseEvery)
   local colors = math.min(maxColors, initialColors + increases)

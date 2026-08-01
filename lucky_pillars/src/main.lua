@@ -1,5 +1,4 @@
--- Mirrors legacy LuckyPillarsModule.java. requiresSpawnCapacityValidation isn't defined here -
--- legacy never overrides it either, so it keeps the framework default (true).
+-- requiresSpawnCapacityValidation isn't defined here - legacy never overrides it either, so it keeps the framework default (true).
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -26,9 +25,7 @@ function M.onLoad()
   voteService.registerWaitingItem()
   voteService.registerClickHandler()
 
-  -- Mirrors LuckyPillarsModule's own voteActionHandler lambda - parses the payload
-  -- MenuActionExecutor already stripped "MODULE;lucky_pillars;" from ("menu modifiers" /
-  -- "vote modifier <id>") back into an args array.
+  -- payload already had "MODULE;lucky_pillars;" stripped by MenuActionExecutor; parse it back into an args array.
   ba.menu.onAction(function(playerHandle, payload)
     if not payload or payload == "" then
       return false
@@ -65,9 +62,7 @@ function M.onEnd(session, result)
   gameManager.finishGame(session)
 end
 
--- Legacy shutdown() defensively re-cleans every still-active arena's world/players/cages if the
--- module gets disabled mid-match. Not ported - same documented gap as every other converted
--- module's M.onDisable(), see docs/BAMODULE_STATUS.md.
+-- Legacy shutdown()'s defensive mid-match cleanup isn't ported - same documented gap as every other module's M.onDisable(), see docs/BAMODULE_STATUS.md.
 function M.onDisable()
 end
 

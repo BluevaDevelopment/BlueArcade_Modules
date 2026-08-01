@@ -1,8 +1,5 @@
--- Mirrors legacy SkyWarsListener.java. SkyWarsVoteListener.java (the redundant /skywarsvote
--- PlayerCommandPreprocessEvent entry point) isn't ported - see support/vote_service.lua.
--- onEntityExplode/onBlockExplode (chest destruction via TNT/creepers) aren't ported either - no
--- entity_explode/block_explode event mapping exists in this project's Lua event catalogue yet, the
--- same documented, deliberate gap battle_royale's own listener.lua already carries.
+-- Mirrors legacy SkyWarsListener.java. SkyWarsVoteListener.java isn't ported (see vote_service.lua).
+-- onEntityExplode/onBlockExplode aren't ported either - no entity_explode/block_explode event mapping exists yet (same gap as battle_royale).
 local lootService = require("support.loot_service")
 local gameManager = require("game_manager")
 local voteService = require("support.vote_service")
@@ -22,9 +19,7 @@ function M.register()
     end
   end)
 
-  -- Only the main hand - Bukkit fires a real PlayerInteractEvent once per hand for a single
-  -- right-click, matching legacy's own `event.getHand() != EquipmentSlot.HAND` guard (otherwise a
-  -- chest interact would roll loot twice per click).
+  -- Only the main hand - otherwise a chest interact would roll loot twice per click (once per hand).
   ba.events.on("player_interact", function(session, e)
     if e.hand ~= "HAND" then
       return

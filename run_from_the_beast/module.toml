@@ -7,7 +7,6 @@ api = "^1.0"
 entry = "src/main.lua"
 authors = ["Blueva", "Whiron"]
 description = "Runners gear up using the map's chests and defeat the beast together."
-disabledRequirements = ["SPAWNS"]
 
 [replaces]
 legacyId = "run_from_the_beast"

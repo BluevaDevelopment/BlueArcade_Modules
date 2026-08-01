@@ -1,4 +1,3 @@
--- Mirrors legacy RunFromTheBeastLoadoutService.java.
 local M = {}
 
 function M.giveItems(session, handle, path)
@@ -42,9 +41,8 @@ function M.applyBeastEquipment(session, beast)
     { path = "game.beast_equipment.chestplate", slot = 38 },
     { path = "game.beast_equipment.leggings", slot = 37 },
     { path = "game.beast_equipment.boots", slot = 36 },
-    -- main_hand goes to hotbar slot 0 rather than "whichever slot the player currently has
-    -- selected" (legacy's real setItemInMainHand) - beast_equipment applies right after
-    -- clearInventory, so slot 0 is always empty and, for a fresh player join, always selected.
+    -- main_hand goes to hotbar slot 0 (not legacy's setItemInMainHand) - always empty and
+    -- selected right after clearInventory, so the effective result is the same.
     { path = "game.beast_equipment.main_hand", slot = 0 },
   }
   for _, piece in ipairs(pieces) do

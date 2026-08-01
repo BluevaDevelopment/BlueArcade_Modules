@@ -3,9 +3,8 @@ local gameManager = require("game_manager")
 local M = {}
 
 function M.register()
-  -- No COUNTDOWN-phase teleport-back branch here (unlike race/fast_zone) - it's real, provably
-  -- dead code in the legacy module: `freezePlayersOnCountdown()` hardcodes `return false`, so the
-  -- listener's own `phase == COUNTDOWN && freezePlayersOnCountdown()` guard can never be true.
+  -- No COUNTDOWN teleport-back branch here - legacy's freezePlayersOnCountdown() hardcodes false,
+  -- so that guard was dead code, not ported.
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then return end
 
@@ -24,9 +23,8 @@ function M.register()
       return
     end
 
-    -- Only the (expensive) trail block-touch detection is gated on a real block change - the
-    -- elimination/bounds checks above run on every move, matching `RedAlertListener.onPlayerMove`'s
-    -- own placement of `hasChangedBlock` right before `handlePlayerStep`, not at the top.
+    -- Block-change gate only wraps handlePlayerStep, matching legacy's hasChangedBlock placement -
+    -- elimination/bounds checks above run on every move.
     local sameBlock = math.floor(e.from.x) == math.floor(e.to.x)
         and math.floor(e.from.y) == math.floor(e.to.y)
         and math.floor(e.from.z) == math.floor(e.to.z)

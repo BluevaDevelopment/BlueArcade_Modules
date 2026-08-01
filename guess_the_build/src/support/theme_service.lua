@@ -1,7 +1,5 @@
--- Mirrors legacy GuessTheBuildThemeService.java. openThemeSelectionMenu takes an explicit
--- onSelect callback (a plain Lua function), exactly mirroring the Java Consumer<GuessTheme> -
--- stored alongside the pending selection and invoked later from handleThemeAction, once the
--- builder actually clicks a difficulty in the menu.
+-- Mirrors legacy GuessTheBuildThemeService.java. openThemeSelectionMenu takes an explicit onSelect
+-- callback (mirroring Java's Consumer<GuessTheme>), invoked later from handleThemeAction once clicked.
 local M = {}
 
 local DIFFICULTY_POINTS = { EASY = 1, MEDIUM = 2, HARD = 3 }
@@ -69,9 +67,8 @@ local function buildItemDefinition(session, builderHandle, theme, labelKey)
     lore[#lore + 1] = pointsLore:gsub("{points}", points)
   end
 
-  -- The "MODULE;" prefix/moduleId is exactly what Core's MenuActionExecutor.dispatchModuleAction
-  -- parses back off before this module's ba.menu.onAction handler ever sees the payload - see
-  -- GuessTheBuildModule.java's own item actions, which build this same literal string.
+  -- The "MODULE;" prefix is stripped by Core's MenuActionExecutor before ba.menu.onAction sees the
+  -- payload - matches legacy GuessTheBuildModule's own item action strings.
   return {
     material = "PAPER",
     amount = 1,
@@ -82,6 +79,10 @@ local function buildItemDefinition(session, builderHandle, theme, labelKey)
 end
 
 function M.openThemeSelectionMenu(session, builderHandle, playedThemes, onSelect)
+  if not builderHandle or not session.player.isOnline(builderHandle) then
+    return
+  end
+
   local easy = getRandomTheme(session, "EASY", playedThemes)
   local medium = getRandomTheme(session, "MEDIUM", playedThemes)
   local hard = getRandomTheme(session, "HARD", playedThemes)

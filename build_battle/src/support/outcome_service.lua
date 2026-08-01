@@ -1,7 +1,5 @@
--- Mirrors legacy OutcomeService.java. teleportToWinnerPlot uses the winner's own stored plot spawn
--- directly rather than porting Plot.findSafeTeleport's own air-pocket block scan - the spawn is
--- exactly where every player already stood throughout the match, so it's always safe in practice; a
--- documented, deliberate simplification.
+-- Mirrors legacy OutcomeService.java. teleportToWinnerPlot uses the winner's stored plot spawn directly
+-- rather than porting Plot.findSafeTeleport's air-pocket scan - the spawn is always safe in practice.
 local PlotService = require("support.plot_service")
 
 local M = {}
