@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy GuardianService.java. Real entity/particle mechanics live in session.guardian
 -- (GuardianBinding.kt) - this file owns orbit bookkeeping and the watch/beam scheduling loops.
 local plotService = require("support.plot_service")

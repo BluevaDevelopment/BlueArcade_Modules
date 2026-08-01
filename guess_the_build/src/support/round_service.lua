@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy GuessTheBuildRoundService.java. selectNextBuilder is a plain random pick - with
 -- only one shared plot, legacy's anti-repeat bookkeeping can never distinguish players anyway.
 local themeService = require("support.theme_service")

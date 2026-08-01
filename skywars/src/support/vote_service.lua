@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy SkyWarsVoteService.java + VoteState.java. All 5 menus are built directly in Lua using
 -- "MODULE;skywars;..." actions, not the legacy YAML's "OPEN;<menuId>" (same decision as capture_the_wool).
 local VoteState = require("support.vote_state")

@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- The vote menu (slots/materials/actions, matching the legacy menu YAML exactly) is built directly in Lua from the modifier list rather than via LuckyPillarsVoteMenuRepository/LuckyPillarsMenuAPI, which aren't ported.
 -- cleanStaleVotes() (the no-arg, all-arenas variant) is dead in legacy too - only cleanStaleVotesForArena is real. The waiting-room "broadcast to everyone else in the lobby" notification is a documented gap (see docs/BAMODULE_STATUS.md) - needs a "list all online players" binding nothing else has needed yet; voting/cooldown/menu still work.
 local VoteState = require("support.vote_state")

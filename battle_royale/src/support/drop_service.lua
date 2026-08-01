@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- The plane vehicle and its 16 BLOCK_DISPLAY entities are purely visual - players never actually
 -- ride them; a synced teleport/velocity each tick fakes it, matching legacy's own design.
 local M = {}

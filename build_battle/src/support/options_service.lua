@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy OptionsService.java. Main/time/weather menus are built directly in Lua from the same
 -- slot/material/action layout the legacy YAML menus shipped; labels stay hardcoded, matching legacy 1:1
 -- (they were never routed through moduleConfig.getTranslation there either).

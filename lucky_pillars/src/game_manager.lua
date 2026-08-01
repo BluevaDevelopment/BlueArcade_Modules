@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- ArenaState.java isn't a separate file here - it's a plain session.state table, same convention as guess_the_build.
 -- migrateSpawnsToDisk and the generic-spawns fallback aren't ported (documented simplification, see docs/BAMODULE_STATUS.md) - lucky_pillars ships disabledRequirements=["SPAWNS"], so a configured arena always has team spawns.
 local combatService = require("support.combat_service")

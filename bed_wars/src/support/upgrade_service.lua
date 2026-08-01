@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy TeamUpgradeService.java - same shape as the shop, one level simpler (flat menu,
 -- per-team progress). Bedrock half not ported. `applyAction` appends to the same
 -- `session.state.teamXEnchantments`/`teamEffects` tables `game_manager.respawnPlayer` reads on

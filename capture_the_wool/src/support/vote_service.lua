@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy CaptureTheWoolVoteService.java. Menus use "MODULE;capture_the_wool;..." actions instead of the legacy
 -- YAMLs' "OPEN;<menuId>", since a Lua-built menu is never registered under a static menu id for OPEN; to reach.
 local VoteState = require("support.vote_state")

@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy SpawnCageService.java; cage skin now resolves via the real StoreAPI binding, falling back to cage.yml's default_cage when unconfigured/unselected. resolveCageOwners/resolveTeamCageOwners aren't ported (dead code); no-team-spawns fallback isn't ported (disabledRequirements=["SPAWNS"] guarantees team spawns).
 local M = {}
 

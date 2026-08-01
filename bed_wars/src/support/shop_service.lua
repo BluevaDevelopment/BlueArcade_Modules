@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy ShopServiceImpl.java: a category->content->tier->buy_item interpreter reading
 -- `shop.yml` at runtime, loaded once lazily at module scope (shared across arenas) via `ba.config`.
 -- Not ported: legacy's multi-path config-key fallback chains (this conversion's shop.yml only has

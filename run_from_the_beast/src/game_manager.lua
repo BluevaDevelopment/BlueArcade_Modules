@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- RewardService and the zapper/kit equipment swap (StoreService's shredder/reset-wand/kit subsystem) aren't ported; beast skin + beast-pass weighting now go through store_service.lua.
 local beastService = require("support.beast_service")
 local disguiseService = require("support.disguise_service")

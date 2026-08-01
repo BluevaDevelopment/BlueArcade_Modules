@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy CaptureTheWoolGame.java; ArenaState.java folded into session.state. isSoloMode is dead code in legacy, not ported.
 -- Reads "wools.carrier_hologram_update_ticks" (the real settings.yml key) - legacy's own read used the wrong key ("wool.") and always fell back to its default, a harmless legacy bug fixed here.
 local combatService = require("support.combat_service")

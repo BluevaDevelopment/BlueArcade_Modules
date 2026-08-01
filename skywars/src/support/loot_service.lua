@@ -1,3 +1,11 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
 -- Mirrors legacy LootService.java + TrackedChest.java. Weighted-random item roll and entry parsing
 -- (MATERIAL:MIN:MAX:WEIGHT[|ENCHANT:LEVEL,...]) stay in Lua; fillContainer/dropEnchantedItemAt only handle the real Bukkit item/enchantment mechanics.
 local M = {}
