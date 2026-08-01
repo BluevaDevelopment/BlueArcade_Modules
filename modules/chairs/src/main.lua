@@ -6,9 +6,6 @@
 --
 -- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
 
--- CI TEST: intentional syntax error, revert right after confirming the workflow fails
-this is not valid lua (
-
 local game = require("game")
 local listener = require("listener")
 local setup = require("setup")
