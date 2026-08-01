@@ -1,9 +1,9 @@
 -- Mirrors legacy ShopServiceImpl.java: a category->content->tier->buy_item interpreter reading
 -- `shop.yml` at runtime, loaded once lazily at module scope (shared across arenas) via `ba.config`.
--- Not ported: Vault currency (unbound, always resolves to 0 money; the shipped shop.yml never uses
--- it) and legacy's multi-path config-key fallback chains (this conversion's shop.yml only has one
--- schema). Bedrock and Quick Buy customization are both real now (session.menu.open auto-derives a
--- Bedrock form; Quick Buy persists per-player via session.playerData).
+-- Not ported: legacy's multi-path config-key fallback chains (this conversion's shop.yml only has
+-- one schema). Bedrock, Quick Buy customization, and Vault currency are all real now
+-- (session.menu.open auto-derives a Bedrock form; Quick Buy persists via session.playerData; Vault
+-- resolves via session.player.vaultBalance/vaultWithdraw, 0/no-op if Vault isn't installed).
 local RESOURCE_CURRENCY = { iron = "IRON_INGOT", gold = "GOLD_INGOT", diamond = "DIAMOND", emerald = "EMERALD" }
 local SWORD_DAMAGE = { WOODEN_SWORD = 4, GOLDEN_SWORD = 4, STONE_SWORD = 5, IRON_SWORD = 6, DIAMOND_SWORD = 7, NETHERITE_SWORD = 8 }
 local DYE_COLOR = {
@@ -276,12 +276,15 @@ local function getCache(session, handle)
 end
 
 local function calculateMoney(session, handle, currency)
-  if not currency then return 0 end -- Vault gap, see file doc
+  if not currency then return session.player.vaultBalance(handle) end
   return session.player.countItem(handle, currency)
 end
 
 local function takeMoney(session, handle, currency, amount)
-  if not currency then return end
+  if not currency then
+    session.player.vaultWithdraw(handle, amount)
+    return
+  end
   session.player.removeItem(handle, currency, amount)
 end
 

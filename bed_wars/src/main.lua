@@ -1,5 +1,5 @@
--- Mirrors legacy BedWarsModule.java. store.yml and menus/bedrock/*.yml aren't registered -
--- StoreAPI and the Bedrock menu path are both unbound/unreachable, same as every other module.
+-- Mirrors legacy BedWarsModule.java. store.yml isn't registered - bed_wars' shop currency is
+-- resource items, not a store category (no legacy StoreAPI usage to port here).
 local gameManager = require("game_manager")
 local listener = require("listener")
 local setup = require("setup")
@@ -33,6 +33,10 @@ function M.onLoad()
 
   -- Single dispatcher for vote/shop/upgrade payloads, mirroring legacy's own handleMenuAction.
   ba.menu.onAction(gameManager.handleMenuAction)
+
+  -- Mirrors legacy's BedWarsMenuAPI registration under both the module id and a literal "bed" alias.
+  ba.menu.onOpenById(voteService.handleMenuIdOpen)
+  ba.menu.registerMenuIdAlias("bed")
 end
 
 function M.onStart(session)

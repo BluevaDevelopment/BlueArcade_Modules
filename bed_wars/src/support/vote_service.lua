@@ -1,8 +1,9 @@
 -- Mirrors legacy BedWarsVoteService/VoteState/BedWarsVoteMenuRepository. Menu item names/lore are
 -- hardcoded literal MiniMessage strings, matching legacy - the vote menus never went through the
--- translation system. BedWarsMenuAPI's admin-tooling `openMenuById` wrapper isn't ported (no
--- player-facing effect). "OPEN;<menuId>" navigation is replaced with "MODULE;bed_wars;menu <id>" -
--- a Lua-built menu is never registered under a Core menu id, so "OPEN;" can't reach it.
+-- translation system. Internal menu buttons still use "MODULE;bed_wars;menu <id>" (a Lua-built
+-- menu has no Core menu id to "OPEN;" from within itself), but M.handleMenuIdOpen now makes this
+-- module's vote menus reachable via a real "OPEN;<menuId>" from anywhere else, matching legacy's
+-- BedWarsMenuAPI registration.
 local VoteState = require("support.vote_state")
 
 local M = {}
@@ -424,6 +425,13 @@ function M.handleVoteCommandWithoutContext(handle, args)
   end
 
   return false
+end
+
+-- Mirrors legacy BedWarsMenuAPI.openMenuById: an admin/Core "OPEN;<menuId>" action string
+-- addressed to this module's vote menus, e.g. "bed_wars_vote_hearts" or "vote_hearts".
+function M.handleMenuIdOpen(handle, menuId)
+  local simpleName = menuId:match("^bed_wars_vote_(.+)$") or menuId:match("^vote_(.+)$") or menuId
+  return M.handleVoteAction(handle, "menu " .. simpleName)
 end
 
 -- Single entry point for both the waiting-item click and the menu-action handler.
