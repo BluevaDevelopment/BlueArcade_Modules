@@ -1,0 +1,41 @@
+schema = 1
+id = "run_from_the_beast"
+name = "Run From The Beast"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Runners gear up using the map's chests and defeat the beast together."
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "run_from_the_beast"
+
+[[setup.steps]]
+id = "beastspawn"
+required = true
+displayName = "Configure Beastspawn"
+description = "Configure the module-specific beastspawn setup data."
+commandExamples = ["/baa game <arena> run_from_the_beast beastspawn"]
+expectedInput = "beast spawn location"
+
+[[setup.steps]]
+id = "beastzone"
+required = true
+displayName = "Configure Beastzone"
+description = "Configure the module-specific beastzone setup data."
+commandExamples = ["/baa game <arena> run_from_the_beast beastzone"]
+expectedInput = "selection region"
+
+[[setup.commands]]
+name = "beastspawn"
+usage = "/baa game <arena> run_from_the_beast beastspawn"
+description = "Configure beastspawn setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "beastzone"
+usage = "/baa game <arena> run_from_the_beast beastzone"
+description = "Configure beastzone setup data."
+requiredHint = true

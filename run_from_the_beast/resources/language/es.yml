@@ -1,0 +1,135 @@
+display_name: "Huye de la bestia"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Huye de la bestia</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Los corredores se equipan usando los cofres del mapa</gray>"
+  - "<gray>y derrotad juntos a la bestia.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Huye de la bestia</green>"
+  lore:
+    - "<gray>Escapa de la bestia, saquea cofres,</gray>"
+    - "<gray>y contraatacan en equipo.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+stats:
+  labels:
+    games_played: "Partidas jugadas"
+    runner_wins: "Victorias como corredor"
+    beast_wins: "Victorias como bestia"
+    beast_roles: "Veces elegido como bestia"
+    beast_kills: "Bajas como bestia"
+    runner_kills: "Bajas como corredor"
+
+messages:
+  roles:
+    beast: "<red>¡Eres la <bold>Bestia</bold>! Espera a que se abra la puerta y caza a los corredores.</red>"
+    runner: "<yellow>¡Eres un <bold>Corredor</bold>! Saquea cofres, equípate y derrota a la bestia.</yellow>"
+  beast_release_countdown: "<yellow>La Bestia será liberada en {time} segundos.</yellow>"
+  beast_released_beast: "<red>¡Eres libre! Cázalos.</red>"
+  beast_released_runners: "<red>¡Corre! La Bestia ha sido liberada.</red>"
+  beast_wins: "<red>¡La Bestia <bold>{beast}</bold> eliminó a todos los corredores!</red>"
+  runners_win: "<green>¡Los corredores derrotaron a la Bestia!</green>"
+  beast_win_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - " "
+    - "<red><bold>¡La Bestia ha ganado!</bold></red>"
+    - "<gray>{beast} salió victorioso.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  runners_win_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - " "
+    - "<green><bold>¡Los corredores han ganado!</bold></green>"
+    - "<gray>El equipo logró derrotar a la Bestia.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  armory_beast_blocked: "<red>La armería es solo para corredores.</red>"
+  checkpoint:
+    set: "<green>Checkpoint guardado. Usos restantes: {uses}</green>"
+    no_uses: "<red>No te quedan usos de punto de control.</red>"
+    none: "<red>No tienes ningún punto de control establecido.</red>"
+    teleported: "<green>Teletransportado a tu punto de control.</green>"
+  checkpoint_items:
+    set_name: "<aqua>Establecer punto de control</aqua>"
+    set_lore:
+      - "<gray>Haz clic derecho para guardar tu actual</gray>"
+      - "<gray>posición como checkpoint.</gray>"
+    return_name: "<yellow>Volver al checkpoint</yellow>"
+    return_lore:
+      - "<gray>Clic derecho para teletransportarte de vuelta</gray>"
+      - "<gray>a tu punto de control guardado.</gray>"
+  eliminated: "<red>¡Has sido derrotado! Ahora eres espectador.</red>"
+  deaths:
+    killed_by_beast:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue destrozado por</gray> <yellow>{beast}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{beast}</yellow> <gray>se cobró a</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no pudo escapar de</gray> <yellow>{beast}</yellow><gray>.</gray>"
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>activó un bloque mortal.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>cayó al vacío.</gray>"
+
+scoreboard:
+  game:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Huye de la bestia</aqua>"
+      - "<white>Tiempo:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Bestia:</white> <red>{beast}</red>"
+      - "<white>Corredores:</white> <aqua>{runners_alive}</aqua>"
+      - "<white>Checkpuntos:</white> <aqua>{checkpoint_uses}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    beast_won:
+      title: "<bold><gradient:red:dark_red>Victoria de la bestia</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Ganador:</white> <red>{beast}</red>"
+        - "<white>Corredores derrotados:</white> <aqua>{runner_count}</aqua>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+    runners_won:
+      title: "<bold><gradient:dark_green:green>Victoria de los corredores</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Bestia:</white> <red>{beast}</red>"
+        - "<white>Corredores vivos:</white> <aqua>{runner_count}</aqua>"
+        - "<white>Equipo:</white> <aqua>{runners}</aqua>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+
+menus:
+  armory:
+    title: "<aqua>Armería</aqua>"
+
+titles:
+  beast:
+    title: "<red><bold>ERES LA BESTIA</bold></red>"
+    subtitle: "<yellow>Caza a todos los corredores.</yellow>"
+  victory:
+    beast_won:
+      title: "<bold><gradient:red:dark_red>GANÓ LA BESTIA</gradient><reset>"
+      subtitle: "<white>La bestia derrotó a todos los corredores</white>"
+    runners_won:
+      title: "<bold><gradient:dark_green:green>GANARON LOS CORREDORES</gradient><reset>"
+      subtitle: "<white>Los corredores han derrotado a la bestia</white>"
+
+setup_messages:
+  usage: "{prefix} <yellow>Uso: /baa game [arena_id] run_from_the_beast <beastspawn|beastzone> set</yellow>"
+  usage_beast_spawn: "{prefix} <yellow>Uso: /baa game [arena_id] run_from_the_beast beastspawn set</yellow>"
+  usage_beast_zone: "{prefix} <yellow>Uso: /baa game [arena_id] run_from_the_beast beastzone set</yellow>"
+  must_use_stick: "{prefix} <red>Usa la Vara Mágica para seleccionar primero el área.</red>"
+  not_configured: "{prefix} <red>Huye de la bestia aún necesita una aparición de bestia y una zona de bestia en la arena {arena_id}.</red>"
+  beast_zone_set: "{prefix} <green>Zona de la bestia guardada: {blocks} bloques ({x}×{y}×{z})</green>"
+  beast_spawn_set: "{prefix} <green>Punto de aparición de la bestia establecido.</green>"

@@ -1,0 +1,135 @@
+display_name: "Run From The Beast"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Game</green> <gray>-</gray> <yellow><bold>Run From The Beast</bold></yellow>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Runners gear up using the map's chests</gray>"
+  - "<gray>and defeat the beast together.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Run From The Beast</green>"
+  lore:
+    - "<gray>Escape the beast, loot the chests,</gray>"
+    - "<gray>and fight back as a team.</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+stats:
+  labels:
+    games_played: "Games played"
+    runner_wins: "Runner wins"
+    beast_wins: "Beast wins"
+    beast_roles: "Times selected as beast"
+    beast_kills: "Beast kills"
+    runner_kills: "Runner kills"
+
+messages:
+  roles:
+    beast: "<red>You are the <bold>Beast</bold>! Wait for the gate to open, then hunt the runners.</red>"
+    runner: "<yellow>You are a <bold>Runner</bold>! Loot chests, gear up, and slay the beast.</yellow>"
+  beast_release_countdown: "<yellow>The Beast will be released in {time} seconds.</yellow>"
+  beast_released_beast: "<red>You are free! Hunt them down.</red>"
+  beast_released_runners: "<red>Run! The Beast has been released.</red>"
+  beast_wins: "<red>The Beast <bold>{beast}</bold> eliminated every runner!</red>"
+  runners_win: "<green>The runners defeated the Beast!</green>"
+  beast_win_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - " "
+    - "<red><bold>The Beast has won!</bold></red>"
+    - "<gray>{beast} emerged victorious.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  runners_win_lines:
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+    - " "
+    - "<green><bold>The runners have won!</bold></green>"
+    - "<gray>The team managed to slay the Beast.</gray>"
+    - " "
+    - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  armory_beast_blocked: "<red>The armory is only for runners.</red>"
+  checkpoint:
+    set: "<green>Checkpoint saved. Remaining uses: {uses}</green>"
+    no_uses: "<red>You have no checkpoint uses left.</red>"
+    none: "<red>You don't have a checkpoint set.</red>"
+    teleported: "<green>Teleported to your checkpoint.</green>"
+  checkpoint_items:
+    set_name: "<aqua>Set Checkpoint</aqua>"
+    set_lore:
+      - "<gray>Right-click to save your current</gray>"
+      - "<gray>position as a checkpoint.</gray>"
+    return_name: "<yellow>Return to Checkpoint</yellow>"
+    return_lore:
+      - "<gray>Right-click to teleport back</gray>"
+      - "<gray>to your saved checkpoint.</gray>"
+  eliminated: "<red>You were slain! You are now a spectator.</red>"
+  deaths:
+    killed_by_beast:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>was shredded by</gray> <yellow>{beast}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{beast}</yellow> <gray>claimed</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>could not escape</gray> <yellow>{beast}</yellow><gray>.</gray>"
+    death_block:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>triggered a death block.</gray>"
+    void:
+      - "<dark_red>✘</dark_red> <red>{player}</red> <gray>fell into the void.</gray>"
+
+scoreboard:
+  game:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Run From The Beast</aqua>"
+      - "<white>Time:</white> <aqua>{time}</aqua>"
+      - ""
+      - "<white>Beast:</white> <red>{beast}</red>"
+      - "<white>Runners:</white> <aqua>{runners_alive}</aqua>"
+      - "<white>Checkpoints:</white> <aqua>{checkpoint_uses}</aqua>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    beast_won:
+      title: "<bold><gradient:red:dark_red>Beast Victory</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Winner:</white> <red>{beast}</red>"
+        - "<white>Runners defeated:</white> <aqua>{runner_count}</aqua>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+    runners_won:
+      title: "<bold><gradient:dark_green:green>Runners Victory</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Beast:</white> <red>{beast}</red>"
+        - "<white>Runners alive:</white> <aqua>{runner_count}</aqua>"
+        - "<white>Team:</white> <aqua>{runners}</aqua>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+
+menus:
+  armory:
+    title: "<aqua>Armory</aqua>"
+
+titles:
+  beast:
+    title: "<red><bold>YOU ARE THE BEAST</bold></red>"
+    subtitle: "<yellow>Hunt every runner down.</yellow>"
+  victory:
+    beast_won:
+      title: "<bold><gradient:red:dark_red>THE BEAST WON</gradient><reset>"
+      subtitle: "<white>The beast defeated all the runners</white>"
+    runners_won:
+      title: "<bold><gradient:dark_green:green>THE RUNNERS WON</gradient><reset>"
+      subtitle: "<white>The runners have defeated the beast</white>"
+
+setup_messages:
+  usage: "{prefix} <yellow>Usage: /baa game [arena_id] run_from_the_beast <beastspawn|beastzone> set</yellow>"
+  usage_beast_spawn: "{prefix} <yellow>Usage: /baa game [arena_id] run_from_the_beast beastspawn set</yellow>"
+  usage_beast_zone: "{prefix} <yellow>Usage: /baa game [arena_id] run_from_the_beast beastzone set</yellow>"
+  must_use_stick: "{prefix} <red>Use the Magic Stick to select the area first.</red>"
+  not_configured: "{prefix} <red>Run From The Beast still needs a beast spawn and beast zone in arena {arena_id}.</red>"
+  beast_zone_set: "{prefix} <green>Beast zone saved: {blocks} blocks ({x}×{y}×{z})</green>"
+  beast_spawn_set: "{prefix} <green>Beast spawn point set.</green>"

@@ -1,0 +1,124 @@
+category:
+  id: "run_from_the_beast"
+  name: "Run From The Beast"
+  description:
+    - "Achievements tied to Run From The Beast."
+  icon: "DRAGON_HEAD"
+  sort_order: 20
+
+achievements:
+  first_escape:
+    name: "First Hunt"
+    description:
+      - "Win your first battle against the Beast."
+    icon: "FEATHER"
+    phases:
+      1:
+        name: "Opening Strike"
+        description:
+          - "Win a game as a runner."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_runner_wins} >= 1"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 10"
+            - "arcadeadmin xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+  beast_tamer:
+    name: "Beast Tamer"
+    description:
+      - "Win as a runner by defeating the beast."
+    icon: "DIAMOND_SWORD"
+    phases:
+      1:
+        name: "Team Victory"
+        description:
+          - "Win 3 games as a runner."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_runner_wins} >= 3"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      2:
+        name: "Beast Breaker"
+        description:
+          - "Win 10 games as a runner."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_runner_wins} >= 10"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 60"
+            - "arcadeadmin xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+  terror_reign:
+    name: "Terror Reign"
+    description:
+      - "Win games as the beast."
+    icon: "WITHER_SKELETON_SKULL"
+    phases:
+      1:
+        name: "Predator"
+        description:
+          - "Win 3 games as the beast."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_beast_wins} >= 3"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 25"
+            - "arcadeadmin xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      2:
+        name: "Apex Beast"
+        description:
+          - "Win 8 games as the beast."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_beast_wins} >= 8"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 70"
+            - "arcadeadmin xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+  arena_runner:
+    name: "Arena Runner"
+    description:
+      - "Keep playing Run From The Beast."
+    icon: "RABBIT_FOOT"
+    phases:
+      1:
+        name: "Warm-up"
+        description:
+          - "Play 5 games."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_games_played} >= 5"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 15"
+            - "arcadeadmin xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "On the run"
+        description:
+          - "Play 20 games."
+        conditions:
+          - "{bluearcade_stat_module_run_from_the_beast_games_played} >= 20"
+        rewards:
+          commands:
+            - "arcadeadmin credits give {player} 40"
+            - "arcadeadmin xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"

@@ -1,0 +1,51 @@
+# Run From The Beast - Settings
+menus:
+  vote:
+    item: "DRAGON_HEAD"
+
+game:
+  release_delay_seconds: 15
+  void_fall:
+    runners_action: "RESPAWN"
+    beast_action: "RESPAWN"
+  allow_beast_loot: true
+  beast_equipment:
+    enabled: true
+    helmet: "DRAGON_HEAD"
+    chestplate: "DIAMOND_CHESTPLATE"
+    leggings: "DIAMOND_LEGGINGS"
+    boots: "DIAMOND_BOOTS"
+    main_hand: "DIAMOND_SWORD"
+
+distance_bar:
+  enabled: true
+  min_distance: 3.0
+  max_distance: 60.0
+  update_interval_ticks: 10
+
+items:
+  starting_items: []
+  beast_items: []
+
+effects:
+  starting_effects:
+    - "SPEED:600:1"
+  beast_effects:
+    - "DAMAGE_RESISTANCE:400:1"
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:2"
+
+checkpoints:
+  default_uses: 5
+  items:
+    set: "NETHER_STAR"
+    return: "ENDER_EYE"
+
+armory:
+  fallback_items:
+    - "IRON_SWORD:1"
+    - "SHIELD:1"
+    - "IRON_HELMET:1"
+    - "IRON_CHESTPLATE:1"
+    - "IRON_LEGGINGS:1"
+    - "IRON_BOOTS:1"
