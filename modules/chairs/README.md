@@ -1,6 +1,7 @@
 # BlueArcade - Chairs
 
 This resource is a **BlueArcade 3 module** and requires the core plugin to run.
+
 Get BlueArcade 3 here: https://blueva.net/store/blue-arcade
 
 ## Description
