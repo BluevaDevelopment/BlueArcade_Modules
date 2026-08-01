@@ -28,7 +28,9 @@ jobs:
             LIST=$(ls modules)
           else
             BEFORE="${{ github.event.before }}"
-            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+              # before can point at a commit that no longer exists (e.g. after a force-push) - fall
+              # back to diffing against an empty tree so we just build everything that one time
               BEFORE=$(git hash-object -t tree /dev/null)
             fi
             LIST=$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- modules | cut -d/ -f2 | sort -u)
