@@ -1,7 +1,7 @@
 schema = 1
 id = "one_in_the_chamber"
 name = "One In The Chamber"
-version = "1.0.0"
+version = "dev"
 type = "MICROGAME"
 api = "^1.0"
 entry = "src/main.lua"

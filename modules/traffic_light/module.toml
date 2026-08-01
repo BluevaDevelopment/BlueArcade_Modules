@@ -1,7 +1,7 @@
 schema = 1
 id = "traffic_light"
 name = "Traffic Light"
-version = "1.0.0"
+version = "dev"
 type = "MICROGAME"
 api = "^1.0"
 entry = "src/main.lua"

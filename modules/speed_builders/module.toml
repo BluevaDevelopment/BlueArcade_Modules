@@ -1,7 +1,7 @@
 schema = 1
 id = "speed_builders"
 name = "Speed Builders"
-version = "1.0.0"
+version = "dev"
 type = "MINIGAME"
 api = "^1.0"
 entry = "src/main.lua"

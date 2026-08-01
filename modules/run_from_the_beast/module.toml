@@ -1,7 +1,7 @@
 schema = 1
 id = "run_from_the_beast"
 name = "Run From The Beast"
-version = "1.0.0"
+version = "dev"
 type = "MINIGAME"
 api = "^1.0"
 entry = "src/main.lua"
