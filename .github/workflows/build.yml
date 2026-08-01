@@ -64,6 +64,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Resolve build version
+        id: version
+        shell: bash
+        run: |
+          SHORT_SHA=$(git rev-parse --short=7 HEAD)
+          BUILD_DATE=$(date +%Y%m%d)
+          echo "value=${BUILD_DATE}-${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Stamp module version
+        run: sed -i "s/^version = .*/version = \"${{ steps.version.outputs.value }}\"/" modules/${{ matrix.module }}/module.toml
+
       - name: Set up Java
         uses: actions/setup-java@v5
         with:
