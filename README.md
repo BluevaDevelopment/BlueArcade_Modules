@@ -40,42 +40,42 @@ example [blueva.net/store/blue-arcade/modules/block_party](https://blueva.net/st
 
 Longer, full length matches.
 
-| Module | Description | Download |
-|---|---|---|
-| Battle Royale | Last player standing inside a shrinking world. | [Get it](https://blueva.net/store/blue-arcade/modules/battle_royale) |
-| Bed Wars | Protect your bed, break the beds of every other team, then eliminate them for good. | [Get it](https://blueva.net/store/blue-arcade/modules/bed_wars) |
-| Block Party | Stand on the color the caller announced before the floor beneath every other color disappears. | [Get it](https://blueva.net/store/blue-arcade/modules/block_party) |
-| Bridge Race | Race across a collapsing bridge before it falls apart completely. | [Get it](https://blueva.net/store/blue-arcade/modules/bridge_race) |
-| Build Battle | Build the best creation for a given theme within the time limit. | [Get it](https://blueva.net/store/blue-arcade/modules/build_battle) |
-| Capture The Wool | Capture the flag, played with wool instead of a flag. | [Get it](https://blueva.net/store/blue-arcade/modules/capture_the_wool) |
-| Guess The Build | Guess what another player is building, in real time, before anyone else does. | [Get it](https://blueva.net/store/blue-arcade/modules/guess_the_build) |
-| Lucky Pillars | Survive on shrinking pillars while random effects change the rules underneath you. | [Get it](https://blueva.net/store/blue-arcade/modules/lucky_pillars) |
-| Run From The Beast | Escape a player controlled monster before it catches up to you. | [Get it](https://blueva.net/store/blue-arcade/modules/run_from_the_beast) |
-| SkyWars | Loot floating islands, then fight down to a single winning team. | [Get it](https://blueva.net/store/blue-arcade/modules/skywars) |
-| Speed Builders | Recreate the shown structure as fast and as accurately as possible. | [Get it](https://blueva.net/store/blue-arcade/modules/speed_builders) |
-| TNT Run | Keep moving. The block beneath your feet disappears the moment you step off it. | [Get it](https://blueva.net/store/blue-arcade/modules/tnt_run) |
-| TNT Tag | Tag another player to pass along a live TNT charge before it detonates on you. | [Get it](https://blueva.net/store/blue-arcade/modules/tnt_tag) |
+| Module | Description | Source | Download |
+|---|---|---|---|
+| Battle Royale | Last player standing inside a shrinking world. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/battle_royale) | [Get it](https://blueva.net/store/blue-arcade/modules/battle_royale) |
+| Bed Wars | Protect your bed, break the beds of every other team, then eliminate them for good. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/bed_wars) | [Get it](https://blueva.net/store/blue-arcade/modules/bed_wars) |
+| Block Party | Stand on the color the caller announced before the floor beneath every other color disappears. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/block_party) | [Get it](https://blueva.net/store/blue-arcade/modules/block_party) |
+| Bridge Race | Race across a collapsing bridge before it falls apart completely. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/bridge_race) | [Get it](https://blueva.net/store/blue-arcade/modules/bridge_race) |
+| Build Battle | Build the best creation for a given theme within the time limit. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/build_battle) | [Get it](https://blueva.net/store/blue-arcade/modules/build_battle) |
+| Capture The Wool | Capture the flag, played with wool instead of a flag. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/capture_the_wool) | [Get it](https://blueva.net/store/blue-arcade/modules/capture_the_wool) |
+| Guess The Build | Guess what another player is building, in real time, before anyone else does. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/guess_the_build) | [Get it](https://blueva.net/store/blue-arcade/modules/guess_the_build) |
+| Lucky Pillars | Survive on shrinking pillars while random effects change the rules underneath you. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/lucky_pillars) | [Get it](https://blueva.net/store/blue-arcade/modules/lucky_pillars) |
+| Run From The Beast | Escape a player controlled monster before it catches up to you. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/run_from_the_beast) | [Get it](https://blueva.net/store/blue-arcade/modules/run_from_the_beast) |
+| SkyWars | Loot floating islands, then fight down to a single winning team. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/skywars) | [Get it](https://blueva.net/store/blue-arcade/modules/skywars) |
+| Speed Builders | Recreate the shown structure as fast and as accurately as possible. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/speed_builders) | [Get it](https://blueva.net/store/blue-arcade/modules/speed_builders) |
+| TNT Run | Keep moving. The block beneath your feet disappears the moment you step off it. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/tnt_run) | [Get it](https://blueva.net/store/blue-arcade/modules/tnt_run) |
+| TNT Tag | Tag another player to pass along a live TNT charge before it detonates on you. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/tnt_tag) | [Get it](https://blueva.net/store/blue-arcade/modules/tnt_tag) |
 
 ### Microgames
 
 Short, fast paced rounds.
 
-| Module | Description | Download |
-|---|---|---|
-| All Against All | A pure free for all skirmish, every player for themselves. | [Get it](https://blueva.net/store/blue-arcade/modules/all_against_all) |
-| Chairs | Musical chairs. Grab a seat before the music stops or you are out. | [Get it](https://blueva.net/store/blue-arcade/modules/chairs) |
-| Exploding Sheep | Herd, dodge, or weaponize sheep that explode on contact. | [Get it](https://blueva.net/store/blue-arcade/modules/exploding_sheep) |
-| Fast Zone | Stay inside the shrinking safe zone or take the consequences. | [Get it](https://blueva.net/store/blue-arcade/modules/fast_zone) |
-| Knockback | Pure knockback combat, send opponents off the platform to win. | [Get it](https://blueva.net/store/blue-arcade/modules/knockback) |
-| Minefield | Cross a field seeded with hidden explosive traps. | [Get it](https://blueva.net/store/blue-arcade/modules/minefield) |
-| One In The Chamber | Single arrow duels. Land a hit and you earn another shot. | [Get it](https://blueva.net/store/blue-arcade/modules/one_in_the_chamber) |
-| Race | Sprint through an obstacle course to reach the finish line first. | [Get it](https://blueva.net/store/blue-arcade/modules/race) |
-| Red Alert | Freeze the instant the alarm sounds, any movement gets you eliminated. | [Get it](https://blueva.net/store/blue-arcade/modules/red_alert) |
-| Snowball Fight | Knock opponents off the platform using nothing but snowballs. | [Get it](https://blueva.net/store/blue-arcade/modules/snowball_fight) |
-| Spleef | Break the floor beneath your opponents until they fall through. | [Get it](https://blueva.net/store/blue-arcade/modules/spleef) |
-| Splegg | Spleef, but the shovel is a TNT launching gun. | [Get it](https://blueva.net/store/blue-arcade/modules/splegg) |
-| Traffic Light | Red light, green light. Move only when it is safe to. | [Get it](https://blueva.net/store/blue-arcade/modules/traffic_light) |
-| Water Well | Push opponents into the water below to eliminate them. | [Get it](https://blueva.net/store/blue-arcade/modules/water_well) |
+| Module | Description | Source | Download |
+|---|---|---|---|
+| All Against All | A pure free for all skirmish, every player for themselves. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/all_against_all) | [Get it](https://blueva.net/store/blue-arcade/modules/all_against_all) |
+| Chairs | Musical chairs. Grab a seat before the music stops or you are out. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/chairs) | [Get it](https://blueva.net/store/blue-arcade/modules/chairs) |
+| Exploding Sheep | Herd, dodge, or weaponize sheep that explode on contact. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/exploding_sheep) | [Get it](https://blueva.net/store/blue-arcade/modules/exploding_sheep) |
+| Fast Zone | Stay inside the shrinking safe zone or take the consequences. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/fast_zone) | [Get it](https://blueva.net/store/blue-arcade/modules/fast_zone) |
+| Knockback | Pure knockback combat, send opponents off the platform to win. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/knockback) | [Get it](https://blueva.net/store/blue-arcade/modules/knockback) |
+| Minefield | Cross a field seeded with hidden explosive traps. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/minefield) | [Get it](https://blueva.net/store/blue-arcade/modules/minefield) |
+| One In The Chamber | Single arrow duels. Land a hit and you earn another shot. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/one_in_the_chamber) | [Get it](https://blueva.net/store/blue-arcade/modules/one_in_the_chamber) |
+| Race | Sprint through an obstacle course to reach the finish line first. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/race) | [Get it](https://blueva.net/store/blue-arcade/modules/race) |
+| Red Alert | Freeze the instant the alarm sounds, any movement gets you eliminated. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/red_alert) | [Get it](https://blueva.net/store/blue-arcade/modules/red_alert) |
+| Snowball Fight | Knock opponents off the platform using nothing but snowballs. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/snowball_fight) | [Get it](https://blueva.net/store/blue-arcade/modules/snowball_fight) |
+| Spleef | Break the floor beneath your opponents until they fall through. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/spleef) | [Get it](https://blueva.net/store/blue-arcade/modules/spleef) |
+| Splegg | Spleef, but the shovel is a TNT launching gun. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/splegg) | [Get it](https://blueva.net/store/blue-arcade/modules/splegg) |
+| Traffic Light | Red light, green light. Move only when it is safe to. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/traffic_light) | [Get it](https://blueva.net/store/blue-arcade/modules/traffic_light) |
+| Water Well | Push opponents into the water below to eliminate them. | [View](https://github.com/BluevaDevelopment/BlueArcade_Modules/tree/main/modules/water_well) | [Get it](https://blueva.net/store/blue-arcade/modules/water_well) |
 
 ## Creating Your Own Modules
 
