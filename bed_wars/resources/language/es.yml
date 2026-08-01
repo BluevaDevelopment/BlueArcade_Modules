@@ -1,0 +1,335 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Bed Wars Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Bed Wars"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<green>Juego</green> <gray>-</gray> <yellow><bold>Bed Wars</bold></yellow>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Protege tu cama, destruye las camas enemigas y elimina</gray>"
+  - "<gray>a todos los rivales para ser el último equipo en pie!</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<green>Bed Wars</green>"
+  lore:
+    - "<gray>Protege tu cama, rompe las camas enemigas,</gray>"
+    - "<gray>¡y sé el último equipo en pie!</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+votes:
+  labels:
+    categories:
+      hearts: "Corazones"
+      time: "Tiempo"
+      weather: "Clima"
+    options:
+      hearts:
+        '10': "10 corazones"
+        '20': "20 corazones"
+        '30': "30 corazones"
+      time:
+        day: "Día"
+        night: "Noche"
+        sunset: "Atardecer"
+        sunrise: "Amanecer"
+      weather:
+        sunny: "Soleado"
+        rainy: "Lluvioso"
+  messages:
+    broadcast: "<yellow>{player}</yellow> <gray>eligió</gray> <aqua>{category}</aqua> <dark_gray>→</dark_gray> <white>{option}</white> <yellow>({votes} votos)</yellow>"
+    selected:
+      sources:
+        popular: "por votación popular"
+        default: "por defecto"
+      hearts: "<gray>Seleccionado</gray> <red>{option}</red> <gray>{source}.</gray>"
+      time: "<gray>Seleccionado</gray> <yellow>{option}</yellow> <gray>hora {source}.</gray>"
+      weather: "<gray>Seleccionado</gray> <blue>{option}</blue> <gray>clima {source}.</gray>"
+    invalid: "<red>Esa opción de voto no está disponible.</red>"
+    not_available: "<red>Solo puedes votar mientras esperas a que empiece la partida.</red>"
+    no_permission: "<red>No tienes permiso para votar por</red> <yellow>{option}</yellow><red>.</red>"
+    cooldown: "<red>Debes esperar {time} segundos para volver a votar.</red>"
+
+stats:
+  descriptions:
+    wins: "Victorias en BedWars"
+    games_played: "Partidas jugadas en BedWars"
+    kills: "Rivales eliminados en BedWars"
+    deaths: "Veces eliminado en BedWars"
+    beds_broken: "Camas enemigas destruidas en BedWars"
+    final_kills: "Rivales eliminados sin cama en BedWars"
+  labels:
+    kills: "Eliminaciones"
+    games_played: "Partidas jugadas en Bed Wars"
+    wins: "Victorias en Bed Wars"
+    deaths: "Muertes"
+    beds_broken: "Camas destruidas"
+    final_kills: "Bajas finales"
+
+messages:
+  common:
+    boolean_true: "Sí"
+    boolean_false: 'No'
+  eliminated: "<red>¡Has muerto! Reapareciendo...</red>"
+  out_of_bounds: "<yellow>No puedes salir de la arena.</yellow>"
+  restricted_zone: "<red>¡No puedes entrar en esta zona!</red>"
+  bed:
+    destroyed: "<red><bold>¡CAMA DESTRUIDA!</bold></red> <yellow>{player}</yellow> <gray>destruyó la cama del equipo</gray> <white>{team}</white><gray>!</gray>"
+    cannot_break_own: "<red>¡No puedes romper la cama de tu propio equipo!</red>"
+    hologram_separator: "<dark_gray>▬▬▬▬▬▬▬▬▬▬</dark_gray>"
+    hologram_title: "<red><bold>❤ CAMA ❤</bold></red>"
+    hologram_label: "<white>{team}</white>"
+    hologram_status: "<green><bold>¡PROTÉGELA!</bold></green>"
+  spawner:
+    hologram_separator: "<dark_gray>▬▬▬▬▬▬▬▬</dark_gray>"
+    hologram_iron: "<white>⚙ Generador de hierro</white>"
+    hologram_gold: "<gold>⚙ Generador de oro</gold>"
+    hologram_diamond: "<aqua>⚙ Generador de diamante</aqua>"
+    hologram_emerald: "<green>⚙ Generador de esmeralda</green>"
+    hologram_tier: "<yellow>Nivel {tier}</yellow>"
+    hologram_next_upgrade: "<gray>(Próxima mejora en <white>{time}</white>)</gray>"
+    hologram_countdown: "<gray>Próxima aparición en <white>{seconds}</white></gray>"
+  npc:
+    store_hologram: "<green><bold>TIENDA DE OBJETOS</bold></green>"
+    upgrade_hologram: "<aqua><bold>MEJORAS DE EQUIPO</bold></aqua>"
+  action_bar:
+    in_game: "<yellow>{team}</yellow> <dark_gray>•</dark_gray> <white>Cama:</white> {bed_status} <dark_gray>•</dark_gray> <white>K:</white> <red>{kills}</red> <white>D:</white> <gray>{deaths}</gray>"
+  team_status:
+    bed_intact: "<green>✔</green>"
+    eliminated: "<red>✘</red>"
+    alive_count: "<yellow>{count}</yellow>"
+    own_team_suffix: " <green><bold>TÚ</bold></green>"
+    bed_line: "<white>{team}</white> <gray>-</gray> {status}{own_team_suffix}"
+    own_team_header_suffix: " <green><bold><- Tú</bold></green>"
+    header: "<white>{team}{own_team_suffix}</white>"
+    summary: "<white>{team}</white> <gray>Cama {bed_status} • K {kills} • D {deaths}</gray>"
+  generator_upgrade: "<gold><bold>⚡ MEJORA DE GENERADORES</bold></gold> <gray>-</gray> <yellow>{label}</yellow> <gray>los generadores ahora son</gray> <green>{multiplier}x</green> <gray>más rápidos!</gray>"
+  shop:
+    not_configured: "<red>La tienda no está configurada.</red>"
+    insufficient_money: "<red>No tienes suficiente {currency}. Te faltan {price}.</red>"
+    purchased: "<green>Has comprado {item}!</green>"
+    already_bought: "<red>¡Ya tienes este objeto permanente!</red>"
+    weight_blocked: "<red>¡Ya tienes una armadura mejor!</red>"
+    quick_buy_added: "<green>¡Añadido a Compra rápida!</green>"
+    quick_buy_removed: "<red>Eliminado de Compra rápida.</red>"
+    quick_buy_full: "<red>¡Compra rápida está llena!</red>"
+    quick_buy_already_added: "<yellow>¡Ese objeto ya está en tu Compra rápida!</yellow>"
+    currencies:
+      money: "Dinero"
+      iron: "Hierro"
+      gold: "Oro"
+      diamond: "Diamante"
+      emerald: "Esmeralda"
+  upgrade:
+    not_configured: "<red>Las mejoras no están configuradas.</red>"
+    teams_disabled: "<red>Los equipos no están activados.</red>"
+    no_team: "<red>No estás en ningún equipo.</red>"
+    maxed: "<red>Esta mejora ya está al máximo.</red>"
+    purchased: "<green>¡{player} compró {upgrade} nivel {tier} para el equipo!</green>"
+  special_items:
+    magic_milk_used: "<yellow>¡Ahora eres inmune a las trampas durante {seconds} segundos!</yellow>"
+  deaths:
+    killed_by_player:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>superó a</gray> <red>{victim}</red><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>cayó ante</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>✘</dark_red> <yellow>{killer}</yellow> <gray>derrotó a</gray> <red>{victim}</red><gray>.</gray>"
+    generic:
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>no sobrevivió al caos.</gray>"
+      - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado.</gray>"
+    final_kill:
+      - "<dark_red>☠</dark_red> <red>{victim}</red> <gray>fue</gray> <dark_red>ELIMINADO FINALMENTE</dark_red> <gray>por</gray> <yellow>{killer}</yellow><gray>.</gray>"
+      - "<dark_red>☠</dark_red> <yellow>{killer}</yellow> <dark_red>ELIMINADO FINALMENTE</dark_red> <red>{victim}</red><gray>.</gray>"
+    final_kill_generic:
+      - "<dark_red>☠</dark_red> <red>{victim}</red> <gray>fue</gray> <dark_red>ELIMINADO FINALMENTE</dark_red><gray>.</gray>"
+
+titles:
+  you_died:
+    title: "<red><bold>HAS MUERTO</bold></red>"
+    subtitle: "<gray>Reapareciendo...</gray>"
+  classified:
+    title: "<yellow><bold>ELIMINADO</bold></yellow>"
+    subtitle: "<gray>Reapareciendo...</gray>"
+  bed_destroyed:
+    title: "<red><bold>¡CAMA DESTRUIDA!</bold></red>"
+    subtitle: "<gray>¡Ya no reaparecerás!</gray>"
+
+scoreboard:
+  team_size_2:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>  <white>D:</white> <gray>{deaths}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_3:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>  <white>D:</white> <gray>{deaths}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_4:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - "{bed_status_team_4}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>  <white>D:</white> <gray>{deaths}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_5:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - "{bed_status_team_4}"
+      - "{bed_status_team_5}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>  <white>D:</white> <gray>{deaths}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_6:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - "{bed_status_team_4}"
+      - "{bed_status_team_5}"
+      - "{bed_status_team_6}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>  <white>D:</white> <gray>{deaths}</gray>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_7:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - "{bed_status_team_4}"
+      - "{bed_status_team_5}"
+      - "{bed_status_team_6}"
+      - "{bed_status_team_7}"
+      - ""
+      - "<white>K:</white> <red>{kills}</red>"
+      - "<yellow>www.blueva.net</yellow>"
+  team_size_8:
+    title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - ""
+      - "{bed_status_team_1}"
+      - "{bed_status_team_2}"
+      - "{bed_status_team_3}"
+      - "{bed_status_team_4}"
+      - "{bed_status_team_5}"
+      - "{bed_status_team_6}"
+      - "{bed_status_team_7}"
+      - "{bed_status_team_8}"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  final:
+    winner:
+      title: "<bold><gradient:light_purple:aqua>Blue Arcade</gradient></bold>"
+      lines:
+        - ""
+        - "<white>Ganador:</white>"
+        - "<green>{winning_team}</green>"
+        - ""
+        - "<green>➊</green> <white>{top_kills_1}</white> <gray>{top_kills_value_1} bajas</gray>"
+        - "<gold>➋</gold> <white>{top_kills_2}</white> <gray>{top_kills_value_2} bajas</gray>"
+        - "<red>➌</red> <white>{top_kills_3}</white> <gray>{top_kills_value_3} bajas</gray>"
+        - "<dark_gray>➍</dark_gray> <gray>{top_kills_4}</gray> <dark_gray>{top_kills_value_4} bajas</dark_gray>"
+        - "<dark_gray>➎</dark_gray> <gray>{top_kills_5}</gray> <dark_gray>{top_kills_value_5} bajas</dark_gray>"
+        - ""
+        - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  common:
+    boolean_true: "Sí"
+    boolean_false: 'No'
+  team:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars team <count|size> <value></yellow>"
+    success: "{prefix} <green>Equipo {setting} establecido en {value} para {game} en la arena {arena_id}.</green>"
+    invalid_limit: "{prefix} <red>La configuración de equipos supera el máximo de jugadores de la arena ({max_players}).</red>"
+    invalid_value: "{prefix} <red>Equipo {setting} debe ser mayor que 0.</red>"
+    invalid_count: "{prefix} <red>El número de equipos debe ser al menos 2.</red>"
+    invalid_size: "{prefix} <red>El tamaño del equipo debe ser al menos 1.</red>"
+    numeric_ids_only: "{prefix} <red>team_id debe ser numérico y estar dentro del rango configurado: <white>{min}</white> a <white>{max}</white>.</red>"
+  region:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars region <set|clear></yellow>"
+    must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+    set: "{prefix} <green>Región de regeneración guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    cleared: "{prefix} <yellow>Región de regeneración borrada.</yellow>"
+  bed:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars bed set <team_id></yellow>"
+    set_usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars bed set <team_id></yellow>"
+    must_look_at_block: "{prefix} <red>Mira el bloque de cama que quieres establecer como cama del equipo.</red>"
+    set: "{prefix} <green>Cama establecida para el equipo <white>{team}</white> en el bloque seleccionado.</green>"
+  spawner:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars spawner <add|list|remove></yellow>"
+    add_usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars spawner add <iron|gold|diamond|emerald> <true|false></yellow>"
+    must_look_at_block: "{prefix} <red>Mira al bloque donde debe colocarse el generador.</red>"
+    invalid_type: "{prefix} <red>Tipo de generador no válido: <white>{type}</white>. Usa: iron, gold, diamond, emerald.</red>"
+    invalid_hologram: "{prefix} <red>No válido hologram value: <white>{value}</white>. Must be <white>true</white> or <white>false</white>.</red>"
+    added: "{prefix} <green>Spawner <white>#{id}</white> añadido. Type: <white>{type}</white>, hologram: <white>{hologram}</white>. Interval is configurado en settings.yml.</green>"
+    removed: "{prefix} <yellow>Spawner <white>#{id}</white> eliminado.</yellow>"
+    not_found: "{prefix} <red>No se encontró ningún generador en el bloque seleccionado.</red>"
+    list_header: "{prefix} <gold>Generadores configurados:</gold>"
+    list_line: "{prefix} <gray>- <white>#{id}</white> | tipo: <white>{type}</white> | holograma: <white>{hologram}</white></gray>"
+    list_empty: "{prefix} <yellow>Aún no hay generadores configurados.</yellow>"
+  npc:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars npc <add|list|remove></yellow>"
+    add_usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars npc add <store|upgrade></yellow>"
+    invalid_type: "{prefix} <red>Tipo de NPC no válido: <white>{type}</white>. Usa: store, upgrade.</red>"
+    added: "{prefix} <green>NPC <white>#{id}</white> añadido. Type: <white>{type}</white>.</green>"
+    removed: "{prefix} <yellow>NPC <white>#{id}</white> eliminado.</yellow>"
+    not_found: "{prefix} <red>NPC <white>#{id}</white> no existe.</red>"
+    remove_usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars npc remove <id></yellow>"
+    list_header: "{prefix} <gold>NPCs configurados:</gold>"
+    list_line: "{prefix} <gray>- <white>#{id}</white> | tipo: <white>{type}</white></gray>"
+    list_empty: "{prefix} <yellow>No NPCs configurado yet.</yellow>"
+  team_spawn:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> bed_wars team spawn <team_id></yellow>"
+    set: "{prefix} <green>Aparición de equipo establecida para el equipo <white>{team}</white> en tu ubicación actual.</green>"

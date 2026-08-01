@@ -1,0 +1,179 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Bed Wars Module Settings
+
+# Visual representation in menus
+menus:
+  vote:
+    item: "RED_BED"
+
+votes:
+  defaults:
+    hearts: "10"
+    time: "day"
+    weather: "sunny"
+  # Seconds a player must wait between votes (0 to disable)
+  cooldown_seconds: 5
+
+waiting_items:
+  vote_settings:
+    enabled: true
+    material: "NAME_TAG"
+    slot: 1
+    display_name: "<aqua>Vote match settings</aqua>"
+    lore:
+      - "<gray>Choose hearts, time, and weather.</gray>"
+
+cages:
+  enabled: true
+
+teams:
+  # Minimum amount of teams required to start the match
+  min_count: 2
+  # Minimum players per team required to start (1 = solo mode)
+  min_size: 1
+
+game:
+  # Set to 0 to disable a time limit
+  time_limit_seconds: 0
+  # Seconds a player must wait before respawning
+  respawn_delay_seconds: 3
+
+inventories:
+  chest_clone_title: "<dark_gray>Chest</dark_gray>"
+  ender_chest_title: "<dark_purple>Ender Chest</dark_purple>"
+
+spawn_protection:
+  # Seconds of fall-damage immunity after spawning
+  fall_damage_seconds: 5
+
+combat:
+  kill_regeneration:
+    # Health restored when eliminating an enemy (set to 0 to disable)
+    health: 6.0
+
+block_rules:
+  # When true, players can only break blocks placed by players during the match
+  break_only_player_placed: true
+
+# Generator spawn intervals (ticks) and hologram defaults.
+# These are the ONLY place where intervals are configured — the setup command
+# does not accept an interval argument. All spawners of a given type share the
+# same base interval defined here. Upgrade events (below) multiply this value.
+spawners:
+  defaults:
+    iron_interval_ticks: 40
+    gold_interval_ticks: 160
+    diamond_interval_ticks: 600
+    emerald_interval_ticks: 1200
+
+# Game items (optional)
+items:
+  # Items to give all players on game start
+  # Format: MATERIAL:AMOUNT:SLOT
+  starting_items: []
+
+  # Team-specific starting items keyed by team id
+  # Format: MATERIAL:AMOUNT:SLOT[:HEX_COLOR]
+  # HEX_COLOR is used by leather armor pieces
+  starting_items_by_team:
+    "1":
+      - "WOODEN_SWORD:1:0"
+      - "LEATHER_BOOTS:1:36:#FF0000"
+      - "LEATHER_LEGGINGS:1:37:#FF0000"
+      - "LEATHER_CHESTPLATE:1:38:#FF0000"
+      - "LEATHER_HELMET:1:39:#FF0000"
+
+    "2":
+      - "WOODEN_SWORD:1:0"
+      - "LEATHER_BOOTS:1:36:#0000FF"
+      - "LEATHER_LEGGINGS:1:37:#0000FF"
+      - "LEATHER_CHESTPLATE:1:38:#0000FF"
+      - "LEATHER_HELMET:1:39:#0000FF"
+
+effects:
+  # Effects to give players during the game
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  starting_effects: []
+
+  # Effects when player respawns
+  # Format: EFFECT_TYPE:DURATION_TICKS:AMPLIFIER
+  respawn_effects:
+    - "DAMAGE_RESISTANCE:60:1"
+
+# Generator upgrade events (Hypixel-style timed upgrades)
+# Each event boosts spawners of the given type to spawn 'multiplier' times faster.
+# Events trigger at 'time_seconds' after the game starts.
+# Set enabled to false to disable all upgrade events.
+generator_upgrades:
+  enabled: true
+  events:
+    1:
+      time_seconds: 300
+      type: "diamond"
+      label: "Diamonds II"
+      multiplier: 2.0
+    2:
+      time_seconds: 600
+      type: "emerald"
+      label: "Emeralds II"
+      multiplier: 2.0
+    3:
+      time_seconds: 900
+      type: "diamond"
+      label: "Diamonds III"
+      multiplier: 3.0
+    4:
+      time_seconds: 1200
+      type: "emerald"
+      label: "Emeralds III"
+      multiplier: 3.0
+    5:
+      time_seconds: 1500
+      type: "diamond"
+      label: "Diamonds IV"
+      multiplier: 4.0
+    6:
+      time_seconds: 1800
+      type: "emerald"
+      label: "Emeralds IV"
+      multiplier: 4.0
+
+special_items:
+  fireball:
+    cooldown_seconds: 1
+    speed: 1.5
+    explosion_size: 3.0
+    knockback_horizontal: 1.0
+    knockback_vertical: 0.65
+    damage_self: 2.0
+    damage_enemy: 2.0
+    damage_teammates: 0.0
+    launch_sound: "ENTITY_GHAST_SHOOT"
+    launch_volume: 1.0
+    launch_pitch: 1.0
+  tnt:
+    fuse_ticks: 40
+  bridge_egg:
+    projectile_speed: 1.5
+    length_blocks: 10
+    half_width_blocks: 1
+    use_team_wool: true
+    fallback_material: "WHITE_WOOL"
+  magic_milk:
+    trap_immunity_seconds: 30
+  bedbug:
+    projectile_speed: 1.5
+  dream_defender:
+    name: "Dream Defender"
+    name_visible: true
+  sponge:
+    radius_blocks: 2
+  tower:
+    height_blocks: 5

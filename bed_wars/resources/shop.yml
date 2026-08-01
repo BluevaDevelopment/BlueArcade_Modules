@@ -1,0 +1,959 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+menu_name: '<dark_gray>Item Shop - {view}'
+menu_size: 54
+type: "CHEST"
+
+# Slots used by the active tab content area.
+# Category tabs use these slots automatically when content entries do not define a slot.
+# Quick Buy inherits these slots unless templates.quick_buy.dynamic_slots is configured.
+dynamic_slots:
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+
+# ============================================
+# ITEM SHOP CONFIGURATION
+# ============================================
+# Currency colors in the shop:
+#   iron     -> white
+#   gold     -> gold/orange
+#   diamond  -> aqua/cyan
+#   emerald  -> dark_green
+#
+# QUICK BUY:
+# - Players can SHIFT+CLICK any item in a category to add it to Quick Buy
+# - Players can SHIFT+CLICK an item in Quick Buy to remove it
+# - Quick Buy uses dynamic_slots by default, or templates.quick_buy.dynamic_slots when set
+# ============================================
+
+templates:
+  quick_buy:
+    # Optional: add dynamic_slots here only if Quick Buy should use a different grid.
+    view: "Quick Buy"
+    tab_selected: "<yellow>Quick Buy</yellow>"
+    tab: "<gray>Quick Buy</gray>"
+    add_lore: "<dark_gray>Sneak Click to add to Quick Buy</dark_gray>"
+    remove_lore: "<dark_gray>Sneak Click to remove from Quick Buy!</dark_gray>"
+    empty:
+      name: " "
+      item_stack:
+        material: "RED_STAINED_GLASS_PANE"
+        amount: 1
+      lore:
+        - "<red>This is a Quick Buy Slot!</red>"
+        - "<gray>Sneak Click any item in</gray>"
+        - "<gray>the shop to add it here.</gray>"
+  category:
+    # Slots used by category tab items. Per-category slot overrides are optional.
+    dynamic_slots:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    tab_selected: "<yellow>{category}</yellow>"
+    tab: "<gray>{category}</gray>"
+  navigation:
+    selected_lore: "<green>Selected</green>"
+    click_to_view_lore: "<gray>Click to view</gray>"
+    separator_regular:
+      item_stack:
+        material: "GRAY_STAINED_GLASS_PANE"
+        amount: 1
+    separator_selected:
+      item_stack:
+        material: "GREEN_STAINED_GLASS_PANE"
+        amount: 1
+  content:
+    tier_line: "{color}Tier {tier} <gray>- {currency_color}{price} {currency}</gray>"
+    cost_line: "<gray>Cost: {currency_color}{price} {currency}</gray>"
+    maxed_line: "<aqua>MAXED OUT</aqua>"
+    click_to_purchase_line: "<green>Click to purchase!</green>"
+    not_enough_resources_line: "<red>Not enough resources!</red>"
+
+items:
+  quick_buy:
+    slot: 0
+    item_stack:
+      material: "NETHER_STAR"
+      amount: 1
+
+shop:
+  settings:
+    # Highest numeric index scanned in categories, content, tiers, buy_items, effects and actions.
+    # This allows admins to leave gaps in numbered sections without stopping the loader.
+    max_index_scan: 256
+    separator_slots: "9,10,11,12,13,14,15,16,17"
+
+  # Optional custom right-click specials for buy_items with custom "special" ids.
+  # Supported actions:
+  #   message:<MiniMessage text>
+  #   broadcast:<MiniMessage text>
+  #   console:<command without slash>
+  #   player:<command without slash>
+  #   sound:<SOUND>[:volume[:pitch]]
+  #   effect:<EFFECT>:<duration_ticks>:<amplifier>[:ambient[:particles]]
+  #   give:<MATERIAL>[:amount]
+  # Placeholders: {player}, {uuid}, {arena}, {arena_id}, {team}, {special}
+  specials: {}
+
+  # Categories, content, tiers and buy_items all support optional actions lists.
+  # Purchase actions use the same syntax as specials, with extra placeholders:
+  # {category}, {category_id}, {item}, {item_id}, {tier}, {price}, {currency}.
+  # Example:
+  # actions:
+  #   1: "message:<green>You bought {item}.</green>"
+  # Quick Buy defaults: items shown in Quick Buy by default.
+  # Items are placed in dynamic_slots order unless an entry defines a slot override.
+  # Format: category = category id, content = content id from that category.
+  quick_buy_defaults:
+    1:
+      category: "blocks"
+      content: "wool"
+    2:
+      category: "melee"
+      content: "stone_sword"
+    3:
+      category: "armor"
+      content: "chainmail"
+    4:
+      category: "ranged"
+      content: "bow1"
+    5:
+      category: "potions"
+      content: "speed_potion"
+    6:
+      category: "utility"
+      content: "tnt"
+    7:
+      category: "blocks"
+      content: "wood"
+    8:
+      category: "melee"
+      content: "iron_sword"
+    9:
+      category: "armor"
+      content: "iron_armor"
+    10:
+      category: "tools"
+      content: "shears"
+    11:
+      category: "ranged"
+      content: "arrow"
+    12:
+      category: "potions"
+      content: "jump_potion"
+    13:
+      category: "utility"
+      content: "water_bucket"
+
+  categories:
+    # Every category supports: id, name, icon, amount, optional slot override, lore, content.
+    # Every content item supports: id, name, optional slot override, lore, permanent, downgradable,
+    # unbreakable, weight, actions and tiers.
+    # Every buy_item supports: material, amount, name, lore, auto_equip, special,
+    # potion_color, enchantments, effects and actions.
+    1:
+      id: "blocks"
+      name: "Blocks"
+      icon: "ORANGE_TERRACOTTA"
+      content:
+        1:
+          id: "wool"
+          name: "Wool"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "WHITE_WOOL"
+              amount: 16
+              enchanted: false
+              price: 4
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "WHITE_WOOL"
+                  amount: 16
+        2:
+          id: "clay"
+          name: "Clay"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "ORANGE_TERRACOTTA"
+              amount: 16
+              enchanted: false
+              price: 12
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "ORANGE_TERRACOTTA"
+                  amount: 16
+        3:
+          id: "glass"
+          name: "Blast-Proof Glass"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "GLASS"
+              amount: 4
+              enchanted: false
+              price: 12
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "GLASS"
+                  amount: 4
+        4:
+          id: "stone"
+          name: "End Stone"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "END_STONE"
+              amount: 16
+              enchanted: false
+              price: 24
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "END_STONE"
+                  amount: 16
+        5:
+          id: "ladder"
+          name: "Ladder"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "LADDER"
+              amount: 16
+              enchanted: false
+              price: 4
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "LADDER"
+                  amount: 16
+        6:
+          id: "wood"
+          name: "Oak Wood"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "OAK_WOOD"
+              amount: 16
+              enchanted: false
+              price: 4
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "OAK_WOOD"
+                  amount: 16
+        7:
+          id: "obsidian"
+          name: "Obsidian"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "OBSIDIAN"
+              amount: 4
+              enchanted: false
+              price: 4
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "OBSIDIAN"
+                  amount: 4
+    2:
+      id: "melee"
+      name: "Melee"
+      icon: "GOLDEN_SWORD"
+      content:
+        1:
+          id: "stone_sword"
+          name: "Stone Sword"
+          permanent: false
+          downgradable: false
+          unbreakable: true
+          weight: 0
+          tiers:
+            1:
+              material: "STONE_SWORD"
+              amount: 1
+              enchanted: false
+              price: 10
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "STONE_SWORD"
+                  amount: 1
+        2:
+          id: "iron_sword"
+          name: "Iron Sword"
+          permanent: false
+          downgradable: false
+          unbreakable: true
+          weight: 0
+          tiers:
+            1:
+              material: "IRON_SWORD"
+              amount: 1
+              enchanted: false
+              price: 7
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "IRON_SWORD"
+                  amount: 1
+        3:
+          id: "diamond_sword"
+          name: "Diamond Sword"
+          permanent: false
+          downgradable: false
+          unbreakable: true
+          weight: 0
+          tiers:
+            1:
+              material: "DIAMOND_SWORD"
+              amount: 1
+              enchanted: false
+              price: 4
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "DIAMOND_SWORD"
+                  amount: 1
+        4:
+          id: "knockback_stick"
+          name: "Knockback Stick"
+          permanent: false
+          downgradable: false
+          unbreakable: true
+          weight: 0
+          tiers:
+            1:
+              material: "STICK"
+              amount: 1
+              enchanted: true
+              price: 10
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "STICK"
+                  amount: 1
+                  enchantments:
+                    1: "KNOCKBACK:1"
+    3:
+      id: "armor"
+      name: "Armor"
+      icon: "CHAINMAIL_BOOTS"
+      content:
+        1:
+          id: "chainmail"
+          name: "Chainmail Armor"
+          permanent: true
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "CHAINMAIL_BOOTS"
+              amount: 1
+              enchanted: false
+              price: 40
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "CHAINMAIL_BOOTS"
+                  amount: 1
+                  auto_equip: true
+                2:
+                  material: "CHAINMAIL_LEGGINGS"
+                  amount: 1
+                  auto_equip: true
+        2:
+          id: "iron_armor"
+          name: "Iron Armor"
+          permanent: true
+          downgradable: false
+          unbreakable: false
+          weight: 1
+          tiers:
+            1:
+              material: "IRON_BOOTS"
+              amount: 1
+              enchanted: false
+              price: 12
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "IRON_BOOTS"
+                  amount: 1
+                  auto_equip: true
+                2:
+                  material: "IRON_LEGGINGS"
+                  amount: 1
+                  auto_equip: true
+        3:
+          id: "diamond_armor"
+          name: "Diamond Armor"
+          permanent: true
+          downgradable: false
+          unbreakable: false
+          weight: 2
+          tiers:
+            1:
+              material: "DIAMOND_BOOTS"
+              amount: 1
+              enchanted: false
+              price: 6
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "DIAMOND_BOOTS"
+                  amount: 1
+                  auto_equip: true
+                2:
+                  material: "DIAMOND_LEGGINGS"
+                  amount: 1
+                  auto_equip: true
+    4:
+      id: "tools"
+      name: "Tools"
+      icon: "STONE_PICKAXE"
+      content:
+        1:
+          id: "shears"
+          name: "Shears"
+          permanent: true
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "SHEARS"
+              amount: 1
+              enchanted: false
+              price: 20
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "SHEARS"
+                  amount: 1
+        2:
+          id: "pickaxe"
+          name: "Pickaxe"
+          permanent: true
+          downgradable: true
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "WOODEN_PICKAXE"
+              amount: 1
+              enchanted: false
+              price: 10
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "WOODEN_PICKAXE"
+                  amount: 1
+            2:
+              material: "IRON_PICKAXE"
+              amount: 1
+              enchanted: true
+              price: 10
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "IRON_PICKAXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:2"
+            3:
+              material: "GOLDEN_PICKAXE"
+              amount: 1
+              enchanted: true
+              price: 3
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "GOLDEN_PICKAXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:3"
+                    2: "DAMAGE_ALL:2"
+            4:
+              material: "DIAMOND_PICKAXE"
+              amount: 1
+              enchanted: true
+              price: 6
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "DIAMOND_PICKAXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:3"
+        3:
+          id: "axe"
+          name: "Axe"
+          permanent: true
+          downgradable: true
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "WOODEN_AXE"
+              amount: 1
+              enchanted: true
+              price: 10
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "WOODEN_AXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:1"
+            2:
+              material: "IRON_AXE"
+              amount: 1
+              enchanted: true
+              price: 10
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "IRON_AXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:1"
+            3:
+              material: "GOLDEN_AXE"
+              amount: 1
+              enchanted: true
+              price: 3
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "GOLDEN_AXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:2"
+            4:
+              material: "DIAMOND_AXE"
+              amount: 1
+              enchanted: true
+              price: 6
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "DIAMOND_AXE"
+                  amount: 1
+                  enchantments:
+                    1: "DIG_SPEED:3"
+    5:
+      id: "ranged"
+      name: "Ranged"
+      icon: "BOW"
+      content:
+        1:
+          id: "arrow"
+          name: "Arrow"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "ARROW"
+              amount: 8
+              enchanted: false
+              price: 2
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "ARROW"
+                  amount: 8
+        2:
+          id: "bow1"
+          name: "Bow"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "BOW"
+              amount: 1
+              enchanted: false
+              price: 12
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "BOW"
+                  amount: 1
+        3:
+          id: "bow2"
+          name: "Power Bow"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "BOW"
+              amount: 1
+              enchanted: true
+              price: 24
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "BOW"
+                  amount: 1
+                  enchantments:
+                    1: "ARROW_DAMAGE:1"
+        4:
+          id: "bow3"
+          name: "Punch Bow"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "BOW"
+              amount: 1
+              enchanted: true
+              price: 6
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "BOW"
+                  amount: 1
+                  enchantments:
+                    1: "ARROW_DAMAGE:1"
+                    2: "ARROW_KNOCKBACK:1"
+    6:
+      id: "potions"
+      name: "Potions"
+      icon: "BREWING_STAND"
+      content:
+        1:
+          id: "speed_potion"
+          name: "Speed Potion"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "POTION"
+              amount: 1
+              enchanted: false
+              price: 1
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "POTION"
+                  amount: 1
+                  potion_color: "#33EBFF"
+                  effects:
+                    1: "SPEED:900:1:true:true"
+        2:
+          id: "jump_potion"
+          name: "Jump Potion"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "POTION"
+              amount: 1
+              enchanted: false
+              price: 1
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "POTION"
+                  amount: 1
+                  potion_color: "#22FF4C"
+                  effects:
+                    1: "JUMP:900:4:true:true"
+        3:
+          id: "invisibility"
+          name: "Invisibility Potion"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "POTION"
+              amount: 1
+              enchanted: false
+              price: 2
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "POTION"
+                  amount: 1
+                  potion_color: "#F6F6F6"
+                  effects:
+                    1: "INVISIBILITY:600:0:true:true"
+    7:
+      id: "utility"
+      name: "Utility"
+      icon: "TNT"
+      content:
+        1:
+          id: "golden_apple"
+          name: "Golden Apple"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "GOLDEN_APPLE"
+              amount: 1
+              enchanted: false
+              price: 3
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "GOLDEN_APPLE"
+                  amount: 1
+        2:
+          id: "bedbug"
+          name: "Bedbug"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "SNOWBALL"
+              amount: 1
+              enchanted: false
+              price: 40
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "SNOWBALL"
+                  amount: 1
+                  special: "bedbug"
+        3:
+          id: "dream_defender"
+          name: "Dream Defender"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "HORSE_SPAWN_EGG"
+              amount: 1
+              enchanted: false
+              price: 120
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "HORSE_SPAWN_EGG"
+                  amount: 1
+                  special: "dream_defender"
+        4:
+          id: "fireball"
+          name: "Fireball"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "FIRE_CHARGE"
+              amount: 1
+              enchanted: false
+              price: 40
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "FIRE_CHARGE"
+                  amount: 1
+                  special: "fireball"
+        5:
+          id: "tnt"
+          name: "TNT"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "TNT"
+              amount: 1
+              enchanted: false
+              price: 4
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "TNT"
+                  amount: 1
+        6:
+          id: "ender_pearl"
+          name: "Ender Pearl"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "ENDER_PEARL"
+              amount: 1
+              enchanted: false
+              price: 4
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "ENDER_PEARL"
+                  amount: 1
+        7:
+          id: "water_bucket"
+          name: "Water Bucket"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "WATER_BUCKET"
+              amount: 1
+              enchanted: false
+              price: 4
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "WATER_BUCKET"
+                  amount: 1
+        8:
+          id: "bridge_egg"
+          name: "Bridge Egg"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "EGG"
+              amount: 1
+              enchanted: false
+              price: 3
+              currency: "emerald"
+              buy_items:
+                1:
+                  material: "EGG"
+                  amount: 1
+                  special: "bridge_egg"
+        9:
+          id: "magic_milk"
+          name: "Magic Milk"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "MILK_BUCKET"
+              amount: 1
+              enchanted: false
+              price: 4
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "MILK_BUCKET"
+                  amount: 1
+                  special: "magic_milk"
+        10:
+          id: "sponge"
+          name: "Sponge"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "SPONGE"
+              amount: 1
+              enchanted: false
+              price: 3
+              currency: "gold"
+              buy_items:
+                1:
+                  material: "SPONGE"
+                  amount: 1
+        11:
+          id: "tower"
+          name: "Tower"
+          permanent: false
+          downgradable: false
+          unbreakable: false
+          weight: 0
+          tiers:
+            1:
+              material: "CHEST"
+              amount: 1
+              enchanted: false
+              price: 24
+              currency: "iron"
+              buy_items:
+                1:
+                  material: "CHEST"
+                  amount: 1
+                  special: "tower"

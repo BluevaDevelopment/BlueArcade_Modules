@@ -1,0 +1,111 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+menu_name: '<dark_gray>Team Upgrades'
+menu_size: 27
+type: "CHEST"
+
+templates:
+  content:
+    tier_line: "{color}Tier {tier} <gray>- {cost} {currency}</gray>"
+    maxed_line: "<aqua>MAXED OUT</aqua>"
+    click_to_purchase_line: "<green>Click to purchase!</green>"
+    not_enough_resources_line: "<red>Not enough resources!</red>"
+
+empty_item:
+  name: " "
+  item_stack:
+    material: "BLACK_STAINED_GLASS_PANE"
+    amount: 1
+  lore: []
+  actions: []
+
+team_upgrades:
+  upgrades:
+    1:
+      id: "sharpness"
+      name: "Sharpened Swords"
+      icon: "DIAMOND_SWORD"
+      amount: 1
+      slot: 10
+      lore: []
+      tiers:
+        1:
+          cost: 4
+          currency: "diamond"
+          actions:
+            1: "enchant-team:sharpness,1,sword"
+        2:
+          cost: 8
+          currency: "diamond"
+          actions:
+            1: "enchant-team:sharpness,2,sword"
+    2:
+      id: "protection"
+      name: "Reinforced Armor"
+      icon: "IRON_CHESTPLATE"
+      amount: 1
+      slot: 12
+      lore: []
+      tiers:
+        1:
+          cost: 4
+          currency: "diamond"
+          actions:
+            1: "enchant-team:protection,1,armor"
+        2:
+          cost: 8
+          currency: "diamond"
+          actions:
+            1: "enchant-team:protection,2,armor"
+        3:
+          cost: 12
+          currency: "diamond"
+          actions:
+            1: "enchant-team:protection,3,armor"
+    3:
+      id: "haste"
+      name: "Maniac Miner"
+      icon: "GOLDEN_PICKAXE"
+      amount: 1
+      slot: 14
+      lore: []
+      tiers:
+        1:
+          cost: 4
+          currency: "diamond"
+          actions:
+            1: "player-effect:HASTE,0,0"
+        2:
+          cost: 6
+          currency: "diamond"
+          actions:
+            1: "player-effect:HASTE,1,0"
+    4:
+      id: "forge"
+      name: "Iron Forge"
+      icon: "FURNACE"
+      amount: 1
+      slot: 16
+      lore: []
+      tiers:
+        1:
+          cost: 4
+          currency: "diamond"
+          actions:
+            1: "generator-speed:iron,2.0"
+        2:
+          cost: 8
+          currency: "diamond"
+          actions:
+            1: "generator-speed:gold,2.0"
+        3:
+          cost: 12
+          currency: "diamond"
+          actions:
+            1: "generator-speed:emerald,2.0"

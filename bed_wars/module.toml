@@ -1,0 +1,83 @@
+schema = 1
+id = "bed_wars"
+name = "Bed Wars"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Protect your bed, destroy enemy beds, and be the last team standing."
+disabledRequirements = ["SPAWNS", "TIME"]
+
+[replaces]
+legacyId = "bed_wars"
+
+[[setup.steps]]
+id = "bed"
+required = true
+displayName = "Configure Bed"
+description = "Configure the module-specific bed setup data."
+commandExamples = ["/baa game <arena> bed_wars bed set <team_id>"]
+expectedInput = "team bed location"
+
+[[setup.steps]]
+id = "npc"
+required = true
+displayName = "Configure Npc"
+description = "Configure the module-specific npc setup data."
+commandExamples = ["/baa game <arena> bed_wars npc add <store|upgrade>"]
+expectedInput = "NPC type and location"
+
+[[setup.steps]]
+id = "region"
+required = true
+displayName = "Configure Region"
+description = "Configure the module-specific region setup data."
+commandExamples = ["/baa game <arena> bed_wars region set", "/baa game <arena> bed_wars region clear"]
+expectedInput = "selection region"
+
+[[setup.steps]]
+id = "spawner"
+required = true
+displayName = "Configure Spawner"
+description = "Configure the module-specific spawner setup data."
+commandExamples = ["/baa game <arena> bed_wars spawner add <iron|gold|diamond|emerald> <true|false>"]
+expectedInput = "spawner type and location"
+
+[[setup.steps]]
+id = "team"
+required = true
+displayName = "Configure Team"
+description = "Configure the module-specific team setup data."
+commandExamples = ["/baa game <arena> bed_wars team count <value>", "/baa game <arena> bed_wars team size <value>", "/baa game <arena> bed_wars team spawn <team_id>"]
+expectedInput = "team count and team size"
+
+[[setup.commands]]
+name = "bed"
+usage = "/baa game <arena> bed_wars bed set <team_id>"
+description = "Configure bed setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "npc"
+usage = "/baa game <arena> bed_wars npc <add|list|remove>"
+description = "Configure npc setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "region"
+usage = "/baa game <arena> bed_wars region <set|clear>"
+description = "Configure region setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "spawner"
+usage = "/baa game <arena> bed_wars spawner <add|list|remove>"
+description = "Configure spawner setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "team"
+usage = "/baa game <arena> bed_wars team <count|size|spawn> <value>"
+description = "Configure team setup data."
+requiredHint = true
