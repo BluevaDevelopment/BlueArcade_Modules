@@ -1,0 +1,90 @@
+name: Build changed modules
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  detect:
+    runs-on: [self-hosted, linux, x64]
+    permissions:
+      contents: read
+    outputs:
+      modules: ${{ steps.changed.outputs.modules }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Find which modules changed
+        id: changed
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            LIST=$(ls modules)
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              BEFORE=$(git hash-object -t tree /dev/null)
+            fi
+            LIST=$(git diff --name-only "$BEFORE" "${{ github.sha }}" -- modules | cut -d/ -f2 | sort -u)
+          fi
+
+          JSON=$(printf '%s\n' "$LIST" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "modules=$JSON" >> "$GITHUB_OUTPUT"
+          echo "Changed modules: $JSON"
+
+  build:
+    needs: detect
+    if: needs.detect.outputs.modules != '[]'
+    runs-on: [self-hosted, linux, x64]
+    permissions:
+      contents: read
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        module: ${{ fromJson(needs.detect.outputs.modules) }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Checkout bacli
+        uses: actions/checkout@v5
+        with:
+          repository: BluevaDevelopment/BlueArcade_CLI
+          path: bacli-src
+
+      - name: Build bacli
+        working-directory: bacli-src
+        run: ./gradlew build
+
+      - name: Locate bacli jar
+        id: bacli
+        shell: bash
+        run: |
+          JAR=$(find bacli-src/build/dist -maxdepth 1 -type f -name "bacli-*.jar" | head -n 1)
+          echo "jar=$JAR" >> "$GITHUB_OUTPUT"
+
+      - name: Check module
+        run: java -jar ${{ steps.bacli.outputs.jar }} check modules/${{ matrix.module }}
+
+      - name: Run module tests
+        run: java -jar ${{ steps.bacli.outputs.jar }} test modules/${{ matrix.module }}
+
+      - name: Build module
+        run: java -jar ${{ steps.bacli.outputs.jar }} build modules/${{ matrix.module }}
+
+      # TODO: curl the built .bamodule to the store update API once modules are actually ready to ship this way
