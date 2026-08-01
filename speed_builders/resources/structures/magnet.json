@@ -1,0 +1,192 @@
+{
+  "id": "magnet",
+  "name": "Magnet",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 3,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    }
+  ],
+  "creatures": []
+}

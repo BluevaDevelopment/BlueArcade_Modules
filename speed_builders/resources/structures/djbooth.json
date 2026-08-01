@@ -1,0 +1,84 @@
+{
+  "id": "djbooth",
+  "name": "Djbooth",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_block"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:note_block[instrument=bass,note=0,powered=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:note_block[instrument=bass,note=1,powered=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_weighted_pressure_plate[power=0]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:lever[face=floor,facing=south,powered=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_weighted_pressure_plate[power=0]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:note_block[instrument=bass,note=0,powered=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:note_block[instrument=bass,note=0,powered=false]"
+    }
+  ],
+  "creatures": []
+}

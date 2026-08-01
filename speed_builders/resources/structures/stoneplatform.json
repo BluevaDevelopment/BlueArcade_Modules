@@ -1,0 +1,306 @@
+{
+  "id": "stoneplatform",
+  "name": "Stoneplatform",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:cobblestone_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:cobblestone_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:cobblestone_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:cobblestone_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:cobblestone_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=outer_left,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,138 @@
+{
+  "id": "enchantingtable",
+  "name": "Enchantingtable",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:enchanting_table"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:bookshelf"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:bookshelf"
+    }
+  ],
+  "creatures": []
+}

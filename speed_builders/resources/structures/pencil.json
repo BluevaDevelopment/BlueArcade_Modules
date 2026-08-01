@@ -1,0 +1,450 @@
+{
+  "id": "pencil",
+  "name": "Pencil",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:pink_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 7,
+      "dz": -1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 7,
+      "dz": -1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 7,
+      "dz": 1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 7,
+      "dz": 1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:cyan_terracotta"
+    }
+  ],
+  "creatures": []
+}

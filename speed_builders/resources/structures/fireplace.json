@@ -1,0 +1,324 @@
+{
+  "id": "fireplace",
+  "name": "Fireplace",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:orange_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:orange_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=true,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=true,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=true,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:orange_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:terracotta"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,66 @@
+{
+  "id": "spbtest",
+  "name": "Spbtest",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone"
+    }
+  ],
+  "creatures": []
+}

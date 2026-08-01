@@ -1,0 +1,168 @@
+{
+  "id": "seaturtle",
+  "name": "Seaturtle",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_button[face=wall,facing=west,powered=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_prismarine"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_button[face=wall,facing=east,powered=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_slab[type=bottom,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

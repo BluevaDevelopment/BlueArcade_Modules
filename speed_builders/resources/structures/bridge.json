@@ -1,0 +1,504 @@
+{
+  "id": "bridge",
+  "name": "Bridge",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,162 @@
+{
+  "id": "friedegg",
+  "name": "Friedegg",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    }
+  ],
+  "creatures": []
+}

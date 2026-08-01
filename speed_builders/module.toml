@@ -1,0 +1,69 @@
+schema = 1
+id = "speed_builders"
+name = "Speed Builders"
+version = "1.0.0"
+type = "MINIGAME"
+api = "^1.0"
+entry = "src/main.lua"
+authors = ["Blueva", "Whiron"]
+description = "Memorize the build, replicate it as fast as possible, and survive each round."
+disabledRequirements = ["SPAWNS"]
+
+[replaces]
+legacyId = "speed_builders"
+
+[[setup.steps]]
+id = "build_area"
+required = true
+displayName = "Configure Build Area"
+description = "Configure the module-specific build area setup data."
+commandExamples = ["/baa game <arena> speed_builders build_area"]
+expectedInput = "build area region"
+
+[[setup.steps]]
+id = "plot"
+required = true
+displayName = "Configure Plot"
+description = "Configure the module-specific plot setup data."
+commandExamples = ["/baa game <arena> speed_builders plot"]
+expectedInput = "plot region and spawn"
+
+[[setup.steps]]
+id = "showcase"
+required = true
+displayName = "Configure Showcase"
+description = "Configure the module-specific showcase setup data."
+commandExamples = ["/baa game <arena> speed_builders showcase"]
+expectedInput = "showcase region and spawn"
+
+[[setup.steps]]
+id = "structure"
+required = true
+displayName = "Configure Structure"
+description = "Configure the module-specific structure setup data."
+commandExamples = ["/baa game <arena> speed_builders structure"]
+expectedInput = "saved structure"
+
+[[setup.commands]]
+name = "build_area"
+usage = "/baa game <arena> speed_builders build_area"
+description = "Configure build area setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "plot"
+usage = "/baa game <arena> speed_builders plot"
+description = "Configure plot setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "showcase"
+usage = "/baa game <arena> speed_builders showcase"
+description = "Configure showcase setup data."
+requiredHint = true
+
+[[setup.commands]]
+name = "structure"
+usage = "/baa game <arena> speed_builders structure"
+description = "Configure structure setup data."
+requiredHint = true

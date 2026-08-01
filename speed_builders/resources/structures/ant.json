@@ -1,0 +1,234 @@
+{
+  "id": "ant",
+  "name": "Ant",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:acacia_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:acacia_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:acacia_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:acacia_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:acacia_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:acacia_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:acacia_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:acacia_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:acacia_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:acacia_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,198 @@
+{
+  "id": "balloon",
+  "name": "Balloon",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:birch_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:birch_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:snow_block"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:snow_block"
+    }
+  ],
+  "creatures": []
+}

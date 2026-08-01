@@ -1,0 +1,702 @@
+{
+  "id": "cheesesandwich",
+  "name": "Cheesesandwich",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:spruce_planks"
+    }
+  ],
+  "creatures": []
+}

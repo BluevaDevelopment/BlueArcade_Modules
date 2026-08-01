@@ -1,0 +1,450 @@
+{
+  "id": "caravan",
+  "name": "Caravan",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_button[face=wall,facing=north,powered=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:birch_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_button[face=wall,facing=south,powered=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:birch_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:iron_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:iron_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:sandstone_slab[type=bottom,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

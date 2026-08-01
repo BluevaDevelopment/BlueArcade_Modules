@@ -1,0 +1,318 @@
+{
+  "id": "cloningchamber",
+  "name": "Cloningchamber",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:piston[extended=false,facing=up]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:lime_stained_glass_pane[east=false,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:piston[extended=false,facing=down]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    }
+  ],
+  "creatures": []
+}

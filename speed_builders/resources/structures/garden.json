@@ -1,0 +1,678 @@
+{
+  "id": "garden",
+  "name": "Garden",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:fern"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:fern"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_log[axis=y]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,388 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+category:
+  id: "speed_builders"
+  name: "Speed Builders"
+  description:
+    - "Achievements tied to Speed Builders."
+  icon: "BRICKS"
+  sort_order: 31
+
+achievements:
+  fast_learner:
+    name: "Fast Learner"
+    description:
+      - "Play Speed Builders matches."
+    icon: "BRICKS"
+    phases:
+      1:
+        name: "First Blueprint"
+        description:
+          - "Play 1 match."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 10"
+            - "baa xp give {player} 10"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+10 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+10 XP</light_purple>"
+      2:
+        name: "Practice Run"
+        description:
+          - "Play 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      3:
+        name: "Blueprint Regular"
+        description:
+          - "Play 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 40"
+            - "baa xp give {player} 40"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+40 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+40 XP</light_purple>"
+      4:
+        name: "Speed Builders Veteran"
+        description:
+          - "Play 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 60"
+            - "baa xp give {player} 60"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+60 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+60 XP</light_purple>"
+      5:
+        name: "Speed Builders Legend"
+        description:
+          - "Play 100 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 90"
+            - "baa xp give {player} 90"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+90 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+90 XP</light_purple>"
+
+  round_survivor:
+    name: "Round Survivor"
+    description:
+      - "Survive rounds in Speed Builders."
+    icon: "SHIELD"
+    phases:
+      1:
+        name: "Still Standing"
+        description:
+          - "Survive 5 rounds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Reliable Builder"
+        description:
+          - "Survive 25 rounds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Steady Hands"
+        description:
+          - "Survive 75 rounds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 75"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Guardian Dodger"
+        description:
+          - "Survive 150 rounds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 150"
+        rewards:
+          commands:
+            - "baa credits give {player} 80"
+            - "baa xp give {player} 80"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+80 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+80 XP</light_purple>"
+      5:
+        name: "Last Builder Standing"
+        description:
+          - "Survive 300 rounds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 300"
+        rewards:
+          commands:
+            - "baa credits give {player} 120"
+            - "baa xp give {player} 120"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+120 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+120 XP</light_purple>"
+
+  perfect_replica:
+    name: "Perfect Replica"
+    description:
+      - "Complete perfect builds."
+    icon: "GOLDEN_APPLE"
+    phases:
+      1:
+        name: "Exact Copy"
+        description:
+          - "Complete 1 perfect build."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 20"
+            - "baa xp give {player} 20"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+20 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+20 XP</light_purple>"
+      2:
+        name: "Sharp Memory"
+        description:
+          - "Complete 10 perfect builds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 45"
+            - "baa xp give {player} 45"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+45 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+45 XP</light_purple>"
+      3:
+        name: "Perfect Builder"
+        description:
+          - "Complete 25 perfect builds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 70"
+            - "baa xp give {player} 70"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+70 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+70 XP</light_purple>"
+      4:
+        name: "Master Copyist"
+        description:
+          - "Complete 50 perfect builds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 100"
+            - "baa xp give {player} 100"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+100 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+100 XP</light_purple>"
+      5:
+        name: "Flawless Architect"
+        description:
+          - "Complete 100 perfect builds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 100"
+        rewards:
+          commands:
+            - "baa credits give {player} 150"
+            - "baa xp give {player} 150"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+150 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+150 XP</light_purple>"
+
+  winner_path:
+    name: "Winner Path"
+    description:
+      - "Win Speed Builders matches."
+    icon: "DIAMOND"
+    phases:
+      1:
+        name: "First Victory"
+        description:
+          - "Win 1 match."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_wins} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 15"
+            - "baa xp give {player} 15"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+15 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+15 XP</light_purple>"
+      2:
+        name: "Rising Champion"
+        description:
+          - "Win 5 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_wins} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 35"
+            - "baa xp give {player} 35"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+35 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+35 XP</light_purple>"
+      3:
+        name: "Speed Champion"
+        description:
+          - "Win 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_wins} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 55"
+            - "baa xp give {player} 55"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+55 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+55 XP</light_purple>"
+      4:
+        name: "Guardian's Nightmare"
+        description:
+          - "Win 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_wins} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 85"
+            - "baa xp give {player} 85"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+85 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+85 XP</light_purple>"
+      5:
+        name: "Build Master"
+        description:
+          - "Win 50 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_wins} >= 50"
+        rewards:
+          commands:
+            - "baa credits give {player} 130"
+            - "baa xp give {player} 130"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+130 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+130 XP</light_purple>"
+
+  complete_builder:
+    name: "Complete Builder"
+    description:
+      - "Master every core Speed Builders skill."
+    icon: "NETHER_STAR"
+    phases:
+      1:
+        name: "Balanced Start"
+        description:
+          - "Play 5 matches and complete 1 perfect build."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 5"
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 1"
+        rewards:
+          commands:
+            - "baa credits give {player} 25"
+            - "baa xp give {player} 25"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+25 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+25 XP</light_purple>"
+      2:
+        name: "Consistent Builder"
+        description:
+          - "Play 15 matches, survive 25 rounds, and complete 5 perfect builds."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 15"
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 25"
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 5"
+        rewards:
+          commands:
+            - "baa credits give {player} 50"
+            - "baa xp give {player} 50"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+50 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+50 XP</light_purple>"
+      3:
+        name: "Arena Specialist"
+        description:
+          - "Play 30 matches, survive 75 rounds, complete 15 perfect builds, and win 3 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 30"
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 75"
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 15"
+          - "{bluearcade_stat_module_speed_builders_wins} >= 3"
+        rewards:
+          commands:
+            - "baa credits give {player} 85"
+            - "baa xp give {player} 85"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+85 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+85 XP</light_purple>"
+      4:
+        name: "Memory Architect"
+        description:
+          - "Play 60 matches, survive 150 rounds, complete 35 perfect builds, and win 10 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 60"
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 150"
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 35"
+          - "{bluearcade_stat_module_speed_builders_wins} >= 10"
+        rewards:
+          commands:
+            - "baa credits give {player} 125"
+            - "baa xp give {player} 125"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+125 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+125 XP</light_purple>"
+      5:
+        name: "Ultimate Speed Builder"
+        description:
+          - "Play 100 matches, survive 300 rounds, complete 75 perfect builds, and win 25 matches."
+        conditions:
+          - "{bluearcade_stat_module_speed_builders_games_played} >= 100"
+          - "{bluearcade_stat_module_speed_builders_rounds_survived} >= 300"
+          - "{bluearcade_stat_module_speed_builders_perfect_builds} >= 75"
+          - "{bluearcade_stat_module_speed_builders_wins} >= 25"
+        rewards:
+          commands:
+            - "baa credits give {player} 200"
+            - "baa xp give {player} 200"
+          messages:
+            - "  <gold>⛁</gold> <yellow>+200 credits</yellow>"
+            - "  <dark_purple>✹</dark_purple> <light_purple>+200 XP</light_purple>"

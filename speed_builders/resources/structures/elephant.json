@@ -1,0 +1,318 @@
+{
+  "id": "elephant",
+  "name": "Elephant",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 3,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:light_gray_wool"
+    }
+  ],
+  "creatures": []
+}

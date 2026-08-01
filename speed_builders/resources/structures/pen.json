@@ -1,0 +1,252 @@
+{
+  "id": "pen",
+  "name": "Pen",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:quartz_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": -1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": 1,
+      "mat": "minecraft:blue_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:iron_block"
+    }
+  ],
+  "creatures": []
+}

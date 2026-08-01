@@ -1,0 +1,192 @@
+{
+  "id": "ring",
+  "name": "Ring",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:birch_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:birch_slab[type=top,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:diamond_block"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:diamond_block"
+    }
+  ],
+  "creatures": []
+}

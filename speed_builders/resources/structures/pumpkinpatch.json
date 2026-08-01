@@ -1,0 +1,240 @@
+{
+  "id": "pumpkinpatch",
+  "name": "Pumpkinpatch",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:carved_pumpkin[facing=south]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:carved_pumpkin[facing=south]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:carved_pumpkin[facing=south]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:carved_pumpkin[facing=north]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:carved_pumpkin[facing=north]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:carved_pumpkin[facing=north]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:carved_pumpkin[facing=north]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:carved_pumpkin[facing=north]"
+    }
+  ],
+  "creatures": []
+}

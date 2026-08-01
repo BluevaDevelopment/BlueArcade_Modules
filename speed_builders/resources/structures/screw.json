@@ -1,0 +1,72 @@
+{
+  "id": "screw",
+  "name": "Screw",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:stone"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=top,shape=outer_right,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=outer_right,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=outer_right,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=top,shape=outer_right,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

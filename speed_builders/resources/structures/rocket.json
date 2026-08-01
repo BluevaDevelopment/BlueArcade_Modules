@@ -1,0 +1,390 @@
+{
+  "id": "rocket",
+  "name": "Rocket",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:orange_stained_glass_pane[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:quartz_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:orange_stained_glass_pane[east=false,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:orange_stained_glass_pane[east=true,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:orange_stained_glass_pane[east=true,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:orange_stained_glass_pane[east=false,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:orange_stained_glass_pane[east=false,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:quartz_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:quartz_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:black_stained_glass_pane[east=false,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:black_stained_glass_pane[east=true,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:quartz_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:quartz_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:quartz_stairs[facing=south,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:quartz_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:quartz_stairs[facing=west,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:quartz_block"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:quartz_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:quartz_stairs[facing=east,half=bottom,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:quartz_stairs[facing=west,half=bottom,shape=outer_right,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

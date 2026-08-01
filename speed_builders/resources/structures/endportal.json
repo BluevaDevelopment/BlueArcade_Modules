@@ -1,0 +1,444 @@
+{
+  "id": "endportal",
+  "name": "Endportal",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:lava[level=0]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:lava[level=0]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:lava[level=0]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:lava[level=0]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:end_portal_frame[eye=false,facing=west]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:polished_andesite"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:cobweb"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:cobweb"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:cobweb"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:stone_bricks"
+    }
+  ],
+  "creatures": []
+}

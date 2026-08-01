@@ -1,0 +1,162 @@
+{
+  "id": "jungletree",
+  "name": "Jungletree",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:jungle_log[axis=y]"
+    },
+    {
+      "dx": -3,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=3,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=3,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=5,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=3,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=2,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=3,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 7,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=5,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=5,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=3,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=4,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 8,
+      "dz": 0,
+      "mat": "minecraft:jungle_leaves[distance=5,persistent=true,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

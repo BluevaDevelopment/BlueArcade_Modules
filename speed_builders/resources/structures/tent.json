@@ -1,0 +1,318 @@
+{
+  "id": "tent",
+  "name": "Tent",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:red_bed[facing=north,occupied=false,part=head]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:red_bed[facing=north,occupied=false,part=head]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_bed[facing=north,occupied=false,part=foot]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_bed[facing=north,occupied=false,part=foot]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    }
+  ],
+  "creatures": []
+}

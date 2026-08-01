@@ -1,0 +1,55 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Speed Builders Module Settings
+
+# Visual representation in core vote menu
+menus:
+  vote:
+    item: "BRICKS"
+
+# Game timing (seconds)
+time:
+  showcase: 10
+  between_rounds: 3
+  elimination_delay: 4
+
+# Gameplay behavior
+gameplay:
+  # When enabled, players cannot move beyond the exact X, Y, and Z bounds of their assigned plot.
+  strict_plot_region: false
+  # Extra horizontal blocks players may move outside their assigned plot before the border stops them.
+  # This value is ignored when strict_plot_region is enabled.
+  plot_border_margin: 6
+
+# Guardian showcase behavior
+guardian:
+  # How many blocks above the showcase top the guardian hovers.
+  height_above_showcase: 5
+  # Orbit radius while players are building.
+  orbit_radius: 4
+  # Rotation speed while orbiting, in degrees per tick.
+  orbit_degrees_per_tick: 3
+  # How long the elimination beam remains visible, in ticks.
+  beam_ticks: 50
+  # Maximum fake falling block shards spawned when an eliminated player's plot explodes.
+  explosion_max_shards: 220
+  # Horizontal shard velocity multiplier, stored as tenths (8 = 0.8).
+  explosion_horizontal_power: 8
+  # Upward shard velocity multiplier, stored as tenths (7 = 0.7).
+  explosion_upward_power: 7
+  # How long fake shards remain before being removed, in ticks.
+  explosion_shard_lifetime_ticks: 50
+
+# Build evaluation
+evaluation:
+  # Tolerance for connection-sensitive blocks (fences, glass panes, etc.)
+  connection_sensitive_only_material: true
+  # Blocks that always match regardless of state
+  always_match:
+    - "END_PORTAL_FRAME"

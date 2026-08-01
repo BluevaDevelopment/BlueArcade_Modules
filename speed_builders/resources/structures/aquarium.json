@@ -1,0 +1,786 @@
+{
+  "id": "aquarium",
+  "name": "Aquarium",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:tall_grass[half=lower]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:tall_grass[half=lower]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:tall_grass[half=upper]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:tall_grass[half=upper]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:acacia_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:light_blue_stained_glass"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:dark_oak_planks"
+    }
+  ],
+  "creatures": []
+}

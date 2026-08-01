@@ -1,0 +1,498 @@
+{
+  "id": "minivillage",
+  "name": "Minivillage",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:coarse_dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:oak_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:poppy"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:oak_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:poppy"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_planks"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:oak_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:poppy"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:short_grass"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:oak_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -3,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

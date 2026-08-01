@@ -1,0 +1,594 @@
+{
+  "id": "lighthouse",
+  "name": "Lighthouse",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:blue_stained_glass"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:sand"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:dead_bush"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:dead_bush"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:nether_brick_stairs[facing=south,half=top,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:nether_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:nether_brick_stairs[facing=west,half=top,shape=outer_left,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:nether_brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:nether_bricks"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:nether_brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:nether_brick_stairs[facing=north,half=top,shape=outer_right,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:nether_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:nether_brick_stairs[facing=west,half=top,shape=outer_right,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:beacon"
+    }
+  ],
+  "creatures": []
+}

@@ -1,0 +1,702 @@
+{
+  "id": "wreath",
+  "name": "Wreath",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 5,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": 2,
+      "dy": 5,
+      "dz": 2,
+      "mat": "minecraft:red_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": -1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 6,
+      "dz": 0,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 6,
+      "dz": 1,
+      "mat": "minecraft:spruce_leaves[distance=7,persistent=true,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

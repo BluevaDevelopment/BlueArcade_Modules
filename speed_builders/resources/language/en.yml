@@ -1,0 +1,181 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Speed Builders Module - English (UK)
+display_name: "Speed Builders"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Game</aqua> <gray>-</gray> <light_purple><bold>Speed Builders</bold></light_purple>"
+  - " "
+  - "<white>Description:</white>"
+  - "<gray>Memorize the build, then replicate it</gray>"
+  - "<gray>as fast as possible to survive each round.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<light_purple>Speed Builders</light_purple>"
+  lore:
+    - "<gray>Memorize and replicate builds.</gray>"
+    - "<gray>Be the last one standing!</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votes.</gray>"
+
+messages:
+  showcase_started:
+    broadcast: "<gray>Memorize this build:</gray> <light_purple><bold>{structure}</bold></light_purple>"
+  build_started:
+    broadcast: "<green><bold>GO!</bold></green> <gray>Replicate the build as fast as you can!</gray>"
+  perfect_build:
+    broadcast: "<green><bold>{player}</bold></green> <gray>got a perfect build!</gray>"
+  all_perfect:
+    broadcast: "<green><bold>Everyone got it perfect!</bold></green>"
+  judging_started:
+    broadcast: "<red><bold>TIME'S UP!</bold></red> <gray>Judging builds...</gray>"
+  elimination:
+    broadcast: "<red><bold>{player}</bold></red> <gray>has been eliminated with</gray> <yellow>{score}%</yellow><gray>!</gray>"
+  round_winner:
+    broadcast: "<green><bold>{player}</bold></green> <gray>wins the round!</gray>"
+  game_winner:
+    broadcast: "<gold><bold>{player}</bold></gold> <gray>is the champion!</gray>"
+  out_of_bounds: "<red>You cannot leave your plot area.</red>"
+  cant_build_here: "<red>You can only build inside your build area.</red>"
+
+stats:
+  descriptions:
+    wins: "Speed Builders victories"
+    games_played: "Speed Builders matches played"
+    rounds_survived: "Total rounds survived"
+    perfect_builds: "Total perfect builds"
+  labels:
+    wins: "Speed Builders wins"
+    games_played: "Speed Builders games played"
+    rounds_survived: "Rounds survived"
+    perfect_builds: "Perfect builds"
+
+titles:
+  showcase:
+    title: "<bold><gradient:aqua:dark_aqua>MEMORIZE</gradient></bold>"
+    subtitle: "<light_purple><bold>{structure}</bold></light_purple>"
+  build_start:
+    title: "<bold><gradient:green:dark_green>GO!</gradient></bold>"
+    subtitle: "<gray>Replicate the build!</gray>"
+  perfect:
+    title: "<bold><gradient:green:dark_green>PERFECT!</gradient></bold>"
+    subtitle: "<gray>You nailed it!</gray>"
+  judging:
+    title: "<bold><gradient:red:dark_red>JUDGING</gradient></bold>"
+    subtitle: "<gray>Time's up!</gray>"
+  elimination:
+    title: "<bold><gradient:red:dark_red>ELIMINATED</gradient></bold>"
+    subtitle: "<gray>You scored {score}%</gray>"
+  winner:
+    title: "<bold><gradient:gold:yellow>WINNER</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+scoreboard:
+  showcase:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Speed Builders</aqua>"
+      - ""
+      - "<white>Round:</white> <yellow>{round}</yellow>"
+      - "<white>Phase:</white> <green>Showcase</green>"
+      - "<white>Time:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  build:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Speed Builders</aqua>"
+      - ""
+      - "<white>Round:</white> <yellow>{round}</yellow>"
+      - "<white>Phase:</white> <green>Build</green>"
+      - "<white>Time:</white> <green>{time}</green>"
+      - "<white>Percentage:</white> <green>{percentage}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  judging:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Game:</white> <aqua>Speed Builders</aqua>"
+      - ""
+      - "<white>Round:</white> <yellow>{round}</yellow>"
+      - "<white>Phase:</white> <red>Judging</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  structure:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders structure <create|remove|list></yellow>"
+    create:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders structure create <id></yellow>"
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      saved: "{prefix} <green>Structure '{id}' saved with {voxels} voxels.</green>"
+    remove:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders structure remove <id></yellow>"
+      not_found: "{prefix} <red>That structure does not exist.</red>"
+      success: "{prefix} <green>Structure '{id}' has been removed.</green>"
+    list:
+      empty: "{prefix} <gray>No structures found.</gray>"
+      header: "{prefix} <green>Available structures:</green>"
+  plot:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders plot <add|set|remove|spawn|build_area></yellow>"
+    invalid_id: "{prefix} <red>Invalid plot ID.</red>"
+    not_found: "{prefix} <red>That plot does not exist.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      set: "{prefix} <green>Plot {index} region saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+      spawn_set: "{prefix} <gray>Plot spawn set to your current location. Change it with</gray> <yellow>/baa game <id> speed_builders plot spawn set {index}</yellow>"
+    set:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders plot set <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} region updated.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    remove:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders plot remove <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} has been removed.</green>"
+    spawn:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders plot spawn set <plot_id></yellow>"
+      set: "{prefix} <green>Plot {index} spawn updated to your current location.</green>"
+    build_area:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders plot build_area <set|remove> <plot_id></yellow>"
+      set: "{prefix} <green>Build area for plot {index} saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+      remove: "{prefix} <green>Build area for plot {index} has been removed.</green>"
+  build_area:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders build_area <add|set|remove></yellow>"
+    invalid_id: "{prefix} <red>Invalid build area ID.</red>"
+    not_found: "{prefix} <red>That build area does not exist.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      too_shallow: "{prefix} <red>Build area is too shallow. The selection must include at least 1 floor layer and 1 build layer.</red>"
+      below_recommended_size: "{prefix} <yellow>Warning:</yellow> <gray>This build area is</gray> <white>{x}x{y}x{z}</white><gray>. Recommended size for default structures is</gray> <white>{recommended_x}x{recommended_y}x{recommended_z}</white><gray>; larger structures will be skipped unless you add custom structures.</gray>"
+      no_floor: "{prefix} <red>No build area floor detected. The lowest layer must contain blocks.</red>"
+      too_many_floor_layers: "{prefix} <red>Too many build area floor layers. Floor must be 1-2 blocks thick.</red>"
+      set: "{prefix} <green>Build area {index} saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+      requires_plot_first: "{prefix} <red>You must add a plot first before adding a build area.</red>"
+      outside_plot: "{prefix} <red>Build area must be fully inside its corresponding plot.</red>"
+    set:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders build_area set <area_id></yellow>"
+      success: "{prefix} <green>Build area {index} updated.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Floor:</gray> <yellow>{floor}</yellow>"
+    remove:
+      usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders build_area remove <area_id></yellow>"
+      success: "{prefix} <green>Build area {index} has been removed.</green>"
+  showcase:
+    usage: "{prefix} <red>Usage:</red> <yellow>/baa game <id> speed_builders showcase <set|remove></yellow>"
+    set:
+      must_use_stick: "{prefix} <red>Select two corners with the setup tool first.</red>"
+      too_shallow: "{prefix} <red>Showcase is too shallow. The selection must be at least 10 blocks high.</red>"
+      success: "{prefix} <green>Showcase saved.</green> <gray>Blocks:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    remove:
+      success: "{prefix} <green>Showcase has been removed.</green>"

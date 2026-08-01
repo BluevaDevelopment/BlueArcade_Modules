@@ -1,0 +1,183 @@
+#  ____  _               _                      _
+# | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+# |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+# | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+# |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+#
+# [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+# Constructores rápidos Module - Spanish (ES)
+# Module-specific Spanish translations
+
+display_name: "Constructores rápidos"
+
+description:
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+  - "<aqua>Juego</aqua> <gray>-</gray> <light_purple><bold>Constructores rápidos</bold></light_purple>"
+  - " "
+  - "<white>Descripción:</white>"
+  - "<gray>Memoriza la construcción y luego replícala</gray>"
+  - "<gray>lo más rápido posible para sobrevivir cada ronda.</gray>"
+  - " "
+  - "<dark_gray><strikethrough>----------------------------------------------</strikethrough></dark_gray>"
+
+vote_menu:
+  name: "<light_purple>Constructores rápidos</light_purple>"
+  lore:
+    - "<gray>Memoriza y replica construcciones.</gray>"
+    - "<gray>¡Sé el último en pie!</gray>"
+    - ""
+    - "<white>{votes}</white> <gray>votos.</gray>"
+
+messages:
+  showcase_started:
+    broadcast: "<gray>Memoriza esta construcción:</gray> <light_purple><bold>{structure}</bold></light_purple>"
+  build_started:
+    broadcast: "<green><bold>¡YA!</bold></green> <gray>Replicate the build as fast as you can!</gray>"
+  perfect_build:
+    broadcast: "<green><bold>{player}</bold></green> <gray>¡hizo una construcción perfecta!</gray>"
+  all_perfect:
+    broadcast: "<green><bold>¡Todos la hicieron perfecta!</bold></green>"
+  judging_started:
+    broadcast: "<red><bold>¡SE ACABÓ EL TIEMPO!</bold></red> <gray>Evaluando construcciones...</gray>"
+  elimination:
+    broadcast: "<red><bold>{player}</bold></red> <gray>ha sido eliminado con</gray> <yellow>{score}%</yellow><gray>!</gray>"
+  round_winner:
+    broadcast: "<green><bold>{player}</bold></green> <gray>victorias the round!</gray>"
+  game_winner:
+    broadcast: "<gold><bold>{player}</bold></gold> <gray>¡es el campeón!</gray>"
+  out_of_bounds: "<red>No puedes salir de tu parcela.</red>"
+  cant_build_here: "<red>Solo puedes construir dentro de tu zona de construcción.</red>"
+
+stats:
+  descriptions:
+    wins: "Speed Builders victorias"
+    games_played: "Speed Builders partidas jugadas"
+    rounds_survived: "Rondas sobrevividas totales"
+    perfect_builds: "Construcciones perfectas totales"
+  labels:
+    wins: "Speed Builders victorias"
+    games_played: "Speed Builders partidas jugadas"
+    rounds_survived: "Rondas sobrevividas"
+    perfect_builds: "Construcciones perfectas"
+
+titles:
+  showcase:
+    title: "<bold><gradient:aqua:dark_aqua>MEMORIZA</gradient></bold>"
+    subtitle: "<light_purple><bold>{structure}</bold></light_purple>"
+  build_start:
+    title: "<bold><gradient:green:dark_green>¡YA!</gradient></bold>"
+    subtitle: "<gray>¡Replica la construcción!</gray>"
+  perfect:
+    title: "<bold><gradient:green:dark_green>¡PERFECTO!</gradient></bold>"
+    subtitle: "<gray>¡Lo clavaste!</gray>"
+  judging:
+    title: "<bold><gradient:red:dark_red>VOTACIÓN</gradient></bold>"
+    subtitle: "<gray>Tiempo's up!</gray>"
+  elimination:
+    title: "<bold><gradient:red:dark_red>ELIMINADO</gradient></bold>"
+    subtitle: "<gray>Has puntuado {score}%</gray>"
+  winner:
+    title: "<bold><gradient:gold:yellow>GANADOR</gradient></bold>"
+    subtitle: "<aqua><bold>{player}</bold></aqua>"
+
+scoreboard:
+  showcase:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Constructores rápidos</aqua>"
+      - ""
+      - "<white>Ronda:</white> <yellow>{round}</yellow>"
+      - "<white>Fase:</white> <green>Vista previa</green>"
+      - "<white>Tiempo:</white> <green>{time}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  build:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Constructores rápidos</aqua>"
+      - ""
+      - "<white>Ronda:</white> <yellow>{round}</yellow>"
+      - "<white>Fase:</white> <green>Construcción</green>"
+      - "<white>Tiempo:</white> <green>{time}</green>"
+      - "<white>Porcentaje:</white> <green>{percentage}</green>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+  judging:
+    title: "<bold><gradient:aqua:light_purple>Blue Arcade</gradient></bold>"
+    lines:
+      - ""
+      - "<white>Arena:</white> <aqua>{arena}</aqua>"
+      - "<white>Juego:</white> <aqua>Constructores rápidos</aqua>"
+      - ""
+      - "<white>Ronda:</white> <yellow>{round}</yellow>"
+      - "<white>Fase:</white> <red>Evaluación</red>"
+      - ""
+      - "<yellow>www.blueva.net</yellow>"
+
+setup_messages:
+  structure:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders structure <create|remove|list></yellow>"
+    create:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders structure create <id></yellow>"
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      saved: "{prefix} <green>Estructura '{id}' guardada con {voxels} vóxeles.</green>"
+    remove:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders structure remove <id></yellow>"
+      not_found: "{prefix} <red>That structure no existe.</red>"
+      success: "{prefix} <green>Structure '{id}' has been eliminado.</green>"
+    list:
+      empty: "{prefix} <gray>No se encontraron estructuras.</gray>"
+      header: "{prefix} <green>Estructuras disponibles:</green>"
+  plot:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders plot <add|set|remove|spawn|build_area></yellow>"
+    invalid_id: "{prefix} <red>ID de parcela no válido.</red>"
+    not_found: "{prefix} <red>Esa parcela no existe.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      set: "{prefix} <green>Región de la parcela {index} guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+      spawn_set: "{prefix} <gray>Aparición de la parcela establecida en tu ubicación actual. Cámbiala con</gray> <yellow>/baa game <id> speed_builders plot spawn set {index}</yellow>"
+    set:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders plot set <plot_id></yellow>"
+      success: "{prefix} <green>Región de la parcela {index} actualizada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    remove:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders plot remove <plot_id></yellow>"
+      success: "{prefix} <green>Plot {index} has been eliminado.</green>"
+    spawn:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders plot spawn set <plot_id></yellow>"
+      set: "{prefix} <green>Aparición de la parcela {index} actualizada a tu ubicación actual.</green>"
+    build_area:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders plot build_area <set|remove> <plot_id></yellow>"
+      set: "{prefix} <green>Build area for plot {index} guardado.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+      remove: "{prefix} <green>Build area for plot {index} has been eliminado.</green>"
+  build_area:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders build_area <add|set|remove></yellow>"
+    invalid_id: "{prefix} <red>No válido build area ID.</red>"
+    not_found: "{prefix} <red>That build area no existe.</red>"
+    add:
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      too_shallow: "{prefix} <red>La zona de construcción es demasiado baja. La selección debe incluir al menos 1 capa de suelo y 1 capa para construir.</red>"
+      below_recommended_size: "{prefix} <yellow>Advertencia:</yellow> <gray>Esta área de construcción mide</gray> <white>{x}x{y}x{z}</white><gray>. El tamaño recomendado para las estructuras por defecto es</gray> <white>{recommended_x}x{recommended_y}x{recommended_z}</white><gray>; las estructuras más grandes se omitirán salvo que añadas estructuras personalizadas.</gray>"
+      no_floor: "{prefix} <red>No se detectó suelo en la zona de construcción. La capa más baja debe contener bloques.</red>"
+      too_many_floor_layers: "{prefix} <red>Demasiadas capas de suelo en la zona de construcción. El suelo debe tener 1-2 bloques de grosor.</red>"
+      set: "{prefix} <green>Build area {index} guardado.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+      requires_plot_first: "{prefix} <red>Debes añadir una parcela antes de añadir una zona de construcción.</red>"
+      outside_plot: "{prefix} <red>Build area debe ser fully inside its corresponding plot.</red>"
+    set:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders build_area set <area_id></yellow>"
+      success: "{prefix} <green>Área de construcción {index} actualizada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray> <gray>Suelo:</gray> <yellow>{floor}</yellow>"
+    remove:
+      usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders build_area remove <area_id></yellow>"
+      success: "{prefix} <green>Build area {index} has been eliminado.</green>"
+  showcase:
+    usage: "{prefix} <red>Uso:</red> <yellow>/baa game <id> speed_builders showcase <set|remove></yellow>"
+    set:
+      must_use_stick: "{prefix} <red>Selecciona primero dos esquinas con la herramienta de setup.</red>"
+      too_shallow: "{prefix} <red>La zona de muestra es demasiado baja. La selección debe tener al menos 10 bloques de altura.</red>"
+      success: "{prefix} <green>Vista previa guardada.</green> <gray>Bloques:</gray> <white>{blocks}</white> <gray>({x}x{y}x{z})</gray>"
+    remove:
+      success: "{prefix} <green>La vista previa ha sido eliminada.</green>"

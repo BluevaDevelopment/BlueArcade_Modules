@@ -1,0 +1,228 @@
+{
+  "id": "tophat",
+  "name": "Tophat",
+  "center": {
+    "cx": 8,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": -7,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -6,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -5,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -4,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": 4,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 5,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 6,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": 4,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 5,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 6,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brown_carpet"
+    },
+    {
+      "dx": -6,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": -5,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:gold_block"
+    },
+    {
+      "dx": -4,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:white_wool"
+    },
+    {
+      "dx": 4,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 5,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 6,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 4,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 5,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": 6,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:cobblestone"
+    },
+    {
+      "dx": -6,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -5,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -4,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 4,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 5,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 6,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 4,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 5,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 6,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:cobblestone_slab[type=bottom,waterlogged=false]"
+    }
+  ],
+  "creatures": []
+}

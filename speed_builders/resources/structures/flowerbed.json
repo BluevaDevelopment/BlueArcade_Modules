@@ -1,0 +1,612 @@
+{
+  "id": "flowerbed",
+  "name": "Flowerbed",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -2,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": -1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:dirt"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 1,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 2,
+      "mat": "minecraft:brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 0,
+      "dz": 3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -2,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": -1,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:grass_block[snowy=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 1,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 2,
+      "mat": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "dx": -3,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": -1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 0,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 1,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "dx": 3,
+      "dy": 1,
+      "dz": 3,
+      "mat": "minecraft:bricks"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": -2,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": -1,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 0,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:rose_bush[half=lower]"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 1,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": -1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 1,
+      "dy": 2,
+      "dz": 2,
+      "mat": "minecraft:rose_bush[half=upper]"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:rose_bush[half=upper]"
+    }
+  ],
+  "creatures": []
+}

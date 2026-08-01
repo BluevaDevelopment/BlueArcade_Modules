@@ -1,0 +1,498 @@
+{
+  "id": "helmet",
+  "name": "Helmet",
+  "center": {
+    "cx": 3,
+    "cy": 0,
+    "cz": 3
+  },
+  "voxels": [
+    {
+      "dx": -2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 0,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 1,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_slab[type=bottom,waterlogged=false]"
+    },
+    {
+      "dx": 2,
+      "dy": 0,
+      "dz": 0,
+      "mat": "minecraft:stone_brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]"
+    },
+    {
+      "dx": -2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 1,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": 2,
+      "dy": 2,
+      "dz": 0,
+      "mat": "minecraft:stone_bricks"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 3,
+      "dz": 2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 3,
+      "dz": 3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -3,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -3,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 2,
+      "dy": 4,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": 0,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:sea_lantern"
+    },
+    {
+      "dx": 1,
+      "dy": 4,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -2,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": -1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 0,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": -1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:yellow_wool"
+    },
+    {
+      "dx": 1,
+      "dy": 5,
+      "dz": 1,
+      "mat": "minecraft:yellow_terracotta"
+    },
+    {
+      "dx": 0,
+      "dy": 5,
+      "dz": 2,
+      "mat": "minecraft:black_wool"
+    }
+  ],
+  "creatures": []
+}
