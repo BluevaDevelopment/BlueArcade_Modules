@@ -69,6 +69,12 @@ end
 local function customPlaceholders(session, handle)
   local mode = M.winMode(session)
   local placeholders = {
+    -- Must be provided here, not left to Core's generic scoreboard formatter: that formatter
+    -- has its own hardcoded {time} handling (arena lobby countdown), which only kicks in when
+    -- a {time} token survives this placeholder pass unresolved - which used to always happen,
+    -- since this table never set one, leaving the match scoreboard permanently showing the
+    -- (by then finished) lobby countdown instead of the actual time left in the round.
+    time = formatTime((session.state and session.state.timeLeft) or 0),
     alive = tostring(#session.alivePlayers()),
     spectators = tostring(#session.spectators()),
     kills = tostring(playerKills(session, handle)),
