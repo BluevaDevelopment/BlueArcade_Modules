@@ -92,7 +92,7 @@ local function formatDistance(session, handle)
 
   local distance = distanceToFinish(session, handle)
   if distance == math.huge then return "?" end
-  return string.format("%.0f", distance)
+  return tostring(math.floor(distance + 0.5))
 end
 
 local function placeholders(session, handle)
