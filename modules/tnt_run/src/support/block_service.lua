@@ -172,7 +172,7 @@ local function resolveFloorDelayTicks(session)
   return math.floor(delay)
 end
 
-local function spawnParticles(session, x, y, z)
+local function spawnParticles(session, x, y, z, material)
   if not session.config.getBoolean("blocks.particles.enabled", true) then return end
 
   local particle = session.config.getString("blocks.particles.type") or "BLOCK"
@@ -181,8 +181,8 @@ local function spawnParticles(session, x, y, z)
   local speed = session.config.getDouble("blocks.particles.speed", 0.15)
   local location = { x = x + 0.5, y = y + 0.5, z = z + 0.5 }
 
-  if not session.world.spawnParticleAt(location, particle, count, spread, spread * 0.6, spread, speed) then
-    session.world.spawnParticleAt(location, "BLOCK_CRACK", count, spread, spread * 0.6, spread, speed)
+  if not session.world.spawnParticleAt(location, particle, count, spread, spread * 0.6, spread, speed, material) then
+    session.world.spawnParticleAt(location, "CLOUD", count, spread, spread * 0.6, spread, speed)
   end
 end
 
@@ -190,7 +190,7 @@ local function handleBlockRemoval(session, state, x, y, z, trigger)
   local material = session.world.blockTypeAt(x, y, z)
   if material == "AIR" or material == "BARRIER" then return end
 
-  spawnParticles(session, x, y, z)
+  spawnParticles(session, x, y, z, material)
   if session.config.getBoolean("blocks.falling.enabled", true) then
     fallingBlockService.spawnFallingShard(session, { x = x + 0.5, y = y + 0.1, z = z + 0.5 }, material)
   end
