@@ -23,6 +23,12 @@ local function isSpectator(session, handle)
   return false
 end
 
+-- Whether a most_kills player is mid-respawn-wait in native spectator mode.
+local function isWaitingRespawn(session, handle)
+  return session.state.waitingRespawn ~= nil and session.state.waitingRespawn[handle] == true
+end
+M.isWaitingRespawn = isWaitingRespawn
+
 function M.handleStart(session)
   session.scheduler.cancelArenaTasks()
 
@@ -31,6 +37,7 @@ function M.handleStart(session)
     winnerId = nil,
     kills = {},
     supplyTicks = 0,
+    waitingRespawn = {},
   }
 
   messagingService.sendDescription(session, outcomeService.getWinMode(session))
@@ -183,7 +190,7 @@ function M.handleKillCredit(session, killer)
 end
 
 function M.handlePlayerElimination(session, target, killer)
-  if isSpectator(session, target) then return end
+  if isSpectator(session, target) or isWaitingRespawn(session, target) then return end
 
   local deathLocation = session.player.location(target)
   session.visualEffects.playDeathEffect(target, deathLocation)
@@ -195,12 +202,7 @@ function M.handlePlayerElimination(session, target, killer)
 
   local winMode = outcomeService.getWinMode(session)
   if winMode == "most_kills" then
-    session.setSpectating(target, true)
-    -- session.setSpectating alone leaves Core's shared "fake spectator" look (ADVENTURE +
-    -- flight + an invisibility effect, see PhysicalStateManager.prepareAsSpectator) - fine for
-    -- most modules, but this is a few-second respawn wait, not a real elimination, and native
-    -- noclip reads much better for it. Scoped to just this mode/module on purpose: the shared
-    -- fake-spectator system is used by all 27 other modules and isn't being changed globally.
+    session.state.waitingRespawn[target] = true
     session.player.setGameMode(target, "SPECTATOR")
     if killer ~= nil then
       session.titles.sendRaw(target,
@@ -212,13 +214,11 @@ function M.handlePlayerElimination(session, target, killer)
     local respawnDelayTicks = math.max(0, session.config.getInt("respawn.most_kills_delay_ticks", 60))
     session.scheduler.runLater("arena_" .. session.arenaId .. "_one_in_the_chamber_respawn_" .. target, function()
       if session.state.ended then return end
-      if not isSpectator(session, target) then return end
+      if not isWaitingRespawn(session, target) then return end
 
-      session.setSpectating(target, false)
+      session.state.waitingRespawn[target] = nil
       session.respawnPlayer(target)
       session.player.setGameMode(target, "SURVIVAL")
-      session.player.setFlying(target, false)
-      session.player.setAllowFlight(target, false)
       loadoutService.applyRespawnLoadout(session, target)
       session.sounds.play(target, session.coreConfig.getSound("sounds.in_game.respawn"))
     end, respawnDelayTicks)

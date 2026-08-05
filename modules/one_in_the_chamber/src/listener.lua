@@ -17,6 +17,7 @@ function M.register()
   -- code; out-of-bounds during COUNTDOWN falls through to the same real-respawn branch below.
   ba.events.on("player_move", function(session, e)
     if not session.isPlaying(e.player) then return end
+    if gameManager.isWaitingRespawn(session, e.player) then return end
 
     if session.phase() ~= "PLAYING" then
       if not session.isInsideBounds(e.to) then
