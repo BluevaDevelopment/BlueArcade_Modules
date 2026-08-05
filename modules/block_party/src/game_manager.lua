@@ -25,7 +25,9 @@ local function ticksToSeconds(ticks)
 end
 
 local function formatSeconds(seconds)
-  return string.format("%.1f", seconds)
+  if seconds < 0 then seconds = 0 end
+  local tenths = math.floor(seconds * 10 + 0.5)
+  return math.floor(tenths / 10) .. "." .. (tenths % 10)
 end
 
 local function locationKey(x, y, z)
