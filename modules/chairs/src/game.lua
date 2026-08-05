@@ -30,7 +30,8 @@ end
 
 local function formatSeconds(seconds)
   if seconds < 0 then seconds = 0 end
-  return string.format("%.1f", seconds)
+  local tenths = math.floor(seconds * 10 + 0.5)
+  return math.floor(tenths / 10) .. "." .. (tenths % 10)
 end
 
 local function sendDescription(session)
