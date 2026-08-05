@@ -196,6 +196,12 @@ function M.handlePlayerElimination(session, target, killer)
   local winMode = outcomeService.getWinMode(session)
   if winMode == "most_kills" then
     session.setSpectating(target, true)
+    -- session.setSpectating alone leaves Core's shared "fake spectator" look (ADVENTURE +
+    -- flight + an invisibility effect, see PhysicalStateManager.prepareAsSpectator) - fine for
+    -- most modules, but this is a few-second respawn wait, not a real elimination, and native
+    -- noclip reads much better for it. Scoped to just this mode/module on purpose: the shared
+    -- fake-spectator system is used by all 27 other modules and isn't being changed globally.
+    session.player.setGameMode(target, "SPECTATOR")
     if killer ~= nil then
       session.titles.sendRaw(target,
         session.config.translation(target, "titles.you_died.title"),
