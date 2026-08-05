@@ -36,7 +36,7 @@ function M.formatDistance(session, handle)
 
   local distance = getDistanceToFinish(session, handle)
   if distance == nil then return "?" end
-  return string.format("%.0f", distance)
+  return tostring(math.floor(distance + 0.5))
 end
 
 -- Spectators first in finish order, then alive players ascending by distance to the finish line.
