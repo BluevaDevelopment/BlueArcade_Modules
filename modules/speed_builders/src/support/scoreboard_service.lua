@@ -15,7 +15,7 @@ local function formatCountdownTime(seconds)
 end
 
 local function formatPercentage(percentage)
-  return string.format("%.0f%%", percentage or 0)
+  return tostring(math.floor((percentage or 0) + 0.5)) .. "%"
 end
 M.formatPercentage = formatPercentage
 

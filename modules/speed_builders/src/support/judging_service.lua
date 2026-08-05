@@ -82,6 +82,10 @@ function M.evaluateBuild(session, state, handle, startNextRound)
   end
 end
 
+local function formatScore(score)
+  return tostring(math.floor(score + 0.5))
+end
+
 local function eliminatePlayer(session, state, handle, score)
   session.eliminate(handle, "lowest_score")
   session.setSpectating(handle, true)
@@ -90,12 +94,12 @@ local function eliminatePlayer(session, state, handle, score)
   local title = session.config.translation(handle, "titles.elimination.title")
   local subtitle = session.config.translation(handle, "titles.elimination.subtitle")
   if title and subtitle then
-    session.titles.sendRaw(handle, title, subtitle:gsub("{score}", string.format("%.0f", score)), 0, 30, 10)
+    session.titles.sendRaw(handle, title, subtitle:gsub("{score}", formatScore(score)), 0, 30, 10)
   end
 
   local broadcast = session.config.translation(handle, "messages.elimination.broadcast")
   if broadcast then
-    local text = broadcast:gsub("{player}", session.player.name(handle)):gsub("{score}", string.format("%.0f", score))
+    local text = broadcast:gsub("{player}", session.player.name(handle)):gsub("{score}", formatScore(score))
     for _, viewer in ipairs(session.players()) do
       session.messages.sendRaw(viewer, text)
     end
