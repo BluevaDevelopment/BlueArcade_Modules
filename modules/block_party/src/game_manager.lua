@@ -298,7 +298,7 @@ local function revealTarget(session, state)
   state.displayedTime = ticksToSeconds(state.phaseTicksRemaining)
 
   messagingService.sendRoundReveal(session, state.targetMaterial)
-  for _, handle in ipairs(session.players()) do
+  for _, handle in ipairs(session.alivePlayers()) do
     playerEffectsService.giveTargetItem(session, handle, state.targetMaterial)
   end
 end
