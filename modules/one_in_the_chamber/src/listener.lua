@@ -77,6 +77,7 @@ function M.register()
     end
 
     gameManager.handleHit(session, e.damager)
+    gameManager.recordHit(session, e.target, e.damager)
 
     local isArrow = ARROW_TYPES[e.projectileType] == true
     local finalHealth = isArrow and -1 or (session.player.health(e.target) - e.finalDamage)
@@ -99,7 +100,7 @@ function M.register()
     if finalHealth > 0 then return end
 
     e:cancel()
-    gameManager.handlePlayerElimination(session, e.player, nil)
+    gameManager.handleNonCombatDeath(session, e.player)
   end)
 end
 

@@ -16,6 +16,11 @@ respawn:
   # Delay (in ticks) before a player respawns in most_kills mode after being eliminated
   most_kills_delay_ticks: 60
 
+kills:
+  # Time window (in ticks) to credit a killer after hitting a player, so knocking someone
+  # into the void still counts as a kill. 20 ticks = 1 second.
+  credit_window_ticks: 200
+
 combat:
   # Drop the victim's inventory on the ground when eliminated in last_standing mode
   drop_items_on_death: true

@@ -38,6 +38,11 @@ block_rules:
 spawn_protection:
   fall_damage_seconds: 5
 
+kills:
+  # Time window (in ticks) to credit a killer after hitting a player, so knocking someone
+  # into the void still counts as a kill. 20 ticks = 1 second.
+  credit_window_ticks: 200
+
 combat:
   kill_regeneration:
     health: 6.0

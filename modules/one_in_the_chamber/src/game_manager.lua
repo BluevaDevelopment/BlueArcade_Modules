@@ -36,6 +36,8 @@ function M.handleStart(session)
     ended = false,
     winnerId = nil,
     kills = {},
+    lastHitBy = {},
+    lastHitAt = {},
     supplyTicks = 0,
     waitingRespawn = {},
   }
@@ -189,8 +191,53 @@ function M.handleKillCredit(session, killer)
   loadoutService.rewardKillArrow(session, killer)
 end
 
+-- Combat tag, so a player knocked to their death still credits whoever hit them last.
+function M.recordHit(session, victim, attacker)
+  if not victim or not attacker or victim == attacker then
+    return
+  end
+  session.state.lastHitBy[victim] = attacker
+  session.state.lastHitAt[victim] = os.clock()
+end
+
+local function resolveRecentAttacker(session, victim)
+  local attacker = session.state.lastHitBy[victim]
+  local hitAt = session.state.lastHitAt[victim]
+  if not attacker or not hitAt then
+    return nil
+  end
+
+  local windowSeconds = math.max(0, session.config.getInt("kills.credit_window_ticks", 200)) * 0.05
+  if os.clock() - hitAt > windowSeconds then
+    return nil
+  end
+
+  for _, handle in ipairs(session.players()) do
+    if handle == attacker and session.isPlaying(handle) then
+      return handle
+    end
+  end
+  return nil
+end
+
+-- Falling and other environmental deaths still count as a kill when someone hit the victim
+-- shortly before: knocking an enemy off the arena is a normal way to win a fight.
+function M.handleNonCombatDeath(session, target)
+  local killer = resolveRecentAttacker(session, target)
+  if killer then
+    M.handleKillCredit(session, killer)
+    M.handlePlayerElimination(session, target, killer)
+    return
+  end
+
+  M.handlePlayerElimination(session, target, nil)
+end
+
 function M.handlePlayerElimination(session, target, killer)
   if isSpectator(session, target) or isWaitingRespawn(session, target) then return end
+
+  session.state.lastHitBy[target] = nil
+  session.state.lastHitAt[target] = nil
 
   local deathLocation = session.player.location(target)
   session.visualEffects.playDeathEffect(target, deathLocation)

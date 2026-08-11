@@ -116,6 +116,7 @@ function M.register()
     end
 
     gameManager.handleHit(session, e.damager)
+    gameManager.recordHit(session, e.target, e.damager)
 
     local finalHealth = session.player.health(e.target) - e.finalDamage
     if finalHealth > 0 then return end

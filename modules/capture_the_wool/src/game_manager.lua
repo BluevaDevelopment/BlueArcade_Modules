@@ -28,6 +28,8 @@ local function newState()
     teamSpawns = {},
     teamRestrictedZones = {},
     fallProtectionUntil = {},
+    lastHitBy = {},
+    lastHitAt = {},
     playerPlacedBlocks = {},
     countdownPrepared = {},
     voteState = nil,
@@ -378,12 +380,56 @@ function M.addPlayerDeath(session, handle)
   session.state.deaths[handle] = (session.state.deaths[handle] or 0) + 1
 end
 
+-- Combat tag, so a player knocked into the void still credits whoever hit them last.
+function M.recordHit(session, victimHandle, attackerHandle)
+  if not victimHandle or not attackerHandle or victimHandle == attackerHandle then
+    return
+  end
+  session.state.lastHitBy[victimHandle] = attackerHandle
+  session.state.lastHitAt[victimHandle] = os.clock()
+end
+
+local function clearCombatTag(session, victimHandle)
+  session.state.lastHitBy[victimHandle] = nil
+  session.state.lastHitAt[victimHandle] = nil
+end
+
+local function resolveRecentAttacker(session, victimHandle)
+  local attackerHandle = session.state.lastHitBy[victimHandle]
+  local hitAt = session.state.lastHitAt[victimHandle]
+  if not attackerHandle or not hitAt then
+    return nil
+  end
+
+  local windowSeconds = math.max(0, session.config.getInt("kills.credit_window_ticks", 200)) * 0.05
+  if os.clock() - hitAt > windowSeconds then
+    return nil
+  end
+
+  for _, handle in ipairs(session.players()) do
+    if handle == attackerHandle and session.isPlaying(handle) then
+      return handle
+    end
+  end
+  return nil
+end
+
 function M.handleKill(session, attackerHandle, victimHandle)
+  clearCombatTag(session, victimHandle)
   combatService.handleKillCredit(session, M, attackerHandle)
   combatService.handleElimination(session, M, victimHandle, attackerHandle)
 end
 
+-- Falling and void deaths still count as a kill when someone hit the victim shortly before:
+-- knocking an enemy off a bridge is a normal way to win a fight.
 function M.handleNonCombatDeath(session, victimHandle)
+  local killerHandle = resolveRecentAttacker(session, victimHandle)
+  if killerHandle then
+    M.handleKill(session, killerHandle, victimHandle)
+    return
+  end
+
+  clearCombatTag(session, victimHandle)
   combatService.handleElimination(session, M, victimHandle, nil)
 end
 

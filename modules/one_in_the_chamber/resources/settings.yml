@@ -16,6 +16,11 @@ respawn:
   # Delay (in ticks) before a player respawns in most_kills mode after being eliminated
   most_kills_delay_ticks: 40
 
+kills:
+  # Time window (in ticks) to credit a killer after hitting a player, so knocking someone
+  # to their death still counts as a kill. 20 ticks = 1 second.
+  credit_window_ticks: 200
+
 items:
   # Items to give players on game start
   # Format: MATERIAL:AMOUNT:SLOT

@@ -42,6 +42,8 @@ function M.startGame(session)
   session.state = {
     ended = false,
     kills = {},
+    lastHitBy = {},
+    lastHitAt = {},
     supplyTicks = 0,
     previousDifficulty = nil,
     winnerId = nil,
@@ -172,12 +174,56 @@ function M.handleHit(session, attacker)
   combatService.handleHit(session, attacker)
 end
 
+-- Combat tag, so a player knocked into the void still credits whoever hit them last.
+function M.recordHit(session, victim, attacker)
+  if not victim or not attacker or victim == attacker then
+    return
+  end
+  session.state.lastHitBy[victim] = attacker
+  session.state.lastHitAt[victim] = os.clock()
+end
+
+local function clearCombatTag(session, victim)
+  session.state.lastHitBy[victim] = nil
+  session.state.lastHitAt[victim] = nil
+end
+
+local function resolveRecentAttacker(session, victim)
+  local attacker = session.state.lastHitBy[victim]
+  local hitAt = session.state.lastHitAt[victim]
+  if not attacker or not hitAt then
+    return nil
+  end
+
+  local windowSeconds = math.max(0, session.config.getInt("kills.credit_window_ticks", 200)) * 0.05
+  if os.clock() - hitAt > windowSeconds then
+    return nil
+  end
+
+  for _, handle in ipairs(session.players()) do
+    if handle == attacker and session.isPlaying(handle) then
+      return handle
+    end
+  end
+  return nil
+end
+
 function M.handleKill(session, attacker, victim)
+  clearCombatTag(session, victim)
   combatService.handleKillCredit(session, attacker)
   combatService.handleElimination(session, victim, attacker)
 end
 
+-- Falling and void deaths still count as a kill when someone hit the victim shortly before:
+-- knocking an enemy off the arena is a normal way to win a fight.
 function M.handleNonCombatDeath(session, victim)
+  local killer = resolveRecentAttacker(session, victim)
+  if killer then
+    M.handleKill(session, killer, victim)
+    return
+  end
+
+  clearCombatTag(session, victim)
   combatService.handleElimination(session, victim, nil)
 end
 

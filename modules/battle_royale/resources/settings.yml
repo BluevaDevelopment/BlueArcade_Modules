@@ -42,6 +42,11 @@ drop:
   # Half-size for the dragon flight path
   default_half_size: 80
 
+kills:
+  # Time window (in ticks) to credit a killer after hitting a player, so knocking someone
+  # to their death still counts as a kill. 20 ticks = 1 second.
+  credit_window_ticks: 200
+
 combat:
   kill_regeneration:
     # Health restored on eliminations (set to 0 to disable)
