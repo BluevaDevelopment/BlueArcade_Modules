@@ -95,10 +95,15 @@ function M.register()
   end)
 
   ba.events.on("player_damage", function(session, e)
-    if e.cause ~= "FALL" then return end
     if not session.isPlaying(e.player) then return end
     if session.phase() ~= "PLAYING" then return end
+    if e.cause == "FALL" then
+      e:cancel()
+      return
+    end
+    if session.player.health(e.player) - e.finalDamage > 0 then return end
     e:cancel()
+    gameManager.handlePlayerElimination(session, e.player)
   end)
 end
 
