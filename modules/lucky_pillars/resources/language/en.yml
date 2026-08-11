@@ -85,6 +85,7 @@ messages:
   eliminated: "<red>You are out! You are now a spectator.</red>"
   out_of_bounds: "<yellow>You cannot leave the arena.</yellow>"
   block_breaking_disabled: "<red>Block breaking is disabled! (Unbreakable modifier)</red>"
+  block_placing_below_lava: "<red>You cannot build below the lava!</red>"
   deaths:
     killed_by_player:
       - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>was eliminated by</gray> <yellow>{killer}</yellow><gray>.</gray>"

@@ -85,6 +85,7 @@ messages:
   eliminated: "<red>¡Has sido eliminado! Ahora eres espectador.</red>"
   out_of_bounds: "<yellow>No puedes salir de la arena.</yellow>"
   block_breaking_disabled: "<red>¡Romper bloques está desactivado! (Modificador Irrompible)</red>"
+  block_placing_below_lava: "<red>¡No puedes construir por debajo de la lava!</red>"
   deaths:
     killed_by_player:
       - "<dark_red>✘</dark_red> <red>{victim}</red> <gray>fue eliminado por</gray> <yellow>{killer}</yellow><gray>.</gray>"

@@ -67,6 +67,11 @@ function M.register()
       e:cancel()
       return
     end
+    if session.state.lavaFrontY and e.location.y <= session.state.lavaFrontY then
+      e:cancel()
+      session.messages.sendRaw(e.player, session.config.translation(e.player, "messages.block_placing_below_lava"))
+      return
+    end
     if not session.isInsideBounds(e.location) then
       e:cancel()
     end

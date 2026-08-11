@@ -32,6 +32,7 @@ local function newState()
     fallProtectionUntil = {},
     lastHitBy = {},
     lastHitAt = {},
+    lavaFrontY = nil,
     voteState = nil,
     selectedModifier = "none",
     blockBreakingDisabled = false,
@@ -556,6 +557,7 @@ local function startRisingLava(session)
   local intervalTicks = intervalSeconds * 20
   local currentY = startY
 
+  session.state.lavaFrontY = currentY
   fillLavaLayer(session, minX, maxX, minZ, maxZ, currentY)
   currentY = currentY + 1
 
@@ -564,6 +566,7 @@ local function startRisingLava(session)
       session.scheduler.cancelTask(taskId)
       return
     end
+    session.state.lavaFrontY = currentY
     fillLavaLayer(session, minX, maxX, minZ, maxZ, currentY)
     currentY = currentY + 1
   end, intervalTicks, intervalTicks)
