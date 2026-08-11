@@ -493,7 +493,8 @@ local function fillLavaLayer(session, minX, maxX, minZ, maxZ, y)
   for x = minX, maxX do
     for z = minZ, maxZ do
       if session.world.isChunkLoaded(math.floor(x / 16), math.floor(z / 16)) then
-        if session.world.blockTypeAt(x, y, z) == "AIR" then
+        local blockType = session.world.blockTypeAt(x, y, z)
+        if blockType ~= "BARRIER" and blockType ~= "LAVA" then
           session.world.setBlockType(x, y, z, "LAVA", false)
         end
       end
