@@ -722,7 +722,8 @@ function M.beginPlaying(session)
   local fallProtectionSeconds = math.max(0, session.config.getInt("spawn_protection.fall_damage_seconds", 5))
   for _, handle in ipairs(session.players()) do
     session.player.setGameMode(handle, "SURVIVAL")
-    session.player.setHealth(handle, 20.0)
+    -- Never above the player's own max: applyModifier may have lowered it (one_heart sets it to 2).
+    session.player.setHealth(handle, math.min(20.0, session.player.maxHealth(handle)))
     session.player.setFoodLevel(handle, 20)
     session.player.setSaturation(handle, 20.0)
     session.player.setFireTicks(handle, 0)
