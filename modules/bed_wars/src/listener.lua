@@ -33,6 +33,15 @@ local function isBedMaterial(material)
   return material ~= nil and #material > #BED_SUFFIX and material:sub(-#BED_SUFFIX) == BED_SUFFIX
 end
 
+local ARMOR_SUFFIXES = { "_HELMET", "_CHESTPLATE", "_LEGGINGS", "_BOOTS" }
+local function isArmorMaterial(material)
+  if material == nil then return false end
+  for _, suffix in ipairs(ARMOR_SUFFIXES) do
+    if material:sub(-#suffix) == suffix then return true end
+  end
+  return false
+end
+
 function M.register()
   -- Mirrors legacy BedWarsVoteListener: /bedwarsvote is a second entry point into the same vote system as the waiting item.
   ba.events.on("player_command", function(session, e)
@@ -322,6 +331,14 @@ function M.register()
   ba.events.on("player_drop_item", function(session, e)
     if not session.isPlaying(e.player) then return end
     if e.itemPermanentId ~= nil then
+      e:cancel()
+    end
+  end)
+
+  -- Armor never wears out in BedWars, whatever piece it is or wherever it came from.
+  ba.events.on("player_item_damage", function(session, e)
+    if not session.isPlaying(e.player) then return end
+    if isArmorMaterial(e.itemType) then
       e:cancel()
     end
   end)

@@ -400,7 +400,7 @@ shop:
           name: "Chainmail Armor"
           permanent: true
           downgradable: false
-          unbreakable: false
+          unbreakable: true
           weight: 0
           tiers:
             1:
@@ -423,7 +423,7 @@ shop:
           name: "Iron Armor"
           permanent: true
           downgradable: false
-          unbreakable: false
+          unbreakable: true
           weight: 1
           tiers:
             1:
@@ -446,7 +446,7 @@ shop:
           name: "Diamond Armor"
           permanent: true
           downgradable: false
-          unbreakable: false
+          unbreakable: true
           weight: 2
           tiers:
             1:
