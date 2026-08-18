@@ -82,6 +82,8 @@ function M.handleElimination(session, targetHandle, killerHandle)
   session.player.dropInventory(targetHandle)
   session.eliminate(targetHandle, session.config.translation(targetHandle, "messages.eliminated"))
   session.setSpectating(targetHandle, true)
+  -- one_heart lowers max health; restore it here so it never follows the player out of the arena.
+  session.player.resetMaxHealth(targetHandle)
   sendDeathTitle(session, targetHandle, killerHandle ~= nil)
 end
 

@@ -143,6 +143,8 @@ function M.register()
     end
     if session then
       voteService.clearActiveVote(session, e.player)
+      -- Leaving mid-game would otherwise save the modifier's max health with the player.
+      session.player.resetMaxHealth(e.player)
     end
   end)
 end
