@@ -35,8 +35,10 @@ local function breakIntoInventory(session, handle, blockType, location)
   if not blockType or blockType == "AIR" then
     return
   end
+  -- Read before clearing it: a double slab gives back both slabs.
+  local amount = session.world.blockItemCountAt(location.x, location.y, location.z)
   session.world.setBlockType(location.x, location.y, location.z, "AIR", false)
-  session.player.giveBlockItem(handle, blockType, 1)
+  session.player.giveBlockItem(handle, blockType, amount)
 end
 
 local function scheduleEvaluate(session, handle)
