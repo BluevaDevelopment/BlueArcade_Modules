@@ -1,0 +1,108 @@
+--  ____  _               _                      _
+-- | __ )| |_   _  ___   / \   _ __ ___ __ _  __| | ___
+-- |  _ \| | | | |/ _ \ / _ \ | '__/ __/ _` |/ _` |/ _ \
+-- | |_) | | |_| |  __// ___ \| | | (_| (_| | (_| |  __/
+-- |____/|_|\__,_|\___/_/   \_|_|  \___\__,_|\__,_|\___|
+--
+-- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
+
+-- Starting items, the kit selected in the store (kits.yml's default_kit otherwise), effects and kill regeneration.
+local M = {}
+
+local function parseParts(raw)
+  local parts = {}
+  for part in raw:gmatch("[^:]+") do
+    parts[#parts + 1] = part
+  end
+  return parts
+end
+
+local function isInteger(value)
+  local n = tonumber(value)
+  return n ~= nil and n == math.floor(n)
+end
+
+local POTION_MATERIALS = { POTION = true, SPLASH_POTION = true, LINGERING_POTION = true }
+
+-- Lua truthiness means the string "false" is truthy - parse to a real boolean before crossing into Kotlin.
+local function toBool(str)
+  return str == "true"
+end
+
+local function giveItems(session, handle, items)
+  for _, itemStr in ipairs(items) do
+    local parts = parseParts(itemStr)
+    if #parts >= 2 then
+      local material = parts[1]:upper()
+      local amount = tonumber(parts[2])
+      local slot = -1
+      local metadataStart = 3
+      if parts[3] and isInteger(parts[3]) then
+        slot = tonumber(parts[3])
+        metadataStart = 4
+      end
+
+      if amount then
+        if POTION_MATERIALS[material] and parts[metadataStart] then
+          local extended = parts[metadataStart + 1] ~= nil and toBool(parts[metadataStart + 1])
+          local upgraded = parts[metadataStart + 2] ~= nil and toBool(parts[metadataStart + 2])
+          session.player.givePotionItem(handle, amount, slot, parts[metadataStart], extended, upgraded)
+        else
+          session.player.giveItem(handle, material, amount, slot)
+        end
+      end
+    end
+  end
+end
+
+function M.giveStartingItems(session, handle)
+  giveItems(session, handle, session.config.getStringList("items.starting_items"))
+end
+
+local function applyEffects(session, handle, effects)
+  for _, effectStr in ipairs(effects) do
+    local parts = parseParts(effectStr)
+    if #parts >= 3 then
+      local duration = tonumber(parts[2])
+      local amplifier = tonumber(parts[3])
+      if duration and amplifier then
+        session.player.addPotionEffect(handle, parts[1], duration, amplifier)
+      end
+    end
+  end
+end
+
+function M.applyStartingEffects(session, handle)
+  applyEffects(session, handle, session.config.getStringList("effects.starting_effects"))
+end
+
+local function resolveSelectedKitId(session, handle)
+  local defaultKit = session.config.getStringFrom("kits.yml", "default_kit", "noob")
+  local categoryId = session.config.getStringFrom("store.yml", "category_settings.kits.id", "lucky_pillars_kits")
+  local selected = session.store.resolveSelected(handle, categoryId)
+  if selected and session.config.containsFrom("kits.yml", "kits." .. selected) then
+    return selected
+  end
+  return defaultKit
+end
+
+function M.applySelectedKit(session, handle)
+  local kitId = resolveSelectedKitId(session, handle)
+  if not kitId or kitId == "" then
+    return
+  end
+  local base = "kits." .. kitId
+  giveItems(session, handle, session.config.getStringListFrom("kits.yml", base .. ".items"))
+  applyEffects(session, handle, session.config.getStringListFrom("kits.yml", base .. ".effects"))
+end
+
+function M.handleKillRegeneration(session, killerHandle)
+  local healAmount = session.config.getDouble("combat.kill_regeneration.health", 6.0)
+  if healAmount <= 0 then
+    return
+  end
+  local newHealth = math.min(session.player.maxHealth(killerHandle), session.player.health(killerHandle) + healAmount)
+  session.player.setHealth(killerHandle, newHealth)
+end
+
+return M

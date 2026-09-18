@@ -6,7 +6,7 @@
 --
 -- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
 
--- loadoutService is always nil (no kits), so healKiller only plays the respawn sound - CombatService.java's own dead healKiller overload (never called) isn't ported.
+local loadoutService = require("support.loadout_service")
 local M = {}
 
 local function getRandomMessage(session, handle, path)
@@ -51,6 +51,7 @@ local function sendDeathTitle(session, targetHandle, killed)
 end
 
 function M.healKiller(session, killerHandle)
+  loadoutService.handleKillRegeneration(session, killerHandle)
   session.sounds.play(killerHandle, "sounds.in_game.respawn")
 end
 

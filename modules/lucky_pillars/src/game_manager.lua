@@ -14,6 +14,7 @@ local spawnCageService = require("support.spawn_cage_service")
 local voteService = require("support.vote_service")
 local descriptionService = require("support.description_service")
 local placeholderService = require("support.placeholder_service")
+local loadoutService = require("support.loadout_service")
 
 local M = {}
 
@@ -681,39 +682,25 @@ local function startItemDistribution(session)
   end, 1, intervalTicks)
 end
 
-local function applyStartingItems(session, handle)
-  for _, itemStr in ipairs(session.config.getStringList("items.starting_items")) do
-    local parts = {}
-    for part in itemStr:gmatch("[^:]+") do
-      parts[#parts + 1] = part
-    end
-    if #parts >= 2 then
-      local amount = tonumber(parts[2])
-      local slot = parts[3] and tonumber(parts[3]) or -1
-      if amount then
-        session.player.giveItem(handle, parts[1], amount, slot)
-      end
-    end
-  end
-end
-
-local function applyStartingEffects(session, handle)
-  for _, effectStr in ipairs(session.config.getStringList("effects.starting_effects")) do
-    local parts = {}
-    for part in effectStr:gmatch("[^:]+") do
-      parts[#parts + 1] = part
-    end
-    if #parts >= 3 then
-      local duration = tonumber(parts[2])
-      local amplifier = tonumber(parts[3])
-      if duration and amplifier then
-        session.player.addPotionEffect(handle, parts[1], duration, amplifier)
-      end
-    end
-  end
-end
-
 function M.beginPlaying(session)
+  local fallProtectionSeconds = math.max(0, session.config.getInt("spawn_protection.fall_damage_seconds", 5))
+  for _, handle in ipairs(session.players()) do
+    session.player.setGameMode(handle, "SURVIVAL")
+    session.player.setHealth(handle, math.min(20.0, session.player.maxHealth(handle)))
+    session.player.setFoodLevel(handle, 20)
+    session.player.setSaturation(handle, 20.0)
+    session.player.setFireTicks(handle, 0)
+    session.player.clearInventory(handle)
+
+    loadoutService.giveStartingItems(session, handle)
+    loadoutService.applySelectedKit(session, handle)
+    loadoutService.applyStartingEffects(session, handle)
+
+    registerFallProtection(session, handle, fallProtectionSeconds)
+    session.scoreboard.show(handle, getScoreboardPath(session))
+  end
+
+  -- Modifiers go after the reset above so it can't undo them (elytra, double_health).
   voteService.applyVotes(session)
   applyModifier(session)
 
@@ -722,23 +709,6 @@ function M.beginPlaying(session)
   session.scheduler.cancelTask("arena_" .. session.arenaId .. "_lucky_pillars_cage_guard")
   spawnCageService.removeCages(session)
   voteService.broadcastVoteResults(session)
-
-  local fallProtectionSeconds = math.max(0, session.config.getInt("spawn_protection.fall_damage_seconds", 5))
-  for _, handle in ipairs(session.players()) do
-    session.player.setGameMode(handle, "SURVIVAL")
-    -- Never above the player's own max: applyModifier may have lowered it (one_heart sets it to 2).
-    session.player.setHealth(handle, math.min(20.0, session.player.maxHealth(handle)))
-    session.player.setFoodLevel(handle, 20)
-    session.player.setSaturation(handle, 20.0)
-    session.player.setFireTicks(handle, 0)
-    session.player.clearInventory(handle)
-
-    applyStartingItems(session, handle)
-    applyStartingEffects(session, handle)
-
-    registerFallProtection(session, handle, fallProtectionSeconds)
-    session.scoreboard.show(handle, getScoreboardPath(session))
-  end
 end
 
 -- Uses dropInventory (drops at the player's feet) instead of legacy's silent discard - the arena resets right after this anyway, and no binding exposes a silent-discard equivalent.

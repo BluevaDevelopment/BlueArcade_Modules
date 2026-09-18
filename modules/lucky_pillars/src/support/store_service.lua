@@ -6,7 +6,7 @@
 --
 -- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
 
--- Mirrors legacy LuckyPillarsStoreService's registration (kits.yml/cage.yml-sourced items, everything else static). Kit selection itself stays unported - confirmed dead code, legacy never calls applySelectedKit either.
+-- Registers the store categories (kits and cages come from kits.yml and cage.yml). Selected kits are given by loadout_service.
 local M = {}
 
 local function readItemsFrom(file, orderPath, base, fallbackIcon)
