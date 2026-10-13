@@ -43,6 +43,14 @@ local function isArmorMaterial(material)
 end
 
 function M.register()
+  ba.events.on("prepare_item_craft", function(session, e)
+    if session.phase() == "PLAYING" and session.isPlaying(e.player) then e.clearResult() end
+  end)
+
+  ba.events.on("craft_item", function(session, e)
+    if session.phase() == "PLAYING" and session.isPlaying(e.player) then e:cancel() end
+  end)
+
   -- Mirrors legacy BedWarsVoteListener: /bedwarsvote is a second entry point into the same vote system as the waiting item.
   ba.events.on("player_command", function(session, e)
     local message = e.message
