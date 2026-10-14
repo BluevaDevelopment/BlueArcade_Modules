@@ -28,6 +28,7 @@ function M.handleStart(session)
   session.state = {
     ended = false,
     winnerId = nil,
+    finishedPlayers = {},
     timeLeft = 0,
     tickCount = 0,
     mines = {},
@@ -120,9 +121,9 @@ local function startGameTimer(session)
 
     local allPlayers = session.players()
     local alivePlayers = session.alivePlayers()
-    local spectators = session.spectators()
+    local finishers = session.state.finishedPlayers
 
-    if #allPlayers < 2 or #alivePlayers == 0 or #spectators >= 3 or session.state.timeLeft <= 0 then
+    if #allPlayers < 2 or #alivePlayers == 0 or #finishers >= 3 or session.state.timeLeft <= 0 then
       endGameOnce(session)
       return
     end
@@ -189,14 +190,12 @@ function M.handlePlayerOutOfBounds(session, handle, deathBlock)
 end
 
 function M.handleFinishLineCross(session, handle)
-  if isSpectator(session, handle) then return end
+  if session.phase() ~= "PLAYING" or not session.isPlaying(handle) then return end
 
   session.finishPlayer(handle)
 
-  local position = 0
-  for i, spectator in ipairs(session.spectators()) do
-    if spectator == handle then position = i end
-  end
+  session.state.finishedPlayers[#session.state.finishedPlayers + 1] = handle
+  local position = #session.state.finishedPlayers
 
   M.handlePlayerFinish(session, handle)
   messageService.broadcastFinish(session, handle, position)

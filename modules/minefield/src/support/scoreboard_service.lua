@@ -8,9 +8,9 @@
 
 local M = {}
 
-local function isSpectator(session, handle)
-  for _, spectator in ipairs(session.spectators()) do
-    if spectator == handle then return true end
+local function isFinisher(session, handle)
+  for _, finisher in ipairs(session.state.finishedPlayers or {}) do
+    if finisher == handle then return true end
   end
   return false
 end
@@ -32,19 +32,18 @@ local function getDistanceToFinish(session, handle)
 end
 
 function M.formatDistance(session, handle)
-  if isSpectator(session, handle) then return "0" end
+  if isFinisher(session, handle) then return "0" end
 
   local distance = getDistanceToFinish(session, handle)
   if distance == nil then return "?" end
   return tostring(math.floor(distance + 0.5))
 end
 
--- Spectators first in finish order (session.spectators() insertion order, same convention as
--- fast_zone), then alive players sorted ascending by distance to the finish line.
+-- Real finishers in crossing order, then alive players sorted by distance.
 function M.getTopPlayersByDistance(session)
   local topPlayers = {}
-  for _, spectator in ipairs(session.spectators()) do
-    topPlayers[#topPlayers + 1] = spectator
+  for _, finisher in ipairs(session.state.finishedPlayers or {}) do
+    topPlayers[#topPlayers + 1] = finisher
   end
 
   local aliveWithDistance = {}
@@ -61,9 +60,9 @@ function M.getTopPlayersByDistance(session)
 end
 
 function M.calculateLivePosition(session, handle)
-  local spectators = session.spectators()
-  for i, spectator in ipairs(spectators) do
-    if spectator == handle then return i end
+  local finishers = session.state.finishedPlayers or {}
+  for i, finisher in ipairs(finishers) do
+    if finisher == handle then return i end
   end
 
   local aliveWithDistance = {}
@@ -73,14 +72,15 @@ function M.calculateLivePosition(session, handle)
   table.sort(aliveWithDistance, function(a, b) return a.distance < b.distance end)
 
   for i, entry in ipairs(aliveWithDistance) do
-    if entry.handle == handle then return #spectators + i end
+    if entry.handle == handle then return #finishers + i end
   end
 
-  return #spectators + #aliveWithDistance
+  return 0
 end
 
 function M.getCustomPlaceholders(session, handle)
-  local placeholders = { minefield_position = tostring(M.calculateLivePosition(session, handle)) }
+  local position = M.calculateLivePosition(session, handle)
+  local placeholders = { minefield_position = position > 0 and tostring(position) or "-" }
 
   local topPlayers = M.getTopPlayersByDistance(session)
   for i = 1, 5 do
