@@ -54,6 +54,13 @@ function M.register()
     end
   end)
 
+  ba.events.on("projectile_hit", function(session, e)
+    if not ARROW_TYPES[e.projectileType] or e.hitBlock == nil then return end
+    if not session.config.getBoolean("gameplay.allow_arrow_pickup", true) then
+      session.entities.remove(e.projectile)
+    end
+  end)
+
   -- Any arrow hit is unconditionally lethal (finalHealth = -1); melee uses a real health check.
   -- Self-damage is a separate branch: immediate elimination, no killer credited.
   ba.events.on("player_damage_by_entity", function(session, e)

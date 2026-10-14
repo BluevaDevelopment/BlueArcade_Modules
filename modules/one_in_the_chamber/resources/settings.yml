@@ -12,6 +12,10 @@ menus:
   vote:
     item: "BOW"
 
+gameplay:
+  # Allow players to collect fired arrows from the ground. Disabled arrows disappear on impact.
+  allow_arrow_pickup: true
+
 respawn:
   # Delay (in ticks) before a player respawns in most_kills mode after being eliminated
   most_kills_delay_ticks: 40
