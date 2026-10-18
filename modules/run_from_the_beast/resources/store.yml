@@ -20,6 +20,12 @@ weights:
 
 # Gameplay values used by selectable Beast equipment and kits.
 gameplay:
+  # Store equipment supplements settings.yml gear; false gives only configured gear.
+  enabled: true
+  zapper:
+    damage: 5.0
+    radius: 2.0
+    effect_duration_ticks: 200
   shredder:
     amount: 4
     slow_duration_ticks: 80
@@ -101,9 +107,9 @@ category_settings:
     icon: "WOODEN_HOE"
     description:
       - "<gray>Upgrade the zapper you wield as the Beast.</gray>"
-      - "<gray>Higher tiers hit harder and last longer.</gray>"
+      - "<gray>Right-click to fire a stunning snowball.</gray>"
       - "<gray> </gray>"
-      - "<yellow>Keep runners at bay with better shocks.</yellow>"
+      - "<yellow>Higher tiers provide more shots per game.</yellow>"
     enabled: true
     type: "selection"
     parent_id: "rftb_store"
@@ -125,11 +131,12 @@ category_settings:
         default_unlocked: true
         gameplay:
           material: "WOODEN_HOE"
+          shots: 1
           sharpness: 0
           unbreaking: 0
         description:
-          - "<gray>Entry-level zapper, gets the job done.</gray>"
-          - "<gray>Reliable starter gear.</gray>"
+          - "<gray>One stunning shot per game.</gray>"
+          - "<gray>An extra tool alongside your configured weapon.</gray>"
       stone:
         name: "<white>Stone Zapper</white>"
         icon: "STONE_HOE"
@@ -138,10 +145,11 @@ category_settings:
         default_unlocked: false
         gameplay:
           material: "STONE_HOE"
+          shots: 2
           sharpness: 1
           unbreaking: 1
         description:
-          - "<gray>Heavier hits with sturdier stone.</gray>"
+          - "<gray>Two stunning shots per game.</gray>"
           - "<gray>Great early upgrade.</gray>"
       iron:
         name: "<aqua>Iron Zapper</aqua>"
@@ -151,11 +159,12 @@ category_settings:
         default_unlocked: false
         gameplay:
           material: "IRON_HOE"
+          shots: 3
           sharpness: 2
           unbreaking: 2
         description:
-          - "<gray>Durable zapper built for long hunts.</gray>"
-          - "<gray>Better reach, better control.</gray>"
+          - "<gray>Three stunning shots per game.</gray>"
+          - "<gray>Hinder nearby runners with each shot.</gray>"
       diamond:
         name: "<light_purple>Diamond Zapper</light_purple>"
         icon: "DIAMOND_HOE"
@@ -164,11 +173,12 @@ category_settings:
         default_unlocked: false
         gameplay:
           material: "DIAMOND_HOE"
+          shots: 4
           sharpness: 4
           unbreaking: 3
         description:
-          - "<gray>Top-tier zapper for relentless Beasts.</gray>"
-          - "<gray>Premium shock and longevity.</gray>"
+          - "<gray>Four stunning shots per game.</gray>"
+          - "<gray>Extra shots for longer hunts.</gray>"
   kits:
     id: "rftb_kits"
     name: "Beast Kits"

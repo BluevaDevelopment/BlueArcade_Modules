@@ -6,7 +6,7 @@
 --
 -- [!] Arcade by Blueva | https://blueva.net/store/blue-arcade [!]
 
--- RewardService and the zapper/kit equipment swap (StoreService's shredder/reset-wand/kit subsystem) aren't ported; beast skin + beast-pass weighting now go through store_service.lua.
+-- RewardService and the shredder/reset-wand kit subsystem aren't ported.
 local beastService = require("support.beast_service")
 local disguiseService = require("support.disguise_service")
 local cageService = require("support.cage_service")
@@ -15,6 +15,8 @@ local loadoutService = require("support.loadout_service")
 local messagingService = require("support.messaging_service")
 local distanceService = require("support.distance_service")
 local storeService = require("support.store_service")
+
+local zapperService = require("support.zapper_service")
 
 local M = {}
 
@@ -27,6 +29,9 @@ local function newState()
     checkpoints = {},
     checkpointUses = {},
     beastId = nil,
+    beastReleased = false,
+    zapperShots = 0,
+    zapperProjectiles = {},
     beastDisguiseHandle = nil,
   }
 end
@@ -117,6 +122,7 @@ local function preparePlayers(session)
     loadoutService.applyStartingEffects(session, beast, "effects.beast_effects")
     beastService.applyBeastGlow(session, beast)
     loadoutService.applyBeastEquipment(session, beast)
+    zapperService.give(session, beast)
     disguiseService.apply(session, beast, storeService.resolveBeastSkin(session, beast))
     messagingService.sendBeastTitle(session, beast)
     session.messages.sendRaw(beast, session.config.translation(beast, "messages.roles.beast"))
@@ -154,6 +160,7 @@ local function releaseBeast(session)
     end
   end
   cageService.clearCage(session)
+  session.state.beastReleased = true
 end
 
 local function startReleaseCountdown(session)
@@ -408,6 +415,7 @@ end
 function M.onEnd(session)
   session.scheduler.cancelArenaTasks()
   cageService.restoreCage(session)
+  zapperService.cleanup(session)
   beastService.removeBeastGlow(session)
   disguiseService.remove(session, M.getBeast(session))
   distanceService.resetDistanceBars(session)
@@ -421,6 +429,7 @@ end
 function M.handleDisableCleanup(session)
   session.scheduler.cancelArenaTasks()
   cageService.restoreCage(session)
+  zapperService.cleanup(session)
   beastService.removeBeastGlow(session)
   disguiseService.remove(session, M.getBeast(session))
   distanceService.resetDistanceBars(session)

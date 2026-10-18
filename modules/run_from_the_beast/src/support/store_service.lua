@@ -53,10 +53,25 @@ function M.registerStoreItems()
   end
 end
 
+-- Resolve only enabled selections, including when an administrator disables a category
+-- after players have already unlocked or selected items in it.
+function M.resolveSelected(session, handle, key)
+  local base = "category_settings." .. key
+  if not session.config.getBooleanFrom("store.yml", "category_settings.root.enabled", true)
+      or not session.config.getBooleanFrom("store.yml", base .. ".enabled", true)
+      or not session.config.getBooleanFrom("store.yml", base .. ".selection_enabled", true) then
+    return nil
+  end
+  local id = session.config.getStringFrom("store.yml", base .. ".id", "rftb_" .. key)
+  local selected = session.store.resolveSelected(handle, id)
+  if selected and session.config.getBooleanFrom("store.yml", base .. ".items." .. selected .. ".enabled", true) then
+    return selected
+  end
+end
+
 -- Mirrors RunFromTheBeastStoreService.resolveSelected("beast_skins"); nil when unconfigured/unselected.
 function M.resolveBeastSkin(session, beastHandle)
-  local categoryId = session.config.getStringFrom("store.yml", "category_settings.beast_skins.id", "rftb_beast_skins")
-  return session.store.resolveSelected(beastHandle, categoryId)
+  return M.resolveSelected(session, beastHandle, "beast_skins")
 end
 
 -- Mirrors RunFromTheBeastBeastService.buildBeastWeights's beast_pass ownership check.

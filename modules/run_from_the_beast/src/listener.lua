@@ -12,6 +12,8 @@ local gameManager = require("game_manager")
 local checkpointService = require("support.checkpoint_service")
 local armoryService = require("support.armory_service")
 
+local zapperService = require("support.zapper_service")
+
 local M = {}
 
 function M.register()
@@ -56,6 +58,12 @@ function M.register()
       return
     end
 
+    if (e.action == "RIGHT_CLICK_AIR" or e.action == "RIGHT_CLICK_BLOCK")
+        and zapperService.fire(session, e.player) then
+      e:cancel()
+      return
+    end
+
     local itemType = session.player.itemInMainHandType(e.player)
     if itemType then
       if itemType == checkpointService.getCheckpointSetMaterial(session) then
@@ -78,6 +86,10 @@ function M.register()
         armoryService.openArmory(session, e.player, x, y, z)
       end
     end
+  end)
+
+  ba.events.on("projectile_hit", function(session, e)
+    zapperService.hit(session, e)
   end)
 
   ba.events.on("player_damage_by_entity", function(session, e)
