@@ -28,6 +28,7 @@ end
 
 local function giveItems(session, handle, items)
   if not items or #items == 0 then return end
+  local unslottedItems = {}
   for _, itemString in ipairs(items) do
     local parts = {}
     for part in itemString:gmatch("[^:]+") do
@@ -39,9 +40,16 @@ local function giveItems(session, handle, items)
       local slot = #parts >= 3 and tonumber(parts[3]) or -1
       local hexColor = #parts >= 4 and parts[4] or nil
       if amount then
-        session.player.giveItem(handle, material, amount, slot, hexColor)
+        if slot and slot >= 0 and slot <= 40 then
+          session.player.giveItem(handle, material, amount, slot, hexColor)
+        else
+          unslottedItems[#unslottedItems + 1] = { material = material, amount = amount, hexColor = hexColor }
+        end
       end
     end
+  end
+  for _, item in ipairs(unslottedItems) do
+    session.player.giveItem(handle, item.material, item.amount, -1, item.hexColor)
   end
 end
 
@@ -62,13 +70,15 @@ local function applyEffects(session, handle, effects)
 end
 
 function M.giveStartingItems(session, handle)
-  local teamSlot = resolveTeamSlot(session, handle)
-  local items
-  if teamSlot > 0 then
-    items = session.config.getStringList("items.starting_items_by_team." .. teamSlot)
+  local items = {}
+  for _, item in ipairs(session.config.getStringList("items.starting_items") or {}) do
+    items[#items + 1] = item
   end
-  if not items or #items == 0 then
-    items = session.config.getStringList("items.starting_items")
+  local teamSlot = resolveTeamSlot(session, handle)
+  if teamSlot > 0 then
+    for _, item in ipairs(session.config.getStringList("items.starting_items_by_team." .. teamSlot) or {}) do
+      items[#items + 1] = item
+    end
   end
   giveItems(session, handle, items)
 end

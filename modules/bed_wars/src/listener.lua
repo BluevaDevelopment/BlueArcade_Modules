@@ -17,6 +17,7 @@ local armoryService = require("support.armory_service")
 local shopService = require("support.shop_service")
 local upgradeService = require("support.upgrade_service")
 local voteService = require("support.vote_service")
+local explosionService = require("support.explosion_service")
 
 local M = {}
 
@@ -277,12 +278,16 @@ function M.register()
   -- TNT (and any other exploding entity) only breaks player-placed blocks, never the map or beds.
   ba.events.on("entity_explode", function(session, e)
     if not session.isInsideBounds(e.location) then return end
+    local kind = e.entityType == "FIREBALL" and "fireball" or "tnt"
+    local protectedBlocks = explosionService.protectedBlocks(session, kind)
     for i = e.blockCount, 1, -1 do
       local blockLoc = e.blockLocationAt(i)
       if blockLoc then
         local x, y, z = math.floor(blockLoc.x), math.floor(blockLoc.y), math.floor(blockLoc.z)
         local key = x .. ":" .. y .. ":" .. z
         local breakable = session.state.playerPlacedBlocks[key] and not gameManager.isBedLocation(session, x, y, z)
+          and not explosionService.protects(protectedBlocks, session.world.blockTypeAt(x, y, z))
+          and not explosionService.shields(session, protectedBlocks, e.location, blockLoc)
         if breakable then
           session.state.playerPlacedBlocks[key] = nil
         else

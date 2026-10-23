@@ -84,7 +84,8 @@ items:
   # Format: MATERIAL:AMOUNT:SLOT
   starting_items: []
 
-  # Team-specific starting items keyed by team id
+  # Team-specific additions keyed by team slot (team list order)
+  # Applied after starting_items; explicit slots override common items in the same slot
   # Format: MATERIAL:AMOUNT:SLOT[:HEX_COLOR]
   # HEX_COLOR is used by leather armor pieces
   starting_items_by_team:
@@ -163,8 +164,19 @@ special_items:
     launch_sound: "ENTITY_GHAST_SHOOT"
     launch_volume: 1.0
     launch_pitch: 1.0
+    # Blocks that fireballs cannot break or pass through
+    protected_blocks:
+      - "OBSIDIAN"
+      - "CRYING_OBSIDIAN"
+      - "END_STONE"
+      - "GLASS"
   tnt:
     fuse_ticks: 40
+    # Protected blocks also shield blocks behind them from the blast
+    protected_blocks:
+      - "OBSIDIAN"
+      - "CRYING_OBSIDIAN"
+      - "GLASS"
   bridge_egg:
     projectile_speed: 1.5
     length_blocks: 10

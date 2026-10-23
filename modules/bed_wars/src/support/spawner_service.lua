@@ -11,6 +11,7 @@ local M = {}
 
 local SPAWNER_SCAN_LIMIT = 128
 local ITEM_STAND_TYPES = { diamond = "DIAMOND_BLOCK", emerald = "EMERALD_BLOCK" }
+local RESOURCE_MATERIALS = { iron = "IRON_INGOT", gold = "GOLD_INGOT", diamond = "DIAMOND", emerald = "EMERALD" }
 
 local function resolveDataBasePath(session, section)
   if session.dataAccess.hasGameData("game.play_area." .. section) then
@@ -156,6 +157,35 @@ function M.setTeamSpawnerMultiplier(session, teamId, spawnerType, multiplier)
   local key = teamId:lower()
   session.state.teamSpawnerMultiplier[key] = session.state.teamSpawnerMultiplier[key] or {}
   session.state.teamSpawnerMultiplier[key][spawnerType] = math.max(1.0, multiplier)
+  if spawnerType ~= "emerald" then return end
+
+  local additions = {}
+  for _, base in ipairs(session.state.spawners) do
+    if base.type == "iron" and base.teamId and base.teamId:lower() == key then
+      local exists = false
+      for _, def in ipairs(session.state.spawners) do
+        if def.type == "emerald" and def.teamId and def.teamId:lower() == key
+          and def.x == base.x and def.y == base.y and def.z == base.z then
+          exists = true
+          break
+        end
+      end
+      for _, def in ipairs(additions) do
+        if def.x == base.x and def.y == base.y and def.z == base.z then exists = true end
+      end
+      if not exists then
+        additions[#additions + 1] = {
+          spawnerId = "forge-emerald-" .. base.key, key = "forge-emerald-" .. base.key,
+          type = "emerald", teamId = key,
+          x = base.x, y = base.y, z = base.z,
+          intervalTicks = defaultInterval(session, "emerald"), hologramEnabled = false,
+        }
+      end
+    end
+  end
+  for _, def in ipairs(additions) do
+    session.state.spawners[#session.state.spawners + 1] = def
+  end
 end
 
 function M.spawnResources(session)
@@ -167,7 +197,7 @@ function M.spawnResources(session)
     if ticks >= effectiveTicks then
       session.state.spawnerTicks[def.key] = 0
       local dropLoc = { x = def.x + 0.5, y = def.y + 1.0, z = def.z + 0.5 }
-      session.world.dropItemAt(dropLoc, ITEM_STAND_TYPES[def.type] or (def.type == "iron" and "IRON_INGOT" or "GOLD_INGOT"), 1)
+      session.world.dropItemAt(dropLoc, RESOURCE_MATERIALS[def.type], 1)
     end
   end
 end

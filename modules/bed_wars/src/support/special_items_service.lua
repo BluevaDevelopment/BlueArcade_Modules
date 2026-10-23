@@ -10,6 +10,7 @@
 -- item's "special" tag. `getSpecialTag` preserves legacy's two-tier lookup: a PDC tag first
 -- (replacing legacy's lore-text `[SPECIAL:xxx]` parsing), then a material-type fallback.
 local gameManager = require("game_manager")
+local explosionService = require("support.explosion_service")
 
 local MATERIAL_SPECIAL_FALLBACK = {
   FIRE_CHARGE = "fireball", TNT = "tnt", EGG = "bridge-egg", MILK_BUCKET = "magic-milk",
@@ -26,7 +27,13 @@ local TEAM_WOOL = {
 
 local M = {}
 
-local function getSpecialTag(session, handle)
+local function getSpecialTag(session, handle, e)
+  if e.hand == "OFF_HAND" then
+    local tag = session.player.itemTag(handle, 40, "bedwars_special")
+    if tag then return tag:lower() end
+    local item = session.player.getSlotItem(handle, 40)
+    return item and MATERIAL_SPECIAL_FALLBACK[item.material]
+  end
   local tag = session.player.mainHandItemTag(handle, "bedwars_special")
   if tag then return tag:lower() end
   local material = session.player.itemInMainHandType(handle)
@@ -47,8 +54,12 @@ local function resolveTeamId(session, handle)
   return (team and team.id) or "solo"
 end
 
-local function consumeOneItem(session, handle)
-  session.player.consumeMainHandItem(handle)
+local function consumeOneItem(session, handle, e)
+  if e.hand == "OFF_HAND" then
+    session.player.consumeOffHandItem(handle)
+  else
+    session.player.consumeMainHandItem(handle)
+  end
 end
 
 local function isRightClick(action)
@@ -74,7 +85,7 @@ local function handleFireball(session, handle, e)
     session.state.trackedFireballs[projectile] = true
   end
 
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
   local launchSound = session.config.getString("special_items.fireball.launch_sound") or "ENTITY_GHAST_SHOOT"
   local volume = session.config.getDouble("special_items.fireball.launch_volume", 1.0)
   local pitch = session.config.getDouble("special_items.fireball.launch_pitch", 1.0)
@@ -93,7 +104,7 @@ local function handleTNT(session, handle, e)
   if tnt then
     session.entities.setFuseTicks(tnt, session.config.getInt("special_items.tnt.fuse_ticks", 40))
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function handleBridgeEgg(session, handle, e)
@@ -104,13 +115,13 @@ local function handleBridgeEgg(session, handle, e)
   if projectile then
     session.state.specialProjectiles[projectile] = "bridge-egg"
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function handleMagicMilk(session, handle, e)
   if not isRightClick(e.action) then return end
   e:cancel()
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
   local seconds = session.config.getInt("special_items.magic_milk.trap_immunity_seconds", 30)
   local message = session.config.translation(handle, "messages.special_items.magic_milk_used")
   if message then
@@ -126,7 +137,7 @@ local function handleBedbug(session, handle, e)
   if projectile then
     session.state.specialProjectiles[projectile] = "bedbug"
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function handleDreamDefender(session, handle, e)
@@ -140,7 +151,7 @@ local function handleDreamDefender(session, handle, e)
     local nameVisible = session.config.getBoolean("special_items.dream_defender.name_visible", true)
     session.entities.setCustomName(golem, name, nameVisible)
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function handleSponge(session, handle, e)
@@ -158,7 +169,7 @@ local function handleSponge(session, handle, e)
       end
     end
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function handleTower(session, handle, e)
@@ -175,7 +186,7 @@ local function handleTower(session, handle, e)
       gameManager.trackPlacedBlock(session, bx, by, bz)
     end
   end
-  consumeOneItem(session, handle)
+  consumeOneItem(session, handle, e)
 end
 
 local function applySpecialPlaceholders(session, handle, input, special)
@@ -237,7 +248,7 @@ local function handleConfiguredSpecial(session, handle, e, special)
     runConfiguredSpecialAction(session, handle, special, rawAction)
   end
   if session.config.getBooleanFrom("shop.yml", basePath .. ".consume", true) then
-    consumeOneItem(session, handle)
+    consumeOneItem(session, handle, e)
   end
 end
 
@@ -253,7 +264,7 @@ local SPECIAL_HANDLERS = {
 }
 
 local function handleFireballHit(session, handle, e)
-  local loc = e.hitBlock or session.player.location(handle)
+  local loc = session.entities.location(e.projectile) or e.hitBlock or session.player.location(handle)
   local explosionSize = session.config.getDouble("special_items.fireball.explosion_size", 3.0)
   local horizontalKb = session.config.getDouble("special_items.fireball.knockback_horizontal", 1.0)
   local verticalKb = session.config.getDouble("special_items.fireball.knockback_vertical", 0.65)
@@ -263,6 +274,7 @@ local function handleFireballHit(session, handle, e)
 
   session.world.createExplosion(loc, explosionSize, false, false)
 
+  local protectedBlocks = explosionService.protectedBlocks(session, "fireball")
   local radius = math.ceil(explosionSize)
   local bx, by, bz = math.floor(loc.x), math.floor(loc.y), math.floor(loc.z)
   for dx = -radius, radius do
@@ -271,7 +283,9 @@ local function handleFireballHit(session, handle, e)
         if dx * dx + dy * dy + dz * dz <= radius * radius then
           local x, y, z = bx + dx, by + dy, bz + dz
           local key = x .. ":" .. y .. ":" .. z
-          if session.world.blockTypeAt(x, y, z) ~= "AIR" and session.state.playerPlacedBlocks[key] then
+          local material = session.world.blockTypeAt(x, y, z)
+          if material ~= "AIR" and not explosionService.protects(protectedBlocks, material) and session.state.playerPlacedBlocks[key]
+            and not explosionService.shields(session, protectedBlocks, loc, { x = x, y = y, z = z }) then
             session.world.setBlockType(x, y, z, "AIR")
             session.state.playerPlacedBlocks[key] = nil
           end
@@ -332,7 +346,7 @@ end
 function M.register()
   ba.events.on("player_interact", function(session, e)
     if not session.isPlaying(e.player) then return end
-    local special = getSpecialTag(session, e.player)
+    local special = getSpecialTag(session, e.player, e)
     if not special then return end
 
     local handler = SPECIAL_HANDLERS[special]
